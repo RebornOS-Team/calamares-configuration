@@ -42,7 +42,7 @@ Item {
                     width: 450
                     height: 104
                     anchors.centerIn: parent
-                    text: qsTr("LibreOffice is a powerful and free office suite, used by millions of people around the world. It includes several applications that make it the most versatile Free and Open Source office suite on the market.<br/>
+                    text: qsTr("Testing... LibreOffice is a powerful and free office suite, used by millions of people around the world. It includes several applications that make it the most versatile Free and Open Source office suite on the market.<br/>
                     Default option.")
                     font.pointSize: 10
                     anchors.verticalCenterOffset: -10
