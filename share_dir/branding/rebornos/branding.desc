@@ -183,7 +183,7 @@ style:
    sidebarBackground:    "#292F34"
    sidebarText:          "#FFFFFF"
    sidebarTextSelect:    "#292F34"
-   sidebarTextHighlight: "#649F4B"
+   sidebarTextHighlight: "#00AAD4"
 
 ### SLIDESHOW
 #
