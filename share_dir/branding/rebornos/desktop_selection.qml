@@ -32,7 +32,7 @@ Item {
             spacing: 5
 
             Rectangle {
-                //id: rectangle
+                id: gnome_rectangle
                 width: 700
                 height: 150
                 color: "#ffffff"
@@ -42,8 +42,7 @@ Item {
                     width: 450
                     height: 104
                     anchors.centerIn: parent
-                    text: qsTr("Testing... LibreOffice is a powerful and free office suite, used by millions of people around the world. It includes several applications that make it the most versatile Free and Open Source office suite on the market.<br/>
-                    Default option.")
+                    text: qsTr("GNOME (GNU Network Object Model Environment, pronounced gah-NOHM) is a graphical user interface (GUI) and set of computer desktop applications for users of the Linux operating system")
                     font.pointSize: 10
                     anchors.verticalCenterOffset: -10
                     anchors.horizontalCenterOffset: 100
@@ -51,41 +50,38 @@ Item {
                 }
 
                 Switch {
-                    id: element2
+                    id: gnome_switch
                     x: 500
                     y: 110
                     width: 187
                     height: 14
-                    text: qsTr("LibreOffice")
+                    text: qsTr("Gnome")
                     checked: true
                     hoverEnabled: true
-                    ButtonGroup.group: switchGroup
 
                     indicator: Rectangle {
                         implicitWidth: 40
                         implicitHeight: 14
                         radius: 10
-                        color: element2.checked ? "#3498db" : "#B9B9B9"
-                        border.color: element2.checked ? "#3498db" : "#cccccc"
+                        color: gnome_switch.checked ? "#3498db" : "#B9B9B9"
+                        border.color: gnome_switch.checked ? "#3498db" : "#cccccc"
 
                         Rectangle {
-                            x: element2.checked ? parent.width - width : 0
+                            x: gnome_switch.checked ? parent.width - width : 0
                             y: (parent.height - height) / 2
                             width: 20
                             height: 20
                             radius: 10
-                            color: element2.down ? "#cccccc" : "#ffffff"
-                            border.color: element2.checked ? (element1.down ? "#3498db" : "#3498db") : "#999999"
+                            color: gnome_switch.down ? "#cccccc" : "#ffffff"
+                            border.color: gnome_switch.checked ? (gnome_switch.down ? "#3498db" : "#3498db") : "#999999"
                         }
                     }
 
                     onCheckedChanged: {
-                        if ( ! checked ) {
-                            print("L not used")
-                        }
-                        else {
-                            config.pkgc = "libreoffice"
-                            print( config.pkgc )
+                        if ( checked ) {
+                            config.pa
+                            print( config.outputconditionname )
+                            print( config.outputconditionname )
                         }
                     }
                 }
@@ -101,6 +97,7 @@ Item {
             }
 
             Rectangle {
+                id: plasma_rectangle
                 width: 700
                 height: 150
                 radius: 10
@@ -109,7 +106,7 @@ Item {
                     width: 450
                     height: 104
                     anchors.centerIn: parent
-                    text: qsTr("If you don't want to install an office suite, just select No Office Suite. You can always add one (or more) later on your installed system as the need arrives.")
+                    text: qsTr("KDE Plasma is a graphical desktop environment with customize layouts and panels, supporting virtual desktops and widgets. It is written with Qt 5 and KDE Frameworks 5.")
                     font.pointSize: 10
                     anchors.verticalCenterOffset: -10
                     anchors.horizontalCenterOffset: 100
@@ -117,31 +114,30 @@ Item {
                 }
 
                 Switch {
-                    id: element1
+                    id: plasma_switch
                     x: 500
                     y: 110
                     width: 187
                     height: 14
-                    text: qsTr("No Office Suite")
+                    text: qsTr("KDE Plasma")
                     checked: false
                     hoverEnabled: true
-                    ButtonGroup.group: switchGroup
 
                     indicator: Rectangle {
                         implicitWidth: 40
                         implicitHeight: 14
                         radius: 10
-                        color: element1.checked ? "#3498db" : "#B9B9B9"
-                        border.color: element1.checked ? "#3498db" : "#cccccc"
+                        color: plasma_switch.checked ? "#3498db" : "#B9B9B9"
+                        border.color: plasma_switch.checked ? "#3498db" : "#cccccc"
 
                         Rectangle {
-                            x: element1.checked ? parent.width - width : 0
+                            x: plasma_switch.checked ? parent.width - width : 0
                             y: (parent.height - height) / 2
                             width: 20
                             height: 20
                             radius: 10
-                            color: element1.down ? "#cccccc" : "#ffffff"
-                            border.color: element1.checked ? (element1.down ? "#3498db" : "#3498db") : "#999999"
+                            color: plasma_switch.down ? "#cccccc" : "#ffffff"
+                            border.color: plasma_switch.checked ? (plasma_switch.down ? "#3498db" : "#3498db") : "#999999"
                         }
                     }
 
