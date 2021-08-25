@@ -22,10 +22,6 @@ Item {
         anchors.fill: parent
         color: "#f2f2f2"
 
-        ButtonGroup {
-            id: switchGroup
-        }
-
         Column {
             id: column
             anchors.centerIn: parent
@@ -79,20 +75,20 @@ Item {
 
                     onCheckedChanged: {
                         if ( checked ) {
-                            config.pa
-                            print( config.outputconditionname )
-                            print( config.outputconditionname )
+                            config.addSelection("gnome")
+                        } else {
+                            config.removeSelection("gnome")
                         }
                     }
                 }
 
                 Image {
-                    id: image2
+                    id: gnome_image
                     x: 8
                     y: 25
                     height: 100
                     fillMode: Image.PreserveAspectFit
-                    source: "images/libreoffice.jpg"
+                    source: "images/desktops/gnome.png"
                 }
             }
 
@@ -100,13 +96,14 @@ Item {
                 id: plasma_rectangle
                 width: 700
                 height: 150
+                color: "#ffffff"
                 radius: 10
                 border.width: 0
                 Text {
                     width: 450
                     height: 104
                     anchors.centerIn: parent
-                    text: qsTr("KDE Plasma is a graphical desktop environment with customize layouts and panels, supporting virtual desktops and widgets. It is written with Qt 5 and KDE Frameworks 5.")
+                    text: qsTr("KDE Plasma a graphical workspaces environment created by KDE primarily for Linux systems. The graphical interface was fully migrated to QML, which uses OpenGL for hardware acceleration, which resulted in better performance and reduced power consumption.")
                     font.pointSize: 10
                     anchors.verticalCenterOffset: -10
                     anchors.horizontalCenterOffset: 100
@@ -119,7 +116,7 @@ Item {
                     y: 110
                     width: 187
                     height: 14
-                    text: qsTr("KDE Plasma")
+                    text: qsTr("Plasma")
                     checked: false
                     hoverEnabled: true
 
@@ -142,92 +139,21 @@ Item {
                     }
 
                     onCheckedChanged: {
-                        if ( ! checked ) {
-                            print("not used")
-                            //console.log("removed")
-                        }
-                        else {
-                            print("No Office Suite")
-                            config.pkgc = "no_office_suite"
+                        if ( checked ) {
+                            config.addSelection("plasma")
+                        } else {
+                            config.removeSelection("plasma")
                         }
                     }
                 }
 
                 Image {
-                    id: image
+                    id: plasma_image
                     x: 8
                     y: 25
                     height: 100
                     fillMode: Image.PreserveAspectFit
-                    source: "images/no-selection.png"
-                }
-
-            }
-
-            Rectangle {
-                width: 700
-                height: 150
-                color: "#ffffff"
-                radius: 10
-                border.width: 0
-                Text {
-                    width: 450
-                    height: 104
-                    anchors.centerIn: parent
-                    text: qsTr("Create a minimal Desktop install, remove all extra applications and decide later on what you would like to add to your system. Examples of what won't be on such an install, there will be no Office Suite, no media players, no image viewer or print support.  It will be just a desktop, file browser, package manager, text editor and simple web-browser.")
-                    font.pointSize: 10
-                    anchors.verticalCenterOffset: -10
-                    anchors.horizontalCenterOffset: 100
-                    wrapMode: Text.WordWrap
-                }
-
-                Switch {
-                    id: element3
-                    x: 500
-                    y: 110
-                    width: 187
-                    height: 14
-                    text: qsTr("Minimal Install")
-                    checked: false
-                    hoverEnabled: true
-                    ButtonGroup.group: switchGroup
-
-                    indicator: Rectangle {
-                        implicitWidth: 40
-                        implicitHeight: 14
-                        radius: 10
-                        color: element3.checked ? "#3498db" : "#B9B9B9"
-                        border.color: element3.checked ? "#3498db" : "#cccccc"
-
-                        Rectangle {
-                            x: element3.checked ? parent.width - width : 0
-                            y: (parent.height - height) / 2
-                            width: 20
-                            height: 20
-                            radius: 10
-                            color: element3.down ? "#cccccc" : "#ffffff"
-                            border.color: element3.checked ? (element3.down ? "#3498db" : "#3498db") : "#999999"
-                        }
-                    }
-
-                    onCheckedChanged: {
-                        if ( ! checked ) {
-                            print("M not used")
-                        }
-                        else {
-                            print("minimal")
-                            config.pkgc = "minimal_install"
-                        }
-                    }
-                }
-
-                Image {
-                    id: image3
-                    x: 8
-                    y: 25
-                    height: 100
-                    fillMode: Image.PreserveAspectFit
-                    source: "images/plasma.png"
+                    source: "images/desktops/plasma.png"
                 }
             }
 
@@ -239,7 +165,7 @@ Item {
                 Text {
                     height: 25
                     anchors.centerIn: parent
-                    text: qsTr("Please select an option for your install, or use the default: LibreOffice included.")
+                    text: qsTr("Please select a desktop environment to install. Not selecting one will give you a text console with no graphics.")
                     font.pointSize: 10
                     wrapMode: Text.WordWrap
                 }
