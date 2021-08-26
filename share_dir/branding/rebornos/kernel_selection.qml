@@ -55,7 +55,7 @@ Item {
                             width: 187
                             height: 14
                             text: qsTr(config.entryNames[index])
-                            checked: true
+                            checked: config.entrySelectedStates[index]
                             hoverEnabled: true
                             onCheckedChanged: {
                                 if ( checked ) {
@@ -70,7 +70,7 @@ Item {
                             y: 25
                             height: 100
                             fillMode: Image.PreserveAspectFit
-                            source: ":/images/desktops/" + config.entryIds[index] + ".png"
+                            source: config.entryScreenshots[index]
                         }
                     }
                 }
@@ -82,7 +82,7 @@ Item {
                     Text {
                         height: 25
                         anchors.centerIn: parent
-                        text: qsTr("Please select a Linux kernel to install. At least one option must be selected.")
+                        text: qsTr(config.promptMessage)
                         font.pointSize: 10
                         wrapMode: Text.WordWrap
                     }
