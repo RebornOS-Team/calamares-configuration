@@ -33,6 +33,7 @@ Item {
                 wrapMode: Text.Wrap
                 text: qsTr(config.promptMessage)
                 font.pixelSize: 14
+                width: parent.width - 20
             }
             ListView {
                 id: listView
