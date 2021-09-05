@@ -47,7 +47,7 @@ Item {
                 ScrollBar.vertical: ScrollBar {
                     active: hovered || pressed
                 }
-                model: config.entryIds
+                model: config.displayedEntryIds
                 delegate: Rectangle {
                     id: rectangle
                     anchors.leftMargin: 10
@@ -72,7 +72,7 @@ Item {
                             anchors.leftMargin: 10
                             width: parent.width - 30
                             wrapMode: Text.Wrap
-                            text: qsTr(config.entryNames[index])
+                            text: qsTr(config.displayedEntryNames[index])
                             font.pixelSize: 16
                             font.bold: true
                         }
@@ -83,7 +83,7 @@ Item {
                             spacing: 10
                             Image {
                                 anchors.leftMargin: 10
-                                source: config.entryScreenshots[index]
+                                source: config.displayedEntryScreenshots[index]
                                 fillMode: Image.PreserveAspectFit
                                 width: (parent.width - 30) / 3
                                 MouseArea {
@@ -91,7 +91,7 @@ Item {
                                     onClicked: {
                                         image_width = 1
                                         image_height = 1
-                                        image_source = config.entryScreenshots[index]
+                                        image_source = config.displayedEntryScreenshots[index]
                                         popup.open()
                                     }
                                 }
@@ -100,7 +100,7 @@ Item {
                                 width: (parent.width - 30) * 2/3
                                 anchors.rightMargin: 10
                                 wrapMode: Text.Wrap
-                                text: qsTr(config.entryDescriptions[index])
+                                text: qsTr(config.displayedEntryDescriptions[index])
                                 font.pixelSize: 14
                             }
                         }
@@ -110,9 +110,9 @@ Item {
                             hoverEnabled: true
                             onCheckedChanged: {
                                 if ( checked ) {
-                                    config.addSelection(config.entryIds[index])
+                                    config.addSelection(config.displayedEntryIds[index])
                                 } else {
-                                    config.removeSelection(config.entryIds[index])
+                                    config.removeSelection(config.displayedEntryIds[index])
                                 }
                             }
                         }
