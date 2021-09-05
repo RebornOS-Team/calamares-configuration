@@ -150,12 +150,30 @@ GNOME 3 is the default desktop environment on many major Linux distributions inc
     }
     Popup {
         id: popup
-        width: image_width > image_height || image_width < 2 ? page.width - 50: image_width 
-        height: image_height > image_width || image_height < 2 ? page.height - 50: image_height
+        width: {
+            if (image_width > image_height || image_width < 2){
+                page.width - 50
+            } else {
+                (page.height - 50) * image_width / image_height
+                // if (new_width >= page.width - 50) {
+                //     page.width - 50
+                // }
+            } 
+        }
+        height: {
+            if (image_height > image_width || image_height < 2){
+                page.height - 50
+            } else {
+                (page.width - 50) * image_height / image_width
+                // if (new_height >= page.height - 50) {
+                //     page.height - 50
+                // }
+            } 
+        }
         anchors.centerIn: parent
         modal: true
         focus: true
-        closePolicy: Popup.CloseOnEscape | Popup.CloseOnReleaseOutside
+        closePolicy: Popup.CloseOnEscape | Popup.CloseOnReleaseOutside | Popup.CloseOnReleaseInside
         padding: 0
         contentItem:
             Image{
