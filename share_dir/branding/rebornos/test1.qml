@@ -6,6 +6,8 @@ Item {
     width: 800
     height: 800
     property string image_source: ""
+    property int image_width: 1
+    property int image_height: 1
     Rectangle {
         id: page
         color: "#f2f2f2"
@@ -148,25 +150,22 @@ GNOME 3 is the default desktop environment on many major Linux distributions inc
     }
     Popup {
         id: popup
-        x: 50
-        y: 50
+        width: image_width > image_height || image_width < 2 ? page.width - 50: image_width 
+        height: image_height > image_width || image_height < 2 ? page.height - 50: image_height
+        anchors.centerIn: parent
         modal: true
         focus: true
-//        height: enlarged_image.implicitHeight
-//        width: enlarged_image.implicitWidth
         closePolicy: Popup.CloseOnEscape | Popup.CloseOnReleaseOutside
-        contentItem: ColumnLayout {
+        padding: 0
+        contentItem:
             Image{
                 id: enlarged_image
-                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
-                Layout.maximumWidth: page.width - 100
-                Layout.maximumHeight: page.implicitHeight - 100
-                Layout.preferredWidth: page.implicitWidth - 100
-                Layout.fillWidth: true
-                Layout.fillHeight: true
                 fillMode: Image.PreserveAspectFit
                 source: image_source
+                onStatusChanged: {
+                    image_width= enlarged_image.paintedWidth
+                    image_height= enlarged_image.paintedHeight
+                }
             }
-        }
     }
 }
