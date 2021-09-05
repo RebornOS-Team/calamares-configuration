@@ -28,7 +28,7 @@ Item {
                 id: listView
                 anchors.left: parent.left
                 anchors.right: parent.right
-                height: parent.height - 25
+                height: parent.height/2 - 25
                 clip: true
                 spacing: 10
                 ScrollBar.vertical: ScrollBar {
@@ -99,19 +99,20 @@ Item {
                             font.bold: true
                         }
                         Row{
-                            id: row
                             anchors.left: parent.left
                             anchors.right: parent.right
                             spacing: 10
                             Image {
                                 anchors.leftMargin: 10
-                                source: "file:images/desktops/budgie.png"
+                                source: "file:images/desktops/gnome.png"
                                 fillMode: Image.PreserveAspectFit
                                 width: (parent.width - 30) / 3
                                 MouseArea {
                                     anchors.fill: parent
                                     onClicked: {
-                                        image_source = "file:images/desktops/budgie.png"
+                                        image_width = 1
+                                        image_height = 1
+                                        image_source = "file:images/desktops/gnome.png"
                                         popup.open()
                                     }
                                 }
@@ -146,6 +147,127 @@ GNOME 3 is the default desktop environment on many major Linux distributions inc
                     }
                 }
             }
+
+            ListView {
+                id: listView1
+                anchors.left: parent.left
+                anchors.right: parent.right
+                height: parent.height/2 - 25
+                clip: true
+                spacing: 10
+                ScrollBar.vertical: ScrollBar {
+                    active: hovered || pressed
+                }
+                model: ListModel {
+                    ListElement {
+                        name: "Grey"
+                        colorCode: "grey"
+                    }
+
+                    ListElement {
+                        name: "Red"
+                        colorCode: "red"
+                    }
+
+                    ListElement {
+                        name: "Blue"
+                        colorCode: "blue"
+                    }
+
+                    ListElement {
+                        name: "Green"
+                        colorCode: "green"
+                    }
+
+                    ListElement {
+                        name: "Blue"
+                        colorCode: "blue"
+                    }
+
+                    ListElement {
+                        name: "Yellow"
+                        colorCode: "yellow"
+                    }
+
+                    ListElement {
+                        name: "Purple"
+                        colorCode: "purple"
+                    }
+                }
+                delegate: Rectangle {
+                    id: rectangle1
+                    anchors.leftMargin: 10
+                    anchors.rightMargin: 10
+                    x: 10
+                    //            height: 500
+                    width: listView1.width - 20
+                    height: column1.implicitHeight + 20
+                    //                        Layout.fillHeight: true
+                    //                        Layout.fillWidth: true
+                    color: "#ffffff"
+                    radius: 10
+                    border.width: 0
+                    Column{
+                        id: column1
+                        spacing: 10
+                        anchors.topMargin: 10
+                        anchors.leftMargin: 10
+                        anchors.rightMargin: 10
+                        anchors.fill: parent
+                        Text {
+                            anchors.leftMargin: 10
+                            width: parent.width - 30
+                            wrapMode: Text.Wrap
+                            text: qsTr("KDE")
+                            font.pixelSize: 16
+                            font.bold: true
+                        }
+                        Row{
+                            anchors.left: parent.left
+                            anchors.right: parent.right
+                            spacing: 10
+                            Image {
+                                anchors.leftMargin: 10
+                                source: "file:images/desktops/plasma.png"
+                                fillMode: Image.PreserveAspectFit
+                                width: (parent.width - 30) / 3
+                                MouseArea {
+                                    anchors.fill: parent
+                                    onClicked: {
+                                        image_width = 1
+                                        image_height = 1
+                                        image_source = "file:images/desktops/plasma.png"
+                                        popup.open()
+                                    }
+                                }
+                            }
+                            Text {
+                                width: (parent.width - 30) * 2/3
+                                anchors.rightMargin: 10
+                                wrapMode: Text.Wrap
+                                text: qsTr("KDE Plasma")
+                                font.pixelSize: 14
+                            }
+                        }
+                        Switch {
+                            anchors.right: parent.right
+                            //            text: qsTr("Minimal Install")
+                            //            checked: false
+                            hoverEnabled: true
+                            //            onCheckedChanged: {
+                            //                if ( ! checked ) {
+                            //                    print("M not used")
+                            //                }
+                            //                else {
+                            //                    print("minimal")
+                            //                    config.pkgc = "minimal_install"
+                            //                }
+                            //            }
+                        }
+                    }
+                }
+            }
+
         }
     }
     Popup {
@@ -175,6 +297,10 @@ GNOME 3 is the default desktop environment on many major Linux distributions inc
         focus: true
         closePolicy: Popup.CloseOnEscape | Popup.CloseOnReleaseOutside | Popup.CloseOnReleaseInside
         padding: 0
+        onAboutToShow: {
+            image_width= enlarged_image.paintedWidth
+            image_height= enlarged_image.paintedHeight
+        }
         contentItem:
             Image{
                 id: enlarged_image
@@ -183,6 +309,8 @@ GNOME 3 is the default desktop environment on many major Linux distributions inc
                 onStatusChanged: {
                     image_width= enlarged_image.paintedWidth
                     image_height= enlarged_image.paintedHeight
+                    console.log("Image width: ", image_width)
+                    console.log("Image height: ", image_height)
                 }
             }
     }
