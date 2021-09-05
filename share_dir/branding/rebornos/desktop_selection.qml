@@ -20,10 +20,6 @@ Item {
     property string image_source: ""
     property int image_width: 1
     property int image_height: 1
-    onImage_SourceChanged: {
-        image_width = 1
-        image_height = 1
-    }
     Rectangle {
         id: page
         color: "#f2f2f2"
@@ -94,6 +90,8 @@ Item {
                                     anchors.fill: parent
                                     onClicked: {
                                         image_source = config.entryScreenshots[index]
+                                        image_width = 1
+                                        image_height = 1
                                         popup.open()
                                     }
                                 }
