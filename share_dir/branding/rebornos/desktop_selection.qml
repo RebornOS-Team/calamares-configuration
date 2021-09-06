@@ -40,7 +40,7 @@ Item {
                 id: listView
                 anchors.left: parent.left
                 anchors.right: parent.right
-                height: parent.height - 25
+                height: parent.height
                 clip: true
                 spacing: 10
                 ScrollBar.vertical: ScrollBar {
