@@ -33,9 +33,8 @@ Presentation
         Image {
             id: background
             source: "squid.png"
-            width: 200; height: 200
             fillMode: Image.PreserveAspectFit
-            anchors.centerIn: parent
+            anchors.fill: parent
         }
         Text {
             anchors.horizontalCenter: background.horizontalCenter
