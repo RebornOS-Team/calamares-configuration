@@ -1,5 +1,6 @@
 ﻿import QtQuick 2.15
 import QtQuick.Controls 2.15
+import QtQuick.Controls 1.4 as OldControls
 import QtQuick.Layouts 1.15
 
 Item {
@@ -24,13 +25,13 @@ Item {
                 text: qsTr("Please select a Desktop Environment")
                 font.pixelSize: 14
             }
-            TreeView {
-                TableViewColumn {
+            OldControls.TreeView {
+                OldControls.TableViewColumn {
                     title: "Name"
                     role: "fileName"
                     width: 300
                 }
-                TableViewColumn {
+                OldControls.TableViewColumn {
                     title: "Permissions"
                     role: "filePermissions"
                     width: 100
@@ -71,7 +72,7 @@ Item {
                         colorCode: "purple"
                     }
                 }
-                delegate: Rectangle {
+                rowDelegate: Rectangle {
                     id: rectangle
                     anchors.leftMargin: 10
                     anchors.rightMargin: 10
