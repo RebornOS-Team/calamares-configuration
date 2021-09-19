@@ -17,4 +17,17 @@ import QtQuick.Layouts 1.15
 
 Item {
     anchors.fill:parent
+    TreeView {
+        // TableViewColumn {
+        //     title: "Name"
+        //     role: "fileName"
+        //     width: 300
+        // }
+        // TableViewColumn {
+        //     title: "Permissions"
+        //     role: "filePermissions"
+        //     width: 100
+        // }
+        model: packageModel
+    }
 }
