@@ -16,5 +16,5 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
 Item {
-
+    anchors.fill:parent
 }
