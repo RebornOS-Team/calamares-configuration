@@ -19,6 +19,7 @@ import QtQuick.Controls 1.4 as OldControls
 Item {
     anchors.fill:parent
     OldControls.TreeView {
+        anchors.fill: parent
         // TableViewColumn {
         //     title: "Name"
         //     role: "fileName"
