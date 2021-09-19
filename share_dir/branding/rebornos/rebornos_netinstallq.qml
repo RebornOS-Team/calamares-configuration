@@ -30,6 +30,6 @@ Item {
         //     role: "filePermissions"
         //     width: 100
         // }
-        model: packageModel
+        model: config.packageModel
     }
 }
