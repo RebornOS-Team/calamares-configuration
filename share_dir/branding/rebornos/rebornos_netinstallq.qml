@@ -20,16 +20,16 @@ Item {
     anchors.fill:parent
     OldControls.TreeView {
         anchors.fill: parent
-        // TableViewColumn {
-        //     title: "Name"
-        //     role: "fileName"
-        //     width: 300
-        // }
-        // TableViewColumn {
-        //     title: "Permissions"
-        //     role: "filePermissions"
-        //     width: 100
-        // }
+        TableViewColumn {
+            title: "Name"
+            role: "fileName"
+            width: 300
+        }
+        TableViewColumn {
+            title: "Permissions"
+            role: "filePermissions"
+            width: 100
+        }
         model: config.packageModel
     }
 }
