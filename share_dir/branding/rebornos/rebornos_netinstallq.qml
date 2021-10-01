@@ -20,15 +20,15 @@ Item {
     anchors.fill:parent
     OldControls.TreeView {
         anchors.fill: parent
-        TableViewColumn {
+        OldControls.TableViewColumn {
             title: "Name"
-            role: "fileName"
-            width: 300
-        }
-        TableViewColumn {
-            title: "Permissions"
-            role: "filePermissions"
+            role: "display"
             width: 100
+        }
+        OldControls.TableViewColumn {
+            title: "Description"
+            role: "display"
+            width: 300
         }
         model: config.packageModel
     }
