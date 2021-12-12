@@ -21,16 +21,18 @@ PROJECT_DIRECTORY=$(dirname -- $(dirname -- $(pwd)))
 # NUMBER_OF_PROCESSORS="$(nproc)"
 
 prepare() {
-    rsync \
-        --archive \
-        --human-readable \
-        --progress \
-        --update \
-        "$PROJECT_DIRECTORY/modules" \
-        "${srcdir}"
+    # rsync \
+    #     --archive \
+    #     --human-readable \
+    #     --progress \
+    #     --update \
+    #     "$PROJECT_DIRECTORY"/* \
+    #     "${srcdir}"
+    :
 }
 
 package() {
     (cd "$PROJECT_DIRECTORY" && install -Dm 755 settings.conf ${pkgdir}/usr/share/calamares/settings.conf)
     (cd "$PROJECT_DIRECTORY" && find modules -type f -exec install -Dm 755 "{}" "${pkgdir}/usr/share/calamares/{}" \;)
+    (cd "$PROJECT_DIRECTORY" && find qml -type f -exec install -Dm 755 "{}" "${pkgdir}/usr/share/calamares/{}" \;)
 }
