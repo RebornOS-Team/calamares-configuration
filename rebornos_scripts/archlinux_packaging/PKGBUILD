@@ -34,7 +34,7 @@ prepare() {
 package() {
     (
         cd "$PROJECT_DIRECTORY" && \
-        install -Dm 755 settings.conf ${pkgdir}/usr/share/calamares/settings.conf
+        install -Dm 755 settings.conf "${pkgdir}"/usr/share/calamares/settings.conf
     )
     (
         cd "$PROJECT_DIRECTORY" && \
