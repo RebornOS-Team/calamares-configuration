@@ -1,0 +1,52 @@
+# Maintainer: shivanandvp <shivanandvp@rebornos.org>
+
+pkgname=calamares-configuration
+pkgver=0.0.1
+pkgrel=1
+arch=('i686' 'x86_64' 'armv6h' 'armv7h')
+pkgdesc='Configuration for the Calamares installer.'
+license=('GPL3')
+depends=()
+optdepends=('calamares-branding'
+            'calamares-core')
+makedepends=('rsync') 
+provides=("${pkgname}")
+conflicts=("${pkgname}")
+source=()
+replaces=('calamares-configuration')
+
+PROJECT_DIRECTORY="$(dirname -- "$(dirname -- "$(pwd)")")"
+# BUILD_DIRECTORY="$PROJECT_DIRECTORY"/build
+# RESOURCE_DIRECTORY="$PROJECT_DIRECTORY"/rebornos_scripts/archlinux_packaging
+# NUMBER_OF_PROCESSORS="$(nproc)"
+
+prepare() {
+    # rsync \
+    #     --archive \
+    #     --human-readable \
+    #     --progress \
+    #     --update \
+    #     "$PROJECT_DIRECTORY"/* \
+    #     "${srcdir}"
+    :
+}
+
+package() {
+    (
+        cd "$PROJECT_DIRECTORY" && \
+        install -Dm 755 settings.conf ${pkgdir}/usr/share/calamares/settings.conf
+    )
+    (
+        cd "$PROJECT_DIRECTORY" && \
+        find modules \
+            -type f \
+            -exec \
+                install -Dm 755 "{}" "${pkgdir}/usr/share/calamares/{}" \;
+    )
+    (
+        cd "$PROJECT_DIRECTORY" && \
+        find qml \
+            -type f \
+            -exec install -Dm 755 "{}" "${pkgdir}/usr/share/calamares/{}" \;
+    )
+}
