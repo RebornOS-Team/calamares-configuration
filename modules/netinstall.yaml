@@ -26,6 +26,7 @@
   subgroups: 
     - name: Storage and Filesystems
       description: 
+      subgroups: 
         - name: Filesystems
           description: Support for common filesystems
           subgroups: 
