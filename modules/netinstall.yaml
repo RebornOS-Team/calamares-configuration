@@ -1,0 +1,66 @@
+- name: Storage and Filesystems
+  description: Support for various storage types and filesystems
+  hidden: false
+  selected: false
+  expanded: false
+  critical: false
+  subgroups:
+    - name: Filesystem
+      description: Support for various filesystems
+      subgroups: 
+            - name: exFAT
+              description: exFAT support
+              packages: 
+                - exfatprogs
+                - exfat-utils
+            - name: APFS
+              description: APFS support
+              packages: 
+                - linux-apfs-rw-dkms-git
+                - apfsprogs-git
+            - name: Bcachefs
+              description: Bcachefs support
+              packages: 
+                - linux-bcachefs-git
+                - bcachefs-tools-git
+            - name: ZFS
+              description: ZFS support
+              packages: 
+                - zfs-linux
+                - zfs-dkms
+                - zfs-utils
+      packages:           
+          - name: dosfstools
+            description: VFAT support
+          - name: e2fsprogs
+            description: ext3 and ext4 support
+          - name: ntfs-3g
+            description: NTFS support          
+          - name: btrfs-progs
+            description: BTRFS support
+          - name: xfs-tools
+            description: XFS support
+          - name: reiserfsprogs
+            description: ReiserFS support
+          - name: f2fs-tools
+            description: F2FS support
+          - name: hfsprogs
+            description: HFS and HFS+ support          
+          - name: jfsutils
+            description: JFS support
+          - name: nilfs-utils
+            description: NILFS2 support          
+          - name: udftools
+            description: UDF support
+          - name: reiser4progs
+            description: Reiser4 support
+
+- name: Development
+  description: Applications and tools for development of applications
+  hidden: false
+  selected: false
+  expanded: false
+  critical: false
+  packages:           
+    - name: base-devel
+      description: A group of packages commonly needed for development
