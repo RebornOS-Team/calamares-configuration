@@ -1,9 +1,28 @@
+- name: Installer Requirements
+  description: Required by the current version of the installer modules
+  hidden: false
+  selected: true
+  expanded: false
+  critical: true
+  immutable: true
+  packages: 
+    - name: mkinitcpio
+      description: A script to create the initial ramdisk. Required to re-run after configuring LVM, system encryption, or RAID
+    - name: grub
+      description: Bootloader required by the current installer version. Will be removed when bootloader is chosen and installed dynamically.
+    - name: os-prober
+      description: For detecting other operating systems
+    - name: dosfstools
+      description: VFAT support for os-prober to mount Windows partitions
+    - name: ntfs-3g
+      description: NTFS support for os-prober to mount Windows partitions
+
 - name: RebornOS Base
   description: Base RebornOS installation
   hidden: false
-  selected: false
+  selected: true
   expanded: false
-  critical: false
+  critical: true
   subgroups: 
     - name: Storage and Filesystems
       description: 
@@ -22,6 +41,9 @@
               description: VFAT support
     - name: Networking and Internet
       description:
+    - name: Utilities
+      description: Core Utilities
+
        
 - name: Storage and Filesystems
   description: 
@@ -171,14 +193,7 @@
           description:  	Git client with Hg and SVN support
         - name: sublime-merge
           description: Meet a new Git Client, from the makers of Sublime Text
-
   packages:           
     - name: base-devel
       description: A group of packages commonly used for development
     
-- name: Storage and Filesystems
-  description: 
-  hidden: false
-  selected: false
-  expanded: false
-  critical: false
