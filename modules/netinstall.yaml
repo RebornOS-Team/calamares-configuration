@@ -1,11 +1,36 @@
+- name: RebornOS Base
+  description: Base RebornOS installation
+  hidden: false
+  selected: false
+  expanded: false
+  critical: false
+  subgroups: 
+    - name: Storage and Filesystems
+      description: 
+        - name: Filesystems
+          description: Support for common filesystems
+          subgroups: 
+            - name: exFAT
+              description: exFAT support
+              packages: 
+                - exfatprogs
+                - exfat-utils
+          packages:          
+            - name: e2fsprogs
+              description: ext3 and ext4 support
+            - name: dosfstools
+              description: VFAT support
+    - name: Networking and Internet
+      description:
+       
 - name: Storage and Filesystems
-  description: Support for various storage types and filesystems
+  description: 
   hidden: false
   selected: false
   expanded: false
   critical: false
   subgroups:
-    - name: Filesystem
+    - name: Filesystems
       description: Support for various filesystems
       subgroups: 
             - name: exFAT
@@ -61,6 +86,99 @@
   selected: false
   expanded: false
   critical: false
+  subgroups: 
+    - name: Editors and IDEs
+      description: 
+      subgroups:
+        - name: VS Code
+          subgroups:
+            - name: Code
+              description: Open-source release built from the official code-oss repository
+              selected: false
+              packages:
+                - code
+                # - code-git
+            - name: VSCodium
+              description: A community-driven, freely-licensed binary distribution of VS Code
+              packages:
+                - vscodium-bin
+                # - vscodium
+                # - vscodium-git
+            - name: Visual Studio Code
+              description: Microsoft-branded binary release with telemetry
+              packages:
+                - visual-studio-code-bin
+                # - visual-studio-code-insiders-bin
+      packages:
+        - name: atom
+          description: A hackable text editor for the 21st Century
+        - name: sublime-text-4
+          description: The sophisticated text editor for code, markup and prose
+    - name: Scripting and Programming Languages
+      description: 
+      subgroups:
+        - name: Rust (Stable)
+          packages:
+            - rustup
+          post-install: /bin/sh -c \"rustup toolchain install stable && rustup default stable\"
+        - name: Rust (Beta)
+          packages:
+            - rustup
+          post-install: /bin/sh -c \"rustup toolchain install beta && rustup default beta\"
+        - name: Rust (Nightly)
+          packages:
+            - rustup
+          post-install: /bin/sh -c \"rustup toolchain install nightly && rustup default nightly\"
+        - name: Python 3
+          subgroups:
+            - name: Qt Bindings
+              subgroups:
+                - name: PySide (Official)
+                  packages: 
+                    - pyside2
+                    - pyside2-tools
+                    - pyside6
+                    - pyside6-tools  
+                - name: pyQt
+                  packages:
+                    - python-pyqt5            
+            - name: Gtk Bindings
+              packages: 
+                - python-gobject
+            - name: wxPython
+              packages: 
+                - python-wxpython
+          packages:
+            - python
+            - python-pip
+            - python-pipenv
+            - ipython
+            - jupyterlab
+            - jupyter-notebook
+            - anaconda
+    - name: Version Control
+      description: Version Control Systems (VCS)
+      packages:
+        - name: git
+          description: The fast distributed version control system
+        - name: subversion
+          description: A Modern Concurrent Version Control System
+        - name: gitkraken
+          description: The intuitive, fast, and beautiful cross-platform Git client
+        - name: git-cola
+          description: The highly caffeinated Git GUI
+        - name: smartgit
+          description:  	Git client with Hg and SVN support
+        - name: sublime-merge
+          description: Meet a new Git Client, from the makers of Sublime Text
+
   packages:           
     - name: base-devel
-      description: A group of packages commonly needed for development
+      description: A group of packages commonly used for development
+    
+- name: Storage and Filesystems
+  description: 
+  hidden: false
+  selected: false
+  expanded: false
+  critical: false
