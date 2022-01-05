@@ -10,6 +10,8 @@
       description: A script to create the initial ramdisk. Required to re-run after configuring LVM, system encryption, or RAID
     - name: grub
       description: Bootloader required by the current installer version. Will be removed when bootloader is chosen and installed dynamically.
+    - name: efibootmgr
+      description: Required by the installer to setup the bootloader
     - name: sed
       description: Stream editor required to substitute entries in /etc/default/grub
     - name: os-prober
