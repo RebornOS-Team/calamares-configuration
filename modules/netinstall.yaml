@@ -48,8 +48,7 @@
       description:
     - name: Utilities
       description: Core Utilities
-
-       
+      
 - name: Storage and Filesystems
   description: 
   hidden: false
