@@ -110,6 +110,7 @@
     # ------------
     - name: Webcam
     # ------------
+      expanded: false
       packages:        
         - name: cheese
           description: Take photos and videos with your webcam, with fun graphical effects
@@ -124,6 +125,7 @@
     # ----------------------
     - name: Screen Recording
     # ----------------------
+      expanded: false
       packages:
         - name: obs-studio
           description: Video recording and live streaming application
@@ -138,6 +140,7 @@
     # ----------------------
     - name: Video Conversion
     # ----------------------
+      expanded: false
       packages: 
         - name: handbrake
           description: Simple yet powerful video transcoder ideal for batch mkv/x264 ripping. GTK version
@@ -148,6 +151,7 @@
     # -------------------
     - name: Video Editing
     # -------------------
+      expanded: false
       packages:
         - name: shotcut
           description: Free, open source, cross-platform video editor
@@ -163,90 +167,43 @@
           description: Free video editor designed for simple cutting, filtering and encoding tasks
         - name: vidcutter
           description: Fast lossless media cutter + joiner w/ frame-accurate SmartCut options powered by mpv, FFmpeg via a sleek Qt5 GUI
-           
-- name: Storage
-  description: 
-  hidden: false
-  selected: false
-  expanded: false
-  critical: false
-  subgroups:
-    - name: Filesystems
-      description: Support for various filesystems
-      subgroups: 
-            - name: exFAT
-              description: exFAT support
-              packages: 
-                - exfatprogs
-                - exfat-utils
-            - name: APFS
-              description: APFS support
-              packages: 
-                - linux-apfs-rw-dkms-git
-                - apfsprogs-git
-            - name: Bcachefs
-              description: Bcachefs support
-              packages: 
-                - linux-bcachefs-git
-                - bcachefs-tools-git
-            - name: ZFS
-              description: ZFS support
-              packages: 
-                - zfs-linux
-                - zfs-dkms
-                - zfs-utils
-      packages:           
-          - name: dosfstools
-            description: VFAT support
-          - name: e2fsprogs
-            description: ext3 and ext4 support
-          - name: ntfs-3g
-            description: NTFS support          
-          - name: btrfs-progs
-            description: BTRFS support
-          - name: xfs-tools
-            description: XFS support
-          - name: reiserfsprogs
-            description: ReiserFS support
-          - name: f2fs-tools
-            description: F2FS support
-          - name: hfsprogs
-            description: HFS and HFS+ support          
-          - name: jfsutils
-            description: JFS support
-          - name: nilfs-utils
-            description: NILFS2 support          
-          - name: udftools
-            description: UDF support
-          - name: reiser4progs
-            description: Reiser4 support
-    - name: Partitioning
 
+# =================
 - name: Development
-  description: Applications and tools for development of applications
+# =================
+  description: Utilities for programming and application design
   hidden: false
   selected: false
-  expanded: false
+  expanded: true
   critical: false
-  subgroups: 
+  packages: 
+    - name: base-devel 
+      description: A group of essential packages commonly used for development
+  subgroups:
+    # ----------------------
     - name: Editors and IDEs
-      description: 
+    # ----------------------
+      expanded: false
       subgroups:
         - name: VS Code
+        # =============
           subgroups:
             - name: Code
+            # ----------
               description: Open-source release built from the official code-oss repository
               selected: false
               packages:
                 - code
                 # - code-git
             - name: VSCodium
+            # --------------
               description: A community-driven, freely-licensed binary distribution of VS Code
               packages:
                 - vscodium-bin
                 # - vscodium
                 # - vscodium-git
             - name: Visual Studio Code
+            # ------------------------
               description: Microsoft-branded binary release with telemetry
               packages:
                 - visual-studio-code-bin
@@ -256,38 +213,49 @@
           description: A hackable text editor for the 21st Century
         - name: sublime-text-4
           description: The sophisticated text editor for code, markup and prose
+    # -----------------------------------------
     - name: Scripting and Programming Languages
-      description: 
+    # -----------------------------------------
+      expanded: false
       subgroups:
         - name: Rust (Stable)
+        # ===================
           packages:
             - rustup
           post-install: /bin/sh -c \"rustup toolchain install stable && rustup default stable\"
         - name: Rust (Beta)
+        # ===================
           packages:
             - rustup
           post-install: /bin/sh -c \"rustup toolchain install beta && rustup default beta\"
         - name: Rust (Nightly)
+        # ===================
           packages:
             - rustup
           post-install: /bin/sh -c \"rustup toolchain install nightly && rustup default nightly\"
         - name: Python 3
+        # ===================
           subgroups:
             - name: Qt Bindings
+            # -----------------
               subgroups:
                 - name: PySide (Official)
+                # :::::::::::::::::::::::
                   packages: 
                     - pyside2
                     - pyside2-tools
                     - pyside6
                     - pyside6-tools  
                 - name: pyQt
+                # :::::::::::::::::::::::
                   packages:
                     - python-pyqt5            
             - name: Gtk Bindings
+            # -----------------
               packages: 
                 - python-gobject
             - name: wxPython
+            # -----------------
               packages: 
                 - python-wxpython
           packages:
@@ -298,8 +266,11 @@
             - jupyterlab
             - jupyter-notebook
             - anaconda
+    # ---------------------
     - name: Version Control
+    # ---------------------
       description: Version Control Systems (VCS)
+      expanded: false
       packages:
         - name: git
           description: The fast distributed version control system
@@ -313,7 +284,79 @@
           description:  	Git client with Hg and SVN support
         - name: sublime-merge
           description: Meet a new Git Client, from the makers of Sublime Text
-  packages:           
-    - name: base-devel
-      description: A group of packages commonly used for development
+
+# ====================
+- name: Administration
+# ====================
+  description: Tools for system administration
+  hidden: false
+  selected: false
+  expanded: true
+  critical: false
+  subgroups: 
+  # -------------
+  - name: Storage
+  # -------------
+    expanded: true
+    subgroups:
+      - name: Filesystems
+      # =================
+        description: Support for various filesystems
+        expanded: false
+        subgroups: 
+          - name: exFAT
+          # -----------
+            description: exFAT support
+            packages: 
+              - exfatprogs
+              - exfat-utils
+          - name: APFS
+          # ----------
+            description: APFS support
+            packages: 
+              - linux-apfs-rw-dkms-git
+              - apfsprogs-git
+          - name: Bcachefs
+          # -------------
+            description: Bcachefs support
+            packages: 
+              - linux-bcachefs-git
+              - bcachefs-tools-git
+          - name: ZFS
+          # ---------
+            description: ZFS support
+            packages: 
+              - zfs-linux
+              - zfs-dkms
+              - zfs-utils
+        packages:           
+            - name: dosfstools
+              description: VFAT support
+            - name: e2fsprogs
+              description: ext3 and ext4 support
+            - name: ntfs-3g
+              description: NTFS support          
+            - name: btrfs-progs
+              description: BTRFS support
+            - name: xfs-tools
+              description: XFS support
+            - name: reiserfsprogs
+              description: ReiserFS support
+            - name: f2fs-tools
+              description: F2FS support
+            - name: hfsprogs
+              description: HFS and HFS+ support          
+            - name: jfsutils
+              description: JFS support
+            - name: nilfs-utils
+              description: NILFS2 support          
+            - name: udftools
+              description: UDF support
+            - name: reiser4progs
+              description: Reiser4 support
+      - name: Partitioning
+      # ==================
+        expanded: false
+        
+
     
