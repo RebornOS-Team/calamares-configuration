@@ -1,5 +1,7 @@
+# ============================
 - name: Installer Requirements
-  description: Required by the current version of the installer modules
+# ============================
+  description: Required by the current installer
   hidden: false
   selected: true
   expanded: false
@@ -21,8 +23,10 @@
     - name: ntfs-3g
       description: NTFS support for os-prober to mount Windows partitions
 
+# ===================
 - name: RebornOS Base
-  description: Base RebornOS installation
+# ===================
+  description: Essential packages. Modify at your own risk
   hidden: false
   selected: true
   expanded: false
@@ -48,8 +52,119 @@
       description:
     - name: Utilities
       description: Core Utilities
-      
-- name: Storage and Filesystems
+
+# =========
+- name: Art
+# =========
+  description: Tools for your artistic pursuits
+  hidden: false
+  selected: false
+  expanded: true
+  critical: false
+  subgroups:
+    # ------------    
+    - name: Simple
+    # ------------
+      description: For MS-Paint-like uses
+      expanded: false
+      packages:
+        - name: drawing
+          description: Simple image editor
+        - name: kolourpaint
+          description: Free graphics editor similar to MS Paint
+        - name: mypaint
+          description: Free software graphics application for digital painters
+        - name: pinta 
+          description: Drawing and editing program modeled after Paint.NET
+    # ---------------------
+    - name: Raster Graphics
+    # ---------------------
+      description: Edit images made of pixels. For Adobe-Photoshop-like uses
+      expanded: false
+      packages: 
+        - name: krita
+          description: Digital painting and illustration software
+        - name: gimp
+          description: Image editing suite with a large number of plugins
+    # ---------------------
+    - name: Vector Graphics
+    # ---------------------
+      description: Edit images made of geometric shapes. For Zoom-able Diagrams or ClipArt
+      expanded: false
+      packages: 
+        - name: inkscape
+          description: Vector graphics editor with SVG support, similar to Adobe Illustrator
+
+# =================
+- name: Videography
+# =================
+  description: Tools for Youtubers, Twitch streamers and their ilk
+  hidden: false
+  selected: false
+  expanded: true
+  critical: false
+  packages: 
+    - name: ffmpeg 
+      description: Complete, cross-platform solution to record, convert and stream audio and video
+  subgroups:
+    # ------------
+    - name: Webcam
+    # ------------
+      packages:        
+        - name: cheese
+          description: Take photos and videos with your webcam, with fun graphical effects
+        - name: kamoso
+          description: Webcam recorder from the KDE community
+        - name: pantheon-camera
+          description: Camera app designed for elementary OS
+        - name: motion
+          description: Monitors video signals from many types of camera and can detect motion 
+        - name: v4l-utils
+          description: Configure webcam parameters like brightness and color       
+    # ----------------------
+    - name: Screen Recording
+    # ----------------------
+      packages:
+        - name: obs-studio
+          description: Video recording and live streaming application
+        - name: vokoscreen
+          description: Simple screencast GUI tool using GStreamer
+        - name: peek
+          description: Simple screencast tool that produces GIF, APNG, WebM or MP4 animations
+        - name: simplescreenrecorder
+          description: Feature-rich screen recorder written in C++/Qt5 that supports X11 and OpenGL
+        - name: menyoki
+          description: Screen{shot,cast} and perform ImageOps on the command line
+    # ----------------------
+    - name: Video Conversion
+    # ----------------------
+      packages: 
+        - name: handbrake
+          description: Simple yet powerful video transcoder ideal for batch mkv/x264 ripping. GTK version
+        - name: ciano
+          description: Simple multimedia file converter using FFmpeg and ImageMagick
+        - name: transmageddon
+          description: Simple python application for transcoding video into formats supported by GStreamer
+    # -------------------
+    - name: Video Editing
+    # -------------------
+      packages:
+        - name: shotcut
+          description: Free, open source, cross-platform video editor
+        - name: kdenlive
+          description: Non-linear video editor designed for basic to semi-professional work
+        - name: flowblade
+          description: Multitrack non-linear video editor released under GPL3 license
+        - name: openshot
+          description: Non-linear video editor based on MLT framework.
+        - name: pitivi
+          description: Free video editor with a beautiful and intuitive user interface, a clean codebase and a fantastic community
+        - name: avidemux-qt
+          description: Free video editor designed for simple cutting, filtering and encoding tasks
+        - name: vidcutter
+          description: Fast lossless media cutter + joiner w/ frame-accurate SmartCut options powered by mpv, FFmpeg via a sleek Qt5 GUI
+           
+- name: Storage
   description: 
   hidden: false
   selected: false
@@ -105,6 +220,7 @@
             description: UDF support
           - name: reiser4progs
             description: Reiser4 support
+    - name: Partitioning
 
 - name: Development
   description: Applications and tools for development of applications
