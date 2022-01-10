@@ -357,6 +357,23 @@
       - name: Partitioning
       # ==================
         expanded: false
+        subgroups: 
+          - name: Commandline
+            packages:
+              - fdisk
+              - parted
+              - cfdisk
+              - sfdisk            
+          - name: Graphical
+            packages:
+              - name: gparted
+                description: GUI frontend for GNU parted
+              - name: gnome-disk-utility
+                description: Default partitioning utility in Gnome 3
+              - name: partitionmanager
+                description: Default partitioning utility in KDE Plasma
+          
+
         
 
     
