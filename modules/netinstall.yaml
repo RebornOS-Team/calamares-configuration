@@ -8,8 +8,8 @@
   critical: true
   immutable: true
   packages: 
-    - name: paru-bin
-      description: For installing packages from the AUR
+    # - name: paru-bin
+    #   description: For installing packages from the AUR
     - name: mkinitcpio
       description: A script to create the initial ramdisk. Required to re-run after configuring LVM, system encryption, or RAID
     - name: grub
