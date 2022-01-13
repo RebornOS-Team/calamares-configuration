@@ -50,6 +50,8 @@
               description: VFAT support
     - name: Networking and Internet
       description:
+      packages: 
+        - networkmanager
     - name: Utilities
       description: Core Utilities
 
