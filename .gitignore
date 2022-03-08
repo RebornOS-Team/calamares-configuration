@@ -1,4 +1,4 @@
 # Packaging
-scripts/archlinux_packaging/**/pkg
-scripts/archlinux_packaging/**/src
-scripts/archlinux_packaging/**/*.pkg.tar.zst*
+scripts/packaging/**/pkg
+scripts/packaging/**/src
+scripts/packaging/**/*.pkg.tar.zst*
