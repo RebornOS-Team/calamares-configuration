@@ -78,105 +78,85 @@ Item {
             displayedEntrySelectedState: false
         }
     }
-    Rectangle {
-        id: page
-        color: "#f2f2f2"
+    ListView {
+        id: listView
         anchors.fill: parent
-        Column{
-            spacing: 10
-            anchors.topMargin: 10
-            anchors.fill: parent
-            Text {
-                anchors.leftMargin: 10
-                x: 10
-                id: description_text
-                wrapMode: Text.Wrap
-                text: "Please select the desktop environments to install. Not selecting one will give you a text console and not a graphical user interface. However, installing multiple desktop environments may interfere with each other and cause visual artifacts."
-                font.pixelSize: 14
-                width: parent.width - 20
-            }
-            ListView {
-                id: listView
-                anchors.left: parent.left
-                anchors.right: parent.right
-                height: parent.height - 100
-                clip: true
+        height: parent.height - 100
+        clip: true
+        spacing: 10
+        // boundsBehavior: Flickable.StopAtBounds
+        ScrollBar.vertical: ScrollBar {
+            active: hovered || pressed
+        }
+        model: displayedEntryModel
+        delegate: Rectangle {
+            id: rectangle
+            anchors.leftMargin: 10
+            anchors.rightMargin: 10
+            x: 10
+            //            height: 500
+            width: listView.width - 20
+            height: column.implicitHeight + 20
+            //                        Layout.fillHeight: true
+            //                        Layout.fillWidth: true
+            color: "#ffffff"
+            radius: 10
+            border.width: 0
+            Column{
+                id: column
                 spacing: 10
-                // boundsBehavior: Flickable.StopAtBounds
-                ScrollBar.vertical: ScrollBar {
-                    active: hovered || pressed
-                }
-                model: displayedEntryModel
-                delegate: Rectangle {
-                    id: rectangle
+                anchors.topMargin: 10
+                anchors.leftMargin: 10
+                anchors.rightMargin: 10
+                anchors.fill: parent
+                Text {
                     anchors.leftMargin: 10
-                    anchors.rightMargin: 10
-                    x: 10
-                    //            height: 500
-                    width: listView.width - 20
-                    height: column.implicitHeight + 20
-                    //                        Layout.fillHeight: true
-                    //                        Layout.fillWidth: true
-                    color: "#ffffff"
-                    radius: 10
-                    border.width: 0
-                    Column{
-                        id: column
-                        spacing: 10
-                        anchors.topMargin: 10
+                    width: parent.width - 30
+                    wrapMode: Text.Wrap
+                    text: displayedEntryName
+                    font.pixelSize: 16
+                    font.bold: true
+                }
+                Row{
+                    id: row
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    spacing: 10
+                    Image {
                         anchors.leftMargin: 10
+                        source: displayedEntryScreenshot
+                        fillMode: Image.PreserveAspectFit
+                        width: (parent.width - 30) / 3
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: {
+                                image_width = 1
+                                image_height = 1
+                                image_source = displayedEntryScreenshot
+                                popup.open()
+                            }
+                        }
+                    }
+                    Text {
+                        width: (parent.width - 30) * 2/3
                         anchors.rightMargin: 10
-                        anchors.fill: parent
-                        Text {
-                            anchors.leftMargin: 10
-                            width: parent.width - 30
-                            wrapMode: Text.Wrap
-                            text: displayedEntryName
-                            font.pixelSize: 16
-                            font.bold: true
-                        }
-                        Row{
-                            id: row
-                            anchors.left: parent.left
-                            anchors.right: parent.right
-                            spacing: 10
-                            Image {
-                                anchors.leftMargin: 10
-                                source: displayedEntryScreenshot
-                                fillMode: Image.PreserveAspectFit
-                                width: (parent.width - 30) / 3
-                                MouseArea {
-                                    anchors.fill: parent
-                                    onClicked: {
-                                        image_width = 1
-                                        image_height = 1
-                                        image_source = displayedEntryScreenshot
-                                        popup.open()
-                                    }
-                                }
-                            }
-                            Text {
-                                width: (parent.width - 30) * 2/3
-                                anchors.rightMargin: 10
-                                wrapMode: Text.Wrap
-                                text: displayedEntryDescription
-                                font.pixelSize: 14
-                            }
-                        }
-                        Switch {
-                            anchors.right: parent.right
-                            checked: displayedEntrySelectedState
-                            hoverEnabled: true
-                            // onCheckedChanged: {
-                            //     if ( checked ) {
-                            //         config.addSelection(config.displayedEntryIds[index])
-                            //     } else {
-                            //         config.removeSelection(config.displayedEntryIds[index])
-                            //     }
-                            // }
-                        }                        
+                        wrapMode: Text.Wrap
+                        text: displayedEntryDescription
+                        font.pixelSize: 14
                     }
                 }
+                Switch {
+                    anchors.right: parent.right
+                    checked: displayedEntrySelectedState
+                    hoverEnabled: true
+                    // onCheckedChanged: {
+                    //     if ( checked ) {
+                    //         config.addSelection(config.displayedEntryIds[index])
+                    //     } else {
+                    //         config.removeSelection(config.displayedEntryIds[index])
+                    //     }
+                    // }
+                }                        
             }
         }
     }
