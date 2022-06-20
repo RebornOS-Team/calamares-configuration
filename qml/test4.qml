@@ -14,35 +14,35 @@ Item {
         ListElement {
             displayedEntryName: "Gnome"
             displayedEntryDescription: "GNOME (GNU Network Object Model Environment, pronounced gah-NOHM) is a graphical user interface (GUI) and set of computer desktop applications for users of the Linux operating system"
-            displayedEntryScreenshot: "/media/DATA/Development/RebornOS Labs/calamares-branding/branding/rebornos/images/desktops/gnome.png"
+            displayedEntryScreenshot: "../branding/rebornos/images/desktops/gnome.png"
             // displayedEntryScreenshot: ""
             displayedEntrySelectedState: false
         }
         ListElement {
             displayedEntryName: "KDE Plasma"
             displayedEntryDescription: "KDE Plasma a graphical workspaces environment created by KDE primarily for Linux systems. The graphical interface was fully migrated to QML, which uses OpenGL for hardware acceleration, which resulted in better performance and reduced power consumption."
-            displayedEntryScreenshot: "/media/DATA/Development/RebornOS Labs/calamares-branding/branding/rebornos/images/desktops/plasma.png"
+            displayedEntryScreenshot: "../branding/rebornos/images/desktops/plasma.png"
             // displayedEntryScreenshot: ""
             displayedEntrySelectedState: false
         }
         ListElement {
             displayedEntryName: "Budgie"
             displayedEntryDescription: "Budgie is a desktop environment that uses GNOME technologies such as GTK (> 3.x) and is developed by the Solus project as well as by contributors from numerous communities such as Arch Linux, Manjaro, openSUSE Tumbleweed and Ubuntu Budgie. Budgie's design emphasizes simplicity, minimalism and elegance."
-            displayedEntryScreenshot: "/media/DATA/Development/RebornOS Labs/calamares-branding/branding/rebornos/images/desktops/budgie.png"
+            displayedEntryScreenshot: "../branding/rebornos/images/desktops/budgie.png"
             // displayedEntryScreenshot: ""
             displayedEntrySelectedState: false
         }
         ListElement {
             displayedEntryName: "Cinnamon"
             displayedEntryDescription: "This is cinnamon"
-            displayedEntryScreenshot: "/media/DATA/Development/RebornOS Labs/calamares-branding/branding/rebornos/images/desktops/cinnamon.png"
+            displayedEntryScreenshot: "../branding/rebornos/images/desktops/cinnamon.png"
             // displayedEntryScreenshot: ""
             displayedEntrySelectedState: false
         }
         ListElement {
             displayedEntryName: "Cutefish"
             displayedEntryDescription: "Cutefish desktop environment is an efficient, beautiful, and modern desktop environment with a focus on simple design to be suitable for most users."
-            displayedEntryScreenshot: "/media/DATA/Development/RebornOS Labs/calamares-branding/branding/rebornos/images/desktops/cutefish.png"
+            displayedEntryScreenshot: "../branding/rebornos/images/desktops/cutefish.png"
             // displayedEntryScreenshot: ""
             displayedEntrySelectedState: false
         }

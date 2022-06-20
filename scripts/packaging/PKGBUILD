@@ -7,8 +7,7 @@ arch=('i686' 'x86_64' 'armv6h' 'armv7h')
 pkgdesc='Configuration for the Calamares installer.'
 license=('GPL3')
 depends=('paru-bin')
-optdepends=('calamares-branding'
-            'calamares-core')
+optdepends=('calamares-core')
 makedepends=('rsync') 
 provides=("${pkgname}")
 conflicts=("${pkgname}")
