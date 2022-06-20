@@ -12,7 +12,7 @@ makedepends=('rsync')
 provides=("${pkgname}")
 conflicts=("${pkgname}")
 source=()
-replaces=('calamares-configuration')
+replaces=('calamares-branding')
 
 PROJECT_DIRECTORY="$(dirname -- "$(dirname -- "$(pwd)")")"
 # BUILD_DIRECTORY="$PROJECT_DIRECTORY"/build
