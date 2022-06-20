@@ -45,6 +45,13 @@ package() {
     )
     (
         cd "$PROJECT_DIRECTORY" && \
+        find branding \
+            -type f \
+            -exec \
+                install -Dm 755 "{}" "${pkgdir}/usr/share/calamares/{}" \;
+    )
+    (
+        cd "$PROJECT_DIRECTORY" && \
         find modules \
             -type f \
             -exec \
