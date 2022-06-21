@@ -125,7 +125,7 @@ strings:
     shortProductName:    RebornOS
     version:             2021.08.12
     shortVersion:        21.08.12
-    versionedName:       RebornOS GNU/Linux 2021.08.12
+    versionedName:       RebornOS 2021.08.12
     shortVersionedName:  RebornOS 21.08.12
     bootloaderEntryName: RebornOS
     productUrl:          https://www.rebornos.org/
