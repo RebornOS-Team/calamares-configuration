@@ -25,9 +25,9 @@
     - name: ntfs-3g
       description: NTFS support for os-prober to mount Windows partitions    
 
-# ===================
-- name: RebornOS Base
-# ===================
+# ===========================
+- name: RebornOS Minimal Base
+# ===========================
   description: Essential packages. Modify at your own risk
   hidden: false
   selected: true
@@ -56,6 +56,618 @@
         - networkmanager
     - name: Utilities
       description: Core Utilities
+    - name: RebornOS
+      description: Packages that make RebornOS what it is
+      packages: 
+        - rebornos-keyring
+        - rebornos-mirrorlist
+        - rebornos-os-release
+        - rebornos-logo
+        
+# =====================
+- name: RebornOS Extras
+# =====================
+  description: Additional offerings for your RebornOS installation
+  hidden: false
+  selected: false
+  expanded: false
+  critical: true
+  subgroups:
+    # -------------------    
+    - name: RebornOS Apps
+    # -------------------
+      description: In-house RebornOS apps to make your life easy as a user
+      selected: true
+      expanded: false
+      packages:         
+        - name: rebornos-fire
+          description: Our flagship app. Install desktops, display manager, kernels, and more!
+        - name: rebornos-welcome
+          description: To get you started with RebornOS
+        - name: refresh-mirrors
+          description: Script and one-click icon to refresh your mirrors
+
+# ============
+- name: Office
+# ============
+  description: Tools for office-related tasks
+  hidden: false
+  selected: false
+  expanded: false
+  critical: false
+  subgroups:
+    # -----------------    
+    - name: Full Suites
+    # -----------------
+      description: Full-featured suites for word processing, spreadsheets, presentations, and drawing
+      expanded: false
+      packages:
+        - name: libreoffice-fresh
+          description: (feature branch for new updates) Free power-packed Open Source personal productivity suite
+        - name: libreoffice-still
+          description: (maintenance branch for stability) Free power-packed Open Source personal productivity suite
+        - name: calligra
+          description: Actively developed fork of KOffice, the KDE office suite
+        - name: openoffice-bin
+          description: (AUR) Open-source office software suite for word processing, spreadsheets, presentations, graphics, databases and more
+        - name: freeoffice
+          description: (AUR) Microsoft Office-compatible proprietary office suite with a word processor, spreadsheet, and presentation graphics software
+        - name: onlyoffice-bin
+          description: (AUR) Office suite that combines text, spreadsheet and presentation editors
+        - name: wps-office
+          description: (AUR) Proprietary office productivity suite, previously known as Kingsoft Office
+        - name: yozo-office
+          description: (AUR) Proprietary office suite, compatible with MS Office
+    # -------------------
+    - name: Email Clients
+    # -------------------
+      packages:
+        - name: thunderbird
+          description: Feature-rich email client from Mozilla written in GTK
+        - name: seamonkey
+          description: Email client included in the SeaMonkey suite
+        - name: geary
+          description: Simple desktop mail client built in Vala        
+        - name: kube
+          description: Modern communication and collaboration client built with QtQuick
+        - name: evolution
+          description: Mature and feature-rich e-mail client that is part of the GNOME project. Part of gnome-extra
+        - name: kmail
+          description: Mature and feature-rich email client. Part of kde-pim
+        - name: balsa
+          description: Simple and light email client for GNOME
+        - name: claws-mail
+          description: Lightweight GTK-based email client and news reader
+    # ----------------------
+    - name: Document Viewers
+    # ----------------------
+      description: PDF, PS and DjVu viewing
+      expanded: false
+      packages: 
+        # - name: acroread
+        #   description: (AUR) Proprietary PDF file viewer offered by Adobe. Discontinued for Linux
+        - name: mupdf
+          description: Very fast EPUB, FictionBook, PDF, XPS and Comicbook viewer written in portable C. Features CJK font support and vim-like bindings
+        - name: zathura
+          description: Highly customizable and functional document viewer (plugin based). Supports PDF, DjVu, PostScript and Comicbook
+        - name: xreader
+          description: Document viewer part of the X-Apps Project. Supports DjVu, DVI, EPUB, PDF, PostScript, TIFF, XPS, Comicbook 
+        - name: xpdf
+          description: Viewer that can decode LZW and read encrypted PDFs
+        # - name: llpp
+        #   description: (AUR) Very fast PDF reader based off of MuPDF, that supports continuous page scrolling, bookmarking, and text search through the whole document
+        # - name: qpdfview
+        #   description: (AUR) Tabbed document viewer. It uses Poppler for PDF support, libspectre for PS support, DjVuLibre for DjVu support, CUPS for printing support and the Qt toolkit for its interface
+        # - name: sioyek-git
+        #   description: (AUR) Lightweight PDF viewer based on MuPDF with features designed for viewing research papers and technical books            
+        - name: evince
+          description: Document viewer for GNOME using GTK. Supports DjVu, DVI, EPS, PDF, PostScript, TIFF, XPS and Comicbook
+        - name: okular
+          description: Universal document viewer for KDE. Supports CHM, Comicbook, DjVu, DVI, EPUB, FictionBook, Mobipocket, ODT, PDF, Plucker, PostScript, TIFF and XPS
+        - name: atril
+          description: Simple multi-page document viewer for MATE. Supports DjVu, DVI, EPS, EPUB, PDF, PostScript, TIFF, XPS and Comicbook
+        - name: deepin-reader
+          description: A simple PDF and DjVu reader, supporting bookmarks, highlights and annotations      
+    # ---------------------
+    - name: Word Processing
+    # ---------------------
+      description: Create rich text documents (Like in MS Word)
+      expanded: false
+      packages: 
+        - name: abiword
+          description: Full-featured word processor
+        # - name: ted
+        #   description: (AUR) Easy to use GTK-based rich text processor (with footnote support)
+        # - name: wordgrinder
+        #   description: (AUR) Word processor for the console
+    # -------------------
+    - name: Presentations
+    # -------------------
+      description: Create presentations (Like in MS PowerPoint)
+      expanded: false
+      packages: 
+        - name: mdp
+          description: A command-line based markdown presentation tool
+        - name: spice-up
+          description: Create simple and beautiful presentations
+        # - name: sent
+        #   description: (AUR) Simple plaintext presentation tool
+        # - name: sozi
+        #   description: (AUR) Zooming presentation editor and player. Based on the Electron platform
+    # -------------------
+    - name: Spreadsheets
+    # -------------------
+      description: Create spreadsheets (Like in MS Excel)
+      expanded: false
+      packages: 
+        - name: gnumeric
+          description: Spreadsheet program for the GNOME desktop
+        - name: sc
+          description: Curses-based lightweight spreadsheet  
+        # - name: pyspread
+        #   description: (AUR) A non-traditional spreadsheet application that is based on and written in the programming language Python
+        # - name: sc-im
+        #   description: (AUR) Spreadsheet program based on sc
+    # ------------------------
+    - name: Desktop Publishing
+    # ------------------------
+      description: 
+      expanded: false
+      packages: 
+        - name: gLabels
+          description: Program for creating labels, business cards and media covers
+        - name: scribus
+          description: Desktop publishing program. Uses hyphen and its language packs for hyphenation  
+
+# ===============================
+- name: Liesure and Entertainment
+# ===============================
+  description: 
+  hidden: false
+  selected: false
+  expanded: false
+  critical: false
+  subgroups:
+    # --------------
+    - name: Browsers
+    # --------------
+      description: Browse the internet.
+      expanded: false
+      selected: false
+      packages:
+        - name: firefox
+          description: Extensible browser from Mozilla based on Gecko with fast rendering
+        - name: chromium
+          description: The open source project behind Google Chrome developed by Google 
+        # - name: google-chrome
+        #   description: (AUR) Proprietary web browser developed by Google
+        - name: vivaldi
+          description: An advanced proprietary browser made with the power user in mind
+        # - name: brave-bin
+        #   description: (AUR) Web browser with builtin ad- and tracker blocking
+        - name: opera
+          description: Proprietary browser developed by Opera Software
+        - name: torbrowser-launcher
+          description: Securely and easily download, verify, install, and launch Tor Browser, a fork of Firefox ESR
+        - name: epiphany
+          description: Browser which uses the WebKitGTK rendering engine, part of gnome
+        - name: konqueror
+          description: Web browser based on Qt toolkit and Qt WebEngine (or KHTML layout engine), part of kde-network
+        - name: midori
+          description: Lightweight web browser based on GTK and WebKit
+        - name: min
+          description: A fast, minimal browser that protects your privacy. It includes an interface designed to minimize distractions
+        - name: falkon
+          description: Web browser based on QtWebEngine, written in Qt framework
+        - name: luakit
+          description: Fast, small, webkit based browser framework extensible by Lua
+        - name: eolie
+          description: Simple web browser for GNOME. 
+
+    # ------------
+    - name: Gaming
+    # ------------
+      description: Play games!
+      selected: false
+      expanded: false
+      packages: 
+        - name: wine
+          description: A compatibility layer capable of running Microsoft Windows games and applications
+        - name: wine-staging 
+          description: a patched version of Wine, which contains bug fixes and features that have not been integrated into the stable or development branch yet
+        # - name: playonlinux
+        #   description: (AUR) Graphical prefix manager for Wine
+        # - name: pywinery
+        #   description: (AUR) Simple graphical prefix manager for Wine
+        # - name: q4wine-git
+        #   description: (AUR) Graphical prefix manager for Wine. Can export Qt themes into the Wine configuration for better integration
+        # - name: proton
+        #   description: (AUR) Compatibility tool made for Steam based on Wine and additional components
+        # - name: bottles
+        #   description: (AUR) Open-Source wine and proton prefix manager. Run windows software and games
+        # - name: play.it
+        #   description: (AUR) Automates the build of native packages. Also supports Wine, DOSBox and ScummVM games
+        - name: wine-gecko
+          description: Wine's built-in replacement for Microsoft's Internet Explorer
+        - name: wine-mono
+          description: Wine's built-in replacement for Microsoft's .NET Framework
+        # - name: crossover
+        #   description: (AUR) Paid, commercialized version of Wine which provides more comprehensive end-user support
+      subgroups: 
+        - name: Stores
+        # ============
+          packages:        
+            - name: lutris
+              description: Open gaming platform for Linux for GOG, Steam, Battle.net, Origin, Uplay and many other sources
+            - name: steam
+              description: Digital distribution and communications platform developed by Valve 
+            # - name: athenaeum-git
+            #   description: (AUR) A libre replacement to Steam        
+            # - name: heroic-games-launcher-bin
+            #   description: (AUR) A GUI for legendary, an open-source alternative for the Epic Games Launcher
+            # - name: legendary
+            #   description: (AUR) A free and open-source replacement for the Epic Games Launcher
+            # - name: minigalaxy
+            #   description: "(AUR) Client for the DRM-free game store: GOG"
+            # - name: itch-setup-bin
+            #   description: (AUR) Indie game store
+        - name: Games
+        # ===========
+          expanded: false
+          selected: false 
+          subgroups:
+            - name: Action and adventure
+            # --------------------------
+              expanded: false
+              selected: false
+              packages:
+                - name: astromenace
+                  description: Modern 3D scrolling space shooter with ship upgrade possibilities
+                - name: bass
+                  description: Point-and-click science fiction thriller set in a bleak vision of the future
+                - name: blobwars
+                  description: 2D action-adventure game with various weapons and missions
+                - name: kobodeluxe
+                  description: An enhanced version of Akira Higuchi's game XKobo, an addictive space shoot'em up
+                - name: kollision
+                  description: Moving a ball to avoid other balls
+                - name: kspaceduel
+                  description: Destroy opponents satellite and control own one to keep it orbiting
+                # - name: minecraft-launcher
+                #   description: (AUR) Java based sandbox game
+                # - name: neverball
+                #   description: (AUR) 3D game to guide a ball through a maze
+                # - name: rune
+                #   description: (AUR) 3rd person Adventure Hack'n Slay using Unreal Engine
+                - name: uqm
+                  description: a port of Star Control 2
+                # - name: airshipper
+                #   description: (AUR) Veloren is an open-world, open-source multiplayer voxel RPG
+            - name: Arcade
+            # ------------
+              expanded: false
+              selected: false
+              packages:
+                - name: bomber
+                  description: A 2D game with a goal by hitting targets with bombs before their plane crashes into them
+                - name: chromium-bsu
+                  description: Fast paced, arcade-style, top-scrolling space shooter
+                - name: granatier
+                  description: A clone of Bomberman
+                - name: hedgewars
+                  description: Yet another Worms clone, considered to be better than its predecessor by many
+                - name: kapman
+                  description: A clone of PacMan
+                - name: kbreakout
+                  description: Breakout-style game
+                - name: lbreakout2
+                  description: Breakout-style arcade game in the manner of Arkanoid
+                - name: kbounce
+                  description: Building walls to limit amount of space occupied by two balls bouncing off the walls
+                - name: ksnakeduel
+                  description: Snake-like game for 2 players which compete to survive longer than the opponent
+                - name: ltris
+                  description: Arcade version of Tetris
+                - name: mari0
+                  description: The Mario game with Portal gun mechanics
+                - name: quadrapassel
+                  description: A Tetris remake for GNOME
+                - name: teeworlds
+                  description: Fast-paced 2D multiplayer shooter
+            - name: Casual
+            # ------------
+              expanded: false
+              selected: false
+              packages:
+                - name: aisleriot
+                  description: A collection of solitaire card games
+                - name: bsd-games
+                  description: Collection of classic text games distributed with *BSD
+                - name: kajongg
+                  description: An implementation of Mahjong for 4 player
+                - name: kpat
+                  description: A set of solitarire card games
+                - name: ksquares
+                  description: A dots-and-boxes game for two players
+                - name: lskat
+                  description: A variation of Skat card game for two players
+            - name: Chess
+            # ------------
+              expanded: false
+              selected: false
+              packages:
+                - name: gnuchess
+                  description: One of the oldest computer chess programs for Unix-based computers
+                - name: xboard
+                  description: Graphical user interface that supports many chess variants and serves as a fronted for chess services such as engines
+                - name: knights
+                  description: Chess board by KDE with XBoard protocol support
+                - name: pychess
+                  description: An advanced chess client for linux following the GNOME Human Interface Guidelines
+                - name: gnome-chess
+                  description: A 2D chess game which can use third party chess engines
+            - name: Education
+            # ---------------
+              expanded: false
+              selected: false
+              packages: 
+                - name: artikulate
+                  description: Pronunciation trainer that helps improving and perfecting a learner's pronunciation skills for a foreign language
+                - name: blinken
+                  description: Sequence-remembering game for training memory
+                - name: gcompris-qt
+                  description: Educational software suite comprising of numerous activities for children aged 2 to 10
+                - name: kanagram
+                  description: Letter order game
+                - name: kbruch
+                  description: Small program to practice calculating with fractions and percentages
+                - name: kgeography
+                  description: Geography learning tool, which allows you to learn about the political divisions of some countries
+                - name: khangman
+                  description: Hangman game
+                - name: klettres
+                  description: Help the user to learn alphabet in a new language and then to learn to read simple syllables
+                - name: minuet
+                  description: Software for music education
+            - name: MMO
+            # ---------
+              expanded: false
+              selected: false
+              packages: 
+                - name: manaplus
+                  description: Serious effort to create an innovative free and open source MMORPG
+            - name: Platformer
+            # ----------------
+              expanded: false
+              selected: false
+              packages: 
+                - name: frogatto
+                  description: Platformer with adventure elements
+                - name: kgoldrunner
+                  description: A platform game with the goal of collecting gold
+                - name: supertux
+                  description: Mario-style game featuring Tux
+            - name: Puzzle
+            # ------------
+              expanded: false
+              selected: false
+              packages: 
+                - name: 
+                  description: 
+            - name: Racing
+            # ------------
+              expanded: false
+              selected: false
+              packages: 
+                - name: 
+                  description: 
+            - name: Rogue-like
+            # ----------------
+              expanded: false
+              selected: false
+              packages: 
+                - name: 
+                  description:
+            - name: Role-playing games (RPG)
+            # ------------------------------
+              expanded: false
+              selected: false
+              packages: 
+                - name: 
+                  description:  
+            - name: Shooters (FPS, third person)
+            # ----------------------------------
+              expanded: false
+              selected: false
+              packages: 
+                - name: 
+                  description:     
+            - name: Simulation
+            # ----------------
+              expanded: false
+              selected: false
+              packages: 
+                - name: 
+                  description:    
+            - name: Strategy
+            # --------------
+              expanded: false
+              selected: false
+              packages: 
+                - name: 
+                  description:  
+            - name: Turn based
+            # ----------------
+              expanded: false
+              selected: false
+              packages: 
+                - name: 
+                  description: 
+            - name: Tycoon/management
+            # -----------------------
+              expanded: false
+              selected: false
+              packages: 
+                - name: 
+                  description: 
+
+    # -----------------------
+    - name: Instant Messaging
+    # -----------------------
+      description: Apps for messaging and chatting
+      expanded: false
+      selected: false
+      subgroups:
+        - name: IRC Clients
+        # ===================
+          description: Clients for Internet Relay Chat (IRC)
+          packages:
+            - name: hexchat
+              description: Fork of XChat for Linux and Windows
+            - name: polari
+              description: Simple IRC client by the GNOME project
+            - name: quassel-monolithic
+              description: Modern, cross-platform, distributed IRC client
+            - name: kvirc
+              description: Qt-based IRC client featuring extensive themes support
+            - name: konversation
+              description: Qt-based IRC client for the KDE desktop
+        - name: Matrix Clients
+        # ===================
+          description: Clients for Matrix, a decentralised conversation store
+          packages:
+            - name: element-desktop
+              description: Glossy Matrix client with an emphasis on performance and usability
+            - name: neochat
+              description: KDE client for the Matrix protocol
+            - name: fractal
+              description: Matrix client for GNOME written in Rust              
+      packages: 
+        - name: pidgin
+          description: Multi-protocol instant messaging client
+        - name: telegram-desktop
+          description: Official Telegram Desktop client        
+        - name: telepathy-kde-meta
+          description: KDE instant messaging client using the Telepathy framework. Meant as a replacement for Kopete
+        - name: kopete
+          description: User-friendly IM supporting Bonjour, Gadu-Gadu, GroupWise, ICQ, XMPP
+        
+    # -------------------
+    - name: Video Players
+    # -------------------
+      expanded: false
+      selected: false
+      packages:
+        - name: vlc
+          description: Middleweight video player with support for a wide variety of audio and video formats
+        - name: mpv
+          description: Movie player based on MPlayer and mplayer2
+        - name: smplayer
+          description: Qt multimedia player with extra features (CSS themes, YouTube integration, etc.) based on mpv
+        - name: celluloid
+          description: Simple GTK frontend for mpv, formerly GNOME MPV
+        - name: parole
+          description: Modern media player based on the GStreamer framework
+        - name: totem
+          description: Media player (audio and video) for the GNOME desktop that uses GStreamer        
+        - name: gnome-mplayer
+          description: Simple GTK-based GUI for MPlayer
+        - name: kodi
+          description: Media player and entertainment hub for digital media
+        - name: glide
+          description: Simple and minimalistic media player relying on GStreamer for the multimedia support and GTK for the user interface
+        - name: maui-clip
+          description: Video player and collection manager utilizing mpv as the backend
+        - name: mplayer
+          description: Video player that supports a complete and versatile array of video and audio formats
+    
+    # -------------------------
+    - name: Audio/Music Players
+    # -------------------------
+      expanded: false
+      selected: false
+      packages:
+        - name: rhythmbox
+          description: GTK clone of iTunes, used by default in GNOME
+        - name: strawberry
+          description: Fork of Clementine aimed at audio enthusiasts and music collectors        
+        - name: clementine
+          description: Amarok 1.4 clone, ported to Qt5
+        - name: gnome-music
+          description: Aims to combine an elegant and immersive browsing experience with simple and straightforward controls
+        - name: lollypop
+          description: A GNOME music player
+        - name: quodlibet
+          description: Audio player written with GTK, Python and GStreamer with support for regular expressions in playlists
+        - name: pragha
+          description: A lightweight two-panel GTK music manager written in C
+
+    # -------------------
+    - name: Image Viewers      
+    # -------------------
+      expanded: false
+      selected: false
+      packages:
+        - name: eog
+          description: Image viewing and cataloging program, which is a part of the GNOME desktop environment 
+        - name: gwenview
+          description: Fast and easy to use image viewer for the KDE desktop
+        - name: gthumb
+          description: Image viewer and browser for the GNOME desktop     
+        - name: mirage
+          description: (AUR) PyGTK image viewer featuring support for crop and resize, custom actions and a thumbnail panel
+        - name: digikam
+          description:  KDE-based image organizer with built-in editing features via a plugin architecture
+        - name: shotwell
+          description: A digital photo organizer designed for the GNOME desktop environment
+        - name: gnome-photos
+          description: Access, organize, and share your photos on GNOME
+        - name: kphotoalbum
+          description: Digital image cataloging software that supports annotation, browsing, searching and viewing of digital images and videos
+    
+    # ---------------------
+    - name: Music Streaming
+    # ---------------------
+      packages:
+        - name: pianobar
+          description: Console-based frontend for the online radio Pandora 
+        # - name: gnome-radio 
+        #   description: (AUR) Easily find live radio programs based on geographical location of radio broadcasters on the Internet
+        # - name: goodvibes
+        #   description: (AUR) Lightweight internet radio player
+        - name: spotify-launcher
+          description: Manages a spotify installation in your home folder from the official spotify release server
+        # - name: spotify
+        #   description: (AUR) Proprietary music streaming service (requires a free account)
+        # - name: gpmdp
+        #   description: (AUR) Beautiful cross platform desktop player for Google Play Music. Based on the Electron platform
+        # - name: cider
+        #   description: (AUR) An open source and community oriented Apple Music client for Windows, Linux, macOS, and more
+        # - name: mellowplayer
+        #   description: (AUR) A free, open source and cross-platform Qt-based desktop application that runs web-based music streaming services in its own window and provides integration with your desktop
+        # - name: nuclear-player-bin
+        #   description: (AUR) Modern music player focused on streaming from free sources
+
+    # -------------------
+    - name: Ebook Readers
+    # -------------------
+      packages:
+        - name: calibre
+          description: E-book library management application that can also edit EPUB files, convert between different formats and sync with a variety of e-book readers
+        - name: fbreader
+          description: E-book viewer with many supported formats such as EPUB, FictionBook, HTML, plucker, PalmDoc, zTxt, TCR, CHM, RTF, OEB, Mobipocket (non-DRM) and TXT
+        - name: okular
+          description: Open-source and cross-platform document viewer developed by KDE
+        - name: gnome-books
+          description: E-book manager application for GNOME with EPUB, Mobipocket, FictionBook, DjVu and Comicbook support
+        - name: foliate
+          description: Simple and modern GTK eBook reader. Supports EPUB, Mobipocket, Kindle, FictionBook, and Comicbook formats
+        - name: coolreader
+          description: E-book viewer with many supported formats such as EPUB (non-DRM), FictionBook, TXT, RTF, HTML, CHM and TCR
+        - name: bookworm
+          description: Simple, focused e-book reader for Elementary OS with EPUB, PDF, Mobipocket and Comicbook support
+        - name: sigil
+          description: WYSIWYG EPUB e-book editor
 
 # =========
 - name: Art
@@ -63,7 +675,7 @@
   description: Tools for your artistic pursuits
   hidden: false
   selected: false
-  expanded: true
+  expanded: false
   critical: false
   subgroups:
     # ------------    
@@ -99,13 +711,13 @@
         - name: inkscape
           description: Vector graphics editor with SVG support, similar to Adobe Illustrator
 
-# =================
-- name: Videography
-# =================
+# ======================
+- name: Media Production
+# ======================
   description: Tools for Youtubers, Twitch streamers and their ilk
   hidden: false
   selected: false
-  expanded: true
+  expanded: false
   critical: false
   packages: 
     - name: ffmpeg 
@@ -171,6 +783,13 @@
           description: Free video editor designed for simple cutting, filtering and encoding tasks
         - name: vidcutter
           description: Fast lossless media cutter + joiner w/ frame-accurate SmartCut options powered by mpv, FFmpeg via a sleek Qt5 GUI
+    # -------------------
+    - name: Audio Editing
+    # -------------------
+      expanded: false
+      packages:
+        - name: 
+          description:   
 
 # =================
 - name: Development
@@ -178,45 +797,46 @@
   description: Utilities for programming and application design
   hidden: false
   selected: false
-  expanded: true
+  expanded: false
   critical: false
   packages: 
     - name: base-devel 
       description: A group of essential packages commonly used for development
   subgroups:
-    # ----------------------
-    - name: Editors and IDEs
-    # ----------------------
+    # --------------------------------
+    - name: Graphical editors and IDEs
+    # --------------------------------
       expanded: false
-      subgroups:
-        - name: VS Code
-        # =============
-          subgroups:
-            - name: Code
-            # ----------
-              description: Open-source release built from the official code-oss repository
-              selected: false
-              packages:
-                - code
-                # - code-git
-            - name: VSCodium
-            # --------------
-              description: A community-driven, freely-licensed binary distribution of VS Code
-              packages:
-                - vscodium-bin
-                # - vscodium
-                # - vscodium-git
-            - name: Visual Studio Code
-            # ------------------------
-              description: Microsoft-branded binary release with telemetry
-              packages:
-                - visual-studio-code-bin
-                # - visual-studio-code-insiders-bin
+      selected: false
       packages:
-        - name: atom
-          description: A hackable text editor for the 21st Century
+        - name: code
+          description: Open-source release of Visual Studio Code built from the official code-oss repository
         - name: sublime-text-4
           description: The sophisticated text editor for code, markup and prose
+        - name: qtcreator
+          description: Lightweight, cross-platform integrated development environment
+        - name: kate
+          description: (KDE) A modern text editor built on the KDE Frameworks and Qt
+        - name: geany
+          description: (Gnome) A powerful, stable and lightweight programmer's text editor
+    # ------------------------------
+    - name: Console editors and IDEs
+    # ------------------------------
+      expanded: false
+      selected: false
+      packages:
+        - name: nano
+          description: Pico editor clone with enhancements
+        - name: neovim
+          description: Fork of Vim aiming to improve user experience, plugins, and GUIs
+        - name: helix
+          description: A post-modern modal text editor written in Rust
+        - name: vim
+          description: Vi Improved, a highly configurable, improved version of the vi text editor
+        - name: emacs
+          description: The extensible, customizable, self-documenting real-time display editor
+        - name: vi
+          description: The original ex/vi text editor
     # -----------------------------------------
     - name: Scripting and Programming Languages
     # -----------------------------------------
@@ -224,19 +844,34 @@
       subgroups:
         - name: Rust (Stable)
         # ===================
-          packages:
-            - rustup
-          post-install: /bin/sh -c \"rustup toolchain install stable && rustup default stable\"
+          subgroups:
+            - name: Rust Stable Default
+            # -------------------------
+              hidden: true
+              selected: true
+              packages:
+                - rustup
+              post-install: /bin/sh -c \"rustup toolchain install stable && rustup default stable\"
         - name: Rust (Beta)
-        # ===================
-          packages:
-            - rustup
-          post-install: /bin/sh -c \"rustup toolchain install beta && rustup default beta\"
+        # =================
+          subgroups:
+            - name: Rust Beta Default
+            # -----------------------
+              hidden: true
+              selected: true
+              packages:
+                - rustup
+              post-install: /bin/sh -c \"rustup toolchain install beta && rustup default beta\"
         - name: Rust (Nightly)
         # ===================
-          packages:
-            - rustup
-          post-install: /bin/sh -c \"rustup toolchain install nightly && rustup default nightly\"
+          subgroups:
+            - name: Rust Nightly Default
+            # --------------------------
+              hidden: true
+              selected: true
+              packages:
+                - rustup
+              post-install: /bin/sh -c \"rustup toolchain install nightly && rustup default nightly\"
         - name: Python 3
         # ===================
           subgroups:
@@ -263,13 +898,57 @@
               packages: 
                 - python-wxpython
           packages:
-            - python
-            - python-pip
-            - python-pipenv
-            - ipython
-            - jupyterlab
-            - jupyter-notebook
-            - anaconda
+            - name: python
+              description: Next generation of the python high-level scripting language
+            - name: python-pip
+              description: The PyPA recommended tool for installing Python packages
+            - name: python-pipenv
+              description: Sacred Marriage of Pipfile, Pip, & Virtualenv
+            - name: ipython
+              description: An enhanced Interactive Python shell
+            - name: jupyterlab
+              description: JupyterLab computational environment
+            - name: jupyter-notebook
+              description: The language-agnostic HTML notebook application for Project Jupyter
+        - name: C++
+        # =========
+          packages:
+            - name: gcc
+              description: Compiler; The GNU Compiler Collection - C and C++ frontends
+            - name: clang
+              description: Compiler; C language family frontend for LLVM
+            - name: cmake
+              description: A cross-platform open-source make system
+            - name: extra-cmake-modules
+              description: Extra modules and scripts for CMake
+            - name: llvm
+              description: Collection of modular and reusable compiler and toolchain technologies
+        - name: JavaScript
+        # ================
+          packages:
+            - name: nodejs 
+              description: Evented I/O for V8 javascript
+            - name: nodejs-lts-fermium
+              description: "Evented I/O for V8 javascript (LTS release: Fermium)"
+            - name: nodejs-lts-gallium
+              description: "Evented I/O for V8 javascript (LTS release: Gallium)"
+            - name: npm
+              description: A package manager for javascript
+            - name: electron
+              description: Build cross platform desktop apps with web technologies
+            - name: electron12
+              description: Build cross platform desktop apps with web technologies
+            - name: electron13
+              description: Build cross platform desktop apps with web technologies
+            - name: electron14
+              description: Build cross platform desktop apps with web technologies
+            - name: electron15
+              description: Build cross platform desktop apps with web technologies
+            - name: electron16
+              description: Build cross platform desktop apps with web technologies
+            - name: electron17
+              description: Build cross platform desktop apps with web technologies
+
     # ---------------------
     - name: Version Control
     # ---------------------
@@ -278,24 +957,26 @@
       packages:
         - name: git
           description: The fast distributed version control system
-        - name: subversion
-          description: A Modern Concurrent Version Control System
         - name: gitkraken
           description: The intuitive, fast, and beautiful cross-platform Git client
         - name: git-cola
           description: The highly caffeinated Git GUI
+        - name: git-lfs
+          description: Git extension for versioning large files
         - name: smartgit
           description:  	Git client with Hg and SVN support
         - name: sublime-merge
           description: Meet a new Git Client, from the makers of Sublime Text
-
+        - name: subversion
+          description: A Modern Concurrent Version Control System      
+      
 # ====================
 - name: Administration
 # ====================
   description: Tools for system administration
   hidden: false
   selected: false
-  expanded: true
+  expanded: false
   critical: false
   subgroups: 
   # -------------
