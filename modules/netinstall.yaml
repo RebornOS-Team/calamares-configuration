@@ -10,6 +10,8 @@
   packages: 
     # - name: paru-bin
     #   description: For installing packages from the AUR
+    - name: linux
+      description: The latest Linux kernel in the Arch Linux repository
     - name: mkinitcpio
       description: A script to create the initial ramdisk. Required to re-run after configuring LVM, system encryption, or RAID
     - name: grub
@@ -979,10 +981,28 @@
   expanded: false
   critical: false
   subgroups: 
+
+  # -------------------------
+  - name: Kernels and Headers
+  # -------------------------
+    description: Other variations of the Linux kernel
+    expanded: true
+    packages: 
+      - name: linux-headers
+        description: Headers and scripts for building modules for the Linux kernel
+      - name: linux-lts
+        description: The more stable long-term-support kernel
+      - name: linux-lts-headers
+        description: Headers and scripts for building modules for the LTS Linux kernel
+      - name: linux-zen
+        description: The Linux Zen kernel and modules
+      - name: linux-zen-headers
+        description: Headers and scripts for building modules for the Linux Zen kernel
+
   # -------------
   - name: Storage
   # -------------
-    expanded: true
+    expanded: false
     subgroups:
       - name: Filesystems
       # =================
