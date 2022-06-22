@@ -39,28 +39,28 @@ package() {
             -type f \
             -name '*.conf' \
             -exec \
-                install -Dm 755 "{}" "${pkgdir}/usr/share/calamares/{}" \;
-        install -Dm 755 settings_online.conf "${pkgdir}"/usr/share/calamares/settings.conf # Start off by copying online settings as the default
+                install -Dm 755 "{}" "${pkgdir}/etc/calamares/{}" \;
+        install -Dm 755 settings_online.conf "${pkgdir}"/etc/calamares/settings.conf # Start off by copying online settings as the default
     )
     (
         cd "$PROJECT_DIRECTORY" && \
         find branding \
             -type f \
             -exec \
-                install -Dm 755 "{}" "${pkgdir}/usr/share/calamares/{}" \;
+                install -Dm 755 "{}" "${pkgdir}/etc/calamares/{}" \;
     )
     (
         cd "$PROJECT_DIRECTORY" && \
         find modules \
             -type f \
             -exec \
-                install -Dm 755 "{}" "${pkgdir}/usr/share/calamares/{}" \;
+                install -Dm 755 "{}" "${pkgdir}/etc/calamares/{}" \;
     )
     (
         cd "$PROJECT_DIRECTORY" && \
         find qml \
             -type f \
             -exec \
-                install -Dm 755 "{}" "${pkgdir}/usr/share/calamares/{}" \;
+                install -Dm 755 "{}" "${pkgdir}/etc/calamares/{}" \;
     )
 }
