@@ -16,46 +16,70 @@ Presentation
     id: presentation
 
     function nextSlide() {
-        console.log("QML Component (default slideshow) Next slide");
+        console.log("QML Component (default slideshow) changing to slide ", presentation.currentSlide + 1);
         presentation.goToNextSlide();
     }
 
     Timer {
         id: advanceTimer
-        interval: 1000
+        interval: 10000
         running: presentation.activatedInCalamares
         repeat: true
         onTriggered: nextSlide()
     }
 
     Slide {
-
         Image {
-            id: background
-            source: "squid.png"
+            id: slide_1
+            source: "images/slides/slide_1.jpg"
             fillMode: Image.PreserveAspectFit
             anchors.fill: parent
         }
-        Text {
-            anchors.horizontalCenter: background.horizontalCenter
-            anchors.top: background.bottom
-            text: "This is a customizable QML slideshow.<br/>"+
-                  "Distributions should provide their own slideshow and list it in <br/>"+
-                  "their custom branding.desc file.<br/>"+
-                  "To create a Calamares presentation in QML, import calamares.slideshow,<br/>"+
-                  "define a Presentation element with as many Slide elements as needed."
-            wrapMode: Text.WordWrap
-            width: presentation.width
-            horizontalAlignment: Text.Center
+    }
+
+    Slide {
+        Image {
+            id: slide_2
+            source: "images/slides/slide_2.jpg"
+            fillMode: Image.PreserveAspectFit
+            anchors.fill: parent
         }
     }
 
     Slide {
-        centeredText: qsTr("This is a second Slide element.")
+        Image {
+            id: slide_3
+            source: "images/slides/slide_3.jpg"
+            fillMode: Image.PreserveAspectFit
+            anchors.fill: parent
+        }
     }
 
     Slide {
-        centeredText: qsTr("This is a third Slide element.")
+        Image {
+            id: slide_4
+            source: "images/slides/slide_4.jpg"
+            fillMode: Image.PreserveAspectFit
+            anchors.fill: parent
+        }
+    }
+
+    Slide {
+        Image {
+            id: slide_5
+            source: "images/slides/slide_5.jpg"
+            fillMode: Image.PreserveAspectFit
+            anchors.fill: parent
+        }
+    }
+
+    Slide {
+        Image {
+            id: slide_6
+            source: "images/slides/slide_6.jpg"
+            fillMode: Image.PreserveAspectFit
+            anchors.fill: parent
+        }
     }
 
     // When this slideshow is loaded as a V1 slideshow, only
@@ -65,12 +89,12 @@ Presentation
     // These example functions log a message (and re-start the slides
     // from the first).
     function onActivate() {
-        console.log("QML Component (default slideshow) activated");
+        console.log("QML Component (slideshow) activated");
         presentation.currentSlide = 0;
     }
 
     function onLeave() {
-        console.log("QML Component (default slideshow) deactivated");
+        console.log("QML Component (slideshow) deactivated");
     }
 
 }
