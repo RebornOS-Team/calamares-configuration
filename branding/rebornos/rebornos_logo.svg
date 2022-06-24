@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="256"
    height="256"
    viewBox="0 0 67.730546 67.633417"
    version="1.1"
    id="svg12"
    sodipodi:docname="rebornos_logo.svg"
-   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
+   inkscape:version="1.2 (dc2aedaf03, 2022-05-15)"
    inkscape:export-filename="/run/media/shivanandvp/DATA/Development/RebornOS/rebornos-calamares-installer/src/branding/default/rebornos_logo.png"
    inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96">
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <metadata
      id="metadata18">
     <rdf:RDF>
@@ -41,12 +41,12 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1004"
+     inkscape:window-height="995"
      id="namedview14"
      showgrid="false"
-     inkscape:zoom="1.97803"
-     inkscape:cx="96.942936"
-     inkscape:cy="104.57429"
+     inkscape:zoom="1.3986784"
+     inkscape:cx="77.930708"
+     inkscape:cy="70.423621"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -55,13 +55,17 @@
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
-     fit-margin-bottom="0" />
+     fit-margin-bottom="0"
+     inkscape:showpageshadow="2"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1" />
   <path
-     d="M 46.627051,56.171308 H 21.034247 L 8.2378444,34.00773 21.034247,11.845896 h 25.592804 l 12.796406,22.162881 z"
+     d="M 47.369706,57.405158 H 20.318035 L 6.7921996,33.978189 20.318035,10.553064 h 27.051671 l 13.52584,23.426232 z"
      fill="#1a1a1a"
      stroke="#cccccc"
      stroke-width="0.523014"
-     id="path4" />
+     id="path4"
+     style="stroke-width:1.95758;stroke-dasharray:none" />
   <path
      d="m 22.026578,13.563473 -5.345897,9.254554 5.282438,3.049866 3.584386,-6.205383 h 7.166334 v -6.099735 z m 12.920878,0 v 6.099734 h 7.166333 l 3.584389,6.208173 5.28244,-3.049867 -5.345203,-9.25804 z m 17.15032,11.191796 -5.28244,3.049867 3.581944,6.206431 -3.584385,6.208869 5.282439,3.049867 5.345202,-9.25804 z m -36.533556,0 -5.342062,9.249672 5.345201,9.258042 5.282438,-3.049868 -3.584387,-6.208871 3.581946,-6.20643 z m 6.401688,17.398924 -5.28174,3.046728 5.34241,9.252808 h 10.687958 v -6.099731 h -7.165288 z m 23.728785,0 -3.581948,6.206429 h -7.16494 v 6.099731 h 10.688658 l 5.341713,-9.252806 z"
      fill="#277748"
