@@ -29,6 +29,7 @@ Presentation
     }
 
     Slide {
+	    anchors.fill: parent
         Image {
             id: slide_1
             source: "images/slides/slide_1.jpg"
@@ -38,6 +39,7 @@ Presentation
     }
 
     Slide {
+	    anchors.fill: parent
         Image {
             id: slide_2
             source: "images/slides/slide_2.jpg"
@@ -47,6 +49,7 @@ Presentation
     }
 
     Slide {
+	    anchors.fill: parent
         Image {
             id: slide_3
             source: "images/slides/slide_3.jpg"
@@ -56,6 +59,7 @@ Presentation
     }
 
     Slide {
+	    anchors.fill: parent
         Image {
             id: slide_4
             source: "images/slides/slide_4.jpg"
@@ -65,6 +69,7 @@ Presentation
     }
 
     Slide {
+	    anchors.fill: parent
         Image {
             id: slide_5
             source: "images/slides/slide_5.jpg"
@@ -74,6 +79,7 @@ Presentation
     }
 
     Slide {
+	    anchors.fill: parent
         Image {
             id: slide_6
             source: "images/slides/slide_6.jpg"
