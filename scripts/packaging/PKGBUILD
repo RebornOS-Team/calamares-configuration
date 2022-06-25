@@ -31,7 +31,8 @@ prepare() {
 }
 
 package() {
-    (
+    (   
+        # Copy settings_online.conf and settings_offline.conf
         cd "$PROJECT_DIRECTORY" && \
         find . \
             -mindepth 1 \
@@ -43,13 +44,7 @@ package() {
         install -Dm 755 settings_online.conf "${pkgdir}"/etc/calamares/settings.conf # Start off by copying online settings as the default
     )
     (
-        cd "$PROJECT_DIRECTORY" && \
-        find branding \
-            -type f \
-            -exec \
-                install -Dm 755 "{}" "${pkgdir}/etc/calamares/{}" \;
-    )
-    (
+        # Copy module specific configuration
         cd "$PROJECT_DIRECTORY" && \
         find modules \
             -type f \
@@ -57,8 +52,25 @@ package() {
                 install -Dm 755 "{}" "${pkgdir}/etc/calamares/{}" \;
     )
     (
+        # Copy QML files
         cd "$PROJECT_DIRECTORY" && \
         find qml \
+            -type f \
+            -exec \
+                install -Dm 755 "{}" "${pkgdir}/etc/calamares/{}" \;
+    )
+    (
+        # Copy images
+        cd "$PROJECT_DIRECTORY" && \
+        find images \
+            -type f \
+            -exec \
+                install -Dm 755 "{}" "${pkgdir}/etc/calamares/{}" \;
+    )
+    (
+        # Copy branding
+        cd "$PROJECT_DIRECTORY" && \
+        find branding \
             -type f \
             -exec \
                 install -Dm 755 "{}" "${pkgdir}/etc/calamares/{}" \;
