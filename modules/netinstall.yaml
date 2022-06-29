@@ -1235,7 +1235,7 @@
                   #     - name: nvidia-exec
                   #       post-install: "systemctl enable nvx"
 
-  # -------------
+          # -------------
           - name: AMD
           # ---------
             description: For AMD GPUs
