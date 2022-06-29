@@ -12,16 +12,12 @@
     #   description: For installing packages from the AUR
     - name: linux
       description: The latest Linux kernel in the Arch Linux repository
-    - name: gnupg
-      description: Complete and free implementation of the OpenPGP standard
     - name: mkinitcpio
       description: A script to create the initial ramdisk. Required to re-run after configuring LVM, system encryption, or RAID
     - name: grub
       description: Bootloader required by the current installer version. Will be removed when bootloader is chosen and installed dynamically.
     - name: efibootmgr
       description: Required by the installer to setup the bootloader
-    - name: sed
-      description: Stream editor required to substitute entries in /etc/default/grub
     - name: os-prober
       description: For detecting other operating systems
     - name: dosfstools
@@ -29,9 +25,9 @@
     - name: ntfs-3g
       description: NTFS support for os-prober to mount Windows partitions   
     - name: amd-ucode
-      description: Microcode update image for AMD CPUs
+      description: Microcode update image for AMD CPUs. Required currently in bootloader.conf
     - name: intel-ucode 
-      description: Microcode update files for Intel CPUs
+      description: Microcode update files for Intel CPUs. Required currently in bootloader.conf
 
 # ===========================
 - name: RebornOS Minimal Base
@@ -62,8 +58,6 @@
       description:
       packages: 
         - networkmanager
-    - name: Utilities
-      description: Core Utilities
     - name: RebornOS
       description: Packages that make RebornOS what it is
       packages: 
@@ -79,7 +73,7 @@
   hidden: false
   selected: false
   expanded: false
-  critical: true
+  critical: false
   subgroups:
     # -------------------    
     - name: RebornOS Apps
@@ -791,13 +785,55 @@
           description: Free video editor designed for simple cutting, filtering and encoding tasks
         - name: vidcutter
           description: Fast lossless media cutter + joiner w/ frame-accurate SmartCut options powered by mpv, FFmpeg via a sleek Qt5 GUI
-    # -------------------
-    - name: Audio Editing
-    # -------------------
+    # ---------------------------------
+    - name: Audio Recording and Editing
+    # ---------------------------------
       expanded: false
       packages:
-        - name: 
-          description:   
+        - name: audacity
+          description: Program that lets you manipulate digital audio waveforms
+        - name: gnome-sound-recorder
+          description: Record and play .flac, .ogg (OGG audio, or .oga), and .wav sound files
+        # - name: gwc
+        #   description: (AUR) Gnome Wave Cleaner; denoise, dehiss and amplify audio files
+        - name: kwave
+          description: Sound editor for KDE
+        # - name: mhwaveedit
+        #   description: (AUR) Graphical program for editing, playing and recording sound files
+        - name: mp3splt-gtk
+          description: Split mp3, ogg vorbis and native FLAC files selecting a begin and an end time position, without decoding
+        # - name: ocenaudio-bin
+        #   description: (AUR) Proprietary cross-platform, easy to use, fast and functional audio editor
+        - name: playitslowly
+          description: Play back audio files at a different speed or pitch
+        - name: polyphone
+          description: A soundfont editor to create and edit a musical instrument based on samples, using the sf2 format
+        - name: snd
+          description: Advanced sound editor modeled loosely after Emacs
+        # - name: swami
+        #   description: (AUR)  A SoundFont editor
+        - name: sweep
+          description: Audio editor and live playback tool
+        # - name: wavesurfer
+        #   description: (AUR) Sound visualization and manipulation
+
+    # ---------------------------------
+    - name: Digital Audio workstations
+    # ---------------------------------
+      expanded: false
+      packages:
+        - name: ardour
+          description: Multichannel hard disk recorder and digital audio workstation
+        - name: lmms
+          description: Digital audio workstation which allows you to produce music with your computer
+        - name: muse
+          description: MIDI/Audio sequencer with recording and editing capabilities
+        - name: qtractor
+          description: Qt-based hard disk recorder and digital audio workstation application
+        - name: reaper
+          description: Proprietary; Full multitrack audio and MIDI recording, editing, processing, mixing and mastering
+        - name: rosegarden
+          description: MIDI sequencer, scorewriter and musical composition and editing tool
 
 # =================
 - name: Development
@@ -1005,6 +1041,312 @@
       - name: linux-zen-headers
         description: Headers and scripts for building modules for the Linux Zen kernel
 
+  # ----------
+  - name: Xorg
+  # ----------
+    description: Packages for the X display server
+    subgroups:
+      - name: xorg-apps
+      # ===============
+        packages:
+          - name: xorg-bdftopcf 
+            description: Convert X font from Bitmap Distribution Format to Portable Compiled Format 
+          - name: xorg-iceauth  
+            description: ICE authority file utility 
+          - name: xorg-mkfontscale  
+            description: Create an index of scalable font files for X 
+          - name: xorg-sessreg  
+            description: Register X sessions in system utmp/utmpx databases 
+          - name: xorg-setxkbmap  
+            description: Set the keyboard using the X Keyboard Extension 
+          - name: xorg-smproxy  
+            description: Allows X applications that do not support X11R6 session management to participate in an X11R6 session 
+          - name: xorg-x11perf  
+            description: Simple X server performance benchmarker 
+          - name: xorg-xauth  
+            description: X.Org authorization settings program 
+          - name: xorg-xbacklight 
+            description: RandR-based backlight control application 
+          - name: xorg-xcmsdb 
+            description: Device Color Characterization utility for X Color Management System 
+          - name: xorg-xcursorgen 
+            description: Create an X cursor file from PNG images 
+          - name: xorg-xdpyinfo 
+            description: Display information utility for X 
+          - name: xorg-xdriinfo 
+            description: Query configuration information of DRI drivers 
+          - name: xorg-xev  
+            description: Print contents of X events 
+          - name: xorg-xgamma 
+            description: Alter a monitor's gamma correction 
+          - name: xorg-xhost  
+            description: Server access control program for X 
+          - name: xorg-xinput 
+            description: Small commandline tool to configure devices 
+          - name: xorg-xkbcomp  
+            description: X Keyboard description compiler 
+          - name: xorg-xkbevd 
+            description: XKB event daemon 
+          - name: xorg-xkbutils 
+            description: XKB utility demos 
+          - name: xorg-xkill  
+            description: Kill a client by its X resource 
+          - name: xorg-xlsatoms 
+            description: List interned atoms defined on server 
+          - name: xorg-xlsclients 
+            description: List client applications running on a display 
+          - name: xorg-xmodmap  
+            description: Utility for modifying keymaps and button mappings 
+          - name: xorg-xpr  
+            description: Print an X window dump from xwd 
+          - name: xorg-xprop  
+            description: Property displayer for X 
+          - name: xorg-xrandr 
+            description: Primitive command line interface to RandR extension 
+          - name: xorg-xrdb 
+            description: X server resource database utility 
+          - name: xorg-xrefresh 
+            description: Refresh all or part of an X screen 
+          - name: xorg-xset 
+            description: User preference utility for X 
+          - name: xorg-xsetroot 
+            description: Classic X utility to set your root window background to a given pattern or color 
+          - name: xorg-xvinfo 
+            description: Prints out the capabilities of any video adaptors associated with the display that are accessible through the X-Video extension 
+          - name: xorg-xwd  
+            description: X Window System image dumping utility 
+          - name: xorg-xwininfo 
+            description: Command-line utility to print information about windows on an X server 
+          - name: xorg-xwud 
+            description: X Window System image undumping utility
+      - name: xorg fonts
+      # ================
+        packages:
+          - name: xorg-font-util
+            description: X.Org font utilities
+          - name: xorg-fonts-75dpi
+            description: X.org 75dpi fonts
+          - name: xorg-fonts-100dpi
+            description: X.org 100dpi fonts
+          - name: xorg-fonts-encodings
+            description: X.org font encoding files
+          - name: xorg-mkfontscale
+            description: Create an index of scalable font files for X
+    packages:
+      - name: xorg-server
+        description: X server
+      - name: xorg-server-common
+        description: X server common files
+          
+  # -------------
+  - name: Drivers
+  # -------------
+    description: Drivers required to run hardware
+    expanded: true
+    packages:
+      - name: libinput
+        description: Input device management and event handling library
+      - name: xf86-input-libinput
+        description: Generic input driver for the X.Org server based on libinput
+      - name: xorg-xinput
+        description: Small commandline tool to configure devices
+    subgroups:
+      - name: Graphics
+      # ==============
+        subgroups:
+          - name: Nvidia
+          # ------------
+            description: For Nvidia GPUs
+            packages:
+              - name: nvidia-settings
+                description: Tool to configure Nvidia drivers (needs Nvidia drivers)
+              - name: lib32-nvidia-utils
+                description: For 32-bit application support
+              - name: nvidia
+                description: For Maxwell (NV110/GMXXX) series and newer with linux kernel
+              - name: nvidia-lts
+                description: For Maxwell (NV110/GMXXX) series and newer with linux-lts kernel
+              - name: nvidia-dkms
+                description: For Maxwell (NV110/GMXXX) series and newer with a custom kernel 
+              # - name: nvidia-beta
+              #   description: (AUR) Newer drivers
+              - name: nvidia-open
+                description: For Turing (NV160/TUXXX) series and newer with linux kernel
+              - name: nvidia-open-dkms
+                description: For Turing (NV160/TUXXX) series and newer with custom kernel
+              - name: nvidia-470xx-dkms
+                description: For Kepler (NVE0/GKXXX) series
+              - name: nvidia-390xx-dkms
+                description: For Fermi (NVC0/GF1XX) series
+              - name: nvidia-340xx-dkms
+                description: (Unsupported) For Tesla (NV50/G80-90-GT2XX) series
+            subgroups: 
+              # :::::::::::::::::::
+              - name: Nvidia Hybrid
+              # :::::::::::::::::::
+                description: Nvidia Discrete with other integrated GPUs
+                subgroups:
+                  - name: PRIME Render Offload
+                  # ::::::::::::::::::::::::::
+                    packages:
+                      - name: nvidia-prime
+                        description: Prime Render Offload configuration and utilities
+                      - xf86-video-amdgpu
+                      - xf86-video-intel
+                  # - name: Nvidia-xrun
+                  # # :::::::::::::::::
+                  #   packages:
+                  #     - name: nvidia-xrun-git
+                  #       description: (AUR) Script to run dedicated X server with discrete nvidia graphics (git version)
+                  #     - name: nvidia-xrun
+                  #       description: (AUR) Old method, uses bumblebee to switch off the dGPU
+                  - name: PRIME Render Offload
+                  # ::::::::::::::::::::::::::
+                    packages:
+                      - name: nvidia-prime
+                        description: Prime Render Offload configuration and utilities
+                      - xf86-video-amdgpu
+                      - xf86-video-intel
+                  - name: Bumblebee
+                  # :::::::::::::::
+                    packages:
+                      - name: bumblebee
+                        description: The main package providing the daemon and client programs
+                        post-install: "systemctl enable bumblebeed.service"
+                      - name: mesa
+                        description: An open-source implementation of the OpenGL specification
+                      - name: xf86-video-intel
+                        description: Intel Xorg driver.
+                      - name: lib32-virtualgl
+                        description: A render/display bridge for 32 bit applications
+                      - lib32-nvidia-utils
+                      # - lib32-nvidia-340xx-utils
+                  # - name: Optimus manager
+                  # # :::::::::::::::::::::
+                  #   packages:
+                  #     - optimus-manager
+                  # - name: EnvyControl
+                  # # :::::::::::::::::
+                  #   packages:
+                  #     - envycontrol
+                  # - name: EnvyControl
+                  # # :::::::::::::::::
+                  #   packages:
+                  #     - name: nvidia-exec
+                  #       post-install: "systemctl enable nvx"
+
+  # -------------
+          - name: AMD
+          # ---------
+            description: For AMD GPUs
+            packages:
+              - name: mesa
+                description: DRI driver for 3D acceleration
+              - name: lib32-mesa
+                description: For 32-bit application support
+              # - mesa-git
+              # - lib32-mesa-git
+              - name: xf86-video-amdgpu
+                description: DDX driver for 2D acceleration in Xorg
+              # - xf86-video-amdgpu-git
+              - name: vulkan-radeon
+                description: Radeon's Vulkan mesa driver
+              - name: lib32-vulkan-radeon
+                description: Radeon's Vulkan mesa driver with 32-bit support
+              - name: amdvlk
+                description: AMD's standalone Vulkan driver
+              - name: lib32-amdvlk
+                description: AMD's standalone Vulkan driver with 32bit support
+              - name: libva-mesa-driver
+                description: Accelerated video decoding for VA-API
+              - name: lib32-libva-mesa-driver
+                description: Accelerated video decoding for VA-API with 32-bit support
+              - name: mesa-vdpau 
+                description: Accelerated video decoding for VDPAU
+              - name: lib32-mesa-vdpau
+                description: Accelerated video decoding for VDPAU with 32-bit support
+              - name: xf86-video-ati
+                description: DDX driver for 2D acceleration in Xorg
+      
+      - name: Network
+      # =============
+        subgroups:
+          - name: Broadcom
+          # --------------
+            subgroups:
+              - name: b43
+              # :::::::::
+                packages:               
+                  - b43-firmware
+                  # - b43-firmware-classic
+                  # - b43legacy-firmware
+              - name: broadcom-wl
+              # :::::::::::::::::
+                packages:               
+                  - broadcom-wl
+                  - broadcom-wl-dkms
+
+      - name: Audio
+      # ===========
+        packages:
+          - name: pavucontrol
+            description: Simple GTK volume control tool ("mixer")
+        subgroups:
+          - name: Pipewire
+            description:
+            packages:
+              - name: pipewire
+                description: Low-latency audio/video router and processor
+              - name: lib32-pipewire
+                description: For PipeWire with 32-bit support 
+              - name: pipewire-alsa
+                description: For PipeWire to manage ALSA as well
+              - name: pipewire-pulse
+                description: For PipeWire bluetooth support
+              - name: pipewire-jack
+                description: For PipeWire JACK sink, source and jackdbus detection
+              - name: lib32-pipewire-jack
+                description: For 32-bit PipeWire JACK sink, source and jackdbus detection
+              - xdg-desktop-portal
+              - xdg-desktop-portal-gnome
+              - xdg-desktop-portal-kde
+              - xdg-desktop-portal-wlr
+          - name: PulseAudio
+            description:
+            packages:
+              - name: pulseaudio
+                description: A featureful, general-purpose sound server 
+              - name: pulseaudio-alsa
+                description: For PulseAudio to manage ALSA as well
+              - name: pulseaudio-bluetooth
+                description: For PulseAudio bluetooth support
+              - name: pulseaudio-equalizer
+                description: For PulseAudio equalizer sink (qpaeq)
+              - name: pulseaudio-jack
+                description: For JACK sink, source and jackdbus detection
+              - name: pulseaudio-lirc
+                description: For PulseAudio infrared volume control with LIRC
+              - name: pulseaudio-zeroconf
+                description: For PulseAudio Zeroconf (Avahi/DNS-SD) support
+      - name: Printers
+      # ==============
+        packages:
+          - name: cups
+            description: The CUPS Printing System - daemon package
+            post-install: "systemctl start cups.socket"
+          - name: cups-pdf
+            description: PDF printer for cups
+      - name: Bluetooth        
+      # ===============
+        packages:
+          - name: bluez
+            description: The Bluetooth protocol stack
+            post-install: "systemctl enable bluetooth.service"
+          - name: bluez-utils
+            description: Development and debugging utilities for bluez
+          - name: blueman
+            description: A full featured Bluetooth manager
+  
   # -------------
   - name: Storage
   # -------------
