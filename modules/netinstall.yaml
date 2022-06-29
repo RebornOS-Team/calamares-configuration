@@ -349,8 +349,10 @@
     packages:
       - name: xorg-server
         description: X server
+        selected: true
       - name: xorg-server-common
         description: X server common files
+        selected: true
   - name: Storage
     subgroups:
       - name: Filesystems
