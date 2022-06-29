@@ -66,6 +66,7 @@
       description: Script and one-click icon to refresh your mirrors
 - name: System
   expanded: true
+  selected: false
   subgroups: 
   - name: Kernels and Headers
     description: Other variations of the Linux kernel
@@ -422,6 +423,7 @@
                 description: Default partitioning utility in KDE Plasma
 - name: Office
   description: Tools for office-related tasks
+  selected: false
   subgroups:
     - name: Full Suites
       description: Full-featured suites for word processing, spreadsheets, presentations, and drawing
@@ -534,6 +536,7 @@
         - name: scribus
           description: Desktop publishing program. Uses hyphen and its language packs for hyphenation  
 - name: Liesure and Entertainment
+  selected: false
   subgroups:
     - name: Browsers
       description: Browse the internet.
@@ -948,6 +951,7 @@
           description: WYSIWYG EPUB e-book editor
 - name: Art
   description: Tools for your artistic pursuits
+  selected: false
   subgroups:
     - name: Simple
       description: For MS-Paint-like uses
@@ -974,6 +978,7 @@
           description: Vector graphics editor with SVG support, similar to Adobe Illustrator
 - name: Media Production
   description: Tools for Youtubers, Twitch streamers and their ilk
+  selected: false
   packages: 
     - name: ffmpeg 
       description: Complete, cross-platform solution to record, convert and stream audio and video
@@ -1070,6 +1075,7 @@
           description: MIDI sequencer, scorewriter and musical composition and editing tool
 - name: Development
   description: Utilities for programming and application design
+  selected: false
   packages: 
     - name: base-devel 
       description: A group of essential packages commonly used for development
@@ -1106,7 +1112,7 @@
           subgroups:
             - name: Rust Stable Default
               hidden: true
-              selected: true
+              selected: false
               packages:
                 - rustup
               post-install: /bin/sh -c \"rustup toolchain install stable && rustup default stable\"
@@ -1114,7 +1120,7 @@
           subgroups:
             - name: Rust Beta Default
               hidden: true
-              selected: true
+              selected: false
               packages:
                 - rustup
               post-install: /bin/sh -c \"rustup toolchain install beta && rustup default beta\"
@@ -1122,7 +1128,7 @@
           subgroups:
             - name: Rust Nightly Default
               hidden: true
-              selected: true
+              selected: false
               packages:
                 - rustup
               post-install: /bin/sh -c \"rustup toolchain install nightly && rustup default nightly\"
