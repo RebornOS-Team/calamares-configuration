@@ -6,6 +6,8 @@
   packages: 
     - name: linux
       description: The latest Linux kernel in the Arch Linux repository
+    - name: linux-firmware
+      description: Firmware files for Linux
     - name: mkinitcpio
       description: A script to create the initial ramdisk. Required to re-run after configuring LVM, system encryption, or RAID
     - name: grub
