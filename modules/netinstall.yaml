@@ -24,12 +24,16 @@
       description: Microcode update image for AMD CPUs. Required currently in bootloader.conf
     - name: intel-ucode 
       description: Microcode update files for Intel CPUs. Required currently in bootloader.conf
+    - name: sudo
+      description: Currently a hard dependency for the users module
     - name: networkmanager
       description: Currently hardcoded into the installer
 - name: RebornOS Minimal Base
   description: Essential packages. Modify at your own risk
   selected: true
   critical: true
+  packages:
+    - nano
   subgroups: 
     - name: Storage and Filesystems
       description: 
