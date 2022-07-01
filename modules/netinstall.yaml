@@ -22,6 +22,8 @@
       description: Microcode update image for AMD CPUs. Required currently in bootloader.conf
     - name: intel-ucode 
       description: Microcode update files for Intel CPUs. Required currently in bootloader.conf
+    - name: networkmanager
+      description: Currently hardcoded into the installer
 - name: RebornOS Minimal Base
   description: Essential packages. Modify at your own risk
   selected: true
@@ -43,10 +45,15 @@
               description: ext3 and ext4 support
             - name: dosfstools
               description: VFAT support
-    - name: Networking and Internet
-      description:
-      packages: 
-        - networkmanager
+    - name: Xorg
+      packages:
+        - name: xorg-server
+    - name: Liesure and Entertainment
+      subgroups:
+        - name: Browsers
+          packages:
+            - name: firefox
+              description: Extensible browser from Mozilla based on Gecko with fast rendering
     - name: RebornOS
       description: Packages that make RebornOS what it is
       packages: 
@@ -350,10 +357,8 @@
     packages:
       - name: xorg-server
         description: X server
-        selected: true
       - name: xorg-server-common
         description: X server common files
-        selected: true
   - name: Storage
     subgroups:
       - name: Filesystems
@@ -540,12 +545,9 @@
   subgroups:
     - name: Browsers
       description: Browse the internet.
-      expanded: false
-      selected: false
       packages:
         - name: firefox
           description: Extensible browser from Mozilla based on Gecko with fast rendering
-          selected: true
         - name: chromium
           description: The open source project behind Google Chrome developed by Google 
         # - name: google-chrome
@@ -574,8 +576,6 @@
           description: Simple web browser for GNOME. 
     - name: Gaming
       description: Play games!
-      selected: false
-      expanded: false
       packages: 
         - name: wine
           description: A compatibility layer capable of running Microsoft Windows games and applications
@@ -730,57 +730,41 @@
                   description: Mario-style game featuring Tux
             - name: Puzzle
             # ------------
-              expanded: false
-              selected: false
               packages: 
                 - name: 
                   description: 
             - name: Racing
             # ------------
-              expanded: false
-              selected: false
               packages: 
                 - name: 
                   description: 
             - name: Rogue-like
             # ----------------
-              expanded: false
-              selected: false
               packages: 
                 - name: 
                   description:
             - name: Role-playing games (RPG)
             # ------------------------------
-              expanded: false
-              selected: false
               packages: 
                 - name: 
                   description:  
             - name: Shooters (FPS, third person)
             # ----------------------------------
-              expanded: false
-              selected: false
               packages: 
                 - name: 
                   description:     
             - name: Simulation
             # ----------------
-              expanded: false
-              selected: false
               packages: 
                 - name: 
                   description:    
             - name: Strategy
             # --------------
-              expanded: false
-              selected: false
               packages: 
                 - name: 
                   description:  
             - name: Turn based
             # ----------------
-              expanded: false
-              selected: false
               packages: 
                 - name: 
                   description: 
@@ -796,8 +780,6 @@
     - name: Instant Messaging
     # -----------------------
       description: Apps for messaging and chatting
-      expanded: false
-      selected: false
       subgroups:
         - name: IRC Clients
         # ===================
@@ -836,8 +818,6 @@
     # -------------------
     - name: Video Players
     # -------------------
-      expanded: false
-      selected: false
       packages:
         - name: vlc
           description: Middleweight video player with support for a wide variety of audio and video formats
@@ -865,8 +845,6 @@
     # -------------------------
     - name: Audio/Music Players
     # -------------------------
-      expanded: false
-      selected: false
       packages:
         - name: rhythmbox
           description: GTK clone of iTunes, used by default in GNOME
@@ -886,8 +864,6 @@
     # -------------------
     - name: Image Viewers      
     # -------------------
-      expanded: false
-      selected: false
       packages:
         - name: eog
           description: Image viewing and cataloging program, which is a part of the GNOME desktop environment 
@@ -1112,7 +1088,6 @@
           subgroups:
             - name: Rust Stable Default
               hidden: true
-              selected: false
               packages:
                 - rustup
               post-install: /bin/sh -c \"rustup toolchain install stable && rustup default stable\"
@@ -1120,7 +1095,6 @@
           subgroups:
             - name: Rust Beta Default
               hidden: true
-              selected: false
               packages:
                 - rustup
               post-install: /bin/sh -c \"rustup toolchain install beta && rustup default beta\"
@@ -1128,7 +1102,6 @@
           subgroups:
             - name: Rust Nightly Default
               hidden: true
-              selected: false
               packages:
                 - rustup
               post-install: /bin/sh -c \"rustup toolchain install nightly && rustup default nightly\"
