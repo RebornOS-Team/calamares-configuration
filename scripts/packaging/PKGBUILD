@@ -1,8 +1,8 @@
 # Maintainer: shivanandvp <shivanandvp@rebornos.org>
 
 pkgname=calamares-configuration
-pkgver=0.0.1
-pkgrel=24
+pkgver=0.0.2
+pkgrel=1
 arch=('i686' 'x86_64' 'armv6h' 'armv7h')
 pkgdesc='Configuration for the RebornOS Calamares installer.'
 license=('GPL3')
