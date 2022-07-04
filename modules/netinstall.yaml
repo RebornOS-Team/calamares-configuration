@@ -596,6 +596,7 @@
       - name: xpra
         description: A multi-platform screen and application forwarding system 
 - name: Basics
+  selected: false
   description: For day-to-day usage of the operating system
   packages:
     - name: inxi
