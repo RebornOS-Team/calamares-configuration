@@ -41,7 +41,7 @@
           packages:
             - name: firefox
               description: Extensible browser from Mozilla based on Gecko with fast rendering
-    - name: Basics
+    - name: Frontend System
       packages:
         - name: inxi
           description: A script to get system information
@@ -71,7 +71,7 @@
               description: Commandline AUR helper
             - name: pamac-aur
               description: Graphical package management
-    - name: System
+    - name: Backend System
       description: Behind-the-scenes working of your Operating System  
       subgroups:
         - name: Display
@@ -179,7 +179,7 @@
           description: To get you started with RebornOS
         - name: refresh-mirrors
           description: Script and one-click icon to refresh your mirrors
-- name: System
+- name: Backend System
   description: Behind-the-scenes working of your Operating System
   expanded: false
   selected: false
@@ -593,7 +593,7 @@
         description: VNC server for real X displays
       - name: xpra
         description: A multi-platform screen and application forwarding system 
-- name: Basics
+- name: Frontend System
   selected: false
   description: For day-to-day usage of the operating system
   packages:
