@@ -146,8 +146,6 @@
               packages: 
                 - name: virtualbox-guest-utils
                   description: VirtualBox Guest utilities with X support
-                - name: virtualbox-guest-utils-nox
-                  description: VirtualBox Guest utilities without X support 
             - name: VMWare
               packages: 
                 - name: open-vm-tools
