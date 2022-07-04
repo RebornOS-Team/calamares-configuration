@@ -28,7 +28,7 @@
       description: Currently a hard dependency for the users module
     - name: networkmanager
       description: Currently hardcoded into the installer
-- name: RebornOS Minimal Base
+- name: Minimal Base
   description: Essential packages. Modify at your own risk
   selected: true
   critical: true
@@ -432,6 +432,30 @@
                 description: Default partitioning utility in Gnome 3
               - name: partitionmanager
                 description: Default partitioning utility in KDE Plasma
+      - name: Virtualization Guest
+        description: Packages for VM Guests
+        subgroups:
+          - name: VirtualBox
+            packages: 
+              - name: virtualbox-guest-utils
+                description: VirtualBox Guest utilities with X support
+              - name: virtualbox-guest-utils-nox
+                description: VirtualBox Guest utilities without X support 
+          - name: VMWare
+            packages: 
+              - name: open-vm-tools
+                description: Suite of open source virtualization utilities and drivers
+              - name: gtkmm3
+                description: C++ bindings for GTK+ 3
+              - name: xf86-video-vmware
+                description: X.org vmware video driver
+              - name: xf86-input-vmmouse
+                description: X.org VMWare Mouse input driver
+              - name: mesa
+                description: Open-source implementation of the OpenGL specification
+          - name: QEMU
+            packages: 
+              - qemu-guest-agent
 - name: Liesure and Entertainment
   selected: false
   subgroups:
