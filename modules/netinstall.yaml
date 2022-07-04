@@ -21,7 +21,7 @@
     - name: ntfs-3g
       description: NTFS support for os-prober to mount Windows partitions 
     - name: btrfs-progs
-      description: Btrfs filesystem utilities   
+      description: Btrfs filesystem utilities for mkinitcpio module  
     - name: amd-ucode
       description: Microcode update image for AMD CPUs. Required currently in bootloader.conf
     - name: intel-ucode 
