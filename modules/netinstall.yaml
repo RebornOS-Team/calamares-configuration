@@ -19,7 +19,9 @@
     - name: dosfstools
       description: VFAT support for os-prober to mount Windows partitions
     - name: ntfs-3g
-      description: NTFS support for os-prober to mount Windows partitions   
+      description: NTFS support for os-prober to mount Windows partitions 
+    - name: btrfs-progs
+      description: Btrfs filesystem utilities   
     - name: amd-ucode
       description: Microcode update image for AMD CPUs. Required currently in bootloader.conf
     - name: intel-ucode 
