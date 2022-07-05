@@ -67,7 +67,7 @@
           - name: udftools
             description: UDF support
           - name: reiser4progs
-            description: (AUR) Reiser4 support
+            description: Reiser4 support
   packages:
     - name: linux
       description: The latest Linux kernel release
