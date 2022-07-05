@@ -605,7 +605,7 @@
             - name: udftools
               description: UDF support
             - name: reiser4progs
-              description: (AUR) Reiser4 support
+              description: Reiser4 support
   - name: Input
     description: Input devices like mouse, touchpad, and keyboard
     packages: 
