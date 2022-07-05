@@ -3,6 +3,56 @@
   selected: true
   critical: true
   immutable: true
+  subgroups: 
+    - name: Filesystems
+      description: Support for various filesystems
+      subgroups: 
+        - name: exFAT
+          description: exFAT support
+          packages: 
+            - exfatprogs
+            - exfat-utils
+        # - name: APFS
+        #   description: (AUR) APFS support
+        #   packages: 
+        #     - linux-apfs-rw-dkms-git
+        #     - apfsprogs-git
+        # - name: Bcachefs
+        #   description: (AUR) Bcachefs support
+        #   packages: 
+        #     - linux-bcachefs-git
+        #     - bcachefs-tools-git
+        # - name: ZFS
+        #   description: (AUR) ZFS support
+        #   packages: 
+        #     - zfs-linux
+        #     - zfs-dkms
+        #     - zfs-utils
+      packages:           
+          - name: dosfstools
+            description: VFAT support
+          - name: e2fsprogs
+            description: ext3 and ext4 support
+          - name: ntfs-3g
+            description: NTFS support          
+          - name: btrfs-progs
+            description: BTRFS support
+          - name: xfsprogs
+            description: XFS support
+          - name: reiserfsprogs
+            description: ReiserFS support
+          - name: f2fs-tools
+            description: F2FS support
+          - name: hfsprogs
+            description: HFS and HFS+ support          
+          - name: jfsutils
+            description: JFS support
+          - name: nilfs-utils
+            description: NILFS2 support          
+          - name: udftools
+            description: UDF support
+          # - name: reiser4progs
+          #   description: (AUR) Reiser4 support
   packages:
     - name: linux
       description: The latest Linux kernel release
@@ -16,12 +66,6 @@
       description: Required by the installer to setup the bootloader
     - name: os-prober
       description: For detecting other operating systems
-    - name: dosfstools
-      description: VFAT support for os-prober to mount Windows partitions
-    - name: ntfs-3g
-      description: NTFS support for os-prober to mount Windows partitions 
-    - name: btrfs-progs
-      description: Btrfs filesystem utilities for mkinitcpio module  
     - name: amd-ucode
       description: Microcode update image for AMD CPUs. Required currently in bootloader.conf
     - name: intel-ucode 
@@ -506,22 +550,22 @@
             packages: 
               - exfatprogs
               - exfat-utils
-          - name: APFS
-            description: APFS support
-            packages: 
-              - linux-apfs-rw-dkms-git
-              - apfsprogs-git
-          - name: Bcachefs
-            description: Bcachefs support
-            packages: 
-              - linux-bcachefs-git
-              - bcachefs-tools-git
-          - name: ZFS
-            description: ZFS support
-            packages: 
-              - zfs-linux
-              - zfs-dkms
-              - zfs-utils
+          # - name: APFS
+          #   description: (AUR) APFS support
+          #   packages: 
+          #     - linux-apfs-rw-dkms-git
+          #     - apfsprogs-git
+          # - name: Bcachefs
+          #   description: (AUR) Bcachefs support
+          #   packages: 
+          #     - linux-bcachefs-git
+          #     - bcachefs-tools-git
+          # - name: ZFS
+          #   description: (AUR) ZFS support
+          #   packages: 
+          #     - zfs-linux
+          #     - zfs-dkms
+          #     - zfs-utils
         packages:           
             - name: dosfstools
               description: VFAT support
@@ -531,7 +575,7 @@
               description: NTFS support          
             - name: btrfs-progs
               description: BTRFS support
-            - name: xfs-tools
+            - name: xfsprogs
               description: XFS support
             - name: reiserfsprogs
               description: ReiserFS support
@@ -545,8 +589,8 @@
               description: NILFS2 support          
             - name: udftools
               description: UDF support
-            - name: reiser4progs
-              description: Reiser4 support
+            # - name: reiser4progs
+            #   description: (AUR) Reiser4 support
   - name: Input
     description: Input devices like mouse, touchpad, and keyboard
     packages: 
