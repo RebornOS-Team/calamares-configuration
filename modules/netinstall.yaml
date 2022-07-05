@@ -3,27 +3,42 @@
   selected: true
   critical: true
   immutable: true
-  subgroups: 
+  subgroups:
     - name: Filesystems
       description: Support for various filesystems
+      selected: true
+      critical: true
+      immutable: true
       subgroups: 
         - name: exFAT
           description: exFAT support
+          selected: true
+          critical: true
+          immutable: true
           packages: 
             - exfatprogs
             - exfat-utils
         # - name: APFS
         #   description: (AUR) APFS support
+        #   selected: true
+        #   critical: true
+        #   immutable: true          
         #   packages: 
         #     - linux-apfs-rw-dkms-git
         #     - apfsprogs-git
         # - name: Bcachefs
         #   description: (AUR) Bcachefs support
+        #   selected: true
+        #   critical: true
+        #   immutable: true          
         #   packages: 
         #     - linux-bcachefs-git
         #     - bcachefs-tools-git
         # - name: ZFS
         #   description: (AUR) ZFS support
+        #   selected: true
+        #   critical: true
+        #   immutable: true          
         #   packages: 
         #     - zfs-linux
         #     - zfs-dkms
@@ -51,8 +66,8 @@
             description: NILFS2 support          
           - name: udftools
             description: UDF support
-          # - name: reiser4progs
-          #   description: (AUR) Reiser4 support
+          - name: reiser4progs
+            description: (AUR) Reiser4 support
   packages:
     - name: linux
       description: The latest Linux kernel release
@@ -589,8 +604,8 @@
               description: NILFS2 support          
             - name: udftools
               description: UDF support
-            # - name: reiser4progs
-            #   description: (AUR) Reiser4 support
+            - name: reiser4progs
+              description: (AUR) Reiser4 support
   - name: Input
     description: Input devices like mouse, touchpad, and keyboard
     packages: 
