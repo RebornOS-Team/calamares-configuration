@@ -1,0 +1,90 @@
+---
+
+display_managers: 
+  - id: sddm
+    test_package: sddm
+    test_unit: sddm
+    default_priority:
+      - regolith
+      - trinity
+      - lxqt
+      - lxde
+      - enlightenment
+      - mate
+      - xfce
+      - cutefish
+      - ukui
+      - deepin
+      - budgie
+      - cinnamon
+      - plasma
+      - gnome
+  - id: gdm
+    test_package: gdm
+    test_unit: gdm
+    default_priority:
+      - regolith
+      - trinity
+      - lxqt
+      - lxde
+      - enlightenment
+      - mate
+      - xfce
+      - cutefish
+      - ukui
+      - deepin
+      - budgie
+      - cinnamon
+      - plasma
+      - gnome
+  - id: lightdm
+    test_package: lightdm
+    test_unit: lightdm
+    default_priority:
+      - regolith
+      - trinity
+      - lxqt
+      - lxde
+      - enlightenment
+      - mate
+      - xfce
+      - cutefish
+      - ukui
+      - deepin
+      - budgie
+      - cinnamon
+      - plasma
+      - gnome
+
+desktops:
+  - id: gnome
+    test_package: gnome-shell
+    session: gnome
+    xsession: gnome
+    login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+    wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+  - id: plasma
+    test_package: plasma-wokspace
+    session: plasma
+    xsession: plasma
+    login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+    wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+  - id: cinnamon
+    test_package: cinnamon-session
+    session: cinnamon
+    xsession: cinnamon
+    login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+    wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+  - id: budgie
+    test_package: budgie-desktop
+    session: budgie-desktop
+    xsession: budgie-desktop
+    login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+    wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+  - id: deepin
+    test_package: deepin-session-shell
+    session: deepin
+    xsession: deepin
+    login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+    wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+

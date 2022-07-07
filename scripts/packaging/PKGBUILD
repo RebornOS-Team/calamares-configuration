@@ -6,7 +6,7 @@ pkgrel=1
 arch=('i686' 'x86_64' 'armv6h' 'armv7h')
 pkgdesc='Configuration for the RebornOS Calamares installer.'
 license=('GPL3')
-depends=('paru-bin')
+depends=('python-yaml')
 optdepends=('calamares-core')
 makedepends=('rsync') 
 provides=("${pkgname}")
@@ -50,6 +50,14 @@ package() {
             -type f \
             -exec \
                 install -Dm 755 "{}" "${pkgdir}/etc/calamares/{}" \;
+    )
+    (
+        # Copy custom files and directories
+        cd "$PROJECT_DIRECTORY" && \
+        find custom \
+            -type f \
+            -exec \
+                install -Dm 700 "{}" "${pkgdir}/etc/calamares/{}" \;
     )
     (
         # Copy QML files
