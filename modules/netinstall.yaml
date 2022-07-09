@@ -109,11 +109,7 @@
         - name: gnu-netcat
           description: Network piping application. Does not support IPv6 (Required for termbin)
         - name: base-devel
-          description: Required to build packages   
-        - name: xdg-user-dirs
-          description: Common directories for desktops
-        - name: xdg-desktop-portal
-          description: D-Bus APIs for containerized apps
+          description: Required to build packages
       subgroups:
         - name: Theming and Customization
           subgroups:
@@ -137,6 +133,13 @@
             - name: pamac-aur
               description: Graphical package management
     - name: Backend System
+      packages: 
+        - name: xdg-user-dirs
+          description: Common directories for desktops
+        - name: xdg-desktop-portal
+          description: D-Bus APIs for containerized apps
+        - name: accountsservice
+          description: D-Bus interface for user account query and manipulation
       description: Behind-the-scenes working of your Operating System  
       subgroups:
         - name: Display
@@ -248,6 +251,13 @@
   description: Behind-the-scenes working of your Operating System
   expanded: false
   selected: false
+  packages: 
+    - name: xdg-user-dirs
+      description: Common directories for desktops
+    - name: xdg-desktop-portal
+      description: D-Bus APIs for containerized apps
+    - name: accountsservice
+      description: D-Bus interface for user account query and manipulation
   subgroups: 
   - name: Kernels
     description: Other variations of the Linux kernel
