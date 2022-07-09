@@ -87,4 +87,57 @@ desktops:
     xsession: deepin
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
     wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
-
+  - id: ukui
+    test_package: ukui-session-manager
+    session: ukui
+    xsession: ukui
+    login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+    wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+  - id: cutefish
+    test_package: cutefish-core
+    session: cutefish-xsession
+    xsession: cutefish-xsession
+    login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+    wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+  - id: xfce
+    test_package: xfce4-session
+    session: xfce
+    xsession: xfce
+    login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+    wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+  - id: mate
+    test_package: mate-session-manager
+    session: mate
+    xsession: mate
+    login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+    wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+  - id: enlightenment
+    test_package: enlightenment
+    session: enlightenment
+    xsession: enlightenment
+    login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+    wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+  - id: lxde
+    test_package: lxsession
+    session: LXDE
+    xsession: LXDE
+    login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+    wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+  - id: lxqt
+    test_package: lxqt-session
+    session: lxqt
+    xsession: lxqt
+    login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+    wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+  - id: trinity
+    test_package: tde-tdebase
+    session: trinity
+    xsession: trinity
+    login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+    wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+  - id: regolith
+    test_package: regolith-i3
+    session: regolith
+    xsession: regolith
+    login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+    wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
