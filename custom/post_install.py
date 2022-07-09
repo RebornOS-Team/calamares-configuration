@@ -32,7 +32,7 @@ def change_to_script_directory():
     )
 
 def set_display_manager_defaults(config: Dict):
-    content = """
+    accountsservice_content = """
         [org.freedesktop.DisplayManager.AccountsService]
         BackgroundFile="{_background_file}"
 
@@ -43,7 +43,13 @@ def set_display_manager_defaults(config: Dict):
         Icon=/home/{_user}/.face
         SystemAccount=false
     """
-    content = textwrap.dedent(content)
+    accountsservice_content = textwrap.dedent(accountsservice_content)
+
+    dmrc_content="""
+        [Desktop]
+        Session="{_session}"
+    """
+    dmrc_content = textwrap.dedent(dmrc_content)
 
     desktop = default_desktop(
         default_display_manager(config),
@@ -51,13 +57,21 @@ def set_display_manager_defaults(config: Dict):
     )
 
     for user in get_users():
-        with open(ACCOUNTSSERVICE_CONFIG / user, "w") as  account_config:
+        pathlib.Path(ACCOUNTSSERVICE_CONFIG).mkdir(parents=True, exist_ok=True)
+        with open(ACCOUNTSSERVICE_CONFIG / user, "w") as account_config:
             account_config.write(
-                content.format(
+                accountsservice_content.format(
                     _background_file= desktop["login_wallpaper"],
                     _session= desktop["session"],
                     _xsession= desktop["session"],
                     _user= user
+                )
+            )
+        (pathlib.Path("/home") / user).mkdir(parents=True, exist_ok=True)
+        with open(pathlib.Path("/home") / user / ".dmrc", "w") as dmrc_config:
+            dmrc_config.write(
+                dmrc_content.format(
+                    _session= desktop["session"],
                 )
             )
 

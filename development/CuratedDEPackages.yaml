@@ -20,8 +20,8 @@
     # ====
     # Core 
     # ====
-    - name: 
-      description:
+    - name: plasma-desktop
+      description: KDE Plasma Desktop
     # ==============
     # Window Manager
     # ==============

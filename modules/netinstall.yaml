@@ -91,6 +91,8 @@
       description: Currently hardcoded into the installer
     - name: python
       description: For running the post-install script
+    - name: python-yaml
+      description: For running the post-install script
 - name: Minimal Base
   description: Essential packages. Modify at your own risk
   selected: true
