@@ -110,6 +110,10 @@
           description: Network piping application. Does not support IPv6 (Required for termbin)
         - name: base-devel
           description: Required to build packages   
+        - name: xdg-user-dirs
+          description: Common directories for desktops
+        - name: xdg-desktop-portal
+          description: D-Bus APIs for containerized apps
       subgroups:
         - name: Theming and Customization
           subgroups:

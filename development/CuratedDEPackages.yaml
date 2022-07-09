@@ -1,0 +1,253 @@
+---
+
+- id: template
+  packages: 
+    # ===============
+    # Display Manager
+    # ===============
+    - name: 
+      description: 
+    # =============
+    # Screen Locker (sometimes referred to as screensaver)
+    # =============
+    - name: 
+      description: 
+    # =============
+    # Compatibility (like Wayland and Nvidia support)
+    # =============
+    - name: 
+      description: 
+    # ====
+    # Core 
+    # ====
+    - name: 
+      description:
+    # ==============
+    # Window Manager
+    # ==============
+    - name:
+      description:
+    # ================
+    # Settings related
+    # ================
+    - name: 
+      description:
+    # ===========
+    # XDG related (like xdg-desktop-portal-gnome, xdg-user-dirs-gtk, archlinux-xdg-menu)
+    # ===========
+    - name: 
+      description:
+    # =================
+    # Extension related (extension manager, store)
+    # =================
+    - name: 
+      description: 
+    # ===============
+    # Theming related (theming support, uniform theming, basic theme)
+    # ===============
+    - name: 
+      description:
+    # ===========
+    # Tweaking apps (like gnome-tweaks)
+    # ===========
+    - name:
+      description: 
+    # ========
+    # Terminal
+    # ========
+    - name:
+      description:
+    # ============
+    # File Manager
+    # ============
+    - name:
+      description:
+    # ===========
+    # Text Editor
+    # ===========
+    - name:
+      description:
+    # ===============
+    # Document Viewer
+    # ===============
+    - name:
+      description: 
+    # ===============
+    # Archive Manager
+    # ===============
+    - name:
+      description:  
+    # ============
+    # Disk Manager
+    # ============
+    - name:
+      description:  
+    # ==========
+    # Calculator
+    # ==========
+    - name:
+      description:  
+    # ==================
+    # Clock and Calendar
+    # ==================
+    - name:
+      description:  
+    # ===========
+    # Screenshots
+    # ===========
+    - name:
+      description:  
+    # ============
+    # Image Viewer
+    # ============
+    - name:
+      description: 
+    # ============
+    # Media Player
+    # ============
+    - name:
+      description:
+
+- id: gnome
+  packages: 
+    # ===============
+    # Display Manager
+    # ===============
+    - name: gdm
+      description: Display manager and login screen
+    # =============
+    # Screen Locker (sometimes referred to as screensaver)
+    # =============
+    # Not required as it is handled by the gnome shell and gdm
+    # - name: 
+    #   description: 
+    # =============
+    # Compatibility (like Wayland and Nvidia support)
+    # =============
+    # Not required
+    # - name: 
+    #   description: 
+    # ====
+    # Core 
+    # ====
+    - name: gnome-shell
+      description: Next generation desktop shell
+    - name: gnome-session
+      description: The GNOME Session Handler
+    - name: yelp
+      description: Get help with GNOME
+    # ==============
+    # Window Manager
+    # ==============
+    - name: mutter
+      description: A window manager for GNOME
+    # ================
+    # Settings related
+    # ================
+    - name: gnome-control-center
+      description: GNOME's main interface to configure various aspects of the desktop
+    - name: gnome-settings-daemon
+      description: GNOME Settings Daemon
+    - name: gnome-system-monitor
+      description: View current processes and monitor system state
+    # ===========
+    # XDG related (like xdg-desktop-portal-gnome, xdg-user-dirs-gtk, archlinux-xdg-menu)
+    # ===========
+    - name: xdg-desktop-portal-gnome
+      description: A backend implementation for xdg-desktop-portal for the GNOME desktop environment
+    - name: xdg-user-dirs-gtk
+      description: Creates user dirs and asks to relocalize them
+    # =================
+    # Extension related (extension manager, store)
+    # =================
+    - name: gnome-shell-extensions
+      description: Extensions for GNOME shell, including classic mode
+    - name: extension-manager 
+      description: A native tool for browsing, installing, and managing GNOME Shell Extensions
+    # ===============
+    # Theming related (theming support, uniform theming, basic theme)
+    # ===============
+    - name: gnome-backgrounds
+      description: Background images and data for GNOME
+    # ===========
+    # Tweaking apps (like gnome-tweaks)
+    # ===========
+    - name: gnome-tweaks
+      description: Graphical interface for advanced GNOME 3 settings (Tweak Tool)
+    # ========
+    # Terminal
+    # ========
+    - name: gnome-terminal
+      description: The GNOME Terminal Emulator
+    # ============
+    # File Manager
+    # ============
+    - name: nautilus
+      description: Default file manager for GNOME
+    - name: sushi
+      description: A quick previewer for Nautilus
+    - name: gvfs
+      description: Virtual filesystem implementation for GIO
+    - name: gvfs-afc
+      description: Virtual filesystem implementation for GIO
+    - name: gvfs-goa
+      description: Virtual filesystem implementation for GIO
+    - name: gvfs-google
+      description: Virtual filesystem implementation for GIO
+    - name: gvfs-gphoto2
+      description: Virtual filesystem implementation for GIO
+    - name: gvfs-mtp
+      description: Virtual filesystem implementation for GIO
+    - name: gvfs-nfs
+      description: Virtual filesystem implementation for GIO
+    - name: gvfs-smb
+      description: Virtual filesystem implementation for GIO
+    - name: tracker3-miners
+      description: Filesystem indexing, metadata storage, and search
+    # ===========
+    # Text Editor
+    # ===========
+    - name: gedit
+      description: GNOME Text Editor
+    # ===============
+    # Document Viewer
+    # ===============
+    - name: evince
+      description: Document viewer (PDF, PostScript, XPS, djvu, dvi, tiff, cbr, cbz, cb7, cbt)
+    # ===============
+    # Archive Manager
+    # ===============
+    - name: file-roller
+      description: Create and modify archives  
+    # ============
+    # Disk Manager
+    # ============
+    - name: gnome-disk-utility
+      description: Disk Management Utility for GNOME 
+    # ==========
+    # Calculator
+    # ==========
+    - name: gnome-calculator
+      description: GNOME Scientific calculator
+    # ==================
+    # Clock and Calendar
+    # ==================
+    - name: gnome-clocks
+      description: Clocks applications for GNOME
+    # ===========
+    # Screenshots
+    # ===========
+    - name: gnome-screenshot
+      description: Take pictures of your screen  
+    # ============
+    # Image Viewer
+    # ============
+    - name: eog
+      description: Eye of Gnome, An image viewing and cataloging program
+    # ============
+    # Media Player
+    # ============
+    - name: totem   
+      description: Movie player for the GNOME desktop based on GStreamer
+
+      
