@@ -142,8 +142,12 @@
           description: Common directories for desktops
         - name: xdg-desktop-portal
           description: D-Bus APIs for containerized apps
+        - name: xdg-desktop-portal-gtk
+          description: XDG Desktop Portal for Gtk
         - name: accountsservice
           description: D-Bus interface for user account query and manipulation
+        - name: packagekit
+          description: A system designed to make installation and updates of packages easier
       description: Behind-the-scenes working of your Operating System  
       subgroups:
         - name: Display
@@ -262,8 +266,12 @@
       description: Common directories for desktops
     - name: xdg-desktop-portal
       description: D-Bus APIs for containerized apps
+    - name: xdg-desktop-portal-gtk
+      description: XDG Desktop Portal for Gtk    
     - name: accountsservice
       description: D-Bus interface for user account query and manipulation
+    - name: packagekit
+      description: A system designed to make installation and updates of packages easier      
   subgroups: 
   - name: Kernels
     description: Other variations of the Linux kernel
