@@ -37,6 +37,11 @@
     # ===========
     - name: 
       description:
+    # ============
+    # Polkit agent
+    # ============
+    - name:
+      description:
     # =================
     # Extension related (extension manager, store)
     # =================
@@ -145,7 +150,7 @@
     # Settings related
     # ================
     - name: gnome-control-center
-      description: GNOME's main interface to configure various aspects of the desktop
+      description: GNOMEs main interface to configure various aspects of the desktop
     - name: gnome-settings-daemon
       description: GNOME Settings Daemon
     - name: gnome-system-monitor
@@ -157,6 +162,11 @@
       description: A backend implementation for xdg-desktop-portal for the GNOME desktop environment
     - name: xdg-user-dirs-gtk
       description: Creates user dirs and asks to relocalize them
+    # ============
+    # Polkit agent
+    # ============
+    - name: polkit-gnome
+      description: Polkit authentication agent for Gnome  
     # =================
     # Extension related (extension manager, store)
     # =================

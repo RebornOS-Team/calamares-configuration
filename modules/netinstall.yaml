@@ -254,6 +254,8 @@
   expanded: false
   selected: false
   packages: 
+    - name: polkit
+      description: Application development toolkit for controlling system-wide privileges
     - name: xdg-user-dirs
       description: Common directories for desktops
     - name: xdg-desktop-portal
