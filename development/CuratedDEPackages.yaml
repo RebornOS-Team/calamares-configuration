@@ -821,272 +821,352 @@
                   description: A style to bend Qt6 applications to look like they belong into GNOME Shell
        
   - id: xfce
-    packages: 
-      # ===============
-      # Display Manager
-      # ===============
-      - name: lightdm 
-        description: Display Manager and Login Screen
-      - name: lightdm-gtk-greeter
-        description: Greeter for LightDM
-      # =============
-      # Screen Locker (sometimes referred to as screensaver)
-      # =============
-      - name: xfce4-screensaver
-        description: Xfce Screensaver
-      # =============
-      # Compatibility (like Wayland and Nvidia support)
-      # =============
-      # - name: 
-      #   description: 
-      # ====
-      # Core 
-      # ====
-      - name: xfce4-session
-        description: Session manager for Xfce
-      - name: xfce4-panel
-        description: Panel for the Xfce desktop environment
-      - name: exo
-        description: Application library for Xfce
-      - name: garcon
-        description: Implementation of the freedesktop.org menu specification
-      - name: xfce4-appfinder
-        description: An application finder for Xfce
-      - name: xfce4-notifyd
-        description: Notification daemon for the Xfce desktop
-      # ==============
-      # Window Manager
-      # ==============
-      - name: xfwm4
-        description: Window Manager
-      # ================
-      # Settings related
-      # ================
-      - name: xfce4-settings
-        description: Settings manager of the Xfce desktop
-      - name: xfdesktop
-        description: A desktop manager for Xfce
-      - name: thunar-volman
-        description: Automatic management of removeable devices in Thunar
-      - name: xfce4-power-manager
-        description: Power manager for the Xfce desktop
-      - name: xfce4-battery-plugin
-        description: A battery monitor plugin for the Xfce panel
-      - name: xfce4-netload-plugin
-        description: A netload plugin for the Xfce panel
-      - name: xfce4-pulseaudio-plugin
-        description: Pulseaudio plugin for the Xfce4 panel
-      - name: xfce4-sensors-plugin
-        description: Sensors plugin for the Xfce panel
-      - name: xfce4-taskmanager
-        description: Easy to use task manager
-      - name: xfce4-wavelan-plugin
-        description: Plugin to monitor wifi connectivity for the Xfce4 panel
-      # ===========
-      # XDG related (like xdg-desktop-portal-gnome, xdg-user-dirs-gtk, archlinux-xdg-menu)
-      # ===========
-      - name: xdg-desktop-portal-gnome
-        description: XDG Desktop Portal
-      # ============
-      # Polkit agent
-      # ============
-      - name: polkit-gnome 
-        description: Legacy polkit authentication agent for GNOME
-      # =================
-      # Extension related (extension manager, store)
-      # =================
-      - name: xfce4-clipman-plugin
-        description: A clipboard plugin for the Xfce4 panel
-      - name: xfce4-whiskermenu-plugin
-        description: Menu for Xfce4
-      # ===============
-      # Theming related (theming support, uniform theming, basic theme)
-      # ===============
-      - name: tumbler
-        description: D-Bus service for applications to request thumbnails
-      - name: xfwm4-themes
-        description: A set of additional themes for the Xfce window manager
-      - name: xfce4-artwork
-        description: Backdrops for the Xfce4 desktop
-      # ===========
-      # Tweaking apps (like gnome-tweaks)
-      # ===========
-      - name: xfconf
-        description: Configuration management
-      # ========
-      # Terminal
-      # ========
-      - name: xfce4-terminal
-        description: A modern terminal emulator primarily for the Xfce desktop environment
-      # ============
-      # File Manager
-      # ============
-      - name: thunar
-        description: Modern file manager for Xfce
-      - name: thunar-media-tags-plugin
-        description: Adds special features for media files to the Thunar File Manager
-      - name: thunar-archive-plugin
-        description: Adds archive operations to the Thunar file context menus      
-      # ===========
-      # Text Editor
-      # ===========
-      - name: mousepad
-        description: Simple text editor for Xfce
-      # ===============
-      # Document Viewer
-      # ===============
-      - name: xreader
-        description: Document Viewer
-      # ===============
-      # Archive Manager
-      # ===============
-      # Handled in Thunar 
-      # - name: 
-      #   description: 
-      # ============
-      # Disk Manager
-      # ============
-      - name: xfce4-mount-plugin
-        description: Mount/umount utility for the Xfce4 panel
-      # ==========
-      # Calculator
-      # ==========
-      - name: galculator
-        description: "GTK+ based scientific calculator"
-      # ==================
-      # Clock and Calendar
-      # ==================
-      - name: xfce4-datetime-plugin
-        description: A date and time display plugin for the Xfce panel
-      - name: xfce4-timer-plugin
-        description: Plugin to track time for the Xfce4 panel
-      # ===========
-      # Screenshots
-      # ===========
-      - name: xfce4-screenshooter
-        description: An application to take screenshots
-      # ============
-      # Image Viewer
-      # ============
-      - name: ristretto
-        description: A fast and lightweight picture viewer for Xfce
-      # ============
-      # Media Player
-      # ============
-      - name: parole
-        description: Modern media player based on the GStreamer framework
+    name: "Xfce"
+    description: "Xfce is a lightweight and modular desktop environment currently based on GTK 3. To provide a complete user experience, it includes a window manager, a file manager, desktop and panel."
+    screenshot: "/etc/calamares/images/desktops/xfce.png"
+    netinstall:
+      name: Xfce Desktop
+      description: Options for the Xfce desktop installation    
+      subgroups:
+        - name: Curated
+          description: Hand-picked offering of the Xfce desktop
+          selected: true
+          critical: true       
+          packages:
+            # ===============
+            # Display Manager
+            # ===============
+            - name: lightdm 
+              description: Display Manager and Login Screen
+            - name: lightdm-gtk-greeter
+              description: Greeter for LightDM
+            # =============
+            # Screen Locker (sometimes referred to as screensaver)
+            # =============
+            - name: xfce4-screensaver
+              description: Xfce Screensaver
+            # =============
+            # Compatibility (like Wayland and Nvidia support)
+            # =============
+            # - name: 
+            #   description: 
+            # ====
+            # Core 
+            # ====
+            - name: xfce4-session
+              description: Session manager for Xfce
+            - name: xfce4-panel
+              description: Panel for the Xfce desktop environment
+            - name: exo
+              description: Application library for Xfce
+            - name: garcon
+              description: Implementation of the freedesktop.org menu specification
+            - name: xfce4-appfinder
+              description: An application finder for Xfce
+            - name: xfce4-notifyd
+              description: Notification daemon for the Xfce desktop
+            # ==============
+            # Window Manager
+            # ==============
+            - name: xfwm4
+              description: Window Manager
+            # ================
+            # Settings related
+            # ================
+            - name: xfce4-settings
+              description: Settings manager of the Xfce desktop
+            - name: xfdesktop
+              description: A desktop manager for Xfce
+            - name: thunar-volman
+              description: Automatic management of removeable devices in Thunar
+            - name: xfce4-power-manager
+              description: Power manager for the Xfce desktop
+            - name: xfce4-battery-plugin
+              description: A battery monitor plugin for the Xfce panel
+            - name: xfce4-netload-plugin
+              description: A netload plugin for the Xfce panel
+            - name: xfce4-pulseaudio-plugin
+              description: Pulseaudio plugin for the Xfce4 panel
+            - name: xfce4-sensors-plugin
+              description: Sensors plugin for the Xfce panel
+            - name: xfce4-taskmanager
+              description: Easy to use task manager
+            - name: xfce4-wavelan-plugin
+              description: Plugin to monitor wifi connectivity for the Xfce4 panel
+            # ===========
+            # XDG related (like xdg-desktop-portal-gnome, xdg-user-dirs-gtk, archlinux-xdg-menu)
+            # ===========
+            - name: xdg-desktop-portal-gnome
+              description: XDG Desktop Portal
+            # ============
+            # Polkit agent
+            # ============
+            - name: polkit-gnome 
+              description: Legacy polkit authentication agent for GNOME
+            # =================
+            # Extension related (extension manager, store)
+            # =================
+            - name: xfce4-clipman-plugin
+              description: A clipboard plugin for the Xfce4 panel
+            - name: xfce4-whiskermenu-plugin
+              description: Menu for Xfce4
+            # ===============
+            # Theming related (theming support, uniform theming, basic theme)
+            # ===============
+            - name: tumbler
+              description: D-Bus service for applications to request thumbnails
+            - name: xfwm4-themes
+              description: A set of additional themes for the Xfce window manager
+            - name: xfce4-artwork
+              description: Backdrops for the Xfce4 desktop
+            # ===========
+            # Tweaking apps (like gnome-tweaks)
+            # ===========
+            - name: xfconf
+              description: Configuration management
+            # ========
+            # Terminal
+            # ========
+            - name: xfce4-terminal
+              description: A modern terminal emulator primarily for the Xfce desktop environment
+            # ============
+            # File Manager
+            # ============
+            - name: thunar
+              description: Modern file manager for Xfce
+            - name: thunar-media-tags-plugin
+              description: Adds special features for media files to the Thunar File Manager
+            - name: thunar-archive-plugin
+              description: Adds archive operations to the Thunar file context menus      
+            # ===========
+            # Text Editor
+            # ===========
+            - name: mousepad
+              description: Simple text editor for Xfce
+            # ===============
+            # Document Viewer
+            # ===============
+            - name: xreader
+              description: Document Viewer
+            # ===============
+            # Archive Manager
+            # ===============
+            # Handled in Thunar 
+            # - name: 
+            #   description: 
+            # ============
+            # Disk Manager
+            # ============
+            - name: xfce4-mount-plugin
+              description: Mount/umount utility for the Xfce4 panel
+            # ==========
+            # Calculator
+            # ==========
+            - name: galculator
+              description: "GTK+ based scientific calculator"
+            # ==================
+            # Clock and Calendar
+            # ==================
+            - name: xfce4-datetime-plugin
+              description: A date and time display plugin for the Xfce panel
+            - name: xfce4-timer-plugin
+              description: Plugin to track time for the Xfce4 panel
+            # ===========
+            # Screenshots
+            # ===========
+            - name: xfce4-screenshooter
+              description: An application to take screenshots
+            # ============
+            # Image Viewer
+            # ============
+            - name: ristretto
+              description: A fast and lightweight picture viewer for Xfce
+            # ============
+            # Media Player
+            # ============
+            - name: parole
+              description: Modern media player based on the GStreamer framework
 
   - id: mate
-    packages: 
-      # ===============
-      # Display Manager
-      # ===============
-      - name: mate
-        description: 
-      # =============
-      # Screen Locker (sometimes referred to as screensaver)
-      # =============
-      - name: 
-        description: 
-      # =============
-      # Compatibility (like Wayland and Nvidia support)
-      # =============
-      - name: 
-        description: 
-      # ====
-      # Core 
-      # ====
-      - name: mate-session-manager
-        description: The MATE Session Handler
-      - name: mate-panel
-        description: The MATE Panel
-      # ==============
-      # Window Manager
-      # ==============
-      - name: marco
-        description: A window manager for MATE  
-      # ================
-      # Settings related
-      # ================
-      - name: 
-        description:
-      # ===========
-      # XDG related (like xdg-desktop-portal-gnome, xdg-user-dirs-gtk, archlinux-xdg-menu)
-      # ===========
-      - name: 
-        description:
-      # ============
-      # Polkit agent
-      # ============
-      - name:
-        description:
-      # =================
-      # Extension related (extension manager, store)
-      # =================
-      - name: 
-        description: 
-      # ===============
-      # Theming related (theming support, uniform theming, basic theme)
-      # ===============
-      - name: 
-        description:
-      # ===========
-      # Tweaking apps (like gnome-tweaks)
-      # ===========
-      - name:
-        description: 
-      # ========
-      # Terminal
-      # ========
-      - name:
-        description:
-      # ============
-      # File Manager
-      # ============
-      - name:
-        description:
-      # ===========
-      # Text Editor
-      # ===========
-      - name:
-        description:
-      # ===============
-      # Document Viewer
-      # ===============
-      - name:
-        description: 
-      # ===============
-      # Archive Manager
-      # ===============
-      - name:
-        description:  
-      # ============
-      # Disk Manager
-      # ============
-      - name:
-        description:  
-      # ==========
-      # Calculator
-      # ==========
-      - name:
-        description:  
-      # ==================
-      # Clock and Calendar
-      # ==================
-      - name:
-        description:  
-      # ===========
-      # Screenshots
-      # ===========
-      - name:
-        description:  
-      # ============
-      # Image Viewer
-      # ============
-      - name:
-        description: 
-      # ============
-      # Media Player
-      # ============
-      - name:
-        description:      
+    name: "MATE"
+    description: "The MATE Desktop Environment is the continuation of GNOME 2. It provides an intuitive and attractive desktop environment using traditional metaphors for Linux and other Unix-like operating systems. MATE is under active development to add support for new technologies while preserving a traditional desktop experience."
+    screenshot: "/etc/calamares/images/desktops/mate.png"
+    netinstall:
+      name: MATE Desktop
+      description: Options for the MATE desktop installation    
+      subgroups:
+        - name: Curated
+          description: Hand-picked offering of the MATE desktop
+          selected: true
+          critical: true  
+          packages:
+            # ===============
+            # Display Manager
+            # ===============
+            - name: lightdm
+              description: Display Manager and login screen
+            - name: lightdm-gtk-greeter
+              description: Greeter for LightDM
+            # =============
+            # Screen Locker (sometimes referred to as screensaver)
+            # =============
+            - name: mate-screensaver 
+              description: Screensaver for MATE
+            # =============
+            # Compatibility (like Wayland and Nvidia support)
+            # =============
+            # - name: 
+            #   description: 
+            # ====
+            # Core 
+            # ====
+            - name: mate-desktop
+              description: Library with common API for various MATE modules
+            - name: mate-session-manager
+              description: The MATE Session Handler
+            - name: mate-panel
+              description: The MATE Panel
+            - name: mate-menus
+              description: MATE menu specifications
+            - name: mate-notification-daemon
+              description: Notification daemon for MATE
+            - name: mate-user-guide
+              description: MATE User Guide
+            # ==============
+            # Window Manager
+            # ==============
+            - name: marco
+              description: A window manager for MATE  
+            # ================
+            # Settings related
+            # ================
+            - name: mate-control-center
+              description: The Control Center for MATE
+            - name: mate-settings-daemon
+              description: The MATE Settings daemon
+            - name: mate-netbook
+              description: A simple window management tool
+            - name: mate-power-manager
+              description: Power management tool for the MATE desktop
+            - name: mate-system-monitor
+              description: A system monitor for MATE
+            - name: mozo
+              description: MATE menu editing tool
+            # ===========
+            # XDG related (like xdg-desktop-portal-gnome, xdg-user-dirs-gtk, archlinux-xdg-menu)
+            # ===========
+            - name: xdg-desktop-portal-gnome
+              description: XDG Desktop Portal
+            # ============
+            # Polkit agent
+            # ============
+            - name:	mate-polkit
+              description: PolicyKit integration for the MATE desktop
+            # =================
+            # Extension related (extension manager, store)
+            # =================
+            - name: mate-applets
+              description: Applets for MATE panel 
+            - name: mate-media
+              description: MATE Media Tools
+            - name: mate-sensors-applet
+              description: A MATE Panel applet to display readings from hardware sensors, including CPU temperature, fan speeds and voltage readings
+            - name: mate-utils
+              description: Common MATE utilities for viewing disk usage, logs and fonts, taking screenshots, managing dictionaries and searching files
+            # ===============
+            # Theming related (theming support, uniform theming, basic theme)
+            # ===============
+            - name: mate-backgrounds
+              description: Background images and data for MATE
+            - name: mate-icon-theme
+              description: MATE icon theme
+            - name: mate-themes
+              description: Default themes for the MATE desktop
+            - name: mate-icon-theme-faenza
+              description: Faenza icon theme for MATE
+            # ===========
+            # Tweaking apps (like gnome-tweaks)
+            # ===========
+            - name: mate-tweak
+              description: Tweak tool for MATE            
+            # ========
+            # Terminal
+            # ========
+            - name:	mate-terminal
+              description: The MATE Terminal Emulator
+            # ============
+            # File Manager
+            # ============
+            - name:	caja
+              description: File manager for the MATE desktop
+            - name: caja-image-converter
+              description: A Caja extension for simple image conversions
+            - name: caja-open-terminal
+              description: A Caja extension for opening terminals in arbitrary local paths
+            - name: caja-sendto
+              description: A Caja extension for sending files
+            - name: caja-share
+              description: A Caja extension to quickly share a folder
+            - name: caja-wallpaper
+              description: A Caja extension to quickly set wallpaper
+            - name: caja-xattr-tags
+              description: A Caja extension to see tags stored on xattrs
+            # ===========
+            # Text Editor
+            # ===========
+            - name: pluma
+              description: A powerful text editor for MATE
+            # ===============
+            # Document Viewer
+            # ===============
+            - name: atril
+              description: MATE document viewer
+            # ===============
+            # Archive Manager
+            # ===============
+            - name: engrampa
+              description: Archive manipulator for MATE 
+            # ============
+            # Disk Manager
+            # ============
+            # Handled by mate-utils
+            # - name:
+            #   description:  
+            # ==========
+            # Calculator
+            # ==========
+            - name: mate-calc
+              description: Calculator for the MATE desktop environment
+            # ==================
+            # Clock and Calendar
+            # ==================
+            # - name:
+            #   description:  
+            # ===========
+            # Screenshots
+            # ===========
+            # Handled by mate-utils
+            # - name:
+            #   description:  
+            # ============
+            # Image Viewer
+            # ============
+            - name:	eom
+              description: An image viewing and cataloging program for MATE
+            # ============
+            # Media Player
+            # ============
+            - name: totem
+              description: A media player 
+        - name: Miscellaneous
+          selected: false
+          critical: false
+          packages:
+            - name: mate-applet-dock
+              description: Application dock for the MATE panel
+            - name: mate-menu
+              description: Advanced menu for MATE Panel, a fork of MintMenu
+            - name: brisk-menu
+              description: Modern, efficient menu for the MATE Desktop Environment from SolusOS distribution
+            - name: mate-user-share
+              description: User level public file sharing via WebDAV for MATE
