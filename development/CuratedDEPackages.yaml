@@ -547,10 +547,10 @@
             # ====
             # Core 
             # ====
-            # - name: budgie-desktop
-            #   description: The Budgie desktop
-            - name: budgie-desktop-git
+            - name: budgie-desktop
               description: The Budgie desktop
+            # - name: budgie-desktop-git
+            #   description: The Budgie desktop
             # ==============
             # Window Manager
             # ==============
@@ -559,8 +559,8 @@
             # ================
             # Settings related
             # ================
-            - name: budgie-control-center
-              description: Budgie settings
+            # - name: budgie-control-center
+            #   description: Budgie settings
             # ===========
             # XDG related (like xdg-desktop-portal-gnome, xdg-user-dirs-gtk, archlinux-xdg-menu)
             # ===========
