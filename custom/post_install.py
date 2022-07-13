@@ -5,6 +5,7 @@ import os.path
 import sys
 import yaml
 from typing import Optional, Dict, List
+import shlex
 import subprocess
 import textwrap
 import pathlib
@@ -22,7 +23,24 @@ def main():
             print("ERROR: Config file could not be read...", file=sys.stderr)
             exit(1)
 
-    set_display_manager_defaults(config)
+    desktop = default_desktop(
+        default_display_manager(config),
+        config
+    )
+
+    if desktop["id"].lower() == "budgie":
+        subprocess.run(
+            shlex.split("pacman --noconfirm -Rdd gnome-control-center >> post_install.log"),
+            shell= True,
+            capture_output=True,            
+        )
+        subprocess.run(
+            shlex.split("pacman --noconfirm -S budgie-control-center >> post_install.log"),
+            shell= True,
+            capture_output=True,            
+        )
+
+    set_display_manager_defaults(desktop, config)
 
 def change_to_script_directory(): 
     os.chdir(
@@ -31,7 +49,7 @@ def change_to_script_directory():
         )
     )
 
-def set_display_manager_defaults(config: Dict):
+def set_display_manager_defaults(desktop: Dict, config: Dict):
     accountsservice_content = """
         [org.freedesktop.DisplayManager.AccountsService]
         BackgroundFile="{_background_file}"
@@ -50,11 +68,6 @@ def set_display_manager_defaults(config: Dict):
         Session="{_session}"
     """
     dmrc_content = textwrap.dedent(dmrc_content)
-
-    desktop = default_desktop(
-        default_display_manager(config),
-        config
-    )
 
     for user in get_users():
         pathlib.Path(ACCOUNTSSERVICE_CONFIG).mkdir(parents=True, exist_ok=True)

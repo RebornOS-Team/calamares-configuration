@@ -842,7 +842,7 @@
             # ===============
             - name: lightdm 
               description: Display Manager and Login Screen
-            - name: lightdm-gtk-greeter
+            - name: lightdm-slick-greeter
               description: Greeter for LightDM
             # =============
             # Screen Locker (sometimes referred to as screensaver)
@@ -1009,7 +1009,7 @@
             # ===============
             - name: lightdm
               description: Display Manager and login screen
-            - name: lightdm-gtk-greeter
+            - name: lightdm-slick-greeter
               description: Greeter for LightDM
             # =============
             # Screen Locker (sometimes referred to as screensaver)
