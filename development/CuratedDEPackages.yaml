@@ -433,10 +433,12 @@
             # ===============
             # Theming related (theming support, uniform theming, basic theme)
             # ===============
-            - name: gnome-backgrounds
-              description: Background images and data for GNOME
-            - name: gnome-themes-extra
-              description: Extra Themes for GNOME Applications
+            - mint-themes
+            - mint-themes-legacy
+            - mint-x-icons
+            - mint-y-icons
+            - mint-artwork
+            - mint-backgrounds
             # ===========
             # Tweaking apps (like gnome-tweaks)
             # ===========
