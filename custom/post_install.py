@@ -28,17 +28,17 @@ def main():
         config
     )
 
-    if desktop["id"].lower() == "budgie":
-        subprocess.run(
-            shlex.split("pacman --noconfirm -Rdd gnome-control-center >> post_install.log"),
-            shell= True,
-            capture_output=True,            
-        )
-        subprocess.run(
-            shlex.split("pacman --noconfirm -S budgie-control-center >> post_install.log"),
-            shell= True,
-            capture_output=True,            
-        )
+    # if desktop["id"].lower() == "budgie":
+    #     subprocess.run(
+    #         shlex.split("pacman --noconfirm -Rdd gnome-control-center >> post_install.log"),
+    #         shell= True,
+    #         capture_output=True,            
+    #     )
+    #     subprocess.run(
+    #         shlex.split("pacman --noconfirm -S budgie-control-center >> post_install.log"),
+    #         shell= True,
+    #         capture_output=True,            
+    #     )
 
     set_display_manager_defaults(desktop, config)
 
