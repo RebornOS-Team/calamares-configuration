@@ -433,12 +433,8 @@
             # ===============
             # Theming related (theming support, uniform theming, basic theme)
             # ===============
-            - mint-themes
-            - mint-themes-legacy
-            - mint-x-icons
-            - mint-y-icons
-            - mint-artwork
-            - mint-backgrounds
+            # - name:
+            #   description: 
             # ===========
             # Tweaking apps (like gnome-tweaks)
             # ===========
@@ -515,6 +511,12 @@
               description: fallback mode
             - name: metacity
               description: fallback mode
+            - mint-themes
+            - mint-themes-legacy
+            - mint-x-icons
+            - mint-y-icons
+            - mint-artwork
+            - mint-backgrounds
 
   - id: budgie
     name: "Budgie"
