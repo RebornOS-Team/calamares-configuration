@@ -54,20 +54,20 @@
             description: BTRFS support
           - name: xfsprogs
             description: XFS support
-          - name: reiserfsprogs
-            description: ReiserFS support
+          # - name: reiserfsprogs
+          #   description: ReiserFS support
           - name: f2fs-tools
             description: F2FS support
-          - name: hfsprogs
-            description: HFS and HFS+ support          
+          # - name: hfsprogs
+          #   description: HFS and HFS+ support          
           - name: jfsutils
             description: JFS support
-          - name: nilfs-utils
-            description: NILFS2 support          
-          - name: udftools
-            description: UDF support
-          - name: reiser4progs
-            description: Reiser4 support
+          # - name: nilfs-utils
+          #   description: NILFS2 support          
+          # - name: udftools
+          #   description: UDF support
+          # - name: reiser4progs
+          #   description: Reiser4 support
   packages:
     - name: linux
       description: The latest Linux kernel release
