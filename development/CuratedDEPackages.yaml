@@ -1178,3 +1178,180 @@
               description: Modern, efficient menu for the MATE Desktop Environment from SolusOS distribution
             - name: mate-user-share
               description: User level public file sharing via WebDAV for MATE
+
+  - id: deepin
+    name: "Deepin"
+    description: "The Deepin Desktop Environment (DDE) is the desktop environment of the deepin Linux distribution. It is designed by the Wuhan Deepin Technology Co.,Ltd. deepin is a Linux distribution devoted to providing a beautiful, easy to use, safe and reliable system for global users. deepin is an open source GNU/Linux operating system, based on Linux kernel and mainly on desktop applications, supporting laptops, desktops, and all-in-ones."
+    screenshot: "/etc/calamares/images/desktops/deepin.png"
+    netinstall:
+      name: Deepin Desktop
+      description: Options for the Deepin desktop installation    
+      subgroups:
+        - name: Curated
+          description: Hand-picked offering of the Deepin desktop
+          selected: true
+          critical: true   
+          packages: 
+            # ===============
+            # Display Manager
+            # ===============
+            - name: lightdm
+              description: Display Manager and login screen
+            - name: lightdm-slick-greeter
+              description: Greeter for LightDM
+            # =============
+            # Screen Locker (sometimes referred to as screensaver)
+            # =============
+            - name: deepin-screensaver
+              description: Deepin screensaver viewer and tools
+            # =============
+            # Compatibility (like Wayland and Nvidia support)
+            # =============
+            - name: deepin-wayland
+              description: DDE wayland support libraries
+            # ====
+            # Core 
+            # ====
+            - name: deepin-session-shell
+              description: Deepin desktop-environment - session-shell module
+            - name: deepin-session-ui
+              description: Deepin desktop-environment - Session UI module
+            - name: deepin-desktop-base
+              description: Base component for Deepin
+            - name: deepin-anything
+              description: Deepin Anything file search tool
+            - name: deepin-api
+              description: Golang bindings for dde-daemon    
+            - name: deepin-daemon 
+              description: Daemon handling the DDE session settings
+            - name: deepin-launcher
+              description: Deepin desktop-environment - Launcher module
+            - name: deepin-dock
+              description: Deepin desktop-environment - dock module        
+            - name: deepin-menu
+              description: Deepin menu service for building beautiful menus
+            - name: deepin-turbo
+              description: A daemon that helps to launch applications faster
+            - name: startdde
+              description:  	starter of deepin desktop environment
+            # ==============
+            # Window Manager
+            # ==============
+            - name: deepin-wm
+              description: Deepin Window Manager
+            - name: deepin-kwin
+              description: KWin configures on DDE
+            - name: deepin-metacity
+              description: 2D window manager for Deepin
+            # ================
+            # Settings related
+            # ================
+            - name: deepin-control-center
+              description: New control center for linux deepin
+            - name: deepin-network-utils
+              description: DDE network utils
+            - name: deepin-desktop-schemas
+              description: GSettings deepin desktop-wide schemas
+            - name: deepin-system-monitor
+              description: A more user-friendly system monitor
+            - name: deepin-printer
+              description: Printer configuration project for DDE
+            # ===========
+            # XDG related (like xdg-desktop-portal-gnome, xdg-user-dirs-gtk, archlinux-xdg-menu)
+            # ===========
+            - name: xdg-desktop-portal-gtk
+              description: XDG Desktop Portal
+            # ============
+            # Polkit agent
+            # ============
+            - name: deepin-polkit-agent
+              description: Deepin Polkit Agent
+            # =================
+            # Extension related (extension manager, store)
+            # =================
+            # - name: 
+            #   description: 
+            # ===============
+            # Theming related (theming support, uniform theming, basic theme)
+            # ===============
+            - name: deepin-gtk-theme
+              description: Deepin GTK Theme
+            - name: deepin-icon-theme
+              description: Deepin Icons
+            - name: deepin-account-faces 
+              description: Account faces for Linux Deepin
+            - name: deepin-qt5integration
+              description: Qt platform theme integration plugins for DDE
+            - name: deepin-qt5platform-plugins
+              description: Qt platform plugins for DDE
+            - name: deepin-shortcut-viewer
+              description: Deepin Shortcut Viewer
+            - name: deepin-sound-theme
+              description: Deepin sound theme
+            - name: deepin-wallpapers
+              description: Default wallpapers for DDE
+            - name: deepin-community-wallpapers
+              description: Community wallpapers for DDE
+            # ===========
+            # Tweaking apps (like gnome-tweaks)
+            # ===========
+            # - name:
+            #   description: 
+            # ========
+            # Terminal
+            # ========
+            - name: deepin-terminal
+              description: Default terminal emulation application for Deepin
+            # ============
+            # File Manager
+            # ============
+            - name: deepin-file-manager
+              description: Deepin File Manager
+            # ===========
+            # Text Editor
+            # ===========
+            - name: deepin-editor
+              description: Simple editor for Deepin
+            # ===============
+            # Document Viewer
+            # ===============
+            - name: deepin-reader
+              description: A simple PDF reader, supporting bookmarks, highlights and annotations
+            - name: docparser
+              description: A document parser library ported from document2html
+            # ===============
+            # Archive Manager
+            # ===============
+            - name: deepin-compressor
+              description: A fast and lightweight application for creating and extracting archives
+            # ============
+            # Disk Manager
+            # ============
+            - name: deepin-device-formatter
+              description: A simple graphical interface for creating file system in a block device 
+            # ==========
+            # Calculator
+            # ==========
+            - name: deepin-calculator
+              description: An easy to use calculator for ordinary users
+            # ==================
+            # Clock and Calendar
+            # ==================
+            - name: deepin-calendar
+              description: Calendar for Deepin Desktop Environment
+            # ===========
+            # Screenshots
+            # ===========
+            - name: deepin-screenshot
+              description: Easy-to-use screenshot tool for linuxdeepin desktop environment
+            # ============
+            # Image Viewer
+            # ============
+            - name: deepin-image-viewer
+              description: An image viewing tool with fashion interface and smooth performance
+            # ============
+            # Media Player
+            # ============
+            - name: deepin-movie
+              description: Movie player based on mpv      
+              
