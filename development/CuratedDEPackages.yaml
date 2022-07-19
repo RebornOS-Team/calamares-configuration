@@ -1678,7 +1678,7 @@
             # ====
             # Core 
             # ====
-            - name: enlightenment-git
+            - name: enlightenment
               description: The Enlightenment Desktop
             # ==============
             # Window Manager
