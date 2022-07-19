@@ -293,8 +293,6 @@
             # ==================
             # Clock and Calendar
             # ==================
-            - name: kalarm
-              description: Personal alarm scheduler  
             - name: kalendar
               description: A calendar application using Akonadi to sync with external services
             # ===========
@@ -1782,3 +1780,145 @@
             # Errors in build
             # - name: enjoy-git 
             #   description: Music Player
+
+  - id: trinity
+    name: "Trinity"
+    description: "The Trinity Desktop Environment (TDE) project is a computer desktop environment for Unix-like operating systems with a primary goal of retaining the function and form of traditional desktop computers. "
+    screenshot: "/etc/calamares/images/desktops/trinity.png"
+    netinstall:
+      name: Trinity Desktop
+      description: Options for the Trinity desktop installation    
+      subgroups:
+        - name: Curated
+          description: Hand-picked offering of the Trinity desktop
+          selected: true
+          critical: true   
+          packages: 
+            # ===============
+            # Display Manager
+            # ===============
+            # - name: 
+            #   description: 
+            # =============
+            # Screen Locker (sometimes referred to as screensaver)
+            # =============
+            # - name: 
+            #   description: 
+            # =============
+            # Compatibility (like Wayland and Nvidia support)
+            # =============
+            # - name: 
+            #   description: 
+            # ====
+            # Core 
+            # ====
+            - name: tde-tdebase
+              description: TDE base libraries and programs 
+            - name: tde-tdelibs
+              description: TDE core libraries 
+            - tde-dbus-tqt
+            - tde-dbus-1-tqt
+            # ==============
+            # Window Manager
+            # ==============
+            # - name:
+            #   description:
+            # ================
+            # Settings related
+            # ================
+            - name: tde-systemsettings
+              description: System settings
+            - name: tde-tdeadmin
+              description: TDE administration programs 
+            - name: tde-tdegraphics
+              description: TDE graphics utilities 
+            - name: tde-tdenetwork
+              description: TDE network applications
+            - name: tde-tdenetworkmanager
+              description: TDE Network Manager
+            - name: tde-tdeutils
+              description: TDE utility programs 
+            - name: tde-tdepowersave
+              description: 
+            # ===========
+            # XDG related (like xdg-desktop-portal-gnome, xdg-user-dirs-gtk, archlinux-xdg-menu)
+            # ===========
+            - name: xdg-desktop-portal-kde
+              description: XDG Desktop Portal
+            # ============
+            # Polkit agent
+            # ============
+            - name: tde-polkit-agent-tde
+              description: Polkit Agent
+            - name: tde-polkit-tqt
+              description: 
+            # =================
+            # Extension related (extension manager, store)
+            # =================
+            - name: tde-tdeaddons
+              description: TDE add-on programs 
+            # ===============
+            # Theming related (theming support, uniform theming, basic theme)
+            # ===============
+            - name: tde-tdeartwork
+              description: TDE artwork 
+            # ===========
+            # Tweaking apps (like gnome-tweaks)
+            # ===========
+            # - name:
+            #   description: 
+            # ========
+            # Terminal
+            # ========
+            - name: konsole
+              description: Terminal
+            # ============
+            # File Manager
+            # ============
+            - name: dolphin
+              description: Dolphin file manager 
+            # ===========
+            # Text Editor
+            # ===========
+            - name: kwrite
+              description: Text Editor
+            # ===============
+            # Document Viewer
+            # ===============
+            - name: okular
+              description: Document Viewer
+            # ===============
+            # Archive Manager
+            # ===============
+            - name: ark
+              description: Archiving Tool
+            # ============
+            # Disk Manager
+            # ============
+            - name: partitionmanager
+              description: A KDE utility that allows you to manage disks, partitions, and file systems  
+            # ==========
+            # Calculator
+            # ==========
+            - name: kcalc
+              description: Scientific Calculator  
+            # ==================
+            # Clock and Calendar
+            # ==================
+            - name: kalendar
+              description: A calendar application using Akonadi to sync with external services
+            # ===========
+            # Screenshots
+            # ===========
+            - name: spectacle
+              description: KDE screenshot capture utility
+            # ============
+            # Image Viewer
+            # ============
+            - name: gwenview
+              description: Gwenview image viewer
+            # ============
+            # Media Player
+            # ============
+            - name: tde-kmplayer
+              description: KMPlayer media player          
