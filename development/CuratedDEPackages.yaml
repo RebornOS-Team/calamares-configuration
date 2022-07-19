@@ -2081,15 +2081,15 @@
             - name: remontoire-regolith
               description: Keybinding viewer for i3 and other programs
             - name: regolith-styles
-              description: Regolith's themes for i3, gdm, gtk, rofi, plymouth, etc.
+              description: Regoliths themes for i3, gdm, gtk, rofi, plymouth, etc.
             - name: regolith-st
-              description: Regolith's fork of st - the simple terminal
+              description: Regoliths fork of st - the simple terminal
             - name: regolith-i3xrocks
-              description: Regolith's i3xrocks with associated widgets and config files
+              description: Regoliths i3xrocks with associated widgets and config files
             - name: regolith-i3
-              description: Regolith's i3-gaps-based DE's underpinnings and gnome foundational dependencies
+              description: Regoliths i3-gaps-based DEs underpinnings and gnome foundational dependencies
             - name: regolith-desktop-config
-              description: Regolith DE's desktop settings and configuration files, for rofi, i3, lightdm, i3xrocks, etc. plus ubiquity-slideshow-regolith
+              description: Regolith DEs desktop settings and configuration files, for rofi, i3, lightdm, i3xrocks, etc. plus ubiquity-slideshow-regolith
             - name: i3xrocks-wifi
               description: Wifi blocklet for i3xrocks
             - name: i3xrocks-weather
