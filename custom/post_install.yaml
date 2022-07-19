@@ -5,6 +5,8 @@ display_managers:
     test_package: sddm
     test_unit: sddm
     default_priority:
+      - i3
+      - openbox
       - regolith
       - trinity
       - lxqt
@@ -23,6 +25,8 @@ display_managers:
     test_package: gdm
     test_unit: gdm
     default_priority:
+      - i3
+      - openbox    
       - regolith
       - trinity
       - lxqt
@@ -41,6 +45,8 @@ display_managers:
     test_package: lightdm
     test_unit: lightdm
     default_priority:
+      - i3
+      - openbox    
       - regolith
       - trinity
       - lxqt
@@ -118,7 +124,7 @@ desktops:
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
     wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
   - id: lxde
-    test_package: lxsession
+    test_package: lxsession-gtk3
     session: LXDE
     xsession: LXDE
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
@@ -141,3 +147,15 @@ desktops:
     xsession: regolith
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
     wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+  - id: openbox
+    test_package: openbox
+    session: openbox
+    xsession: openbox
+    login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+    wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+  - id: i3
+    test_package: i3-wm
+    session: i3
+    xsession: i3
+    login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
+    wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg    
