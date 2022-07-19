@@ -154,7 +154,7 @@ desktops:
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
     wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
   - id: i3
-    test_package: i3-wm
+    test_package: i3-gaps
     session: i3
     xsession: i3
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
