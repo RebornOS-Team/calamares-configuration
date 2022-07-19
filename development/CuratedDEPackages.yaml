@@ -907,8 +907,8 @@
             # ============
             # Polkit agent
             # ============
-            - name: polkit-gnome 
-              description: Legacy polkit authentication agent for GNOME
+            - name: xfce-polkit
+              description: Polkit Agent
             # =================
             # Extension related (extension manager, store)
             # =================
