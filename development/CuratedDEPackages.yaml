@@ -2159,6 +2159,8 @@
             # ===============
             - name: tde-tdeartwork
               description: TDE artwork 
+            - name: breeze-icons
+              description: Icons for Dolphin              
             # ===========
             # Tweaking apps (like gnome-tweaks)
             # ===========
