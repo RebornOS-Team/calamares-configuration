@@ -1447,7 +1447,7 @@
             # ========
             # Terminal
             # ========
-            - name: gnome-terminal
+            - name: gnome-console
               description: Terminal Emulator
             # ============
             # File Manager
