@@ -1734,6 +1734,8 @@
               description: LXQt platform integration for Qt
             - name: lxqt-themes
               description: LXQt themes, graphics and icons
+            - name: breeze-icons
+              description: Breeze Icons               
             # ===========
             # Tweaking apps (like gnome-tweaks)
             # ===========
