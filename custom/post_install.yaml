@@ -5,12 +5,12 @@ display_managers:
     test_package: sddm
     test_unit: sddm
     default_priority:
-      - i3
-      - openbox
       - regolith
       - trinity
       - lxqt
       - lxde
+      - i3
+      - openbox      
       - enlightenment
       - mate
       - xfce
@@ -25,12 +25,12 @@ display_managers:
     test_package: gdm
     test_unit: gdm
     default_priority:
-      - i3
-      - openbox    
       - regolith
       - trinity
       - lxqt
       - lxde
+      - i3
+      - openbox         
       - enlightenment
       - mate
       - xfce
@@ -44,13 +44,13 @@ display_managers:
   - id: lightdm
     test_package: lightdm
     test_unit: lightdm
-    default_priority:
-      - i3
-      - openbox    
+    default_priority: 
       - regolith
       - trinity
       - lxqt
       - lxde
+      - i3
+      - openbox        
       - enlightenment
       - mate
       - xfce
