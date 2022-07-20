@@ -2255,10 +2255,12 @@
             # ====
             # Core 
             # ====
-            - name: gnome-flashback
-              description: Session
+            # - name: gnome-flashback
+            #   description: Session
             - name: remontoire-regolith 
               description: Keybinding viewer for i3 and other programs
+            - name: python-appdirs
+              description: A small Python module for determining appropriate platform-specific dirs
             # ==============
             # Window Manager
             # ==============
@@ -2313,6 +2315,8 @@
             # ===============
             - name: regolith-styles 
               description: Regoliths themes for i3, gdm, gtk, rofi, plymouth, etc.
+            - name: picom
+              description: Compositing
             # ===========
             # Tweaking apps (like gnome-tweaks)
             # ===========
@@ -2331,7 +2335,7 @@
             # ===========
             # Text Editor
             # ===========
-            - name: gedit
+            - name: gnome-text-editor
               description: Text Editor
             # ===============
             # Document Viewer
