@@ -112,6 +112,8 @@
           description: Network piping application. Does not support IPv6 (Required for termbin)
         - name: base-devel
           description: Required to build packages
+        - name: network-manager-applet
+          description: Applet for managing network connections
       subgroups:
         - name: Theming and Customization
           subgroups:
@@ -397,6 +399,33 @@
     subgroups:
       - name: Nvidia Drivers
         description: For Nvidia GPUs
+        post-install: |-2
+          /bin/sh -c "
+            mkdir -p /etc/pacman.d/hooks/
+            printf \"$(cat <<-EOF
+              [Trigger]
+              Operation = Install
+              Operation = Upgrade
+              Operation = Remove
+              Type = Package
+              Target = nvidia
+              Target = nvidia-lts
+              Target = nvidia-dkms 
+              Target = nvidia-beta
+              Target = nvidia-open
+              Target = nvidia-open-dkms
+              Target = nvidia-470xx-dkms
+              Target = nvidia-390xx-dkms
+              Target = nvidia-340xx-dkms           
+
+              [Action]
+              Description=Update NVIDIA module in initcpio
+              Depends = mkinitcpio
+              When = PostTransaction
+              Exec = /usr/bin/mkinitcpio -P
+            EOF
+            )\" > /etc/pacman.d/hooks/nvidia.hook
+          "        
         packages:
           - name: nvidia-settings
             description: Tool to configure Nvidia drivers (needs Nvidia drivers)
@@ -440,7 +469,6 @@
                 packages:
                   - name: bumblebee
                     description: The main package providing the daemon and client programs
-                    post-install: "systemctl enable bumblebeed.service"
                   - name: mesa
                     description: An open-source implementation of the OpenGL specification
                   - name: xf86-video-intel
@@ -576,7 +604,6 @@
     packages:
       - name: cups
         description: The CUPS Printing System - daemon package
-        post-install: "systemctl start cups.socket"
       - name: cups-pdf
         description: PDF printer for cups
   - name: Storage
@@ -702,6 +729,8 @@
       description: Network piping application. Does not support IPv6 (Required for termbin)
     - name: base-devel
       description: Required to build packages 
+    - name: network-manager-applet
+      description: Applet for managing network connections      
     - name: fastfetch
       description: Like Neofetch, but much faster because written in C
     - name: docker
