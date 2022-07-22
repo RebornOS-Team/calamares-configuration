@@ -2,7 +2,7 @@
 
 display_managers: 
   - id: sddm
-    test_package: sddm
+    test_packages: sddm
     test_unit: sddm
     default_priority:
       - regolith
@@ -22,7 +22,7 @@ display_managers:
       - plasma
       - gnome
   - id: gdm
-    test_package: gdm
+    test_packages: gdm
     test_unit: gdm
     default_priority:
       - regolith
@@ -42,7 +42,7 @@ display_managers:
       - plasma
       - gnome
   - id: lightdm
-    test_package: lightdm
+    test_packages: lightdm
     test_unit: lightdm
     default_priority: 
       - regolith
@@ -64,97 +64,101 @@ display_managers:
 
 desktops:
   - id: gnome
-    test_package: gnome-shell
+    test_packages: gnome-shell
     session: gnome
     xsession: gnome
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
     wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
   - id: plasma
-    test_package: plasma-wokspace
+    test_packages: plasma-wokspace
     session: plasma
     xsession: plasma
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
     wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
   - id: cinnamon
-    test_package: cinnamon-session
+    test_packages: cinnamon-session
     session: cinnamon
     xsession: cinnamon
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
     wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
   - id: budgie
-    test_package: budgie-desktop
+    test_packages: budgie-desktop
     session: budgie-desktop
     xsession: budgie-desktop
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
     wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
   - id: deepin
-    test_package: deepin-session-shell
+    test_packages: deepin-session-shell
     session: deepin
     xsession: deepin
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
     wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
   - id: ukui
-    test_package: ukui-session-manager
+    test_packages: ukui-session-manager
     session: ukui
     xsession: ukui
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
     wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
   - id: cutefish
-    test_package: cutefish-core
+    test_packages: cutefish-core
     session: cutefish-xsession
     xsession: cutefish-xsession
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
     wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
   - id: xfce
-    test_package: xfce4-session
+    test_packages: xfce4-session
     session: xfce
     xsession: xfce
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
     wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
   - id: mate
-    test_package: mate-session-manager
+    test_packages: mate-session-manager
     session: mate
     xsession: mate
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
     wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
   - id: enlightenment
-    test_package: enlightenment
+    test_packages: enlightenment
     session: enlightenment
     xsession: enlightenment
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
     wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
   - id: lxde
-    test_package: lxsession-gtk3
+    test_packages: 
+      - lxsession
+      - lxsession-gtk3
     session: LXDE
     xsession: LXDE
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
     wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
   - id: lxqt
-    test_package: lxqt-session
+    test_packages: lxqt-session
     session: lxqt
     xsession: lxqt
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
     wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
   - id: trinity
-    test_package: tde-tdebase
+    test_packages: tde-tdebase
     session: trinity
     xsession: trinity
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
     wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
   - id: regolith
-    test_package: regolith-i3
+    test_packages: regolith-i3
     session: regolith
     xsession: regolith
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
     wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
   - id: openbox
-    test_package: openbox
+    test_packages: openbox
     session: openbox
     xsession: openbox
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
     wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
   - id: i3
-    test_package: i3-gaps
+    test_packages: 
+      - i3-wm
+      - i3-gaps
     session: i3
     xsession: i3
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg

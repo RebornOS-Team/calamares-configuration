@@ -398,34 +398,7 @@
         description: Open-source implementation of OpenGL specification
     subgroups:
       - name: Nvidia Drivers
-        description: For Nvidia GPUs
-        post-install: |-2
-          /bin/sh -c "
-            mkdir -p /etc/pacman.d/hooks/
-            printf \"$(cat <<-EOF
-              [Trigger]
-              Operation = Install
-              Operation = Upgrade
-              Operation = Remove
-              Type = Package
-              Target = nvidia
-              Target = nvidia-lts
-              Target = nvidia-dkms 
-              Target = nvidia-beta
-              Target = nvidia-open
-              Target = nvidia-open-dkms
-              Target = nvidia-470xx-dkms
-              Target = nvidia-390xx-dkms
-              Target = nvidia-340xx-dkms           
-
-              [Action]
-              Description=Update NVIDIA module in initcpio
-              Depends = mkinitcpio
-              When = PostTransaction
-              Exec = /usr/bin/mkinitcpio -P
-            EOF
-            )\" > /etc/pacman.d/hooks/nvidia.hook
-          "        
+        description: For Nvidia GPUs     
         packages:
           - name: nvidia-settings
             description: Tool to configure Nvidia drivers (needs Nvidia drivers)
