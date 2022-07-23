@@ -1,8 +1,8 @@
 # Maintainer: shivanandvp <shivanandvp@rebornos.org>
 
 pkgname=calamares-configuration
-pkgver=0.0.9
-pkgrel=7
+pkgver=0.0.10
+pkgrel=1
 arch=('i686' 'x86_64' 'armv6h' 'armv7h')
 pkgdesc='Configuration for the RebornOS Calamares installer.'
 license=('GPL3')
@@ -52,9 +52,9 @@ package() {
                 install -Dm 755 "{}" "${pkgdir}/etc/calamares/{}" \;
     )
     (
-        # Copy custom files and directories
+        # Copy post_install files and directories
         cd "$PROJECT_DIRECTORY" && \
-        find custom \
+        find post_install \
             -type f \
             -exec \
                 install -Dm 700 "{}" "${pkgdir}/etc/calamares/{}" \;
