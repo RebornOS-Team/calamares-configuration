@@ -86,7 +86,7 @@ def copy_files():
     logging.info(
         "Copying the contents of \"/var/tmp/post_install/rootfs\" to \"/\" (root)...")
     shutil.copytree(
-        src="/var/tmp/post_install/rootfs",
+        src="rootfs",
         dst="/",
         dirs_exist_ok=True,
     )
