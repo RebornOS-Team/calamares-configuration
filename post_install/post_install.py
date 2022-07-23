@@ -223,7 +223,7 @@ def set_display_manager_defaults(desktop: Dict, config: Dict):
 def configure_desktops(config: Dict):
     logging.info("Configuring Desktops and Window Managers...")
 
-    installed, installed_ids = get_installed_display_managers(config=config)
+    installed, installed_ids = get_installed_desktops(config=config)
 
     for desktop, id in zip(installed, installed_ids):
         if id == "enlightenment":
