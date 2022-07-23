@@ -16,6 +16,17 @@ CONFIG_FILEPATH: pathlib.Path = pathlib.Path("post_install.yaml")
 ACCOUNTSSERVICE_CONFIG_DIRPATH: pathlib.Path = pathlib.Path(
     "/var/lib/AccountsService/users")
 LOG_FILEPATH: pathlib.Path = pathlib.Path("/var/log/post_install.log")
+NVIDIA_PACKAGES: List[str] = [
+    "nvidia",
+    "nvidia-lts",
+    "nvidia-dkms ",
+    "nvidia-beta",
+    "nvidia-open",
+    "nvidia-open-dkms",
+    "nvidia-470xx-dkms",
+    "nvidia-390xx-dkms",
+    "nvidia-340xx-dkms",
+]
 
 LOGGING_FORMAT: str = '%(asctime)s [%(levelname)8s] %(message)s (%(funcName)s; Line %(lineno)d)'
 LOGGING_DATE_FORMAT: str = '%Y-%m-%d %H:%M:%S %Z'
@@ -36,6 +47,11 @@ def main():
 
     copy_files()
 
+    if are_installed(NVIDIA_PACKAGES):
+        add_nvidia_modeset()
+
+    configure_desktops(config=config)
+
     default_display_manager: Dict = get_default_display_manager(config=config)
 
     default_desktop: Dict = get_default_desktop(
@@ -47,8 +63,6 @@ def main():
         desktop=default_desktop,
         config=config
     )
-
-    configure_desktops(config=config)
 
 
 def change_to_script_directory():
@@ -91,6 +105,20 @@ def copy_files():
         dirs_exist_ok=True,
     )
 
+def add_nvidia_modeset():
+    with open("/etc/default/grub", 'r') as f:
+        config_lines = f.readlines()
+
+    for index, config_line in enumerate(config_lines):
+        config_line = config_line.strip()
+        if config_line.startswith("GRUB_CMDLINE_LINUX=") and "nvidia-drm.modeset=1" not in config_line:
+            kernel_parameters = config_line.split("=")[1]
+            kernel_parameters = kernel_parameters.strip('\" ') + " nvidia-drm.modeset=1"
+            kernel_parameters = kernel_parameters.strip()
+            config_lines[index] = f"GRUB_CMDLINE_LINUX=\"{kernel_parameters}\"\n"
+    
+    with open("/etc/default/grub", 'w') as f:
+        f.writelines(config_lines)
 
 def get_default_display_manager(config: Dict) -> Dict:
     logging.info("Determining the default Display Manager...")
