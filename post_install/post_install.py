@@ -4,7 +4,7 @@ import os
 import os.path
 import sys
 import yaml
-from typing import Union, Optional, Dict, List
+from typing import Union, Optional, Dict, List, Tuple
 import shlex
 import shutil
 import subprocess
@@ -36,19 +36,19 @@ def main():
 
     copy_files()
 
-    display_manager: Dict = default_display_manager(config=config)
+    default_display_manager: Dict = get_default_display_manager(config=config)
 
-    desktop: Dict = default_desktop(
-        display_manager=display_manager,
+    default_desktop: Dict = get_default_desktop(
+        display_manager=default_display_manager,
         config=config
     )
-
-    configure_desktop(desktop=desktop)
 
     set_display_manager_defaults(
-        desktop=desktop,
+        desktop=default_desktop,
         config=config
     )
+
+    configure_desktops(config=config)
 
 
 def change_to_script_directory():
@@ -92,16 +92,10 @@ def copy_files():
     )
 
 
-def default_display_manager(config: Dict) -> Dict:
+def get_default_display_manager(config: Dict) -> Dict:
     logging.info("Determining the default Display Manager...")
 
-    installed = list(
-        filter(
-            lambda dm: are_installed(dm["test_packages"]),
-            config["display_managers"]
-        )
-    )
-    installed_ids = get_ids(installed)
+    installed, installed_ids = get_installed_display_managers(config=config)
     logging.debug(
         "\N{heavy four balloon-spoked asterisk} Installed display managers: %s", str(installed_ids))
 
@@ -137,16 +131,10 @@ def default_display_manager(config: Dict) -> Dict:
     return selected_display_manager
 
 
-def default_desktop(display_manager: Dict, config: Dict) -> Dict:
+def get_default_desktop(display_manager: Dict, config: Dict) -> Dict:
     logging.info("Determining the default Desktop/Window Manager...")
 
-    installed = list(
-        filter(
-            lambda d: are_installed(d["test_packages"]),
-            config["desktops"]
-        )
-    )
-    installed_ids = get_ids(installed)
+    installed, installed_ids = get_installed_desktops(config=config)
     logging.debug(
         "\N{heavy four balloon-spoked asterisk} Installed desktops/WMs: %s", str(installed_ids))
 
@@ -175,22 +163,6 @@ def default_desktop(display_manager: Dict, config: Dict) -> Dict:
     logging.debug("\N{blue heart} Selected desktop/WM: %s",
                   selected_desktop_id)
     return selected_desktop
-
-
-def configure_desktop(desktop: Dict):
-    logging.info("Configuring Desktops and Window Managers...")
-    # if desktop["id"].lower() == "budgie":
-    #     subprocess.run(
-    #         shlex.split("pacman --noconfirm -Rdd gnome-control-center >> post_install.log"),
-    #         shell= True,
-    #         capture_output=True,
-    #     )
-    #     subprocess.run(
-    #         shlex.split("pacman --noconfirm -S budgie-control-center >> post_install.log"),
-    #         shell= True,
-    #         capture_output=True,
-    #     )
-    pass
 
 
 def set_display_manager_defaults(desktop: Dict, config: Dict):
@@ -248,6 +220,42 @@ def set_display_manager_defaults(desktop: Dict, config: Dict):
             dmrc_config.write(file_content)
 
 
+def configure_desktops(config: Dict):
+    logging.info("Configuring Desktops and Window Managers...")
+
+    installed, installed_ids = get_installed_display_managers(config=config)
+
+    for desktop, id in zip(installed, installed_ids):
+        if id == "enlightenment":
+            configure_enlightenment_desktop(desktop)
+        else:
+            pass
+
+def configure_enlightenment_desktop(enlightenment_config: Dict):
+    logging.info("Configuring the Enlightenment Desktop...")
+    disable_networkmanager = subprocess.run(
+        shlex.split("systemctl disable NetworkManager.service"),
+        shell= False,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=True,
+    )
+    logging.debug("Running \"systemctl disable NetworkManager.service\":\n%s", disable_networkmanager.stdout)
+    if disable_networkmanager.returncode != 0:
+        logging.error(f"Could not disable NetworkManager. Exit code: {disable_networkmanager.returncode}")
+        return
+
+    enable_connman = subprocess.run(
+    shlex.split("systemctl enable connman.service"),
+        shell= False,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        text=True,
+    )
+    logging.debug("Running \"systemctl enable connman.service\":\n%s", enable_connman.stdout)
+    if enable_connman.returncode != 0:
+        logging.error(f"Could not enable connman. Exit code: {enable_connman.returncode}")        
+
 def get_ids(dicts: list[Dict]) -> list[str]:
     return list(
         map(
@@ -269,6 +277,28 @@ def get_users() -> List[str]:
     )
     logging.debug("Users found: %s", str(users_list))
     return users_list
+
+
+def get_installed_display_managers(config: Dict) -> Tuple[list[Dict], list[str]]:
+    installed = list(
+        filter(
+            lambda dm: are_installed(dm["test_packages"]),
+            config["display_managers"]
+        )
+    )
+    installed_ids = get_ids(installed)
+    return (installed, installed_ids)
+
+
+def get_installed_desktops(config: Dict) -> Tuple[list[Dict], list[str]]:
+    installed = list(
+        filter(
+            lambda d: are_installed(d["test_packages"]),
+            config["desktops"]
+        )
+    )
+    installed_ids = get_ids(installed)
+    return (installed, installed_ids)
 
 
 def are_installed(package_names_given: Union[List[str], str]) -> bool:
