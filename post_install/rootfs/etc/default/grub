@@ -1,5 +1,6 @@
 # GRUB boot loader configuration
 
+LANG=C
 GRUB_DEFAULT=saved
 GRUB_TIMEOUT=5
 GRUB_DISTRIBUTOR="RebornOS"
