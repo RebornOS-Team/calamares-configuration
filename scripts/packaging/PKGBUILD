@@ -2,7 +2,7 @@
 
 pkgname=calamares-configuration
 pkgver=0.0.12
-pkgrel=1
+pkgrel=2
 arch=('i686' 'x86_64' 'armv6h' 'armv7h')
 pkgdesc='Configuration for the RebornOS Calamares installer.'
 license=('GPL3')
@@ -31,6 +31,9 @@ prepare() {
 }
 
 package() {
+
+    # Calamares related files and directories
+
     (   
         # Copy settings_online.conf and settings_offline.conf
         cd "$PROJECT_DIRECTORY" && \
@@ -52,12 +55,12 @@ package() {
                 install -Dm 755 "{}" "${pkgdir}/etc/calamares/{}" \;
     )
     (
-        # Copy post_install files and directories
+        # Copy branding
         cd "$PROJECT_DIRECTORY" && \
-        find post_install \
+        find branding \
             -type f \
             -exec \
-                install -Dm 700 "{}" "${pkgdir}/etc/calamares/{}" \;
+                install -Dm 755 "{}" "${pkgdir}/etc/calamares/{}" \;
     )
     (
         # Copy QML files
@@ -67,6 +70,9 @@ package() {
             -exec \
                 install -Dm 755 "{}" "${pkgdir}/etc/calamares/{}" \;
     )
+
+    # Custom files and directories
+
     (
         # Copy images
         cd "$PROJECT_DIRECTORY" && \
@@ -76,11 +82,20 @@ package() {
                 install -Dm 755 "{}" "${pkgdir}/etc/calamares/{}" \;
     )
     (
-        # Copy branding
+        # Copy post_install files and directories
         cd "$PROJECT_DIRECTORY" && \
-        find branding \
+        find post_install \
             -type f \
             -exec \
-                install -Dm 755 "{}" "${pkgdir}/etc/calamares/{}" \;
+                install -Dm 700 "{}" "${pkgdir}/etc/calamares/{}" \;
     )
+    (
+        # Copy local packages
+        cd "$PROJECT_DIRECTORY" && \
+        find local_packages \
+            -type f \
+            -exec \
+                install -Dm 700 "{}" "${pkgdir}/etc/calamares/{}" \;
+    )
+
 }
