@@ -793,7 +793,7 @@
               description: Qt GUI for Neovim
     - name: File Management
       packages:
-        - name: nautilis
+        - name: nautilus
           description: Extensible, heavyweight file manager used by default in GNOME with support for custom scripts
         - name: dolphin
           description: File manager included in the KDE desktop
@@ -933,7 +933,7 @@
                   description: Simple remote display client
                 - name: cockpit-machines
                   description: Web-based system administration tool with plugin to manage virtual machines
-                - name: libvert
+                - name: libvirt
                   description: Command line program for managing and configuring domains
     - name: Remote Desktop Clients
       description: Connect to other computers remotely 
@@ -1445,7 +1445,7 @@
       description: 
       expanded: false
       packages: 
-        - name: gLabels
+        - name: glabels
           description: Program for creating labels, business cards and media covers
         - name: scribus
           description: Desktop publishing program. Uses hyphen and its language packs for hyphenation  
