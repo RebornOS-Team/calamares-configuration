@@ -588,8 +588,7 @@
             packages:
               - fdisk
               - parted
-              - cfdisk
-              - sfdisk            
+              - util-linux         
           - name: Graphical
             packages:
               - name: gparted
