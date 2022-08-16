@@ -145,7 +145,7 @@
         - name: xdg-desktop-portal
           description: D-Bus APIs for containerized apps
         - name: xdg-desktop-portal-gtk
-          description: XDG Desktop Portal for Gtk
+          description: XDG Desktop Portal for GTK
         - name: accountsservice
           description: D-Bus interface for user account query and manipulation
         - name: packagekit
@@ -270,7 +270,7 @@
     - name: xdg-desktop-portal
       description: D-Bus APIs for containerized apps
     - name: xdg-desktop-portal-gtk
-      description: XDG Desktop Portal for Gtk    
+      description: XDG Desktop Portal for GTK    
     - name: accountsservice
       description: D-Bus interface for user account query and manipulation
     - name: packagekit
@@ -764,19 +764,19 @@
             - name: kwrite
               description: Lightweight text editor for the KDE desktop that uses the same editor widget as Kate
             - name: mousepad
-              description: Fast text editor for the Xfce Desktop Environment
+              description: Fast text editor for the Xfce desktop
             - name: xed
-              description: Text editor based on Pluma developed for Linux Mint
+              description: Small and lightweight text editor based on Pluma
             - name: pluma
               description: Powerful text editor for MATE
             - name: maui-nota
-              description: Multi-platform text editor
+              description: Simple, Multi-platform text editor
             - name: deepin-editor
               description: Simple text editor for Deepin desktop
             - name: notepadqq
               description: Qt-based, Notepad++-like text editor with support for syntax highlighting for more than 100 languages
             - name: featherpad
-              description: Minimal Qt5 plain text editor featuring a native dark theme and support for tabs, printing and syntax highlighting
+              description: Lightweight Qt plain text editor featuring a native dark theme, support for tabs, printing and syntax highlighting
             - name: gobby
               description: Collaborative editor supporting multiple documents in one session and a multi-user chat
             - name: leafpad
@@ -1212,7 +1212,7 @@
           description: Clients for Internet Relay Chat (IRC)
           packages:
             - name: hexchat
-              description: Fork of XChat for Linux and Windows
+              description: Easy to use GTK IRC client based on XChat
             - name: polari
               description: Simple IRC client by the GNOME project
             - name: quassel-monolithic
@@ -1450,7 +1450,7 @@
         - name: scribus
           description: Desktop publishing program. Uses hyphen and its language packs for hyphenation  
 - name: Media Production
-  description: Tools for Youtubers, Twitch streamers and their ilk
+  description: Tools for YouTubers, Twitch streamers and their ilk
   selected: false
   packages: 
     - name: ffmpeg 
@@ -1522,15 +1522,15 @@
         - name: kdenlive
           description: Non-linear video editor designed for basic to semi-professional work
         - name: flowblade
-          description: Multitrack non-linear video editor released under GPL3 license
+          description: Multitrack non-linear video editor
         - name: openshot
-          description: Non-linear video editor based on MLT framework.
+          description: Non-linear video editor based on MLT framework
         - name: pitivi
           description: Free video editor with a beautiful and intuitive user interface, a clean codebase and a fantastic community
         - name: avidemux-qt
           description: Free video editor designed for simple cutting, filtering and encoding tasks
         - name: vidcutter
-          description: Fast lossless media cutter + joiner w/ frame-accurate SmartCut options powered by mpv, FFmpeg via a sleek Qt5 GUI
+          description: Fast lossless media cutter + joiner with frame-accurate SmartCut technology
     - name: Audio Recording and Editing
       packages:
         - name: audacity
@@ -1589,9 +1589,9 @@
         - name: qtcreator
           description: Lightweight, cross-platform integrated development environment
         - name: kate
-          description: (KDE) A modern text editor built on the KDE Frameworks and Qt
+          description: A modern text editor built on the KDE Frameworks and Qt
         - name: geany
-          description: (Gnome) A powerful, stable and lightweight programmer's text editor
+          description: A powerful, stable and lightweight programmer's text editor for GNOME
     - name: Console editors and IDEs
       packages:
         - name: nano
@@ -1642,7 +1642,7 @@
                 - name: pyQt
                   packages:
                     - python-pyqt5            
-            - name: Gtk Bindings
+            - name: GTK Bindings
               packages: 
                 - python-gobject
             - name: wxPython
@@ -1720,4 +1720,4 @@
         - name: sublime-merge
           description: Meet a new Git Client, from the makers of Sublime Text
         - name: subversion
-          description: A Modern Concurrent Version Control System      
+          description: A modern concurrent version control system      
