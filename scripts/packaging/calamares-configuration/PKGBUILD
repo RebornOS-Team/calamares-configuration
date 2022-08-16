@@ -1,6 +1,6 @@
 # Maintainer: shivanandvp <shivanandvp@rebornos.org>
 
-pkgname=calamares-configuration-git
+pkgname=calamares-configuration
 pkgver=0.0.15
 pkgrel=1
 arch=('i686' 'x86_64' 'armv6h' 'armv7h')
@@ -11,9 +11,8 @@ depends=('python-yaml')
 optdepends=('calamares-core')
 makedepends=('rsync' 'git') 
 provides=('calamares-configuration')
-conflicts=('calamares-configuration-git' 'calamares-configuration')
-source=("git+https://github.com/RebornOS-Developers/calamares-configuration")
-replaces=('calamares-configuration')
+conflicts=('calamares-configuration' 'calamares-configuration-git')
+source=("https://github.com/RebornOS-Developers/calamares-configuration/archive/refs/tags/v${pkgver}.tar.gz")
 md5sums=('SKIP')
 
 prepare() {
@@ -22,7 +21,7 @@ prepare() {
 
 package() {
 
-    PROJECT_DIRECTORY="${srcdir}/calamares-configuration#tag=v${pkgver}"
+    PROJECT_DIRECTORY="${srcdir}/calamares-configuration-${pkgver}"
     # BUILD_DIRECTORY="$PROJECT_DIRECTORY/build"
     # RESOURCE_DIRECTORY="$PROJECT_DIRECTORY/scripts/packaging"
     # NUMBER_OF_PROCESSORS="$(nproc)"
