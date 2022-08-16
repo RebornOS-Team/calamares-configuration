@@ -1,7 +1,7 @@
 # Maintainer: shivanandvp <shivanandvp@rebornos.org>
 
 pkgname=calamares-configuration-git
-pkgver=r467.c4aa923
+pkgver=0.0.15
 pkgrel=1
 arch=('i686' 'x86_64' 'armv6h' 'armv7h')
 pkgdesc='Configuration for the RebornOS Calamares installer.'
@@ -16,21 +16,13 @@ source=("git+https://github.com/RebornOS-Developers/calamares-configuration")
 replaces=('calamares-configuration')
 md5sums=('SKIP')
 
-pkgver() {
-  cd "${srcdir}/calamares-configuration"
-  ( set -o pipefail
-    git describe --long 2>/dev/null | sed 's/\([^-]*-g\)/r\1/;s/-/./g' ||
-    printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
-  )
-}
-
 prepare() {
     :
 }
 
 package() {
 
-    PROJECT_DIRECTORY="${srcdir}/calamares-configuration"
+    PROJECT_DIRECTORY="${srcdir}/calamares-configuration#tag=v${pkgver}"
     # BUILD_DIRECTORY="$PROJECT_DIRECTORY/build"
     # RESOURCE_DIRECTORY="$PROJECT_DIRECTORY/scripts/packaging"
     # NUMBER_OF_PROCESSORS="$(nproc)"

@@ -2,3 +2,5 @@
 scripts/packaging/**/pkg
 scripts/packaging/**/src
 scripts/packaging/**/*.pkg.tar.*
+scripts/packaging/calamares-configuration-git/calamares-configuration/*
+scripts/packaging/calamares-configuration/calamares-configuration/*
