@@ -1348,8 +1348,8 @@
           description: (maintenance branch for stability) Free power-packed Open Source personal productivity suite
         - name: calligra
           description: Actively developed fork of KOffice, the KDE office suite
-        - name: openoffice-bin
-          description: (AUR) Open-source office software suite for word processing, spreadsheets, presentations, graphics, databases and more
+        # - name: openoffice-bin
+        #   description: (AUR) Open-source office software suite for word processing, spreadsheets, presentations, graphics, databases and more
         - name: freeoffice
           description: (AUR) Microsoft Office-compatible proprietary office suite with a word processor, spreadsheet, and presentation graphics software
         - name: onlyoffice-bin
