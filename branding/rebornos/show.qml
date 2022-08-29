@@ -37,7 +37,10 @@ Presentation
             Image {
                 id: slide_1
                 source: "images/slides/slide_1.jpg"
-                fillMode: Image.PreserveAspectFit
+                horizontalAlignment: Image.AlignCenter
+                verticalAlignment: Image.AlignTop
+                fillMode: Image.Stretch
+                //fillMode: Image.PreserveAspectFit
                 anchors.fill: parent
             }
         }
@@ -52,7 +55,9 @@ Presentation
             Image {
                 id: slide_2
                 source: "images/slides/slide_2.jpg"
-                fillMode: Image.PreserveAspectFit
+                horizontalAlignment: Image.AlignCenter
+                verticalAlignment: Image.AlignTop
+                fillMode: Image.Stretch
                 anchors.fill: parent
             }
         }
@@ -67,7 +72,9 @@ Presentation
             Image {
                 id: slide_3
                 source: "images/slides/slide_3.jpg"
-                fillMode: Image.PreserveAspectFit
+                horizontalAlignment: Image.AlignCenter
+                verticalAlignment: Image.AlignTop
+                fillMode: Image.Stretch
                 anchors.fill: parent
             }
         }
@@ -82,7 +89,9 @@ Presentation
             Image {
                 id: slide_4
                 source: "images/slides/slide_4.jpg"
-                fillMode: Image.PreserveAspectFit
+                horizontalAlignment: Image.AlignCenter
+                verticalAlignment: Image.AlignTop
+                fillMode: Image.Stretch
                 anchors.fill: parent
             }
         }
@@ -97,7 +106,9 @@ Presentation
             Image {
                 id: slide_5
                 source: "images/slides/slide_5.jpg"
-                fillMode: Image.PreserveAspectFit
+                horizontalAlignment: Image.AlignCenter
+                verticalAlignment: Image.AlignTop
+                fillMode: Image.Stretch
                 anchors.fill: parent
             }
         }
@@ -112,7 +123,9 @@ Presentation
             Image {
                 id: slide_6
                 source: "images/slides/slide_6.jpg"
-                fillMode: Image.PreserveAspectFit
+                horizontalAlignment: Image.AlignCenter
+                verticalAlignment: Image.AlignTop
+                fillMode: Image.Stretch
                 anchors.fill: parent
             }
         }
