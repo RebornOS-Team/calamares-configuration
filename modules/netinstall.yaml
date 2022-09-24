@@ -260,6 +260,7 @@
           description: Script and one-click icon to refresh your mirrors
 - name: Backend System
   description: Behind-the-scenes working of your Operating System
+  noncheckable: true
   expanded: false
   selected: false
   packages: 
@@ -278,6 +279,7 @@
   subgroups: 
   - name: Kernels
     description: Other variations of the Linux kernel
+    noncheckable: true
     packages: 
       - name: linux
         description: The latest Linux kernel release
@@ -292,6 +294,7 @@
       - name: linux-zen-headers
         description: Headers and scripts for building modules for the Linux Zen kernel
   - name: Display
+    noncheckable: true
     subgroups: 
       - name: Xorg
         description: The X display server
@@ -394,12 +397,14 @@
           - name: qt6-wayland 
             description: Wayland support on Qt6
   - name: Graphics
+    noncheckable: true
     packages: 
       - name: mesa
         description: Open-source implementation of OpenGL specification
     subgroups:
       - name: Nvidia Drivers
-        description: For Nvidia GPUs     
+        description: For Nvidia GPUs  
+        noncheckable: true   
         packages:
           - name: nvidia-settings
             description: Tool to configure Nvidia drivers (needs Nvidia drivers)
@@ -426,6 +431,7 @@
         subgroups: 
           - name: Nvidia Hybrid
             description: Nvidia Discrete with other integrated GPUs
+            noncheckable: true
             subgroups:
               - name: PRIME Render Offload
                 packages:
@@ -463,6 +469,7 @@
               #       post-install: "systemctl enable nvx"
       - name: AMD Drivers
         description: For AMD GPUs
+        noncheckable: true
         packages:
           - name: mesa
             description: DRI driver for 3D acceleration
@@ -492,6 +499,7 @@
           - name: xf86-video-ati
             description: DDX driver for 2D acceleration in Xorg
   - name: Audio
+    noncheckable: true
     packages:
       - name: pavucontrol
         description: Simple GTK volume control tool ("mixer")
@@ -533,6 +541,7 @@
           - name: pulseaudio-zeroconf
             description: For PulseAudio Zeroconf (Avahi/DNS-SD) support
   - name: Network
+    noncheckable: true
     subgroups:
       - name: VPN
         description: Virtual Private Network support
@@ -546,6 +555,7 @@
           - name: pptpclient
             description: Client for the proprietary Microsoft Point-to-Point Tunneling Protocol
       - name: Realtek Drivers
+        noncheckable: true
         packages: 
           - rtl8723bu-git-dkms
           - rtl8812au-dkms-git
@@ -556,6 +566,7 @@
           - rtl88x2bu-dkms-git
           - rtl88xxau-aircrack-dkms-git        
       - name: Broadcom Drivers
+        noncheckable: true
         subgroups:
           - name: b43
             packages:               
@@ -657,6 +668,7 @@
         description: Tools to configure devices at runtime  
   - name: Virtualization (as Guest)
     description: Run RebornOS on a VM
+    noncheckable: true
     subgroups:
       - name: VirtualBox
         packages: 
@@ -681,6 +693,7 @@
           - qemu-guest-agent  
   - name: Remote Desktop Servers
     description: Let other computers connect remotely
+    noncheckable: true
     packages:
       - name: tigervnc
         description: VNC Server for X displays
@@ -695,6 +708,7 @@
 - name: Frontend System
   selected: false
   description: For day-to-day usage of the operating system
+  noncheckable: true
   packages:
     - name: inxi
       description: A script to get system information
@@ -710,6 +724,7 @@
       description: A utility to pack, ship and run any application as a lightweight container
   subgroups:
     - name: Alternative App Stores
+      noncheckable: true
       subgroups: 
         - name: Flatpak
           description: A system for building, distributing and running sandboxed desktop applications on Linux
@@ -726,6 +741,7 @@
             - name: apparmor
               description: Mandatory Access Control (MAC) using Linux Security Module (LSM)
     - name: Theming and Customization
+      noncheckable: true
       subgroups:
         - name: feh
           description: Manage desktop wallpaper for standalone WMs
@@ -739,8 +755,10 @@
         - name: variety
           description: Changes wallpaper on a regular interval using user-specified or automatically downloaded images
     - name: Text Editing
+      noncheckable: true
       subgroups:
         - name: Console
+          noncheckable: true
           packages:
             - name: nano
               description: Console text editor based on pico with on-screen key bindings help
@@ -757,6 +775,7 @@
             - name: micro
               description: Modern and intuitive terminal-based text editor, written in go and extensible through plugins   
         - name: Graphical
+          noncheckable: true
           packages:
             - name: gedit
               description: GTK editor for the GNOME desktop with syntax highlighting, automatic indentation, matching brackets, etc.
@@ -791,6 +810,7 @@
             - name: neovim-qt
               description: Qt GUI for Neovim
     - name: File Management
+      noncheckable: true
       packages:
         - name: nautilus
           description: Extensible, heavyweight file manager used by default in GNOME with support for custom scripts
@@ -813,6 +833,7 @@
         - name: deepin-file-manager
           description: File manager for Deepin
     - name: Terminal Emulation
+      noncheckable: true
       packages:
         - name: tilix
           description: Tiling terminal emulator for GNOME
@@ -845,6 +866,7 @@
         - name: cool-retro-term
           description: Good looking terminal emulator which mimics the old cathode display.    
     - name: Commandline Shells
+      noncheckable: true
       packages:
         - name: bash
           description: Bourne again shell. Included by default
@@ -865,6 +887,7 @@
         - name: tcsh
           description: Command language interpreter usable both as an interactive login shell and a shell script command processor
     - name: Package Management
+      noncheckable: true
       packages:
         - name: yay
           description: Commandline AUR helper
@@ -880,6 +903,7 @@
           description: Graphical package management tool
     - name: Virtualization (as Host)
       description: Run VMs on RebornOS
+      noncheckable: true
       subgroups: 
         - name: VirtualBox
           packages:
@@ -936,6 +960,7 @@
                   description: Command line program for managing and configuring domains
     - name: Remote Desktop Clients
       description: Connect to other computers remotely 
+      noncheckable: true
       packages:
         - name: remmina
           description: Remote desktop client written in GTK. Supports RDP, VNC, NX, XDMCP and SSH
@@ -956,6 +981,7 @@
         - name: freerdp
           description: FreeRDP X11 client. Run with xfreerdp
     - name: Security
+      noncheckable: true
       packages: 
         - name: clamav
           description: Open source anti-virus toolkit for UNIX
@@ -971,9 +997,11 @@
               description: Command-line status monitor for tor
 - name: Leisure and Entertainment
   selected: false
+  noncheckable: true
   subgroups:
     - name: Browsers
       description: Browse the internet.
+      noncheckable: true
       packages:
         - name: firefox
           description: Extensible browser from Mozilla based on Gecko with fast rendering
@@ -1005,6 +1033,7 @@
           description: Simple web browser for GNOME. 
     - name: Gaming
       description: Play games!
+      noncheckable: true
       packages: 
         - name: wine
           description: A compatibility layer capable of running Microsoft Windows games and applications
@@ -1030,6 +1059,7 @@
         #   description: (AUR) Paid, commercialized version of Wine which provides more comprehensive end-user support
       subgroups: 
         - name: Stores
+          noncheckable: true
           packages:        
             - name: lutris
               description: Open gaming platform for Linux for GOG, Steam, Battle.net, Origin, Uplay and many other sources
@@ -1046,8 +1076,10 @@
             # - name: itch-setup-bin
             #   description: (AUR) Indie game store
         - name: Games
+          noncheckable: true
           subgroups:
             - name: Action and adventure
+              noncheckable: true
               packages:
                 - name: astromenace
                   description: Modern 3D scrolling space shooter with ship upgrade possibilities
@@ -1072,6 +1104,7 @@
                 # - name: airshipper
                 #   description: (AUR) Veloren is an open-world, open-source multiplayer voxel RPG
             - name: Arcade
+              noncheckable: true
               packages:
                 - name: bomber
                   description: A 2D game with a goal by hitting targets with bombs before their plane crashes into them
@@ -1100,6 +1133,7 @@
                 - name: teeworlds
                   description: Fast-paced 2D multiplayer shooter
             - name: Casual
+              noncheckable: true
               packages:
                 - name: aisleriot
                   description: A collection of solitaire card games
@@ -1114,6 +1148,7 @@
                 - name: lskat
                   description: A variation of Skat card game for two players
             - name: Chess
+              noncheckable: true
               packages:
                 - name: gnuchess
                   description: One of the oldest computer chess programs for Unix-based computers
@@ -1126,6 +1161,7 @@
                 - name: gnome-chess
                   description: A 2D chess game which can use third party chess engines
             - name: Education
+              noncheckable: true
               packages: 
                 - name: artikulate
                   description: Pronunciation trainer that helps improving and perfecting a learner's pronunciation skills for a foreign language
@@ -1146,10 +1182,12 @@
                 - name: minuet
                   description: Software for music education
             - name: MMO
+              noncheckable: true
               packages: 
                 - name: manaplus
                   description: Serious effort to create an innovative free and open source MMORPG
             - name: Platformer
+              noncheckable: true
               packages: 
                 - name: frogatto
                   description: Platformer with adventure elements
@@ -1158,47 +1196,47 @@
                 - name: supertux
                   description: Mario-style game featuring Tux
             - name: Puzzle
-            # ------------
+              noncheckable: true
               packages: 
                 - name: 
                   description: 
             - name: Racing
-            # ------------
+              noncheckable: true
               packages: 
                 - name: 
                   description: 
             - name: Rogue-like
-            # ----------------
+              noncheckable: true
               packages: 
                 - name: 
                   description:
             - name: Role-playing games (RPG)
-            # ------------------------------
+              noncheckable: true
               packages: 
                 - name: 
                   description:  
             - name: Shooters (FPS, third person)
-            # ----------------------------------
+              noncheckable: true
               packages: 
                 - name: 
                   description:     
             - name: Simulation
-            # ----------------
+              noncheckable: true
               packages: 
                 - name: 
                   description:    
             - name: Strategy
-            # --------------
+              noncheckable: true
               packages: 
                 - name: 
                   description:  
             - name: Turn based
-            # ----------------
+              noncheckable: true
               packages: 
                 - name: 
                   description: 
             - name: Tycoon/management
-            # -----------------------
+              noncheckable: true
               expanded: false
               selected: false
               packages: 
@@ -1206,9 +1244,11 @@
                   description: 
     - name: Instant Messaging
       description: Apps for messaging and chatting
+      noncheckable: true
       subgroups:
         - name: IRC Clients
           description: Clients for Internet Relay Chat (IRC)
+          noncheckable: true
           packages:
             - name: hexchat
               description: Easy to use GTK IRC client based on XChat
@@ -1222,6 +1262,7 @@
               description: Qt-based IRC client for the KDE desktop
         - name: Matrix Clients
           description: Clients for Matrix, a decentralised conversation store
+          noncheckable: true
           packages:
             - name: element-desktop
               description: Glossy Matrix client with an emphasis on performance and usability
@@ -1239,6 +1280,7 @@
         - name: kopete
           description: User-friendly IM supporting Bonjour, Gadu-Gadu, GroupWise, ICQ, XMPP
     - name: Video Players
+      noncheckable: true
       packages:
         - name: vlc
           description: Middleweight video player with support for a wide variety of audio and video formats
@@ -1263,6 +1305,7 @@
         - name: mplayer
           description: Video player that supports a complete and versatile array of video and audio formats
     - name: Audio/Music Players
+      noncheckable: true
       packages:
         - name: rhythmbox
           description: GTK clone of iTunes, used by default in GNOME
@@ -1278,7 +1321,8 @@
           description: Audio player written with GTK, Python and GStreamer with support for regular expressions in playlists
         - name: pragha
           description: A lightweight two-panel GTK music manager written in C
-    - name: Image Viewers      
+    - name: Image Viewers    
+      noncheckable: true  
       packages:
         - name: eog
           description: Image viewing and cataloging program, which is a part of the GNOME desktop environment 
@@ -1297,6 +1341,7 @@
         - name: kphotoalbum
           description: Digital image cataloging software that supports annotation, browsing, searching and viewing of digital images and videos
     - name: Music Streaming
+      noncheckable: true
       packages:
         - name: pianobar
           description: Console-based frontend for the online radio Pandora 
@@ -1317,6 +1362,7 @@
         # - name: nuclear-player-bin
         #   description: (AUR) Modern music player focused on streaming from free sources
     - name: Ebook Readers
+      noncheckable: true
       packages:
         - name: calibre
           description: E-book library management application that can also edit EPUB files, convert between different formats and sync with a variety of e-book readers
@@ -1336,10 +1382,12 @@
           description: WYSIWYG EPUB e-book editor
 - name: Office and Productivity 
   description: Tools for office-related tasks
+  noncheckable: true
   selected: false
   subgroups:
     - name: Full Office Suites
       description: Full-featured suites for word processing, spreadsheets, presentations, and drawing
+      noncheckable: true
       expanded: false
       packages:
         - name: libreoffice-fresh
@@ -1359,6 +1407,7 @@
         - name: yozo-office
           description: (AUR) Proprietary office suite, compatible with MS Office
     - name: Email Clients
+      noncheckable: true
       packages:
         - name: thunderbird
           description: Feature-rich email client from Mozilla written in GTK
@@ -1378,6 +1427,7 @@
           description: Lightweight GTK-based email client and news reader
     - name: Document Viewers
       description: PDF, PS and DjVu viewing
+      noncheckable: true
       packages: 
         # - name: acroread
         #   description: (AUR) Proprietary PDF file viewer offered by Adobe. Discontinued for Linux
@@ -1405,6 +1455,7 @@
           description: A simple PDF and DjVu reader, supporting bookmarks, highlights and annotations      
     - name: Word Processing
       description: Create rich text documents (Like in MS Word)
+      noncheckable: true
       expanded: false
       packages: 
         - name: abiword
@@ -1416,6 +1467,7 @@
     # -------------------
     - name: Presentations
       description: Create presentations (Like in MS PowerPoint)
+      noncheckable: true
       expanded: false
       packages: 
         - name: mdp
@@ -1429,6 +1481,7 @@
     # -------------------
     - name: Spreadsheets
       description: Create spreadsheets (Like in MS Excel)
+      noncheckable: true
       expanded: false
       packages: 
         - name: gnumeric
@@ -1442,6 +1495,7 @@
     # ------------------------
     - name: Desktop Publishing
       description: 
+      noncheckable: true
       expanded: false
       packages: 
         - name: glabels
@@ -1450,6 +1504,7 @@
           description: Desktop publishing program. Uses hyphen and its language packs for hyphenation  
 - name: Media Production
   description: Tools for YouTubers, Twitch streamers and their ilk
+  noncheckable: true
   selected: false
   packages: 
     - name: ffmpeg 
@@ -1457,10 +1512,12 @@
   subgroups:
     - name: Art
       description: Tools for your artistic pursuits
+      noncheckable: true
       selected: false
       subgroups:
         - name: Simple
           description: For MS-Paint-like uses
+          noncheckable: true
           packages:
             - name: drawing
               description: Simple image editor
@@ -1472,6 +1529,7 @@
               description: Drawing and editing program modeled after Paint.NET
         - name: Raster Graphics
           description: Edit images made of pixels. For Adobe-Photoshop-like uses
+          noncheckable: true
           packages: 
             - name: krita
               description: Digital painting and illustration software
@@ -1479,10 +1537,12 @@
               description: Image editing suite with a large number of plugins
         - name: Vector Graphics
           description: Edit images made of geometric shapes. For Zoom-able Diagrams or ClipArt
+          noncheckable: true
           packages: 
             - name: inkscape
               description: Vector graphics editor with SVG support, similar to Adobe Illustrator
     - name: Webcam
+      noncheckable: true
       packages:        
         - name: cheese
           description: Take photos and videos with your webcam, with fun graphical effects
@@ -1495,6 +1555,7 @@
         - name: v4l-utils
           description: Configure webcam parameters like brightness and color       
     - name: Screen Recording
+      noncheckable: true
       packages:
         - name: obs-studio
           description: Video recording and live streaming application
@@ -1507,6 +1568,7 @@
         - name: menyoki
           description: Screen{shot,cast} and perform ImageOps on the command line
     - name: Video Conversion
+      noncheckable: true
       packages: 
         - name: handbrake
           description: Simple yet powerful video transcoder ideal for batch mkv/x264 ripping. GTK version
@@ -1515,6 +1577,7 @@
         - name: transmageddon
           description: Simple python application for transcoding video into formats supported by GStreamer
     - name: Video Editing
+      noncheckable: true
       packages:
         - name: shotcut
           description: Free, open source, cross-platform video editor
@@ -1531,6 +1594,7 @@
         - name: vidcutter
           description: Fast lossless media cutter + joiner with frame-accurate SmartCut technology
     - name: Audio Recording and Editing
+      noncheckable: true
       packages:
         - name: audacity
           description: Program that lets you manipulate digital audio waveforms
@@ -1559,6 +1623,7 @@
         # - name: wavesurfer
         #   description: (AUR) Sound visualization and manipulation
     - name: Digital Audio workstations
+      noncheckable: true
       packages:
         - name: ardour
           description: Multichannel hard disk recorder and digital audio workstation
@@ -1574,12 +1639,14 @@
           description: MIDI sequencer, scorewriter and musical composition and editing tool
 - name: Development
   description: Utilities for programming and application design
+  noncheckable: true
   selected: false
   packages: 
     - name: base-devel 
       description: A group of essential packages commonly used for development
   subgroups:
     - name: Graphical editors and IDEs
+      noncheckable: true
       packages:
         - name: code
           description: Open-source release of Visual Studio Code built from the official code-oss repository
@@ -1592,6 +1659,7 @@
         - name: geany
           description: A powerful, stable and lightweight programmer's text editor for GNOME
     - name: Console editors and IDEs
+      noncheckable: true
       packages:
         - name: nano
           description: Pico editor clone with enhancements
@@ -1606,6 +1674,7 @@
         - name: vi
           description: The original ex/vi text editor
     - name: Scripting and Programming Languages
+      noncheckable: true
       subgroups:
         - name: Rust (Stable)
           subgroups:
@@ -1697,6 +1766,7 @@
             - name: electron17
               description: Build cross platform desktop apps with web technologies
     - name: Build Systems
+      noncheckable: true
       packages:
         - name: cmake
           description: A cross-platform open-source make system
@@ -1704,6 +1774,7 @@
           description: Cross platform build system
     - name: Version Control
       description: Version Control Systems (VCS)
+      noncheckable: true
       expanded: false
       packages:
         - name: git
