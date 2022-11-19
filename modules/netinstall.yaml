@@ -110,10 +110,12 @@
           description: A script to get system information
         - name: gnu-netcat
           description: Network piping application. Does not support IPv6 (Required for termbin)
-        - name: base-devel
-          description: Required to build packages
         - name: network-manager-applet
           description: Applet for managing network connections
+        - name: pciutils
+          description: PCI bus configuration space access library and tools
+        - name: usbutils    
+          description: A collection of USB tools to query connected USB devices          
       subgroups:
         - name: Theming and Customization
           subgroups:
@@ -138,6 +140,8 @@
               description: Graphical package management
     - name: Backend System
       packages: 
+        - name: base-devel
+          description: Required to build packages      
         - name: polkit
           description: Application development toolkit for controlling system-wide privileges      
         - name: xdg-user-dirs
@@ -264,6 +268,8 @@
   expanded: false
   selected: false
   packages: 
+    - name: base-devel
+      description: Required to build packages   
     - name: polkit
       description: Application development toolkit for controlling system-wide privileges
     - name: xdg-user-dirs
@@ -714,10 +720,12 @@
       description: A script to get system information
     - name: gnu-netcat
       description: Network piping application. Does not support IPv6 (Required for termbin)
-    - name: base-devel
-      description: Required to build packages 
     - name: network-manager-applet
-      description: Applet for managing network connections      
+      description: Applet for managing network connections  
+    - name: pciutils
+      description: PCI bus configuration space access library and tools
+    - name: usbutils    
+      description: A collection of USB tools to query connected USB devices
     - name: fastfetch
       description: Like Neofetch, but much faster because written in C
     - name: docker
