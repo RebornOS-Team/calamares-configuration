@@ -25,5 +25,5 @@ if [ "$MODE" != "local" ]; then
 fi
 
 set -o xtrace
-sh "$SCRIPT_DIRECTORY"/build.sh "$MODE" --install "$@"
+sh "$SCRIPT_DIRECTORY"/build_package.sh "$MODE" --install "$@"
 set +o xtrace

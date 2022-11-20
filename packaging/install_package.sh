@@ -30,6 +30,6 @@ if ls "$PACKAGE_DIRECTORY"/*.pkg.tar.* > /dev/null 2>&1;then
     set +o xtrace
 else
     set -o xtrace
-    sh "$SCRIPT_DIRECTORY"/build.sh "$MODE" --install "$@"
+    sh "$SCRIPT_DIRECTORY"/build_package.sh "$MODE" --install "$@"
     set +o xtrace
 fi
