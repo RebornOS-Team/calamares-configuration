@@ -1,8 +1,8 @@
 # Maintainer: shivanandvp <shivanandvp@rebornos.org, shivanandvp.oss@gmail.com>
 
 pkgname=calamares-configuration-git
-pkgver=v0.1.2.r3.g15a58ef
-pkgrel=1
+pkgver=v0.1.2.r4.ga540bee
+pkgrel=2
 
 arch=('i686' 'x86_64' 'armv6h' 'armv7h')
 pkgdesc='Configuration for the RebornOS Calamares installer.'
@@ -18,7 +18,7 @@ makedepends=('git')
 source=("git+https://github.com/RebornOS-Developers/calamares-configuration")
 
 pkgver() {
-    ( cd "${srcdir}/calamares-configuration" 
+    (   cd "${srcdir}/calamares-configuration" 
         set -o pipefail
         git describe --long 2>/dev/null | sed 's/\([^-]*-g\)/r\1/;s/-/./g' ||
         printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"

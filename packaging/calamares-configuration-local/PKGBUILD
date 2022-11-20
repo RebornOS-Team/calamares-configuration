@@ -1,8 +1,8 @@
 # Maintainer: shivanandvp <shivanandvp@rebornos.org, shivanandvp.oss@gmail.com>
 
 pkgname=calamares-configuration-local
-pkgver=v0.1.1.r10.gfb19dcc
-pkgrel=1
+pkgver=v0.1.2.r4.ga540bee
+pkgrel=2
 
 arch=('i686' 'x86_64' 'armv6h' 'armv7h')
 pkgdesc='Configuration for the RebornOS Calamares installer.'
@@ -18,7 +18,7 @@ makedepends=()
 source=()
 
 pkgver() {        
-    PROJECT_DIRECTORY="$(dirname -- "$(dirname -- "$(pwd)")")"     
+    PROJECT_DIRECTORY="$(dirname -- "$(dirname -- "$(dirname -- "$(pwd)")")")"     
 
     ( cd "$PROJECT_DIRECTORY" 
         set -o pipefail
@@ -28,7 +28,7 @@ pkgver() {
 }
 
 package() {
-    PROJECT_DIRECTORY="$(dirname -- "$(dirname -- "$(pwd)")")"
+    PROJECT_DIRECTORY="$(dirname -- "$(dirname -- "$(dirname -- "$(pwd)")")")"
     # RESOURCE_DIRECTORY="$PROJECT_DIRECTORY/packaging/resources"
     # BUILD_DIRECTORY="$PROJECT_DIRECTORY/build"
     # NUMBER_OF_PROCESSORS="$(nproc)"
