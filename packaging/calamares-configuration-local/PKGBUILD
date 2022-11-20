@@ -1,7 +1,7 @@
 # Maintainer: shivanandvp <shivanandvp@rebornos.org, shivanandvp.oss@gmail.com>
 
 pkgname=calamares-configuration-local
-pkgver=v0.1.1.r7.gfcdf25f
+pkgver=v0.1.1.r10.gfb19dcc
 pkgrel=1
 
 arch=('i686' 'x86_64' 'armv6h' 'armv7h')
@@ -10,7 +10,7 @@ url='https://github.com/RebornOS-Developers/calamares-configuration'
 license=('GPL3')
 depends=('python' 'python-yaml')
 optdepends=('calamares-core')
-provides=('calamares-configuration')
+provides=('calamares-config')
 conflicts=('calamares-configuration' 'calamares-configuration-git' 'calamares-configuration-local')
 md5sums=()
 makedepends=() 
