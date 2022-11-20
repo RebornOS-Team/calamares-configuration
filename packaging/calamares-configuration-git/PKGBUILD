@@ -18,17 +18,19 @@ makedepends=('git')
 source=("git+https://github.com/RebornOS-Developers/calamares-configuration")
 
 pkgver() {
-  ( cd "${srcdir}/calamares-configuration" 
-    set -o pipefail
-    git describe --long 2>/dev/null | sed 's/\([^-]*-g\)/r\1/;s/-/./g' ||
-    printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
-  )
+    ( cd "${srcdir}/calamares-configuration" 
+        set -o pipefail
+        git describe --long 2>/dev/null | sed 's/\([^-]*-g\)/r\1/;s/-/./g' ||
+        printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+    )
 }
 
 package() {
     PROJECT_DIRECTORY="${srcdir}/calamares-configuration"
+    # RESOURCE_DIRECTORY="$PROJECT_DIRECTORY/packaging/resources"
     # BUILD_DIRECTORY="$PROJECT_DIRECTORY/build"
     # NUMBER_OF_PROCESSORS="$(nproc)"
+    # NUMBER_OF_PROCESSORS="$(($NUMBER_OF_PROCESSORS-1))"
     TARGET_DIRECTORY_STUB="etc/calamares"
     DIST_DIRECTORY="$PROJECT_DIRECTORY/$TARGET_DIRECTORY_STUB"    
 

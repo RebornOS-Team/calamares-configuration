@@ -17,22 +17,22 @@ makedepends=()
 
 source=()
 
-PROJECT_DIRECTORY="$(dirname -- "$(dirname -- "$(pwd)")")" 
-
 pkgver() {        
-  ( cd "$PROJECT_DIRECTORY" 
-    set -o pipefail
-    git describe --long 2>/dev/null | sed 's/\([^-]*-g\)/r\1/;s/-/./g' ||
-    printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
-  )
+    PROJECT_DIRECTORY="$(dirname -- "$(dirname -- "$(pwd)")")"     
+
+    ( cd "$PROJECT_DIRECTORY" 
+        set -o pipefail
+        git describe --long 2>/dev/null | sed 's/\([^-]*-g\)/r\1/;s/-/./g' ||
+        printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+    )
 }
 
-PROJECT_DIRECTORY="$(dirname -- "$(dirname -- "$(pwd)")")"
-
 package() {
-    # PROJECT_DIRECTORY="$(dirname -- "$(dirname -- "$(pwd)")")"
+    PROJECT_DIRECTORY="$(dirname -- "$(dirname -- "$(pwd)")")"
+    # RESOURCE_DIRECTORY="$PROJECT_DIRECTORY/packaging/resources"
     # BUILD_DIRECTORY="$PROJECT_DIRECTORY/build"
     # NUMBER_OF_PROCESSORS="$(nproc)"
+    # NUMBER_OF_PROCESSORS="$(($NUMBER_OF_PROCESSORS-1))"
     TARGET_DIRECTORY_STUB="etc/calamares"
     DIST_DIRECTORY="$PROJECT_DIRECTORY/$TARGET_DIRECTORY_STUB"     
 
