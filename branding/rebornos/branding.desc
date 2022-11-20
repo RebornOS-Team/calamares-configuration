@@ -1,0 +1,55 @@
+# SPDX-FileCopyrightText: no
+# SPDX-License-Identifier: CC0-1.0
+---
+componentName:  rebornos
+
+### WELCOME / OVERALL WORDING
+welcomeStyleCalamares:   true
+welcomeExpandingLogo:   true
+
+### WINDOW CONFIGURATION
+windowExpanding:    normal
+windowSize: 800px,500px
+windowPlacement: center
+
+### PANELS CONFIGURATION
+sidebar: qml
+navigation: qml
+
+
+### STRINGS, IMAGES AND COLORS
+strings:
+    productName:         "${NAME}"
+    shortProductName:    RebornOS
+    version:             2022.11.12
+    shortVersion:        22.11.12
+    versionedName:       RebornOS 2022.11.12
+    shortVersionedName:  RebornOS 22.11.12
+    bootloaderEntryName: RebornOS
+    productUrl:          https://www.rebornos.org/
+    supportUrl:          https://rebornos.org/support/
+    knownIssuesUrl:      https://rebornos.org/downloads/
+    releaseNotesUrl:     https://rebornos.org/downloads/
+    donateUrl:           https://rebornos.org/donate/
+
+images:
+    # productBanner:       "images/rebornos_banner.png"
+    productIcon:         "images/rebornos_logo.png"
+    productLogo:         "images/rebornos_logo.png"
+    # productWallpaper:    "images/wallpaper.png"
+    productWelcome:      "images/languages.png"
+
+style:
+   SidebarBackground:        "#292F34"
+   SidebarText:              "#FFFFFF"
+   SidebarTextCurrent:       "#292F34"
+   SidebarBackgroundCurrent: "#00AAD4"
+
+### SLIDESHOW
+slideshow:               "show.qml"
+slideshowAPI: 2
+
+uploadServer :
+    type :    "fiche"
+    url :     "http://termbin.com:9999"
+    sizeLimit : -1

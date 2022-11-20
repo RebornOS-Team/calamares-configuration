@@ -1,0 +1,114 @@
+---
+
+  - id: template
+    packages: 
+      # ===============
+      # Display Manager
+      # ===============
+      - name: 
+        description: 
+      # =============
+      # Screen Locker (sometimes referred to as screensaver)
+      # =============
+      - name: 
+        description: 
+      # =============
+      # Compatibility (like Wayland and Nvidia support)
+      # =============
+      - name: 
+        description: 
+      # ====
+      # Core 
+      # ====
+      - name:
+        description:
+      # ==============
+      # Window Manager
+      # ==============
+      - name:
+        description:
+      # ================
+      # Settings related
+      # ================
+      - name: 
+        description:
+      # ===========
+      # XDG related (like xdg-desktop-portal-gnome, xdg-user-dirs-gtk, archlinux-xdg-menu)
+      # ===========
+      - name: 
+        description:
+      # ============
+      # Polkit agent
+      # ============
+      - name:
+        description:
+      # =================
+      # Extension related (extension manager, store)
+      # =================
+      - name: 
+        description: 
+      # ===============
+      # Theming related (theming support, uniform theming, basic theme)
+      # ===============
+      - name: 
+        description:
+      # ===========
+      # Tweaking apps (like gnome-tweaks)
+      # ===========
+      - name:
+        description: 
+      # ========
+      # Terminal
+      # ========
+      - name:
+        description:
+      # ============
+      # File Manager
+      # ============
+      - name:
+        description:
+      # ===========
+      # Text Editor
+      # ===========
+      - name:
+        description:
+      # ===============
+      # Document Viewer
+      # ===============
+      - name:
+        description: 
+      # ===============
+      # Archive Manager
+      # ===============
+      - name:
+        description:  
+      # ============
+      # Disk Manager
+      # ============
+      - name:
+        description:  
+      # ==========
+      # Calculator
+      # ==========
+      - name:
+        description:  
+      # ==================
+      # Clock and Calendar
+      # ==================
+      - name:
+        description:  
+      # ===========
+      # Screenshots
+      # ===========
+      - name:
+        description:  
+      # ============
+      # Image Viewer
+      # ============
+      - name:
+        description: 
+      # ============
+      # Media Player
+      # ============
+      - name:
+        description:
