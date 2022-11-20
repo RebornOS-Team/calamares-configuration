@@ -1,6 +1,7 @@
 # Packaging
-scripts/packaging/**/pkg
-scripts/packaging/**/src
-scripts/packaging/**/*.tar.*
-scripts/packaging/calamares-configuration-git/calamares-configuration/*
-scripts/packaging/calamares-configuration/calamares-configuration/*
+packaging/**/pkg
+packaging/**/src
+packaging/**/*.tar.*
+packaging/**/*.pack
+packaging/calamares-configuration-git/calamares-configuration/*
+packaging/calamares-configuration/calamares-configuration/*

@@ -1,0 +1,115 @@
+# Maintainer: shivanandvp <shivanandvp@rebornos.org, shivanandvp.oss@gmail.com>
+
+pkgname=calamares-configuration-local
+pkgver=v0.1.1.r7.gfcdf25f
+pkgrel=1
+
+arch=('i686' 'x86_64' 'armv6h' 'armv7h')
+pkgdesc='Configuration for the RebornOS Calamares installer.'
+url='https://github.com/RebornOS-Developers/calamares-configuration'
+license=('GPL3')
+depends=('python' 'python-yaml')
+optdepends=('calamares-core')
+provides=('calamares-configuration')
+conflicts=('calamares-configuration' 'calamares-configuration-git' 'calamares-configuration-local')
+md5sums=()
+makedepends=() 
+
+source=()
+
+PROJECT_DIRECTORY="$(dirname -- "$(dirname -- "$(pwd)")")" 
+
+pkgver() {        
+  ( cd "$PROJECT_DIRECTORY" 
+    set -o pipefail
+    git describe --long 2>/dev/null | sed 's/\([^-]*-g\)/r\1/;s/-/./g' ||
+    printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+  )
+}
+
+PROJECT_DIRECTORY="$(dirname -- "$(dirname -- "$(pwd)")")"
+
+package() {
+    # PROJECT_DIRECTORY="$(dirname -- "$(dirname -- "$(pwd)")")"
+    # BUILD_DIRECTORY="$PROJECT_DIRECTORY/build"
+    # NUMBER_OF_PROCESSORS="$(nproc)"
+    TARGET_DIRECTORY_STUB="etc/calamares"
+    DIST_DIRECTORY="$PROJECT_DIRECTORY/$TARGET_DIRECTORY_STUB"     
+
+    # =======================================
+    # Calamares-related files and directories
+    # =======================================
+
+    (   # ---------------------------------------------------
+        # Copy settings_online.conf and settings_offline.conf
+        # ---------------------------------------------------
+        cd "$DIST_DIRECTORY" && \
+        find . \
+            -mindepth 1 \
+            -maxdepth 1 \
+            -type f \
+            -name '*.conf' \
+            -exec \
+                install -Dm 755 "{}" "${pkgdir}/$TARGET_DIRECTORY_STUB/{}" \;
+        install -Dm 755 settings_online.conf "${pkgdir}"/$TARGET_DIRECTORY_STUB/settings.conf # Start off by copying online settings as the default
+    )
+    (   # ----------------------------------
+        # Copy module-specific configuration
+        # ----------------------------------
+        cd "$DIST_DIRECTORY" && \
+        find modules \
+            -type f \
+            -exec \
+                install -Dm 755 "{}" "${pkgdir}/$TARGET_DIRECTORY_STUB/{}" \;
+    )
+    (   # -------------
+        # Copy branding
+        # -------------
+        cd "$DIST_DIRECTORY" && \
+        find branding \
+            -type f \
+            -exec \
+                install -Dm 755 "{}" "${pkgdir}/$TARGET_DIRECTORY_STUB/{}" \;
+    )
+    (   # --------------
+        # Copy QML files
+        # --------------
+        cd "$DIST_DIRECTORY" && \
+        find qml \
+            -type f \
+            -exec \
+                install -Dm 755 "{}" "${pkgdir}/$TARGET_DIRECTORY_STUB/{}" \;
+    )
+
+    # ============================
+    # Custom files and directories
+    # ============================
+
+    (   # -----------
+        # Copy images
+        # -----------
+        cd "$DIST_DIRECTORY" && \
+        find images \
+            -type f \
+            -exec \
+                install -Dm 755 "{}" "${pkgdir}/$TARGET_DIRECTORY_STUB/{}" \;
+    )
+    (   # ---------------------------------------
+        # Copy post_install files and directories
+        # ---------------------------------------
+        cd "$DIST_DIRECTORY" && \
+        find post_install \
+            -type f \
+            -exec \
+                install -Dm 700 "{}" "${pkgdir}/$TARGET_DIRECTORY_STUB/{}" \;
+    )
+    (   # -------------------
+        # Copy local packages
+        # -------------------
+        cd "$DIST_DIRECTORY" && \
+        find local_packages \
+            -type f \
+            -exec \
+                install -Dm 700 "{}" "${pkgdir}/$TARGET_DIRECTORY_STUB/{}" \;
+    )
+}
