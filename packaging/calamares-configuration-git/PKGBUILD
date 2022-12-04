@@ -110,4 +110,11 @@ package() {
             -exec \
                 install -Dm 700 "{}" "${pkgdir}/$TARGET_DIRECTORY_STUB/{}" \;
     )
+    (
+        cd "$PROJECT_DIRECTORY" && \
+        find pre_install \
+            -type f \
+            -exec \
+                install -Dm 755 "{}" "${pkgdir}/usr/lib/calamares/modules/pre_install/{}" \;
+    )
 }
