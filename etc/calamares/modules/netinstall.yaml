@@ -48,8 +48,8 @@
             description: VFAT support
           - name: e2fsprogs
             description: ext3 and ext4 support
-          - name: ntfs-3g
-            description: NTFS support          
+          # - name: ntfs-3g
+          #   description: NTFS support (Not needed on newer kernels)          
           - name: btrfs-progs
             description: BTRFS support
           - name: xfsprogs
@@ -154,7 +154,6 @@
           description: D-Bus interface for user account query and manipulation
         - name: packagekit
           description: A system designed to make installation and updates of packages easier
-      description: Behind-the-scenes working of your Operating System  
       subgroups:
         - name: Display
           subgroups: 
@@ -244,6 +243,7 @@
               packages: 
                 - qemu-guest-agent   
 - name: RebornOS
+  description: RebornOS Base and Apps
   selected: true
   subgroups:
     - name: RebornOS Base
@@ -300,6 +300,7 @@
       - name: linux-zen-headers
         description: Headers and scripts for building modules for the Linux Zen kernel
   - name: Display
+    description: Display Servers
     noncheckable: true
     subgroups: 
       - name: Xorg
@@ -403,6 +404,7 @@
           - name: qt6-wayland 
             description: Wayland support on Qt6
   - name: Graphics
+    description: Graphics Drivers
     noncheckable: true
     packages: 
       - name: mesa
@@ -505,6 +507,7 @@
           - name: xf86-video-ati
             description: DDX driver for 2D acceleration in Xorg
   - name: Audio
+    description: Audio Drivers
     noncheckable: true
     packages:
       - name: pavucontrol
@@ -547,6 +550,7 @@
           - name: pulseaudio-zeroconf
             description: For PulseAudio Zeroconf (Avahi/DNS-SD) support
   - name: Network
+    description: Network Drivers and VPN prerequisites
     noncheckable: true
     subgroups:
       - name: VPN
@@ -583,7 +587,8 @@
             packages:               
               - broadcom-wl
               - broadcom-wl-dkms
-  - name: Bluetooth        
+  - name: Bluetooth  
+    description: Bluetooth Drivers      
     packages:
       - name: bluez
         description: The Bluetooth protocol stack
@@ -592,12 +597,14 @@
       - name: blueman
         description: A full featured Bluetooth manager
   - name: Printing
+    description: Printer Drivers
     packages:
       - name: cups
         description: The CUPS Printing System - daemon package
       - name: cups-pdf
         description: PDF printer for cups
   - name: Storage
+    description: Partitioning and Filesystems
     subgroups:
       - name: Partitioning
         subgroups: 
@@ -643,8 +650,8 @@
               description: VFAT support
             - name: e2fsprogs
               description: ext3 and ext4 support
-            - name: ntfs-3g
-              description: NTFS support          
+            # - name: ntfs-3g
+            #   description: NTFS support (Not needed on newer kernels)       
             - name: btrfs-progs
               description: BTRFS support
             - name: xfsprogs
@@ -664,7 +671,7 @@
             - name: reiser4progs
               description: Reiser4 support
   - name: Input
-    description: Input devices like mouse, touchpad, and keyboard
+    description: "Input device drivers for mouse, touchpad, keyboard, etc."
     packages: 
       - name: libinput
         description: Input device management and event handling library
@@ -732,6 +739,7 @@
       description: A utility to pack, ship and run any application as a lightweight container
   subgroups:
     - name: Alternative App Stores
+      description: Alternatives to native apps
       noncheckable: true
       subgroups: 
         - name: Flatpak
@@ -749,6 +757,7 @@
             - name: apparmor
               description: Mandatory Access Control (MAC) using Linux Security Module (LSM)
     - name: Theming and Customization
+      description: Tools for Theming and Customization
       noncheckable: true
       subgroups:
         - name: feh
@@ -763,6 +772,7 @@
         - name: variety
           description: Changes wallpaper on a regular interval using user-specified or automatically downloaded images
     - name: Text Editing
+      description: Text Editors
       noncheckable: true
       subgroups:
         - name: Console
@@ -818,6 +828,7 @@
             - name: neovim-qt
               description: Qt GUI for Neovim
     - name: File Management
+      description: File Managers
       noncheckable: true
       packages:
         - name: nautilus
@@ -841,6 +852,7 @@
         - name: deepin-file-manager
           description: File manager for Deepin
     - name: Terminal Emulation
+      description: Terminal Emulator Frontends
       noncheckable: true
       packages:
         - name: tilix
@@ -874,6 +886,7 @@
         - name: cool-retro-term
           description: Good looking terminal emulator which mimics the old cathode display.    
     - name: Commandline Shells
+      description: Commandline Shells
       noncheckable: true
       packages:
         - name: bash
@@ -895,6 +908,7 @@
         - name: tcsh
           description: Command language interpreter usable both as an interactive login shell and a shell script command processor
     - name: Package Management
+      description: Tools for managing packages
       noncheckable: true
       packages:
         - name: yay
@@ -989,6 +1003,7 @@
         - name: freerdp
           description: FreeRDP X11 client. Run with xfreerdp
     - name: Security
+      description: Antimalware and Onion Routing
       noncheckable: true
       packages: 
         - name: clamav
@@ -1004,6 +1019,7 @@
             - name: nyx
               description: Command-line status monitor for tor
 - name: Leisure and Entertainment
+  description: Anything other than serious work
   selected: false
   noncheckable: true
   subgroups:
@@ -1389,7 +1405,7 @@
         - name: sigil
           description: WYSIWYG EPUB e-book editor
 - name: Office and Productivity 
-  description: Tools for office-related tasks
+  description: Tools for Office-related tasks
   noncheckable: true
   selected: false
   subgroups:
@@ -1646,7 +1662,7 @@
         - name: rosegarden
           description: MIDI sequencer, scorewriter and musical composition and editing tool
 - name: Development
-  description: Utilities for programming and application design
+  description: Utilities for Programming and application design
   noncheckable: true
   selected: false
   packages: 
@@ -1759,19 +1775,15 @@
               description: "Evented I/O for V8 javascript (LTS release: Gallium)"
             - name: npm
               description: A package manager for javascript
+            - name: yarn
+              description: "Fast, reliable, and secure dependency management"
             - name: electron
               description: Build cross platform desktop apps with web technologies
-            - name: electron12
-              description: Build cross platform desktop apps with web technologies
-            - name: electron13
-              description: Build cross platform desktop apps with web technologies
-            - name: electron14
-              description: Build cross platform desktop apps with web technologies
-            - name: electron15
-              description: Build cross platform desktop apps with web technologies
-            - name: electron16
-              description: Build cross platform desktop apps with web technologies
             - name: electron17
+              description: Build cross platform desktop apps with web technologies
+            - name: electron18
+              description: Build cross platform desktop apps with web technologies
+            - name: electron19
               description: Build cross platform desktop apps with web technologies
     - name: Build Systems
       noncheckable: true
