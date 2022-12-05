@@ -1,8 +1,8 @@
 # Maintainer: shivanandvp <shivanandvp@rebornos.org, shivanandvp.oss@gmail.com>
 
 pkgname=calamares-configuration
-pkgver=0.1.2
-pkgrel=2
+pkgver=0.1.3
+pkgrel=1
 
 arch=('i686' 'x86_64' 'armv6h' 'armv7h')
 pkgdesc='Configuration for the RebornOS Calamares installer.'
@@ -23,8 +23,10 @@ package() {
     # BUILD_DIRECTORY="$PROJECT_DIRECTORY/build"
     # NUMBER_OF_PROCESSORS="$(nproc)"
     # NUMBER_OF_PROCESSORS="$(($NUMBER_OF_PROCESSORS-1))"
-    TARGET_DIRECTORY_STUB="etc/calamares"
-    DIST_DIRECTORY="$PROJECT_DIRECTORY/$TARGET_DIRECTORY_STUB"    
+    DIST_DIRECTORY_STUB="etc/calamares"
+    DIST_DIRECTORY="$PROJECT_DIRECTORY/$DIST_DIRECTORY_STUB"
+    LIB_DIRECTORY_STUB="usr/lib/calamares/modules"
+    LIB_DIRECTORY="$PROJECT_DIRECTORY/$LIB_DIRECTORY_STUB"        
         
     # =======================================
     # Calamares-related files and directories
@@ -40,8 +42,8 @@ package() {
             -type f \
             -name '*.conf' \
             -exec \
-                install -Dm 755 "{}" "${pkgdir}/$TARGET_DIRECTORY_STUB/{}" \;
-        install -Dm 755 settings_online.conf "${pkgdir}"/$TARGET_DIRECTORY_STUB/settings.conf # Start off by copying online settings as the default
+                install -Dm 755 "{}" "${pkgdir}/$DIST_DIRECTORY_STUB/{}" \;
+        install -Dm 755 settings_online.conf "${pkgdir}"/$DIST_DIRECTORY_STUB/settings.conf # Start off by copying online settings as the default
     )
     (   # ----------------------------------
         # Copy module-specific configuration
@@ -50,7 +52,7 @@ package() {
         find modules \
             -type f \
             -exec \
-                install -Dm 755 "{}" "${pkgdir}/$TARGET_DIRECTORY_STUB/{}" \;
+                install -Dm 755 "{}" "${pkgdir}/$DIST_DIRECTORY_STUB/{}" \;
     )
     (   # -------------
         # Copy branding
@@ -59,7 +61,7 @@ package() {
         find branding \
             -type f \
             -exec \
-                install -Dm 755 "{}" "${pkgdir}/$TARGET_DIRECTORY_STUB/{}" \;
+                install -Dm 755 "{}" "${pkgdir}/$DIST_DIRECTORY_STUB/{}" \;
     )
     (   # --------------
         # Copy QML files
@@ -68,7 +70,7 @@ package() {
         find qml \
             -type f \
             -exec \
-                install -Dm 755 "{}" "${pkgdir}/$TARGET_DIRECTORY_STUB/{}" \;
+                install -Dm 755 "{}" "${pkgdir}/$DIST_DIRECTORY_STUB/{}" \;
     )
 
     # ============================
@@ -82,7 +84,7 @@ package() {
         find images \
             -type f \
             -exec \
-                install -Dm 755 "{}" "${pkgdir}/$TARGET_DIRECTORY_STUB/{}" \;
+                install -Dm 755 "{}" "${pkgdir}/$DIST_DIRECTORY_STUB/{}" \;
     )
     (   # ---------------------------------------
         # Copy post_install files and directories
@@ -91,7 +93,7 @@ package() {
         find post_install \
             -type f \
             -exec \
-                install -Dm 700 "{}" "${pkgdir}/$TARGET_DIRECTORY_STUB/{}" \;
+                install -Dm 700 "{}" "${pkgdir}/$DIST_DIRECTORY_STUB/{}" \;
     )
     (   # -------------------
         # Copy local packages
@@ -100,13 +102,15 @@ package() {
         find local_packages \
             -type f \
             -exec \
-                install -Dm 700 "{}" "${pkgdir}/$TARGET_DIRECTORY_STUB/{}" \;
+                install -Dm 700 "{}" "${pkgdir}/$DIST_DIRECTORY_STUB/{}" \;
     )
-    (
-        cd "$PROJECT_DIRECTORY" && \
+    (   # -------------------
+        # Copy custom modules
+        # -------------------
+        cd "$LIB_DIRECTORY" && \
         find pre_install \
             -type f \
             -exec \
-                install -Dm 755 "{}" "${pkgdir}/usr/lib/calamares/modules/pre_install/{}" \;
+                install -Dm 755 "{}" "${pkgdir}/$LIB_DIRECTORY_STUB/{}" \;
     )
 }
