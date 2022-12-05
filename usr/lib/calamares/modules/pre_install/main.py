@@ -51,7 +51,11 @@ def run():
     if package in cumulative_package_list:
         libcalamares.utils.debug("Running pre-install commands for: {}".format(package))
         for command in pre_commands:
-            command_ = command.split(' ')
+            command_ = [
+                "/usr/bin/sh",
+                "-c",
+                command,
+            ]
             libcalamares.utils.debug("Running command: {}".format(command))
             libcalamares.utils.target_env_call(command_)
     else:
