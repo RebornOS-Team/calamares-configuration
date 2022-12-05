@@ -43,7 +43,7 @@ cumulative_package_list: list[str] = []
 def run():
     packagechooser = libcalamares.globalstorage.value("netinstallAdd")
     package = libcalamares.job.configuration["package"]
-    pre_commands = libcalamares.job.configuration["pre_install"]
+    pre_commands = libcalamares.job.configuration["pre-install"]
     netinstall = libcalamares.globalstorage.value("packageOperations")
     print(netinstall)
     pick_out_packages(item= packagechooser, cumulative_package_list= cumulative_package_list)
