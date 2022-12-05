@@ -1,3 +1,8 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+#
+#   SPDX-FileCopyrightText: 2022 Panda <panda@rebornos.org>
+
 import os
 import shutil
 from typing import Optional, Union, Dict, List
@@ -44,7 +49,7 @@ def run():
     pick_out_packages(item= packagechooser, cumulative_package_list= cumulative_package_list)
     print(pre_commands)
     if package in cumulative_package_list:
-        libcalamares.utils.debug("Match found")
+        libcalamares.utils.debug("Running pre-install commands for: {}".format(package))
         for command in pre_commands:
             command_ = command.split(' ')
             libcalamares.utils.debug("Running command: {}".format(command))
