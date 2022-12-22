@@ -3,9 +3,9 @@ run-name: ${{ github.actor }} triggered a release
 on:
   - workflow_dispatch
   - workflow_call
-  - push:
-      tags:
-        - "v**"
+  # - push:
+  #     tags:
+  #       - "v**"
 jobs:
   build:
     runs-on: ubuntu-latest
