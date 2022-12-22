@@ -1,13 +1,14 @@
 name: Release
-run-name: ${{ github.actor }} triggered a release
+run-name: Release triggered by ${{ github.actor }}
 on:
+  # push:
+  #     tags:
+  #     - "v**"
   - workflow_dispatch
   - workflow_call
-  # - push:
-  #     tags:
-  #       - "v**"
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
     container: 
       image: rebornos/rebornos:latest
@@ -23,11 +24,27 @@ jobs:
         uses: actions/checkout@v3
       - id: build_package_step
         name: Build Package
-        # run: runuser -l nobody -c "sh packaging/build_package.sh stable"
-        run: sudo chown -R rebornos packaging && sudo chmod -R +x packaging && sudo -u rebornos sh -c "packaging/build_package.sh stable --noconfirm"
+        run: |
+          chown -R rebornos packaging
+          chmod -R +x packaging
+          sudo -u rebornos sh -c "packaging/build_package.sh stable --noconfirm"
       - id: upload_package_step
         name: Upload Package Artifact
         uses: actions/upload-artifact@v3
         with: 
-          name: built-iso
+          name: Stable Package
           path: packaging/${{ github.event.repository.name }}/${{ github.event.repository.name }}*.pkg.tar.*
+          if-no-files-found: error
+  release:  
+    needs: build        
+    name: Release
+    runs-on: ubuntu-latest
+    steps:
+      - id: download_package_step 
+        name: Download Package Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: Stable Package
+      - name: Display structure of downloaded files
+        run: ls -R
+  
