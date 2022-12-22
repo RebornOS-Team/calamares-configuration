@@ -63,9 +63,8 @@ jobs:
           draft: false
           prerelease: true
           fail_on_unmatched_files: true
-          generate_release_notes: false
+          generate_release_notes: true
           append_body: false
-          body_path: CHANGELOG.md
           tag_name: ${{ env.GIT_VERSION }}
           name: ${{ env.GIT_VERSION }}
           files: |
