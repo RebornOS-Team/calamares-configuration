@@ -24,9 +24,7 @@ jobs:
       - id: build_package_step
         name: Build Package
         # run: runuser -l nobody -c "sh packaging/build_package.sh stable"
-        run: sudo chown -R nobody packaging \
-             && sudo chmod +x packaging \
-             && sudo -u nobody sh -c "packaging/build_package.sh stable"
+        run: sudo chown -R nobody packaging && sudo chmod +x packaging && sudo -u nobody sh -c "packaging/build_package.sh stable"
       - id: upload_package_step
         name: Upload Package Artifact
         uses: actions/upload-artifact@v3
