@@ -1,0 +1,32 @@
+name: Release
+run-name: ${{ github.actor }} triggered a release
+on:
+  - workflow_dispatch
+  - workflow_call
+  - push:
+      tags:
+        - "v**"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: 
+      image: rebornos/rebornos:latest
+      ports:
+        - 80
+      options: --privileged
+    steps:
+      - id: init_docker_step
+        name: Initialize RebornOS Docker Container        
+        run: sh /usr/bin/init-rebornos-docker.sh
+      - id: checkout_repository_step
+        name: Checkout Git Repository
+        uses: actions/checkout@v3
+      - id: build_package_step
+        name: Build Package
+        run: sh packaging/build_package.sh stable
+      - id: upload_package_step
+        name: Upload Package Artifact
+        uses: actions/upload-artifact@v3
+        with: 
+          name: built-iso
+          path: packaging/${{ github.event.repository.name }}*.pkg.tar.*
