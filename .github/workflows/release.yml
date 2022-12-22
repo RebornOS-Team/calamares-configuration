@@ -23,7 +23,8 @@ jobs:
         uses: actions/checkout@v3
       - id: build_package_step
         name: Build Package
-        run: runuser -l nobody -c "sh packaging/build_package.sh stable"
+        # run: runuser -l nobody -c "sh packaging/build_package.sh stable"
+        run: sudo -u nobody "sh packaging/build_package.sh stable"
       - id: upload_package_step
         name: Upload Package Artifact
         uses: actions/upload-artifact@v3
