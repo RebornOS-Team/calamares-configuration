@@ -1,4 +1,4 @@
-## `calamares-configuration v0.1.1 -> v0.1.4 changelog`
+## Calamares Configuration `v0.1.1` to `v0.1.4` ChangelLog
 
 ### For Developers
 • Reorganization and renaming of project directories and updated PKGBUILDs to incorporate those changes in packaging

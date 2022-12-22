@@ -14,7 +14,6 @@ jobs:
       image: rebornos/rebornos:latest
       ports:
         - 80
-      # options: --privileged
     steps:
       - id: init_docker_step
         name: Initialize RebornOS Docker Container        
@@ -56,7 +55,7 @@ jobs:
           path: output
       - id: generate_checksum_step
         name: Generate CheckSum
-        run: find ${{ steps.download_package_step.outputs.download-path }} -type f -exec md5sum {} > {}.md5sum \;
+        run: find ${{ steps.download_package_step.outputs.download-path }} -type f -exec sh -c 'md5sum $0 > $0.md5sum' {} \;
       - id: create_release_step
         name: Create Release        
         uses: softprops/action-gh-release@v1
@@ -70,9 +69,4 @@ jobs:
           tag_name: ${{ env.LATEST_TAG }}
           name: ${{ env.LATEST_TAG }}
           files: |
-            ${{ steps.download_package_step.outputs.download-path }}/**${{ github.event.repository.name }}*.pkg.tar*
-            CHANGELOG.md
-            LICENSE
-
-
-  
+            ${{ steps.download_package_step.outputs.download-path }}/**${{ github.event.repository.name }}*.pkg.tar*  
