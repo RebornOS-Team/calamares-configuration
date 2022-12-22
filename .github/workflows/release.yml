@@ -40,25 +40,25 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
+      - id: checkout_repository_step
+        name: Checkout Git Repository
+        uses: actions/checkout@v3
+      - id: set_latest_tag
+        name: Determine Latest Tag
+        run: echo "LATEST_TAG=$(git tag | sort --version-sort | tail -n1)" >> $GITHUB_ENV        
       - id: download_package_step 
         name: Download Package Artifact
         uses: actions/download-artifact@v3
         with:
           name: Stable Package
-      - name: Display Tag
-        run: echo "${{ github.ref_name }}""
-      # - id: create_release_step
-      #   name: Create Release        
-      #   uses: actions/create-release@v1
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-      #   with:
-      #     tag_name: ${{ github.ref }}
-      #     release_name: Release ${{ github.ref }}
-      #     body: |
-      #       Changes in this Release
-      #       - First Change
-      #       - Second Change
-      #     draft: false
-      #     prerelease: false
+      - id: create_release_step
+        name: Create Release        
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: ${{ env.LATEST_TAG }}
+          release_name: ${{ github.event.repository.name }} ${{ env.LATEST_TAG }}
+          draft: false
+          prerelease: false
   
