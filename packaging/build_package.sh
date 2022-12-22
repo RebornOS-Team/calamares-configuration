@@ -31,6 +31,7 @@ fi
     makepkg \
         --cleanbuild \
         --force \
+        --syncdeps \
         --clean \
         "$@"
     set +o xtrace
