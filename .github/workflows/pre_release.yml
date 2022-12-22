@@ -32,7 +32,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with: 
           name: Unstable Package
-          path: packaging/${{ github.event.repository.name }}/${{ github.event.repository.name }}*.pkg.tar.*
+          path: packaging/${{ github.event.repository.name }}-git/${{ github.event.repository.name }}*.pkg.tar.*
           if-no-files-found: error
   release:  
     needs: build        
