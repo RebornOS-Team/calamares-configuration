@@ -54,7 +54,9 @@ jobs:
         with:
           name: Stable Package
           path: output
-        run: find output -type f -exec md5sum {} > {}.md5sum \;
+      - id: generate_checksum_step
+        name: Generate CheckSum
+        run: find ${{ steps.download_package_step.outputs.download-path }} -type f -exec md5sum {} > {}.md5sum \;
       - id: create_release_step
         name: Create Release        
         uses: softprops/action-gh-release@v1
@@ -68,7 +70,7 @@ jobs:
           tag_name: ${{ env.LATEST_TAG }}
           name: ${{ env.LATEST_TAG }}
           files: |
-            ${{ steps.download.outputs.download-path }}/**${{ github.event.repository.name }}*.pkg.tar*
+            ${{ steps.download_package_step.outputs.download-path }}/**${{ github.event.repository.name }}*.pkg.tar*
             CHANGELOG.md
             LICENSE
 
