@@ -1,5 +1,7 @@
 # Calamares Configuration for RebornOS
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/rebornos-developers/calamares-configuration)
 [![Release](https://github.com/RebornOS-Developers/calamares-configuration/actions/workflows/release.yml/badge.svg)](https://github.com/RebornOS-Developers/calamares-configuration/actions/workflows/release.yml)
 [![Pre-Release (Git)](https://github.com/RebornOS-Developers/calamares-configuration/actions/workflows/pre_release.yml/badge.svg)](https://github.com/RebornOS-Developers/calamares-configuration/actions/workflows/pre_release.yml)
 
