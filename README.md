@@ -1,5 +1,8 @@
 # Calamares Configuration for RebornOS
 
+[![Release](https://github.com/RebornOS-Developers/calamares-configuration/actions/workflows/release.yml/badge.svg)](https://github.com/RebornOS-Developers/calamares-configuration/actions/workflows/release.yml)
+[![Pre-Release (Git)](https://github.com/RebornOS-Developers/calamares-configuration/actions/workflows/pre_release.yml/badge.svg)](https://github.com/RebornOS-Developers/calamares-configuration/actions/workflows/pre_release.yml)
+
 > **Note**: This project only carries RebornOS-specific configuration except for the installer packaging files (PKGBUILD, build scripts), icons, and launch scripts. For the rest of the installer's source code and for the above exceptions, please use the [calamares-core](https://github.com/RebornOS-Developers/calamares-core) project.
 
 > **Note**: It is recommended that all module-specific configuration (`.conf`) files in the `etc/calamares/modules` directory display the URL to the *upstream configuration file* at the top (for example: `# https://github.com/calamares/calamares/blob/calamares/src/modules/welcomeq/welcomeq.conf`) so that developers can refer to the latest configuration easily.
