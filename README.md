@@ -1,5 +1,6 @@
 # Calamares Configuration for RebornOS
 
+[![Discord Server](https://dcbadge.vercel.app/api/server/cU5s6MPpQH?style=flat)](https://discord.gg/cU5s6MPpQH)
 ![GitHub](https://img.shields.io/github/license/rebornos-developers/calamares-configuration)
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/rebornos-developers/calamares-configuration)
 [![Release](https://github.com/RebornOS-Developers/calamares-configuration/actions/workflows/release.yml/badge.svg)](https://github.com/RebornOS-Developers/calamares-configuration/actions/workflows/release.yml)
