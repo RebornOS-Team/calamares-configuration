@@ -1,7 +1,7 @@
 # Maintainer: shivanandvp <shivanandvp@rebornos.org, shivanandvp.oss@gmail.com>
 
 pkgname=calamares-configuration-local
-pkgver=v0.1.5.r9.g3bc0dea
+pkgver=v0.1.5.r10.g2e45f8f
 pkgrel=1
 
 arch=('i686' 'x86_64' 'armv6h' 'armv7h')
