@@ -14,11 +14,25 @@
 
 - *Openbox* theming fixed
 
+- *Trinity Desktop Environment (TDE)* installation fixed by using TDE's official repos and using a new custom module - `pre_install` (thanks *Panda*)
+
 - *LXDE* now uses `leafpad` instead of `geany`
 
 - *Openbox* now uses geany instead of mousepad
 
-- *Trinity Desktop Environment (TDE)* installation fixed by using TDE's official repos and using a new custom module - `pre_install` (thanks *Panda*)
+- `gnome-todo` is replaced by `endeavour`
+
+- `vino` is replaced by `gnome-remote-desktop`
+
+- The exhaustive *Gnome* group is now marked as *non-critical*. Renamed or missing packages here will not fail the installation.
+
+- `gvfs` and related backends installed in the default minimal base so that file managers can see all USB devices and remote devices.
+
+- *Bluetooth* set up by default in the default minimal base.
+
+- A *firewall* (`firewalld`) is set up by default in the default minimal base.
+
+- `nvidia-utils` added among options for Nvidia GPU drivers
 
 ### For Developers
 
