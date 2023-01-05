@@ -34,6 +34,8 @@
 
 - `nvidia-utils` added among options for Nvidia GPU drivers
 
+- KDE Plasma installation now includes `plasma-wayland-session`
+
 ### For Developers
 
 - GitHub CI for stable releases complete with GitHub-built Arch Linux packages, ChangeLog fetched from CHANGELOG.md, and MD5 CheckSums
