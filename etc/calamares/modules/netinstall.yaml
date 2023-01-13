@@ -138,6 +138,13 @@
               description: Commandline AUR helper
             - name: pamac-aur
               description: Graphical package management
+        - name: Fonts
+          description: Fonts required to see all characters on RebornOS
+          packages:
+            - name: adobe-source-han-serif-otc-fonts
+              description: Adobe Source Han Serif - Pan-CJK OpenType/CFF Collection fonts
+            - name: adobe-source-han-sans-otc-fonts
+              description: Adobe Source Han Sans - Pan-CJK OpenType/CFF Collection fonts                
     - name: Backend System
       packages: 
         - name: base-devel
@@ -267,15 +274,7 @@
                   description: Open-source implementation of the OpenGL specification
             - name: QEMU
               packages: 
-                - qemu-guest-agent
-    - name: Fonts
-      description: Fonts required to see all characters on RebornOS
-      packages:
-        - name: adobe-source-han-serif-otc-fonts
-          description: Adobe Source Han Serif - Pan-CJK OpenType/CFF Collection fonts
-        - name: adobe-source-han-sans-otc-fonts
-          description: Adobe Source Han Sans - Pan-CJK OpenType/CFF Collection fonts   
-                
+                - qemu-guest-agent                
 - name: RebornOS
   description: RebornOS Base and Apps
   selected: true
