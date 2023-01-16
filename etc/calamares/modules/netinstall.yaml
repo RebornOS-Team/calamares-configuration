@@ -806,6 +806,8 @@
               description: Linux application sandboxing and distribution framework (formerly xdg-app)
             - name: xdg-desktop-portal
               description: For flatpak apps to interact with your desktop
+            - name: flatseal
+              description: A permissions manager for Flatpak.
         - name: Snap
           description: Software deployment and package management system
           packages: 
@@ -813,6 +815,11 @@
               description: Service and tools for management of snap packages
             - name: apparmor
               description: Mandatory Access Control (MAC) using Linux Security Module (LSM)
+        - name: Appimages
+          description: Tools for managing & updating appimages
+          packages: 
+            - name: appimagelauncher
+              description: A Helper application for running and integrating AppImages.           
     - name: Theming and Customization
       description: Tools for Theming and Customization
       noncheckable: true
