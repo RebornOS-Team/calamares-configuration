@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Calamares Configuration `v0.1.1` to `v0.1.8` ChangeLog
+## Calamares Configuration `v0.1.1` to `v0.1.9` ChangeLog
 
 ### For Users
 
@@ -43,6 +43,10 @@
 - Fonts included by default to avoid missing characters
 
 - *Cinnamon* includes `mintlocale` and `cinnamon-translations` for localization
+
+- `flatseal` added for permission management under the *Flatpak* category
+
+- `appimagelauncher` added under the *Appimages* category to simplify handling of appimages
 
 ### For Developers
 
