@@ -216,8 +216,8 @@
             - name: Firewall
               description: Control incoming and outgoing network connections
               packages:
-                - name: firewalld
-                  description: Firewall daemon with D-Bus interface
+                - name: gufw
+                  description: Uncomplicated Firewall
         - name: Bluetooth  
           description: Bluetooth Drivers      
           packages:
@@ -1075,6 +1075,24 @@
               description: Securely download, verify, install, and launch Tor Browser, a fork of Firefox ESR
             - name: nyx
               description: Command-line status monitor for tor
+        - name: Firewall
+          description: Control incoming and outgoing network connections
+          noncheckable: true
+          packages:
+            - name: firewalld
+              description: Firewall daemon with D-Bus interface
+            - name: ufw
+              description: Uncomplicated and easy to use CLI tool for managing a netfilter firewall                      
+            - name: gufw
+              description: Gtk frontend for ufw                
+    - name: Fonts
+      description: Fonts required to see all characters on RebornOS
+      noncheckable: true
+      packages:
+        - name: adobe-source-han-serif-otc-fonts
+          description: "Adobe Source Han Serif - Pan-CJK OpenType/CFF Collection fonts"
+        - name: adobe-source-han-sans-otc-fonts
+          description: "Adobe Source Han Sans - Pan-CJK OpenType/CFF Collection fonts"           
 - name: Leisure and Entertainment
   description: Anything other than serious work
   selected: false

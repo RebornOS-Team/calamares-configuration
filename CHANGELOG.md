@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Calamares Configuration `v0.1.1` to `v0.1.7` ChangeLog
+## Calamares Configuration `v0.1.1` to `v0.1.8` ChangeLog
 
 ### For Users
 
@@ -30,11 +30,19 @@
 
 - *Bluetooth* set up by default in the default minimal base.
 
-- A *firewall* (`firewalld`) is set up by default in the default minimal base.
+- A *firewall* (`gufw`) is set up by default in the default minimal base.
 
 - `nvidia-utils` added among options for Nvidia GPU drivers
 
 - KDE Plasma installation now includes `plasma-wayland-session`
+  
+- *Xfce* includes `engrampa` for archive management
+  
+- *MATE* includes `mate-hud` for quick navigation
+
+- Fonts included by default to avoid missing characters
+
+- *Cinnamon* includes `mintlocale` and `cinnamon-translations` for localization
 
 ### For Developers
 
