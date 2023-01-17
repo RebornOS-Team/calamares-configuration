@@ -1380,11 +1380,13 @@
         - name: pidgin
           description: Multi-protocol instant messaging client
         - name: telegram-desktop
-          description: Official Telegram Desktop client        
+          description: Official Telegram Desktop client
         - name: telepathy-kde-meta
           description: KDE instant messaging client using the Telepathy framework. Meant as a replacement for Kopete
         - name: kopete
           description: User-friendly IM supporting Bonjour, Gadu-Gadu, GroupWise, ICQ, XMPP
+        - name: discord
+          description: "All-in-one voice and text chat for gamers"
     - name: Video Players
       noncheckable: true
       packages:
