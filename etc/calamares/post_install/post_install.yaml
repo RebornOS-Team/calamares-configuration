@@ -158,7 +158,6 @@ desktops:
   - id: i3
     test_packages: 
       - i3-wm
-      - i3-gaps
     session: i3
     xsession: i3
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg

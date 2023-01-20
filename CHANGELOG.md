@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Calamares Configuration `v0.1.1` to `v0.1.9` ChangeLog
+## Calamares Configuration `v0.1.1` to `v0.1.10` ChangeLog
 
 ### For Users
 
@@ -48,6 +48,18 @@
 
 - `appimagelauncher` added under the *Appimages* category to simplify handling of appimages
 
+- LTE Kernel support for offline installations too
+
+- Discord added as an option in the advanced page
+
+- *Cinnamon* will use `gnome-terminal` instead of `mate-terminal`
+
+- `electron18` removed
+
+- `i3-gaps` replaced by `i3-wm`
+
+- `python-dbus` replaced by `dbus-python`
+
 ### For Developers
 
 - GitHub CI for stable releases complete with GitHub-built Arch Linux packages, ChangeLog fetched from CHANGELOG.md, and MD5 CheckSums
@@ -61,3 +73,5 @@
 - Revamped and simplified build scripts for three packaging modes - `local`, `git`, and `stable`
 
 - Updated *PKGBUILD*s to prevent the annoying replacement offers for the installer packages during system updates. 
+
+- Xfce configuration for offline installations through pre-install file copies and shellprocess commands

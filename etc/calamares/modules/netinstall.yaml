@@ -1865,8 +1865,6 @@
               description: Build cross platform desktop apps with web technologies
             - name: electron17
               description: Build cross platform desktop apps with web technologies
-            - name: electron18
-              description: Build cross platform desktop apps with web technologies
             - name: electron19
               description: Build cross platform desktop apps with web technologies
     - name: Build Systems
