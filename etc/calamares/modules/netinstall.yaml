@@ -131,7 +131,10 @@
           subgroups: 
             - name: Console
               packages:
-                - nano
+                - name: nano
+                  description: Command-line text editor, free replacement for Pico
+                - name: micro
+                  description: Modern and intuitive terminal-based text editor
         - name: Package Management
           packages:
             - name: yay
