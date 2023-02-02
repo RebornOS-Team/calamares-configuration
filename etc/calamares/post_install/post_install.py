@@ -40,6 +40,12 @@ def main():
         filemode='w',
         encoding='utf-8', level=logging.DEBUG
     )
+    
+    if os.path.isfile("/opt/trinity/bin/tdm"):
+        with open("/opt/trinity/share/config/tdm/tdmrc", "a") as f:
+            f.write("MaxShowUID=65000")
+            f.write("MinShowUID=1000")
+            f.write("ShowUsers=NotHidden")
 
     change_to_script_directory()
 
