@@ -25,7 +25,6 @@ NVIDIA_PACKAGES: List[str] = [
     "nvidia-open-dkms",
     "nvidia-470xx-dkms",
     "nvidia-390xx-dkms",
-    "nvidia-340xx-dkms",
 ]
 
 LOGGING_FORMAT: str = '%(asctime)s [%(levelname)8s] %(message)s (%(funcName)s; Line %(lineno)d)'
