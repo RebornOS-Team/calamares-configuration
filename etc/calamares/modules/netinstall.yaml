@@ -484,8 +484,6 @@
             description: For Kepler (NVE0/GKXXX) series
           - name: nvidia-390xx-dkms
             description: For Fermi (NVC0/GF1XX) series
-          - name: nvidia-340xx-dkms
-            description: (Unsupported) For Tesla (NV50/G80-90-GT2XX) series
         subgroups: 
           - name: Nvidia Hybrid
             description: Nvidia Discrete with other integrated GPUs
@@ -670,7 +668,6 @@
         subgroups: 
           - name: Commandline
             packages:
-              - fdisk
               - parted
               - util-linux         
           - name: Graphical
@@ -688,7 +685,6 @@
             description: exFAT support
             packages: 
               - exfatprogs
-              - exfat-utils
           # - name: APFS
           #   description: (AUR) APFS support
           #   packages: 
@@ -716,8 +712,6 @@
               description: BTRFS support
             - name: xfsprogs
               description: XFS support
-            - name: reiserfsprogs
-              description: ReiserFS support
             - name: f2fs-tools
               description: F2FS support
             - name: hfsprogs
@@ -728,8 +722,6 @@
               description: NILFS2 support          
             - name: udftools
               description: UDF support
-            - name: reiser4progs
-              description: Reiser4 support
   - name: Input
     description: "Input device drivers for mouse, touchpad, keyboard, etc."
     packages: 
