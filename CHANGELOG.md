@@ -1,5 +1,21 @@
 # CHANGELOG
 
+## Calamares Configuration `v0.1.10` to `v0.1.13` ChangeLog
+
+### For Users
+
+- Remove the *Cutefish* desktop environment.
+- Replace `ttf-nerd-fonts-symbols-2048-em` with `ttf-nerd-fonts-symbols` for the *Sway* Window Manager (thanks @CookieSource).
+- Replace `obkey` with `lxhotkey-gtk3` for the *Openbox* Window Manager (thanks @CookieSource).
+- Rename Budgie's `mutter` to `mutter43` (thanks @CookieSource).
+- Rename `deepin-wayland` to `deepin-wayland-protocols` (thanks @CookieSource).
+- Remove `nvidia-340xx-dkms`, `fdisk`, `exfat-utils`, `reiserfsprogs`, and `reiser4progs` (thanks @SoulHarsh007).
+- Replace `xfce4-screenshooter` with `gnome-screenshot` on the *Cinnamon* desktop environment (thanks @CookieSource).
+- Fix system user accounts being displayed at Trinity login screen (thanks @Rippanda12).
+- Add the *Sway* Window Manager.
+- Add `pavucontrol` to Xfce (thanks @CookieSource).
+- Add `nano` and `micro` under Console packages (thanks @cake03).
+
 ## Calamares Configuration `v0.1.1` to `v0.1.10` ChangeLog
 
 ### For Users
