@@ -93,6 +93,8 @@
       description: For running the post-install script
     - name: python-yaml
       description: For running the post-install script
+    - name: mkinitcpio-openswap
+      description: For installs with swap and encryption
 - name: Minimal Base
   description: Essential packages. Modify at your own risk
   selected: true
