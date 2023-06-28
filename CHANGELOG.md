@@ -1,9 +1,11 @@
 # CHANGELOG
 
-## Calamares Configuration `v0.1.10` to `v0.1.13` ChangeLog
+## Calamares Configuration `v0.1.10` to `v0.1.14` ChangeLog
 
 ### For Users
 
+- Fix encrypted installation with swap by adding the `mkinitcpio-openswap` package which supplies the `openswap` mkinitcpio hook.
+- Fix Budgie installation by replacing `xdg-desktop-portal-gnome` with `xdg-desktop-portal-gtk`.
 - Remove the *Cutefish* desktop environment.
 - Replace `ttf-nerd-fonts-symbols-2048-em` with `ttf-nerd-fonts-symbols` for the *Sway* Window Manager (thanks @CookieSource).
 - Replace `obkey` with `lxhotkey-gtk3` for the *Openbox* Window Manager (thanks @CookieSource).
