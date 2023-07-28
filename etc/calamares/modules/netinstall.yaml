@@ -291,7 +291,7 @@
         - rebornos-mirrorlist
         - rebornos-os-release
         - rebornos-logo 
-        - grub2-theme-vimix-git
+        - rebornos-grub2-theme
     - name: RebornOS Applications      
       packages:         
         - name: rebornos-fire
