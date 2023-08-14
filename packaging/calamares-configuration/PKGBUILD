@@ -16,6 +16,7 @@ conflicts=('calamares-configuration-git' 'calamares-configuration-local')
 makedepends=() 
 
 source=("https://github.com/RebornOS-Developers/calamares-configuration/archive/refs/tags/v${pkgver}.tar.gz")
+sha256sums=('SKIP')
 
 package() {
     PROJECT_DIRECTORY="${srcdir}/calamares-configuration-${pkgver}"

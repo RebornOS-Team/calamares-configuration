@@ -2,7 +2,7 @@
 # 1. shivanandvp <shivanandvp@rebornos.org, shivanandvp.oss@gmail.com>
 
 pkgname=calamares-configuration-git
-pkgver=0.1.14
+pkgver=v0.1.14.r11.g6076b1b
 pkgrel=1
 
 arch=('i686' 'x86_64' 'armv6h' 'armv7h')
@@ -16,6 +16,7 @@ conflicts=('calamares-configuration' 'calamares-configuration-local')
 makedepends=('git')
 
 source=("git+https://github.com/RebornOS-Developers/calamares-configuration")
+sha256sums=('SKIP')
 
 pkgver() {
     (   cd "${srcdir}/calamares-configuration" 
