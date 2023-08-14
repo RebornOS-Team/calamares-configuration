@@ -204,8 +204,14 @@
                   description: For PipeWire with 32-bit support 
                 - name: pipewire-alsa
                   description: For PipeWire to manage ALSA as well
+                - name: alsa-card-profiles
+                  description: Low-latency AV router and processor
                 - name: pipewire-pulse
                   description: For PipeWire bluetooth support
+                - name: pipewire-jack
+                  description: For PipeWire JACK sink, source and jackdbus detection
+                - name: lib32-pipewire-jack
+                  description: For 32-bit PipeWire JACK sink, source and jackdbus detection                  
                 - name: wireplumber
                   description: Session manager implementation for PipeWire
                 - xdg-desktop-portal
@@ -574,6 +580,8 @@
             description: For PipeWire with 32-bit support 
           - name: pipewire-alsa
             description: For PipeWire to manage ALSA as well
+          - name: alsa-card-profiles
+            description: Low-latency AV router and processor            
           - name: pipewire-pulse
             description: For PipeWire bluetooth support
           - name: pipewire-jack
