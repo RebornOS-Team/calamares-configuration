@@ -21,15 +21,15 @@ navigation: qml
 strings:
     productName:         "${NAME}"
     shortProductName:    RebornOS
-    version:             2023.05.16
-    shortVersion:        23.05.16
-    versionedName:       RebornOS 2023.05.16
-    shortVersionedName:  RebornOS 23.05.16
+    version:             2023.08.14
+    shortVersion:        23.08.14
+    versionedName:       RebornOS 2023.08.14
+    shortVersionedName:  RebornOS 23.08.14
     bootloaderEntryName: RebornOS
     productUrl:          https://www.rebornos.org/
-    supportUrl:          https://rebornos.org/support/
-    knownIssuesUrl:      https://rebornos.org/downloads/
-    releaseNotesUrl:     https://rebornos.org/downloads/
+    supportUrl:          https://rebornos.discourse.group/
+    knownIssuesUrl:      https://rebornos.discourse.group/c/announcements
+    releaseNotesUrl:     https://github.com/RebornOS-Developers/calamares-configuration/releases/latest
     donateUrl:           https://rebornos.org/donate/
 
 images:
