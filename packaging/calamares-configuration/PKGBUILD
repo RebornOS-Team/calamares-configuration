@@ -1,4 +1,5 @@
-# Maintainer: shivanandvp <shivanandvp@rebornos.org, shivanandvp.oss@gmail.com>
+# Maintainers:
+# 1. shivanandvp <shivanandvp@rebornos.org, shivanandvp.oss@gmail.com>
 
 pkgname=calamares-configuration
 pkgver=0.1.14
@@ -11,8 +12,7 @@ license=('GPL3')
 depends=('python' 'python-yaml')
 optdepends=('calamares')
 provides=('calamares-config')
-conflicts=('calamares-configuration' 'calamares-configuration-git' 'calamares-configuration-local')
-md5sums=('SKIP')
+conflicts=('calamares-configuration-git' 'calamares-configuration-local')
 makedepends=() 
 
 source=("https://github.com/RebornOS-Developers/calamares-configuration/archive/refs/tags/v${pkgver}.tar.gz")
