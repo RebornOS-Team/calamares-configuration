@@ -17,6 +17,8 @@ import org.kde.kirigami 2.7 as Kirigami
 import QtGraphicalEffects 1.0
 import QtQuick.Window 2.3
 
+import Process 1.0
+
 Page
 {
     id: welcome
@@ -24,6 +26,10 @@ Page
     header: Item {
         width: parent.width
         height: parent.height
+
+        Process {
+            id: process
+        }
 
         Text {
             id: welcomeTopText
@@ -69,7 +75,8 @@ Page
                 Kirigami.Theme.textColor: Kirigami.Theme.textColor
 
                 visible: config.supportUrl !== ""
-                onClicked: Qt.openUrlExternally(config.supportUrl)
+                // onClicked: Qt.openUrlExternally(config.supportUrl)
+                onClicked: process.start("sudo", [ "-E", "bash", "-c", "sudo -E -u $DEFAULT_USER firefox" + " " + config.supportUrl ]);
             }
 
             Button {
@@ -80,7 +87,8 @@ Page
                 Kirigami.Theme.textColor: Kirigami.Theme.textColor
 
                 visible: config.knownIssuesUrl !== ""
-                onClicked: Qt.openUrlExternally(config.knownIssuesUrl)
+                // onClicked: Qt.openUrlExternally(config.knownIssuesUrl)
+                onClicked: process.start("sudo", [ "-E", "bash", "-c", "sudo -E -u $DEFAULT_USER firefox" + " " + config.knownIssuesUrl ]);
             }
 
             Button {
@@ -93,7 +101,8 @@ Page
                 visible: config.releaseNotesUrl !== ""
                 //onClicked: load.source = "release_notes.qml"
                 //onClicked: load.source = "file:/usr/share/calamares/release_notes.qml"
-                onClicked: Qt.openUrlExternally(config.releaseNotesUrl)
+                // onClicked: Qt.openUrlExternally(config.releaseNotesUrl)
+                onClicked: process.start("sudo", [ "-E", "bash", "-c", "sudo -E -u $DEFAULT_USER firefox" + " " + config.releaseNotesUrl ]);
             }
 
             Button {
@@ -104,7 +113,8 @@ Page
                 Kirigami.Theme.textColor: Kirigami.Theme.textColor
 
                 visible: config.donateUrl !== ""
-                onClicked: Qt.openUrlExternally(config.donateUrl)
+                // onClicked: Qt.openUrlExternally(config.donateUrl)
+                onClicked: process.start("sudo", [ "-E", "bash", "-c", "sudo -E -u $DEFAULT_USER firefox" + " " + config.donateUrl ]);
             }
         }
 
