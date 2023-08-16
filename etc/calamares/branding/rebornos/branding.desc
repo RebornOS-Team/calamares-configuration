@@ -13,8 +13,8 @@ windowSize: 800px,500px
 windowPlacement: center
 
 ### PANELS CONFIGURATION
-sidebar: qml, bottom
-navigation: qml, bottom
+sidebar: qml,bottom
+navigation: qml
 
 
 ### STRINGS, IMAGES AND COLORS

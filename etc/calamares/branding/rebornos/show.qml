@@ -33,7 +33,7 @@ Presentation
         Rectangle {
             anchors.fill: parent
             border.width: 0
-            color: "#D6D2D0"
+            color: "#222020"
             Image {
                 id: slide_1
                 source: "images/slides/slide_1.jpg"
