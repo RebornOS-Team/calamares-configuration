@@ -7,7 +7,7 @@ pkgrel=1
 
 arch=('i686' 'x86_64' 'armv6h' 'armv7h')
 pkgdesc='Configuration for the RebornOS Calamares installer.'
-url='https://github.com/RebornOS-Developers/calamares-configuration'
+url='https://github.com/RebornOS-Team/calamares-configuration'
 license=('GPL3')
 depends=('python' 'python-yaml')
 optdepends=('calamares')
