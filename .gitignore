@@ -5,3 +5,4 @@ packaging/**/*.tar.*
 packaging/**/*.pack
 packaging/calamares-configuration-git/calamares-configuration/*
 packaging/calamares-configuration/calamares-configuration/*
+*.code-workspace
