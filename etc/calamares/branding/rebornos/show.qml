@@ -48,7 +48,7 @@ Presentation
         Rectangle {
             anchors.fill: parent
             border.width: 0
-            color: "#D6D2D0"
+            color: "#222020"
             Image {
                 id: slide_2
                 source: "images/slides/slide_2.jpg"
@@ -63,7 +63,7 @@ Presentation
         Rectangle {
             anchors.fill: parent
             border.width: 0
-            color: "#D6D2D0"
+            color: "#222020"
             Image {
                 id: slide_3
                 source: "images/slides/slide_3.jpg"
@@ -78,7 +78,7 @@ Presentation
         Rectangle {
             anchors.fill: parent
             border.width: 0
-            color: "#D6D2D0"
+            color: "#222020"
             Image {
                 id: slide_4
                 source: "images/slides/slide_4.jpg"
@@ -93,7 +93,7 @@ Presentation
         Rectangle {
             anchors.fill: parent
             border.width: 0
-            color: "#D6D2D0"
+            color: "#222020"
             Image {
                 id: slide_5
                 source: "images/slides/slide_5.jpg"
@@ -108,7 +108,7 @@ Presentation
         Rectangle {
             anchors.fill: parent
             border.width: 0
-            color: "#D6D2D0"
+            color: "#222020"
             Image {
                 id: slide_6
                 source: "images/slides/slide_6.jpg"
