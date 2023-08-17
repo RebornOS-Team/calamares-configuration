@@ -77,7 +77,7 @@ Page
 
                 visible: config.supportUrl !== ""
                 // onClicked: Qt.openUrlExternally(config.supportUrl)
-                onClicked: process.start("sudo", [ "-E", "bash", "-c", "sudo -E -u $DEFAULT_USER firefox" + " " + config.supportUrl ]);
+                onClicked: process.start("sudo", [ "-E", "bash", "-c", "sudo -E -u $DEFAULT_USER firefox 2>/dev/null" + " " + config.supportUrl + " & disown" ]);
             }
 
             Button {
@@ -89,7 +89,7 @@ Page
 
                 visible: config.knownIssuesUrl !== ""
                 // onClicked: Qt.openUrlExternally(config.knownIssuesUrl)
-                onClicked: process.start("sudo", [ "-E", "bash", "-c", "sudo -E -u $DEFAULT_USER firefox" + " " + config.knownIssuesUrl ]);
+                onClicked: process.start("sudo", [ "-E", "bash", "-c", "sudo -E -u $DEFAULT_USER firefox 2>/dev/null" + " " + config.knownIssuesUrl + " & disown" ]);
             }
 
             Button {
@@ -103,7 +103,7 @@ Page
                 //onClicked: load.source = "release_notes.qml"
                 //onClicked: load.source = "file:/usr/share/calamares/release_notes.qml"
                 // onClicked: Qt.openUrlExternally(config.releaseNotesUrl)
-                onClicked: process.start("sudo", [ "-E", "bash", "-c", "sudo -E -u $DEFAULT_USER firefox" + " " + config.releaseNotesUrl ]);
+                onClicked: process.start("sudo", [ "-E", "bash", "-c", "sudo -E -u $DEFAULT_USER firefox 2>/dev/null" + " " + config.releaseNotesUrl + " & disown" ]);
             }
 
             Button {
@@ -115,7 +115,7 @@ Page
 
                 visible: config.donateUrl !== ""
                 // onClicked: Qt.openUrlExternally(config.donateUrl)
-                onClicked: process.start("sudo", [ "-E", "bash", "-c", "sudo -E -u $DEFAULT_USER firefox" + " " + config.donateUrl ]);
+                onClicked: process.start("sudo", [ "-E", "bash", "-c", "sudo -E -u $DEFAULT_USER firefox 2>/dev/null" + " " + config.donateUrl + " & disown" ]);
             }
         }
 
