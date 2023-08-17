@@ -4,6 +4,7 @@
 
 ### For Users
 
+- DNS Caching for better internet experience, using `systemd-resolved`.
 - The support/information buttons on the first installer screen now function correctly. After enabling process execution from QML, only one instance of the browser tab with one URL used to open, but now multiple clicks open multiple web-pages (thanks @SoulHarsh007).
 - Budgie is set to use `gnome-terminal` (instead of `gnome-console`) which better suits the Budgie themes.
 - The installer theme is set to dark mode.
