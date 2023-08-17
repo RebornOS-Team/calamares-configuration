@@ -1,5 +1,27 @@
 # CHANGELOG
 
+## Calamares Configuration `v0.1.15`
+
+### For Users
+
+- The installer theme is set to dark mode.
+- The sidebar is moved to the bottom, in a horizontal layout.
+- Better audio support with a more inclusive set of audio packages added around *pipewire*.
+- Performance fix for Budgie by using `xdg-desktop-portal-gtk` instead of `xdg-desktop-portal-gnome`.
+- Budgie isntallatio is fixed by removing `mutter43` from the Budgie package list.
+- The Grub theme is updated (thanks @SoulHarsh007).
+- The installer screenshot resolution is fixed for the Trinity desktop (thanks @SoulHarsh007).
+- Installations with swap and encryption fixed by adding `mkinitcpio-openswap`.
+- Cutefish is removed since it is no longer in development.
+  
+### For Developers
+
+- Removed or replaced partial upgrades.
+- Renamed the RebornOS GitHub organization from `RebornOS-Developers` to `RebornOS-Team`.
+- Updated `.gitignore` to ignore *Visual Studio Code* files.
+- Removed self conflicts in the `PKGBUILD`s.
+- The `README.md` documentation is updated.
+
 ## Calamares Configuration `v0.1.10` to `v0.1.14` ChangeLog
 
 ### For Users
