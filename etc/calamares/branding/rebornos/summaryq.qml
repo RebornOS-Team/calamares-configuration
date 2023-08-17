@@ -70,10 +70,10 @@ Kirigami.ScrollablePage {
                                 Layout.preferredWidth: height
                                 Layout.alignment: Qt.AlignTop
                                 fillMode: Image.PreserveAspectFit
-                                source: index === 0 ? "img/lokalize.svg"
-                                    : ( index === 1 ? "img/keyboard.svg"
-                                    : ( index === 2 ? "qrc:/data/images/partition-manual.svg"
-                                    : "qrc:/data/images/partition-partition.svg" ) )
+                                source: index === 0 ? "images/modules/lokalize.svg"
+                                    : ( index === 1 ? "images/modules/keyboard.svg"
+                                    : ( index === 2 ? "images/modules/partition-manual.svg"
+                                    : "images/modules/partition-partition.svg" ) )
                             }
                             ColumnLayout {
 

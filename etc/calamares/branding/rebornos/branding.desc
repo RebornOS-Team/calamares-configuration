@@ -37,7 +37,7 @@ images:
     productIcon:         "images/rebornos_logo.png"
     productLogo:         "images/rebornos_logo.png"
     # productWallpaper:    "images/wallpaper.png"
-    productWelcome:      "images/languages.png"
+    productWelcome:      "images/modules/languages.png"
 
 style:
    SidebarBackground:        "#292F34"

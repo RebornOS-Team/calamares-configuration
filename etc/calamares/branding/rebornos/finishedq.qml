@@ -46,7 +46,7 @@ Page {
         }
 
         Image {
-            source: "seedling.svg"
+            source: "images/modules/seedling.svg"
             anchors.top: header.bottom
             anchors.topMargin: 80
             anchors.horizontalCenter: parent.horizontalCenter
