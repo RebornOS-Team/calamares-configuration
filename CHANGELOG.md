@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## Calamares Configuration `v0.1.17`
+
+### For Users
+
+- Replace `kalendar` with `merkuro` since the former package no longer exists.
+
+### For Developers
+
 ## Calamares Configuration `v0.1.16`
 
 ### For Users
