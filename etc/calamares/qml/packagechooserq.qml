@@ -1,7 +1,7 @@
 /* === This file is part of Calamares - <https://calamares.io> ===
  *
  *   SPDX-FileCopyrightText: 2021 Anke Boersma <demm@kaosx.us>
- *   SPDX-FileCopyrightText: 2021 shivanandvp <shivanandvp@rebornos.org>
+ *   SPDX-FileCopyrightText: 2021 shiva.patt <shivanandvp@rebornos.org>
  *   SPDX-License-Identifier: GPL-3.0-or-later
  *
  *   Calamares is Free Software: see the License-Identifier above.
