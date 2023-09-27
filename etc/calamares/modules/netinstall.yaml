@@ -210,6 +210,8 @@
                   description: For 32-bit PipeWire JACK sink, source and jackdbus detection
                 - name: wireplumber
                   description: Session manager implementation for PipeWire
+                - name: gst-plugin-pipewire
+                  description: "Multimedia graph framework - pipewire plugin"
                 - xdg-desktop-portal
         - name: Network
           subgroups:
@@ -586,6 +588,8 @@
               description: For 32-bit PipeWire JACK sink, source and jackdbus detection
             - name: wireplumber
               description: Session manager implementation for PipeWire
+            - name: gst-plugin-pipewire
+              description: "Multimedia graph framework - pipewire plugin"
             - xdg-desktop-portal
             - xdg-desktop-portal-gnome
             - xdg-desktop-portal-kde
@@ -1118,8 +1122,8 @@
           description: Extensible browser from Mozilla based on Gecko with fast rendering
         - name: chromium
           description: The open source project behind Google Chrome developed by Google
-        # - name: google-chrome
-        #   description: (AUR) Proprietary web browser developed by Google
+        - name: google-chrome
+          description: "Proprietary web browser developed by Google"
         - name: vivaldi
           description: An advanced proprietary browser made with the power user in mind
         # - name: brave-bin

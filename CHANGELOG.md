@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## Calamares Configuration `v0.1.19`
+
+### For Users
+
+- Add `google-chrome` as an option.
+- Add `gst-plugin-pipewire`.
+- Make parent desktop environment groups non-checkable on the Advanced page (`netinstall` page).
+
+### For Developers
+
 ## Calamares Configuration `v0.1.17`
 
 ### For Users
