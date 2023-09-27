@@ -102,6 +102,8 @@
           packages:
             - name: firefox
               description: Extensible browser from Mozilla based on Gecko with fast rendering
+            - name: google-chrome
+            description: Google chrome browser.
     - name: Frontend System
       packages:
         - name: inxi
@@ -175,6 +177,29 @@
         - name: gvfs-smb
           description: "GIO (SMB/CIFS backend; Windows client)"
       subgroups:
+        - name: Utility/Development
+          subgroups:
+            - name: python
+            description: Python base requisite.
+            - name: python-pip
+            description: Python pip tool
+            - name: python-virtualenv
+            description: Python virtual environments / venvs
+            - name: wget
+            description: wget terminal tool
+            - name: make
+            description: used to make packages.
+            - name: git
+            description: used to clone repos or other github things.
+            - name: curl
+            description: used in commands to download certain types of files.
+            - name: cargo
+            description: cargo one of the biggest building tools.
+            - name: ninja
+            description: used often with make and cargo for building packages.
+            - name: gperftools
+            description: Googles TCMalloc. helps with memory usage.
+
         - name: Display
           subgroups:
             - name: Xorg
@@ -482,6 +507,8 @@
               description: For Maxwell (NV110/GMXXX) series and newer with linux-lts kernel
             - name: nvidia-dkms
               description: For Maxwell (NV110/GMXXX) series and newer with a custom kernel
+            - name: cuda
+              description: NVidia Cuda Toolkit
             # - name: nvidia-beta
             #   description: (AUR) Newer drivers
             - name: nvidia-open
@@ -562,6 +589,10 @@
               description: Accelerated video decoding for VDPAU with 32-bit support
             - name: xf86-video-ati
               description: DDX driver for 2D acceleration in Xorg
+            - name: rocm-hip-sdk
+              description: ROCm HIP SDK CUDA wrapper
+            - name: rocm-opencl-sdk
+              description: ROCm opencl SDK for wrapper
     - name: Audio
       description: Audio Drivers
       noncheckable: true
