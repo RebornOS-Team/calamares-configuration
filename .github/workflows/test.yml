@@ -1,5 +1,5 @@
 name: Validate Package Lists
-run-name: Package list validation for ${{ github.actor }}
+run-name: Package list validation for ${{ github.ref_name }} at ${{ github.sha }}
 on:
   push:
     paths:
