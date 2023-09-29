@@ -4,11 +4,11 @@ import { join, resolve } from "path";
 import { parse } from "yaml";
 import logger from "./logger";
 
-type TNetInstallPackage = string | { name: string; description: string };
+type TNetInstallPackage = string | { name: string; description?: string };
 
 type TNetInstallSubGroup = {
   name: string;
-  description: string;
+  description?: string;
   selected?: boolean;
   critical?: boolean;
   immutable?: boolean;
@@ -18,26 +18,67 @@ type TNetInstallSubGroup = {
 
 type TNetInstallModule = {
   name: string;
-  description: string;
+  description?: string;
   selected?: boolean;
   critical?: boolean;
   immutable?: boolean;
   subgroups?: TNetInstallSubGroup[];
-  packages: TNetInstallPackage[];
+  packages?: TNetInstallPackage[];
 };
 
-const path = resolve("../etc/calamares/modules/netinstall.yaml");
+type TPackageChooserModule = {
+  id: string;
+  name: string;
+  description?: string;
+  screenshot?: string;
+  netinstall: {
+    name: string;
+    description?: string;
+    noncheckable?: boolean;
+    "ignore-share-state"?: boolean;
+    subgroups?: TNetInstallSubGroup[];
+    packages?: TNetInstallPackage[];
+  };
+};
 
-logger.info(`Reading netinstall.yaml from: ${path}`);
+type TPackageChooserData = {
+  items: TPackageChooserModule[];
+  mode: string;
+  labels: {
+    step: string;
+  };
+  qmlFilename: string;
+  promptmessage: string;
+  default: string;
+  outputconditionkey: string;
+};
 
-const json: TNetInstallModule[] = parse(await Bun.file(path).text());
+const netInstallPath = resolve("../etc/calamares/modules/netinstall.yaml");
+const packageChooserPath = resolve(
+  "../etc/calamares/modules/packagechooser_DE.conf"
+);
 
-logger.info(`Found ${json.length} modules in netinstall.yaml`);
+logger.info(`Reading netinstall.yaml from: ${netInstallPath}`);
+logger.info(`Reading packagechooser_DE.conf from: ${packageChooserPath}`);
 
-const discoverSubGroupPackages = (json: TNetInstallModule[]) => {
+const netInstallJSON: TNetInstallModule[] = parse(
+  await Bun.file(netInstallPath).text()
+);
+const packageChooserJSON: TPackageChooserData = parse(
+  await Bun.file(packageChooserPath).text()
+);
+
+logger.info(`Found ${netInstallJSON.length} modules in netinstall.yaml`);
+logger.info(
+  `Found ${packageChooserJSON.items.length} modules in packagechooser_DE.conf`
+);
+
+const discoverSubGroupPackages = (
+  json: (TNetInstallModule | TPackageChooserModule)[]
+) => {
   const packages: string[] = [];
   json.forEach((section) => {
-    if (section.packages) {
+    if ("packages" in section && section.packages) {
       packages.push(
         ...section.packages.map((x) => {
           if (typeof x === "string") {
@@ -47,16 +88,28 @@ const discoverSubGroupPackages = (json: TNetInstallModule[]) => {
         })
       );
     }
-    if (section.subgroups) {
+    if ("subgroups" in section && section.subgroups) {
       packages.push(...discoverSubGroupPackages(section.subgroups));
+    }
+    if ("netinstall" in section && section.netinstall) {
+      packages.push(...discoverSubGroupPackages([section.netinstall]));
     }
   });
   return packages;
 };
 
-const packages = [...new Set(discoverSubGroupPackages(json))];
+const packages = [
+  ...new Set(
+    [
+      discoverSubGroupPackages(netInstallJSON),
+      discoverSubGroupPackages(packageChooserJSON.items),
+    ].flat()
+  ),
+];
 
-logger.info(`Found ${packages.length} unique packages in netinstall.yaml`);
+logger.info(
+  `Found ${packages.length} unique packages in netinstall.yaml and packagechooser_DE.conf`
+);
 
 const repositories = [
   {
