@@ -1,0 +1,12 @@
+{
+  "name": "tests",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "dependencies": {
+    "chalk": "5.3.0",
+    "yaml": "2.3.2"
+  }
+}
