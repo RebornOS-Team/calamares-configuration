@@ -10,6 +10,15 @@
 
 > **Note**: It is recommended that all module-specific configuration (`.conf`) files in the `etc/calamares/modules` directory display the URL to the *upstream configuration file* at the top (for example: `# https://github.com/calamares/calamares/blob/calamares/src/modules/welcomeq/welcomeq.conf`) so that developers can refer to the latest configuration easily.
 
+## Useful locations
+
+- [The License](LICENSE)
+- [The Changelog](CHANGELOG.md)
+- [The Contributing Guidelines](CONTRIBUTING.md)
+  
+- [Common Package List](etc/calamares/modules/netinstall.yaml)
+- [Desktop-Specific Package Lists](etc/calamares/modules/packagechooser_DE.conf)
+
 ## Cloning
 
 In order to download the source code to your local computer for testing, or for development, you can clone from the remote repository using either SSH, or HTTPS. Below are instructions on how to do so using GitHub hosted code as remote.
