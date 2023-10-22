@@ -189,6 +189,14 @@
           packages:
             - name: mesa
               description: Open-source implementation of OpenGL specification
+            - name: cuda
+              description: NVIDIA's GPU programming toolkit
+            - name: opencl-nvidia
+              description: OpenCL implementation for NVIDIA
+            - name: rocm-hip-sdk
+              description: Develop applications using HIP and libraries for AMD platforms
+            - name: rocm-opencl-sdk
+              description: Develop OpenCL-based applications for AMD platforms
         - name: Audio
           subgroups:
             - name: Pipewire
@@ -870,8 +878,6 @@
           packages:
             - name: gedit
               description: GTK editor for the GNOME desktop with syntax highlighting, automatic indentation, matching brackets, etc.
-            - name: kwrite
-              description: Lightweight text editor for the KDE desktop that uses the same editor widget as Kate
             - name: mousepad
               description: Fast text editor for the Xfce desktop
             - name: xed
@@ -1036,8 +1042,6 @@
               description: QEMU Gluster block driver
             - name: qemu-block-iscsi
               description: QEMU iSCSI block driver
-            - name: qemu-block-rbd
-              description: QEMU Ceph/RBD block driver
             - name: qemu-guest-agent
               description: QEMU Guest Agent
           subgroups:
@@ -1138,8 +1142,6 @@
           description: Web browser based on Qt toolkit and Qt WebEngine (or KHTML layout engine), part of kde-network
         - name: midori
           description: Lightweight web browser based on GTK and WebKit
-        - name: min
-          description: A fast, minimal browser that protects your privacy. It includes an interface designed to minimize distractions
         - name: falkon
           description: Web browser based on QtWebEngine, written in Qt framework
         - name: luakit
@@ -1202,8 +1204,6 @@
                   description: Point-and-click science fiction thriller set in a bleak vision of the future
                 - name: blobwars
                   description: 2D action-adventure game with various weapons and missions
-                - name: kobodeluxe
-                  description: An enhanced version of Akira Higuchi's game XKobo, an addictive space shoot'em up
                 - name: kollision
                   description: Moving a ball to avoid other balls
                 - name: kspaceduel
@@ -1239,8 +1239,6 @@
                   description: Building walls to limit amount of space occupied by two balls bouncing off the walls
                 - name: ksnakeduel
                   description: Snake-like game for 2 players which compete to survive longer than the opponent
-                - name: ltris
-                  description: Arcade version of Tetris
                 - name: mari0
                   description: The Mario game with Portal gun mechanics
                 - name: quadrapassel
@@ -1310,53 +1308,6 @@
                   description: A platform game with the goal of collecting gold
                 - name: supertux
                   description: Mario-style game featuring Tux
-            - name: Puzzle
-              noncheckable: true
-              packages:
-                - name:
-                  description:
-            - name: Racing
-              noncheckable: true
-              packages:
-                - name:
-                  description:
-            - name: Rogue-like
-              noncheckable: true
-              packages:
-                - name:
-                  description:
-            - name: Role-playing games (RPG)
-              noncheckable: true
-              packages:
-                - name:
-                  description:
-            - name: Shooters (FPS, third person)
-              noncheckable: true
-              packages:
-                - name:
-                  description:
-            - name: Simulation
-              noncheckable: true
-              packages:
-                - name:
-                  description:
-            - name: Strategy
-              noncheckable: true
-              packages:
-                - name:
-                  description:
-            - name: Turn based
-              noncheckable: true
-              packages:
-                - name:
-                  description:
-            - name: Tycoon/management
-              noncheckable: true
-              expanded: false
-              selected: false
-              packages:
-                - name:
-                  description:
     - name: Instant Messaging
       description: Apps for messaging and chatting
       noncheckable: true
@@ -1426,8 +1377,6 @@
           description: GTK clone of iTunes, used by default in GNOME
         - name: strawberry
           description: Fork of Clementine aimed at audio enthusiasts and music collectors
-        - name: clementine
-          description: Amarok 1.4 clone, ported to Qt5
         - name: gnome-music
           description: Aims to combine an elegant and immersive browsing experience with simple and straightforward controls
         - name: lollypop
@@ -1445,8 +1394,6 @@
           description: Fast and easy to use image viewer for the KDE desktop
         - name: gthumb
           description: Image viewer and browser for the GNOME desktop
-        - name: mirage
-          description: (AUR) PyGTK image viewer featuring support for crop and resize, custom actions and a thumbnail panel
         - name: digikam
           description: KDE-based image organizer with built-in editing features via a plugin architecture
         - name: shotwell
@@ -1526,8 +1473,6 @@
           description: Feature-rich email client from Mozilla written in GTK
         - name: geary
           description: Simple desktop mail client built in Vala
-        - name: kube
-          description: Modern communication and collaboration client built with QtQuick
         - name: evolution
           description: Mature and feature-rich e-mail client that is part of the GNOME project. Part of gnome-extra
         - name: kmail
@@ -1729,8 +1674,6 @@
           description: Advanced sound editor modeled loosely after Emacs
         # - name: swami
         #   description: (AUR)  A SoundFont editor
-        - name: sweep
-          description: Audio editor and live playback tool
         # - name: wavesurfer
         #   description: (AUR) Sound visualization and manipulation
     - name: Digital Audio workstations
@@ -1880,8 +1823,6 @@
           description: The fast distributed version control system
         - name: gitkraken
           description: The intuitive, fast, and beautiful cross-platform Git client
-        - name: git-cola
-          description: The highly caffeinated Git GUI
         - name: git-lfs
           description: Git extension for versioning large files
         - name: smartgit

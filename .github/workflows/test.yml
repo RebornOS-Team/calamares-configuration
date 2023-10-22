@@ -1,0 +1,35 @@
+name: Validate Package Lists
+run-name: Package list validation for ${{ github.ref_name }} at ${{ github.sha }}
+on:
+  push:
+    paths:
+      - etc/calamares/modules/netinstall.yaml
+  pull_request:
+    paths:
+      - etc/calamares/modules/netinstall.yaml
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch to validate"
+        required: true
+        default: "main"
+      sha:
+        description: "SHA to validate"
+        required: true
+        default: "HEAD"
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Git Repository
+        uses: actions/checkout@v4
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+      - name: Setup libarchive-tools
+        run: sudo apt update && sudo apt install -y libarchive-tools
+      - name: Validate Package Lists
+        run: cd tests && bun install && bun index.ts
