@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## Calamares Configuration `v0.1.20`
+
+### For Users
+
+- Close to 40 packages modified (added, renamed or changed in accordance with changes in Arch Linux packages).
+
+### For Developers
+
+- CONTRIBUTING.md contains a release checklist.
+- README.md contains useful links to package lists.
+
 ## Calamares Configuration `v0.1.19`
 
 ### For Users
