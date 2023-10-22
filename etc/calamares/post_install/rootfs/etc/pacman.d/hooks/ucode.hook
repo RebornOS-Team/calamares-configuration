@@ -1,0 +1,12 @@
+[Trigger]
+Operation = Install
+Operation = Remove
+Type = Package
+Target = intel-ucode
+Target = amd-ucode
+
+[Action]
+Description=Update Grub entries when ucodes change
+Depends = grub
+When = PostTransaction
+Exec = /usr/bin/grub-mkconfig -o /boot/grub/grub.cfg
