@@ -133,6 +133,7 @@ Page
                 width: parent.width
                 Layout.fillWidth: true
                 focus: true
+                color: "#222020"
 
                 Loader {
                     id: imLoader

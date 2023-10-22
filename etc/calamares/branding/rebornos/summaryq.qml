@@ -46,7 +46,7 @@ Kirigami.ScrollablePage {
                 width: parent.width - 80
                 implicitHeight: message.implicitHeight + title.implicitHeight + 20
                 anchors.horizontalCenter: parent.horizontalCenter
-		color: "#3D3D3D"
+		        color: "#3D3D3D"
 
                 Item {
                     width: parent.width - 80
