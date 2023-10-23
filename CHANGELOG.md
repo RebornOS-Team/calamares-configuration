@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Calamares Configuration `v0.1.22`
+## Calamares Configuration `v0.1.23`
 
 ### For Users
 
@@ -11,6 +11,7 @@
 
 - CONTRIBUTING.md contains a release checklist.
 - README.md contains useful links to package lists.
+- Add `mkinitcpio-openswap` as a dependency.
 
 ## Calamares Configuration `v0.1.19`
 

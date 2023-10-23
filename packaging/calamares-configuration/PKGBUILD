@@ -2,14 +2,14 @@
 # 1. shiva.patt <shivanandvp@rebornos.org, shiva.patt.oss@gmail.com>
 
 pkgname=calamares-configuration
-pkgver=0.1.22
+pkgver=0.1.23
 pkgrel=1
 
 arch=('i686' 'x86_64' 'armv6h' 'armv7h')
 pkgdesc='Configuration for the RebornOS Calamares installer.'
 url='https://github.com/RebornOS-Team/calamares-configuration'
 license=('GPL3')
-depends=('python' 'python-yaml')
+depends=('python' 'python-yaml' 'mkinitcpio-openswap')
 optdepends=('calamares')
 provides=('calamares-config')
 conflicts=('calamares-configuration-git' 'calamares-configuration-local')
