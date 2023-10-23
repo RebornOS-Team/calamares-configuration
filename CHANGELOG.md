@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Calamares Configuration `v0.1.21`
+## Calamares Configuration `v0.1.22`
 
 ### For Users
 
