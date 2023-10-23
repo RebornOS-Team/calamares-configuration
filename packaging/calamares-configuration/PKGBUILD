@@ -2,7 +2,7 @@
 # 1. shiva.patt <shivanandvp@rebornos.org, shiva.patt.oss@gmail.com>
 
 pkgname=calamares-configuration
-pkgver=0.1.20
+pkgver=0.1.21
 pkgrel=1
 
 arch=('i686' 'x86_64' 'armv6h' 'armv7h')

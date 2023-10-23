@@ -189,14 +189,6 @@
           packages:
             - name: mesa
               description: Open-source implementation of OpenGL specification
-            - name: cuda
-              description: NVIDIA's GPU programming toolkit
-            - name: opencl-nvidia
-              description: OpenCL implementation for NVIDIA
-            - name: rocm-hip-sdk
-              description: Develop applications using HIP and libraries for AMD platforms
-            - name: rocm-opencl-sdk
-              description: Develop OpenCL-based applications for AMD platforms
         - name: Audio
           subgroups:
             - name: Pipewire

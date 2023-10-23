@@ -1,10 +1,11 @@
 # CHANGELOG
 
-## Calamares Configuration `v0.1.20`
+## Calamares Configuration `v0.1.21`
 
 ### For Users
 
 - Close to 40 packages modified (added, renamed or changed in accordance with changes in Arch Linux packages).
+- Do not install `cuda`, `opencl-nvidia`, `rocm-hip-sdk` or `rocm-opencl-sdk` by default
 
 ### For Developers
 
