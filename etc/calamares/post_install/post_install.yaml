@@ -1,6 +1,5 @@
 ---
-
-display_managers: 
+display_managers:
   - id: sddm
     test_packages: sddm
     test_unit: sddm
@@ -10,8 +9,7 @@ display_managers:
       - lxqt
       - lxde
       - i3
-      - openbox      
-      - enlightenment
+      - openbox
       - mate
       - xfce
       - cutefish
@@ -30,8 +28,7 @@ display_managers:
       - lxqt
       - lxde
       - i3
-      - openbox         
-      - enlightenment
+      - openbox
       - mate
       - xfce
       - cutefish
@@ -44,14 +41,13 @@ display_managers:
   - id: lightdm
     test_packages: lightdm
     test_unit: lightdm
-    default_priority: 
+    default_priority:
       - regolith
       - trinity
       - lxqt
       - lxde
       - i3
-      - openbox        
-      - enlightenment
+      - openbox
       - mate
       - xfce
       - cutefish
@@ -117,14 +113,8 @@ desktops:
     xsession: mate
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
     wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
-  - id: enlightenment
-    test_packages: enlightenment
-    session: enlightenment
-    xsession: enlightenment
-    login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
-    wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
   - id: lxde
-    test_packages: 
+    test_packages:
       - lxsession
       - lxsession-gtk3
     session: LXDE
@@ -156,9 +146,9 @@ desktops:
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
     wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
   - id: i3
-    test_packages: 
+    test_packages:
       - i3-wm
     session: i3
     xsession: i3
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
-    wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg    
+    wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
