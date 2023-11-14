@@ -259,35 +259,8 @@ def configure_desktops(config: Dict):
     installed, installed_ids = get_installed_desktops(config=config)
 
     for desktop, id in zip(installed, installed_ids):
-        if id == "enlightenment":
-            configure_enlightenment_desktop(desktop)
-        else:
-            pass
+        pass
 
-def configure_enlightenment_desktop(enlightenment_config: Dict):
-    logging.info("Configuring the Enlightenment Desktop...")
-    disable_networkmanager = subprocess.run(
-        shlex.split("systemctl disable NetworkManager.service"),
-        shell= False,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT,
-        text=True,
-    )
-    logging.debug("Running \"systemctl disable NetworkManager.service\":\n%s", disable_networkmanager.stdout)
-    if disable_networkmanager.returncode != 0:
-        logging.error(f"Could not disable NetworkManager. Exit code: {disable_networkmanager.returncode}")
-        return
-
-    enable_connman = subprocess.run(
-    shlex.split("systemctl enable connman.service"),
-        shell= False,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT,
-        text=True,
-    )
-    logging.debug("Running \"systemctl enable connman.service\":\n%s", enable_connman.stdout)
-    if enable_connman.returncode != 0:
-        logging.error(f"Could not enable connman. Exit code: {enable_connman.returncode}")        
 
 def get_ids(dicts: list[Dict]) -> list[str]:
     return list(
