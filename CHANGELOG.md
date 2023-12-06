@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## Calamares Configuration `v0.1.24`
+
+### For Users
+
+- Replace `kgamma5` with `kgamma`
+- Replace `deepin-reader` with `okular`
+
+### For Developers
+
 ## Calamares Configuration `v0.1.23`
 
 ### For Users
