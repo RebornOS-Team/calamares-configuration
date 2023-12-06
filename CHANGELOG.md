@@ -4,6 +4,12 @@
 
 ### For Users
 
+- Offer optional Containerization category with Docker, Podman, and Distrobox
+- Offer optional Nix package manager under Frontend System > Alternative App Stores
+- Start `docker.socket` instead of `docker.service`
+- Include `appimagelauncher` by default
+- Add the NetworkManager plugin for openconnect by default so that VPNs are accessible from the tray
+- Enable printing support by default
 - Replace `kgamma5` with `kgamma`
 - Replace `deepin-reader` with `okular`
 

@@ -139,6 +139,8 @@
               description: Commandline AUR helper
             - name: pamac-aur
               description: Graphical package management
+            - name: appimagelauncher
+              description: A Helper application for running and integrating AppImages.
         - name: Fonts
           description: Fonts required to see all characters on RebornOS
           packages:
@@ -222,6 +224,8 @@
                   description: Connect to OpenVPN VPNs
                 - name: openconnect
                   description: Supports Cisco and Juniper VPNs
+                - name: networkmanager-openconnect
+                  description: NetworkManager VPN plugin for OpenConnect
                 - name: wireguard-tools
                   description: Next generation secure network tunnel
             - name: Firewall
@@ -229,6 +233,13 @@
               packages:
                 - name: gufw
                   description: Uncomplicated Firewall
+        - name: Printing
+          description: Printer Drivers
+          packages:
+            - name: cups
+              description: The CUPS Printing System - daemon package
+            - name: cups-pdf
+              description: PDF printer for cups
         - name: Bluetooth
           description: Bluetooth Drivers
           packages:
@@ -622,6 +633,8 @@
               description: Connect to OpenVPN VPNs
             - name: openconnect
               description: Supports Cisco and Juniper VPNs
+            - name: networkmanager-openconnect
+              description: NetworkManager VPN plugin for OpenConnect
             - name: wireguard-tools
               description: Next generation secure network tunnel
             - name: pptpclient
@@ -804,6 +817,37 @@
     - name: docker
       description: A utility to pack, ship and run any application as a lightweight container
   subgroups:
+    - name: Containerization
+      description: Tools for managing containers
+      noncheckable: true
+      subgroups:
+        - name: Podman
+          description: "An alternative to Docker with a similar interface and rootless containers."
+          packages: 
+            - name: podman
+              description: "Tool and library for running OCI-based containers in pods"
+            - name: podman-docker
+              description: Emulate Docker CLI using podman
+            - name: cockpit-podman
+              description: Cockpit UI for podman containers
+            - name: netavark
+              description: Container network stack
+        - name: Docker
+          description: "A utility to pack, ship and run any application as a lightweight container."
+          packages: 
+            - name: docker
+              description: "Pack, ship and run any application as a lightweight container"
+            - name: docker-compose
+              description: "Alternate CLI frontend which specifies container properties in docker-compose.yml"
+        - name: Distrobox
+          description: "Use any linux distribution inside your terminal."
+          packages: 
+            - name: distrobox
+              description: "Use any linux distribution inside your terminal."
+            - name: podman
+              description: "Tool and library for running OCI-based containers in pods"
+            - name: docker
+              description: "Pack, ship and run any application as a lightweight container"
     - name: Alternative App Stores
       description: Alternatives to native apps
       noncheckable: true
@@ -824,11 +868,11 @@
               description: Service and tools for management of snap packages
             - name: apparmor
               description: Mandatory Access Control (MAC) using Linux Security Module (LSM)
-        - name: Appimages
-          description: Tools for managing & updating appimages
+        - name: Nix
+          description: A purely functional package manager that aims to make package management reliable and reproducible
           packages:
-            - name: appimagelauncher
-              description: A Helper application for running and integrating AppImages.
+            - name: nix
+              description: A purely functional package manager
     - name: Theming and Customization
       description: Tools for Theming and Customization
       noncheckable: true
@@ -994,6 +1038,8 @@
           description: Graphical package management tool
         - name: octopi
           description: Graphical package management tool
+        - name: appimagelauncher
+          description: A Helper application for running and integrating AppImages.
     - name: Virtualization (as Host)
       description: Run VMs on RebornOS
       noncheckable: true
