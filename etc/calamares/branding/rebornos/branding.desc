@@ -9,7 +9,7 @@ welcomeExpandingLogo:   true
 
 ### WINDOW CONFIGURATION
 windowExpanding:    normal
-windowSize: 800px,500px
+windowSize: 1034px,563px
 windowPlacement: center
 
 ### PANELS CONFIGURATION
@@ -21,10 +21,10 @@ navigation: qml
 strings:
     productName:         "${NAME}"
     shortProductName:    RebornOS
-    version:             2023.12.06
-    shortVersion:        23.12.06
-    versionedName:       RebornOS 2023.12.06
-    shortVersionedName:  RebornOS 23.12.06
+    version:             2023.12.08
+    shortVersion:        23.12.08
+    versionedName:       RebornOS 2023.12.08
+    shortVersionedName:  RebornOS 23.12.08
     bootloaderEntryName: RebornOS
     productUrl:          https://www.rebornos.org/
     supportUrl:          https://rebornos.discourse.group/
