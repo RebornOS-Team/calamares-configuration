@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Calamares Configuration `v0.1.24`
+## Calamares Configuration `v0.1.25`
 
 ### For Users
 
@@ -14,6 +14,8 @@
 - Replace `deepin-reader` with `okular`
 
 ### For Developers
+
+- Do not remove pacman sync databases during install
 
 ## Calamares Configuration `v0.1.23`
 

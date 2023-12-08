@@ -1545,8 +1545,8 @@
           description: Universal document viewer for KDE. Supports CHM, Comicbook, DjVu, DVI, EPUB, FictionBook, Mobipocket, ODT, PDF, Plucker, PostScript, TIFF and XPS
         - name: atril
           description: Simple multi-page document viewer for MATE. Supports DjVu, DVI, EPS, EPUB, PDF, PostScript, TIFF, XPS and Comicbook
-        - name: deepin-reader
-          description: A simple PDF and DjVu reader, supporting bookmarks, highlights and annotations
+        # - name: deepin-reader
+        #   description: A simple PDF and DjVu reader, supporting bookmarks, highlights and annotations
     - name: Word Processing
       description: Create rich text documents (Like in MS Word)
       noncheckable: true
