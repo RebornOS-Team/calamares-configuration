@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## Calamares Configuration `v0.1.26`
+
+### For Users
+
+- Replace `gnome-terminal` with `mate-terminal` for Cinnamon.
+- Include and enable `touchegg` on Cinnamon for touchscreen support.
+
+
+### For Developers
+
 ## Calamares Configuration `v0.1.25`
 
 ### For Users
