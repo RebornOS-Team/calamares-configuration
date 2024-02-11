@@ -11,7 +11,7 @@
   - [ ] [The PKGBUILD for the git variant of the package](packaging/calamares-configuration-git/PKGBUILD)
   - [ ] [The PKGBUILD for the local variant of the package](packaging/calamares-configuration-local/PKGBUILD)
 
-- [ ] Update the strings in [branding.desc](calamares-configuration/etc/calamares/branding/rebornos/branding.desc)
+- [ ] Update the strings in [branding.desc](etc/calamares/branding/rebornos/branding.desc)
 
 - [ ] Commit and push all changes through git, for example `git commit -m "Some message" && git push`
 
