@@ -1,8 +1,10 @@
 # Packaging
-packaging/**/pkg
-packaging/**/src
-packaging/**/*.tar.*
-packaging/**/*.pack
-packaging/calamares-configuration-git/calamares-configuration/*
-packaging/calamares-configuration/calamares-configuration/*
-*.code-workspace
+/packaging/**/pkg
+/packaging/**/src
+/packaging/**/*.tar.*
+/packaging/**/*.pack
+/packaging/calamares-configuration-git/calamares-configuration/*
+/packaging/calamares-configuration/calamares-configuration/*
+
+# VSCode
+/*.code-workspace
