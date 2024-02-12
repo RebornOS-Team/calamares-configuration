@@ -214,6 +214,8 @@
                   description: Session manager implementation for PipeWire
                 - name: gst-plugin-pipewire
                   description: "Multimedia graph framework - pipewire plugin"
+                - name: sof-firmware
+                  description: Sound Open Firmware
                 - xdg-desktop-portal
         - name: Network
           subgroups:
@@ -297,6 +299,9 @@
             - name: QEMU
               packages:
                 - qemu-guest-agent
+                - spice-vdagent
+                - xf86-video-qxl
+                # - x-resize # TODO: Uncomment after adding to the repo
 - name: RebornOS
   description: RebornOS Base and Apps
   selected: true
@@ -601,6 +606,8 @@
               description: Session manager implementation for PipeWire
             - name: gst-plugin-pipewire
               description: "Multimedia graph framework - pipewire plugin"
+            - name: sof-firmware
+              description: Sound Open Firmware
             - xdg-desktop-portal
             - xdg-desktop-portal-gnome
             - xdg-desktop-portal-kde
@@ -783,6 +790,9 @@
         - name: QEMU
           packages:
             - qemu-guest-agent
+            - spice-vdagent
+            - xf86-video-qxl
+            # - x-resize # TODO: Uncomment after adding to the repo
     - name: Remote Desktop Servers
       description: Let other computers connect remotely
       noncheckable: true
@@ -1189,47 +1199,98 @@
     - name: Gaming
       description: Play games!
       noncheckable: true
-      packages:
-        - name: wine
-          description: A compatibility layer capable of running Microsoft Windows games and applications
-        - name: wine-staging
-          description: a patched version of Wine, which contains bug fixes and features that have not been integrated into the stable or development branch yet
-        # - name: playonlinux
-        #   description: (AUR) Graphical prefix manager for Wine
-        # - name: pywinery
-        #   description: (AUR) Simple graphical prefix manager for Wine
-        # - name: q4wine-git
-        #   description: (AUR) Graphical prefix manager for Wine. Can export Qt themes into the Wine configuration for better integration
-        # - name: proton
-        #   description: (AUR) Compatibility tool made for Steam based on Wine and additional components
-        # - name: bottles
-        #   description: (AUR) Open-Source wine and proton prefix manager. Run windows software and games
-        # - name: play.it
-        #   description: (AUR) Automates the build of native packages. Also supports Wine, DOSBox and ScummVM games
-        - name: wine-gecko
-          description: Wine's built-in replacement for Microsoft's Internet Explorer
-        - name: wine-mono
-          description: Wine's built-in replacement for Microsoft's .NET Framework
-        # - name: crossover
-        #   description: (AUR) Paid, commercialized version of Wine which provides more comprehensive end-user support
       subgroups:
-        - name: Stores
-          noncheckable: true
+        - name: "Curated Essentials"
+          description: A hand-picked collection of essentials for gaming on Linux
+          noncheckable: false
+          subgroups:
+            - name: Wine
+              description: Windows compatibility layer
+              noncheckable: false
+              packages:
+                - name: wine
+                  description: A compatibility layer capable of running Microsoft Windows games and applications
+                - name: wine-staging
+                  description: a patched version of Wine, which contains bug fixes and features that have not been integrated into the stable or development branch yet
+                - name: wine-gecko
+                  description: Wine's built-in replacement for Microsoft's Internet Explorer
+                - name: wine-mono
+                  description: Wine's built-in replacement for Microsoft's .NET Framework
+                - name: winetricks
+                  description: Script to install various redistributable runtime libraries in Wine.
+                # - name: crossover
+                #   description: (AUR) Paid, commercialized version of Wine which provides more comprehensive end-user support
+                # - name: playonlinux
+                #   description: (AUR) Graphical prefix manager for Wine
+                # - name: pywinery
+                #   description: (AUR) Simple graphical prefix manager for Wine
+                # - name: q4wine-git
+                #   description: (AUR) Graphical prefix manager for Wine. Can export Qt themes into the Wine configuration for better integration
+                # - name: proton
+                #   description: (AUR) Compatibility tool made for Steam based on Wine and additional components
+                # - name: bottles
+                #   description: (AUR) Open-Source wine and proton prefix manager. Run windows software and games
+                # - name: play.it
+                #   description: (AUR) Automates the build of native packages. Also supports Wine, DOSBox and ScummVM games
+            - name: Vulkan
+              description: 3D graphics API and successor to OpenGL
+              noncheckable: false
+              packages:
+                - vulkan-icd-loader
+                - lib32-vulkan-icd-loader
+                - vkd3d
+                - lib32-vkd3d
+                - vulkan-tools
+                - vulkan-swrast
+                - lib32-vulkan-swrast
+                - vulkan-headers
+                - vulkan-validation-layers
+              subgroups:
+                - name: Vulkan for Intel
+                  noncheckable: false
+                  packages:
+                    - vulkan-intel
+                    - lib32-vulkan-intel
+                - name: Vulkan for AMD
+                  noncheckable: false
+                  packages:
+                    - vulkan-radeon
+                    - lib32-vulkan-radeon
+                - name: Vulkan for Nvidia
+                  noncheckable: false
+                  packages:
+                    - nvidia-utils
+                    - lib32-nvidia-utils
+            - name: Stores
+              description: Game Stores
+              noncheckable: false
+              packages:
+                - name: lutris
+                  description: Open gaming platform for Linux for GOG, Steam, Battle.net, Origin, Uplay and many other sources
+                - name: steam
+                  description: Digital distribution and communications platform developed by Valve
+                # - name: heroic-games-launcher-bin
+                #   description: (AUR) A GUI for legendary, an open-source alternative for the Epic Games Launcher
           packages:
-            - name: lutris
-              description: Open gaming platform for Linux for GOG, Steam, Battle.net, Origin, Uplay and many other sources
-            - name: steam
-              description: Digital distribution and communications platform developed by Valve
-            # - name: athenaeum-git
-            #   description: (AUR) A libre replacement to Steam
-            # - name: heroic-games-launcher-bin
-            #   description: (AUR) A GUI for legendary, an open-source alternative for the Epic Games Launcher
-            # - name: legendary
-            #   description: (AUR) A free and open-source replacement for the Epic Games Launcher
-            # - name: minigalaxy
-            #   description: "(AUR) Client for the DRM-free game store: GOG"
-            # - name: itch-setup-bin
-            #   description: (AUR) Indie game store
+            - gamemode
+            - lib32-gamemode
+        # - name: Stores
+        #   noncheckable: false
+        #   packages:
+        #     - name: lutris
+        #       description: Open gaming platform for Linux for GOG, Steam, Battle.net, Origin, Uplay and many other sources
+        #     - name: steam
+        #       description: Digital distribution and communications platform developed by Valve
+        #     # - name: athenaeum-git
+        #     #   description: (AUR) A libre replacement to Steam
+        #     # - name: heroic-games-launcher-bin
+        #     #   description: (AUR) A GUI for legendary, an open-source alternative for the Epic Games Launcher
+        #     # - name: legendary
+        #     #   description: (AUR) A free and open-source replacement for the Epic Games Launcher
+        #     # - name: minigalaxy
+        #     #   description: "(AUR) Client for the DRM-free game store: GOG"
+        #     # - name: itch-setup-bin
+        #     #   description: (AUR) Indie game store
         - name: Games
           noncheckable: true
           subgroups:

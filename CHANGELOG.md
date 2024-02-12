@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## Calamares Configuration `v0.1.28`
+
+### For Users
+
+- Comprehensive curated non-AUR gaming package list consisting of hand-picked packages for Wine, Vulkan, and game stores.
+- Add `spice-vdagent` and `xf86-video-qxl` for use as virtualization guest.
+- Add `sof-firmware` for audio on newer computers.
+- Fix the aspect ratio of the installer slides.
+
+### For Developers
+
+- Improve `.gitignore`
+
 ## Calamares Configuration `v0.1.27`
 
 ### For Users
