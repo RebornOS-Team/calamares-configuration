@@ -4,6 +4,11 @@
 
 ### For Users
 
+- Add `deepin-session-shell` and `deepin-session-ui` to Deepin Desktop package list.
+- Remove the below packages since they are no longer present in the Arch Linux repositories:
+  - `opera`
+  - `deepin-wallpapers-plasma`
+  - `deepin-launcher` (replaced with `deepin-launchpad`)
 - Comprehensive curated non-AUR gaming package list consisting of hand-picked packages for Wine, Vulkan, and game stores.
 - Add `spice-vdagent` and `xf86-video-qxl` for use as virtualization guest.
 - Add `sof-firmware` for audio on newer computers.

@@ -1180,8 +1180,6 @@
           description: An advanced proprietary browser made with the power user in mind
         # - name: brave-bin
         #   description: (AUR) Web browser with builtin ad- and tracker blocking
-        - name: opera
-          description: Proprietary browser developed by Opera Software
         - name: torbrowser-launcher
           description: Securely and easily download, verify, install, and launch Tor Browser, a fork of Firefox ESR
         - name: epiphany
