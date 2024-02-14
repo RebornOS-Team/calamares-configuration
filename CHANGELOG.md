@@ -1,9 +1,11 @@
 # CHANGELOG
 
-## Calamares Configuration `v0.1.28`
+## Calamares Configuration `v0.1.29`
 
 ### For Users
 
+- Add `x-resize` for Qemu VM window scaling.
+- Add `mate-menu` to the MATE desktop.
 - Add `deepin-session-shell` and `deepin-session-ui` to Deepin Desktop package list.
 - Remove the below packages since they are no longer present in the Arch Linux repositories:
   - `opera`
