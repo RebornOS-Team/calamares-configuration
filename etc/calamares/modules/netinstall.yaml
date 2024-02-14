@@ -301,7 +301,7 @@
                 - qemu-guest-agent
                 - spice-vdagent
                 - xf86-video-qxl
-                # - x-resize # TODO: Uncomment after adding to the repo
+                - x-resize
 - name: RebornOS
   description: RebornOS Base and Apps
   selected: true
@@ -792,7 +792,7 @@
             - qemu-guest-agent
             - spice-vdagent
             - xf86-video-qxl
-            # - x-resize # TODO: Uncomment after adding to the repo
+            - x-resize
     - name: Remote Desktop Servers
       description: Let other computers connect remotely
       noncheckable: true
