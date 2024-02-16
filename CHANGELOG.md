@@ -1,9 +1,10 @@
 # CHANGELOG
 
-## Calamares Configuration `v0.1.29`
+## Calamares Configuration `v0.1.30`
 
 ### For Users
 
+- Update the *UKUI* package list.
 - Add `x-resize` for Qemu VM window scaling.
 - Add `mate-menu` to the MATE desktop.
 - Add `deepin-session-shell` and `deepin-session-ui` to Deepin Desktop package list.
