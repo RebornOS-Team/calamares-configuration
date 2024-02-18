@@ -1,10 +1,10 @@
 # CHANGELOG
 
-## Calamares Configuration `v0.1.30`
+## Calamares Configuration `v0.1.31`
 
 ### For Users
 
-- Update the *UKUI* package list.
+- Drop UKUI - bugs in the window manager, and upstream has not been updated in years.
 - Add `x-resize` for Qemu VM window scaling.
 - Add `mate-menu` to the MATE desktop.
 - Add `deepin-session-shell` and `deepin-session-ui` to Deepin Desktop package list.
