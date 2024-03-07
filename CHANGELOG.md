@@ -1,8 +1,9 @@
 # CHANGELOG
 
-## Calamares Configuration `v0.1.33`
+## Calamares Configuration `v0.1.34`
 
 ### For Users
+- Include `plasma5-integration` for better Qt5 theme support
 - Update KDE packages in light of Arch Linux changes due to Plasma 6 release
 
 ### For Developers 
