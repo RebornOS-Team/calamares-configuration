@@ -1438,8 +1438,6 @@
           description: Multi-protocol instant messaging client
         - name: telegram-desktop
           description: Official Telegram Desktop client
-        - name: kopete
-          description: User-friendly IM supporting Bonjour, Gadu-Gadu, GroupWise, ICQ, XMPP
         - name: discord
           description: "All-in-one voice and text chat for gamers"
     - name: Video Players
