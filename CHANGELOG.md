@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Calamares Configuration `v0.1.32`
+## Calamares Configuration `v0.1.33`
 
 ### For Users
 - Update KDE packages in light of Arch Linux changes due to Plasma 6 release
