@@ -1186,8 +1186,6 @@
           description: Browser which uses the WebKitGTK rendering engine, part of gnome
         - name: konqueror
           description: Web browser based on Qt toolkit and Qt WebEngine (or KHTML layout engine), part of kde-network
-        - name: midori
-          description: Lightweight web browser based on GTK and WebKit
         - name: falkon
           description: Web browser based on QtWebEngine, written in Qt framework
         - name: luakit
