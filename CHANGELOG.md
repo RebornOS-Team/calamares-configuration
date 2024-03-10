@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## Calamares Configuration `v0.1.35`
+
+### For Users
+- Remove `midori` from the package list because it is no longer in the repositories.
+- Add back essential KDE applications to the curated KDE Plasma package list.
+
+### For Developers
+
 ## Calamares Configuration `v0.1.34`
 
 ### For Users
