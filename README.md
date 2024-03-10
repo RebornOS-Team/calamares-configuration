@@ -47,7 +47,7 @@ Change to the project directory (`cd calamares-configuration`) and run any of th
 - where `<MODE>` can be one of the below
      1. `local`: Selects *calamares-configuration-local* from the local project that you have cloned already.
      2. `git`: Selects *calamares-configuration-git* from the latest git commit.
-     3. `stable`: Selects *calamares-configuration* from the git tag corresponding to the [`pkgver` specified in the PKGBUILD](https://github.com/RebornOS-Team/calamares-configuration/blob/main/packaging/calamares-configuration/PKGBUILD#L4). If `pkgver=0.1.2`, then the git tag `v0.1.2` is used for packaging. 
+     3. `stable`: Selects *calamares-configuration* from the git tag corresponding to the [`pkgver` specified in the PKGBUILD](packaging/calamares-configuration/PKGBUILD#L5). If `pkgver=0.1.2`, then the git tag `v0.1.2` is used for packaging. 
      
 > **Note**: Any additional parameters passed to the above scripts are automatically sent to `makepkg` or `pacman` (whichever is applicable).
 
