@@ -27,7 +27,7 @@ Kirigami.ScrollablePage {
         Layout.fillWidth: true
         height: 100
         horizontalAlignment: Qt.AlignHCenter
-        color: Kirigami.Theme.textColor
+        color: "#F4F4F4"
         font.weight: Font.Medium
         font.pointSize: 12
         text: config.message
@@ -84,7 +84,7 @@ Kirigami.ScrollablePage {
                                     text: model.title
                                     font.weight: Font.Medium
                                     font.pointSize: 16
-                                    color: Kirigami.Theme.textColor
+                                    color: "#F4F4F4"
                                 }
                                 Rectangle {
                                     height: 2
@@ -95,7 +95,7 @@ Kirigami.ScrollablePage {
                                     id: message
                                     Layout.fillWidth: true
                                     text: model.message
-                                    color: Kirigami.Theme.textColor
+                                    color: "#F4F4F4"
                                 }
                             }
                         }
