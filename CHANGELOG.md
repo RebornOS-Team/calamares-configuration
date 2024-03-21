@@ -1,8 +1,9 @@
 # CHANGELOG
 
-## Calamares Configuration `v0.1.37`
+## Calamares Configuration `v0.1.38`
 
 ### For Users
+- Move to Qt6 with fixes for text color, window size, and UI configuration.
 - Remove `liri-text` and `liri-terminal` as they are no longer in official Arch Linux repositories. 
 - Restore `discover` in KDE Plasma until a replacement is configured.
 - Remove `midori` from the package list because it is no longer in the repositories.
