@@ -9,7 +9,7 @@ welcomeExpandingLogo:   true
 
 ### WINDOW CONFIGURATION
 windowExpanding:    normal
-windowSize: 1044px,563px
+windowSize: 1042px,563px
 windowPlacement: center
 
 ### PANELS CONFIGURATION
