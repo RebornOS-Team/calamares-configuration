@@ -944,8 +944,6 @@
               description: Notepad clone for GTK that emphasizes simplicity
             - name: l3afpad
               description: Simple text editor forked from Leafpad, supports GTK 3
-            - name: liri-text
-              description: Text editor for Liri
             - name: emacs
               description: Extensible, customizable, self-documenting real-time display editor by GNU
             - name: gvim
@@ -1006,8 +1004,6 @@
           description: Desktop independent terminal emulator for LXDE
         - name: pantheon-terminal
           description: A super lightweight, beautiful, and simple terminal emulator
-        - name: liri-terminal
-          description: Material Design terminal for Liri
         - name: cool-retro-term
           description: Good looking terminal emulator which mimics the old cathode display.
     - name: Commandline Shells
