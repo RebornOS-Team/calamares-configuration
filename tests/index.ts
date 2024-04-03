@@ -132,6 +132,11 @@ const repositories = [
     name: "RebornOS",
     url: "https://repo.rebornos.org/RebornOS/Reborn-OS.db",
   },
+  {
+    id: "trinity",
+    name: "Trinity",
+    url: "https://mirror.ppa.trinitydesktop.org/trinity/archlinux/x86_64/trinity.db",
+  },
 ];
 
 const remotePackages: string[] = [];
