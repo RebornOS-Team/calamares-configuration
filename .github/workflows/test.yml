@@ -3,12 +3,16 @@ run-name: Package list validation for ${{ github.ref_name }} at ${{ github.sha }
 on:
   push:
     paths:
-      - etc/calamares/modules/netinstall.yaml
-      - etc/calamares/modules/packagechooser_DE.conf
+      - 'etc/calamares/modules/netinstall.yaml'
+      - 'etc/calamares/modules/packagechooser_DE.conf'
+      - '.github.workflows/test.yml'
+      - 'tests/index.ts'
   pull_request:
     paths:
-      - etc/calamares/modules/netinstall.yaml
-      - etc/calamares/modules/packagechooser_DE.conf
+      - 'etc/calamares/modules/netinstall.yaml'
+      - 'etc/calamares/modules/packagechooser_DE.conf'
+      - '.github.workflows/test.yml'
+      - 'tests/index.ts'
   schedule:
     - cron: "0 0 * * *"
   workflow_dispatch:

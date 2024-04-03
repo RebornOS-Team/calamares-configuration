@@ -3,7 +3,8 @@
 [![Discord Server](https://dcbadge.vercel.app/api/server/cU5s6MPpQH?style=flat)](https://discord.gg/cU5s6MPpQH)
 ![GitHub](https://img.shields.io/github/license/rebornos-team/calamares-configuration)
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/rebornos-team/calamares-configuration)
-[![Release](https://github.com/RebornOS-Team/calamares-configuration/actions/workflows/release.yml/badge.svg)](https://github.com/RebornOS-Team/calamares-configuration/actions/workflows/release.yml)
+[![Tests](https://github.com/RebornOS-Team/calamares-configuration/actions/workflows/test.yml/badge.svg)](https://github.com/RebornOS-Team/calamares-configuration/actions/workflows/test.yml)
+[![Release](https://github.com/RebornOS-Team/calamares-configuration/actions/workflows/test.yml/badge.svg)](https://github.com/RebornOS-Team/calamares-configuration/actions/workflows/test.yml)
 [![Pre-Release (Git)](https://github.com/RebornOS-Team/calamares-configuration/actions/workflows/pre_release.yml/badge.svg)](https://github.com/RebornOS-Team/calamares-configuration/actions/workflows/pre_release.yml)
 
 > **Note**: This project only carries RebornOS-specific configuration except for the installer packaging files (PKGBUILD, build scripts), icons, and launch scripts. For the rest of the installer's source code and for the above exceptions, please use the [calamares-core](https://github.com/RebornOS-Team/calamares-core) project.
