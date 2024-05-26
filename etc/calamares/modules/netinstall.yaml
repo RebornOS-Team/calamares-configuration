@@ -1846,8 +1846,6 @@
               subgroups:
                 - name: PySide (Official)
                   packages:
-                    - pyside2
-                    - pyside2-tools
                     - pyside6
                     - pyside6-tools
                 - name: pyQt
