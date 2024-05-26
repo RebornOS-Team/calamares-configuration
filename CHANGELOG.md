@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## Calamares Configuration `v0.1.39`
+
+### For Users
+- Remove `exfat-utils`
+- Remove `pyside2`, `pyside2-tools`, `libcroco`, and `dbus-python`. 
+
+### For Developers
+
 ## Calamares Configuration `v0.1.38`
 
 ### For Users
