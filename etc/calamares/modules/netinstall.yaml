@@ -17,7 +17,6 @@
           immutable: true
           packages:
             - exfatprogs
-            - exfat-utils
         # - name: APFS
         #   description: (AUR) APFS support
         #   selected: true
@@ -261,8 +260,6 @@
                   packages:
                     - name: exfatprogs
                       description: exFAT filesystem userspace utilities for the Linux Kernel exfat driver
-                    - name: exfat-utils
-                      description: Utilities for exFAT file system
               packages:
                 - name: e2fsprogs
                   description: ext3 and ext4 support
