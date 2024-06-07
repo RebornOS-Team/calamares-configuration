@@ -2,7 +2,15 @@ import { mkdtemp, readdir } from "fs/promises";
 import { tmpdir } from "os";
 import { join, resolve } from "path";
 import { parse } from "yaml";
+
 import logger from "./logger";
+
+const bsdtar = Bun.which("bsdtar");
+if (!bsdtar) {
+  logger.error("bsdtar not found in PATH");
+  logger.error("Exiting with error code 1");
+  process.exit(1);
+}
 
 type TNetInstallPackage = string | { name: string; description?: string };
 
@@ -53,9 +61,11 @@ type TPackageChooserData = {
   outputconditionkey: string;
 };
 
-const netInstallPath = resolve("../etc/calamares/modules/netinstall.yaml");
+const netInstallPath = resolve(
+  join(import.meta.dir, "..", "etc/calamares/modules/netinstall.yaml")
+);
 const packageChooserPath = resolve(
-  "../etc/calamares/modules/packagechooser_DE.conf"
+  join(import.meta.dir, "..", "etc/calamares/modules/packagechooser_DE.conf")
 );
 
 logger.info(`Reading netinstall.yaml from: ${netInstallPath}`);
@@ -99,13 +109,11 @@ const discoverSubGroupPackages = (
 };
 
 const packages = [
-  ...new Set(
-    [
-      discoverSubGroupPackages(netInstallJSON),
-      discoverSubGroupPackages(packageChooserJSON.items),
-    ].flat()
-  ),
-];
+  discoverSubGroupPackages(netInstallJSON),
+  discoverSubGroupPackages(packageChooserJSON.items),
+]
+  .flat()
+  .filter((x, i, a) => a.indexOf(x) === i);
 
 logger.info(
   `Found ${packages.length} unique packages in netinstall.yaml and packagechooser_DE.conf`
@@ -151,7 +159,7 @@ await Promise.all(
     await Bun.write(db, body);
     logger.info(`Extracting ${repo.name} repository database`);
     try {
-      await Bun.spawn(["bsdtar", "-xf", db], {
+      await Bun.spawn([bsdtar, "-xf", db], {
         cwd: tempDir,
       }).exited;
       logger.success(`Extracted ${repo.name} repository database`);
