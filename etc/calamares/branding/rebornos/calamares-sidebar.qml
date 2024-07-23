@@ -39,6 +39,12 @@ Rectangle {
             source: "file:/" + Branding.imagePath(Branding.ProductLogo);
             sourceSize.width: width;
             sourceSize.height: height;
+            MouseArea {
+                anchors.fill: parent
+                onClicked: {
+                    debug.toggle()
+                }
+    	    }
         }
 
         Repeater {

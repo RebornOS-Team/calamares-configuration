@@ -70,12 +70,10 @@
       description: Firmware files for Linux
     - name: mkinitcpio
       description: Script to create the initial ramdisk. Required to re-run after configuring LVM, system encryption, or RAID
-    - name: grub
-      description: Bootloader required by the current installer version. Will be removed when bootloader is chosen and installed dynamically.
+    # - name: grub
+    #   description: Bootloader required by the current installer version. Will be removed when bootloader is chosen and installed dynamically.
     - name: efibootmgr
       description: Required by the installer to setup the bootloader
-    - name: os-prober
-      description: For detecting other operating systems
     - name: amd-ucode
       description: Microcode update image for AMD CPUs. Required currently in bootloader.conf
     - name: intel-ucode

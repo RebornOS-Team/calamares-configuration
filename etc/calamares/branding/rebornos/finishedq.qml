@@ -89,7 +89,7 @@ Page {
             horizontalAlignment: Text.AlignHCenter
             color: "#F4F4F4"
             text: qsTr("<p>A full log of the install is available as installation.log in the home directory of the Live user.<br/>
-            This log is copied to /var/log/installation.log of the target system.</p>")
+            This log is copied to /var/log/install.log of the target system.</p>")
         }
     }
 

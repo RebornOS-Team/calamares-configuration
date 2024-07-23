@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## Calamares Configuration `v0.1.40`
+
+### For Users
+- Add bootloader choice screen and support for systemd-boot, and refind.
+- Do not install os-prober if grub is not selected.
+- Move fstab generation to later during the installation process to prevent issues with encrypted volumes.
+
+### For Developers
+- Set up launching the debug window by clicking on the RebornOS logo.
+- Update initcpiocfg.conf in response to schema change.
+
 ## Calamares Configuration `v0.1.39`
 
 ### For Users
