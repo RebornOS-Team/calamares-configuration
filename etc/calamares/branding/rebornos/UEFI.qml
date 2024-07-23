@@ -32,7 +32,7 @@ Column {
         Text {
             height: 25
             anchors.centerIn: parent
-            text: qsTr("Please select a <strong>bootloader</strong> option for your install, or leave the already selected default option, <strong>Grub</strong>.")
+            text: qsTr("Please select a <strong>bootloader</strong> option for your install, or leave the already selected default option, <strong>GRUB</strong>.")
             font.pointSize: 12
             color: "#ffffff"
             wrapMode: Text.WordWrap
@@ -51,7 +51,7 @@ Column {
             height: 40
             x: 25
             y: 10
-            text: qsTr("<strong>Grub</strong>: a feature-rich and customizable bootloader that has broad compatibility with various filesystems.")
+            text: qsTr("<strong>GRUB</strong>: a feature-rich and customizable bootloader that has broad compatibility with various filesystems.")
             font.pointSize: 12
             color: "#ffffff"
             anchors.verticalCenterOffset: 0
@@ -65,7 +65,7 @@ Column {
             y: 65
             width: 187
             height: 14
-            text: qsTr("Grub")
+            text: qsTr("GRUB")
             checked: true
             hoverEnabled: true
             ButtonGroup.group: switchGroup
@@ -91,9 +91,9 @@ Column {
 
             onCheckedChanged: {
                 if (! checked) {
-                    print("Grub not used")
+                    print("GRUB not used")
                 } else {
-                    print("Grub")
+                    print("GRUB")
                     config.packageChoice = "grub"
                 }
             }
@@ -151,7 +151,7 @@ Column {
 
             onCheckedChanged: {
                 if (! checked) {
-                    print("systemd not used")
+                    print("systemd-boot not used")
                 } else {
                     config.packageChoice = "systemd-boot"
                     print(config.packageChoice)
@@ -271,7 +271,7 @@ Column {
 
             onCheckedChanged: {
                 if (! checked) {
-                    print("no btl not checked")
+                    print("no bootloader not checked")
                 } else {
                     print("no bootloader")
                     config.packageChoice = "none"

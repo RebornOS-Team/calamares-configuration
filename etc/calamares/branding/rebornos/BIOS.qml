@@ -17,27 +17,23 @@ import QtQuick.Layouts 1.3
 Column {
     id: column
     anchors.centerIn: parent
-    spacing: 5
+    spacing: 7
 
     ButtonGroup {
         id: switchGroup
     }
 
-    Component.onCompleted: {
-        config.packageChoice = "grub"
-    }
-
     Rectangle {
         //id: rectangle
         width: 700
-        height: 50
+        height: 40
         color: "#2a2e32"
         border.width: 0
         Text {
             height: 25
             anchors.centerIn: parent
             text: qsTr("Please select a <strong>bootloader</strong> option for your install, or leave the already selected default option, <strong>GRUB</strong>.")
-            font.pointSize: 11
+            font.pointSize: 12
             color: "#ffffff"
             wrapMode: Text.WordWrap
         }
@@ -45,17 +41,18 @@ Column {
 
     Rectangle {
         width: 700
-        height: 150
+        height: 90
         color: "#1b1e20"
         radius: 5
         border.width: 1
         border.color: "#646b75"
         Text {
             width: 600
-            height: 104
-            anchors.centerIn: parent
-            text: qsTr("<strong>Grub Bootloader</strong><br><br>The GRand Unified Bootloader is the reference implementation<br>of the Free Software Foundation's Multiboot Specification,<br>which provides a user the choice<br>to boot one of multiple operating systems installed on a computer.")
-            font.pointSize: 10
+            height: 40
+            x: 25
+            y: 10
+            text: qsTr("<strong>GRUB</strong>: a feature-rich and customizable bootloader that has broad compatibility with various filesystems.")
+            font.pointSize: 12
             color: "#ffffff"
             anchors.verticalCenterOffset: 0
             anchors.horizontalCenterOffset: -20.0
@@ -63,9 +60,9 @@ Column {
         }
 
         Switch {
-            id: element2
+            id: grub_switch
             x: 500
-            y: 110
+            y: 65
             width: 187
             height: 14
             text: qsTr("GRUB")
@@ -73,30 +70,31 @@ Column {
             hoverEnabled: true
             ButtonGroup.group: switchGroup
 
+
             indicator: Rectangle {
                 implicitWidth: 40
                 implicitHeight: 14
                 radius: 10
-                color: element2.checked ? "#3498db" : "#B9B9B9"
-                border.color: element2.checked ? "#3498db" : "#cccccc"
+                color: grub_switch.checked ? "#3498db" : "#B9B9B9"
+                border.color: grub_switch.checked ? "#3498db" : "#cccccc"
 
                 Rectangle {
-                    x: element2.checked ? parent.width - width : 0
+                    x: grub_switch.checked ? parent.width - width : 0
                     y: (parent.height - height) / 2
                     width: 20
                     height: 20
                     radius: 10
-                    color: element2.down ? "#cccccc" : "#ffffff"
-                    border.color: element2.checked ? (element2.down ? "#3498db" : "#3498db") : "#999999"
+                    color: grub_switch.down ? "#cccccc" : "#ffffff"
+                    border.color: grub_switch.checked ? (grub_switch.down ? "#3498db" : "#3498db") : "#999999"
                 }
             }
 
             onCheckedChanged: {
                 if (! checked) {
-                    print("grub not used")
+                    print("GRUB not used")
                 } else {
+                    print("GRUB")
                     config.packageChoice = "grub"
-                    print(config.packageChoice)
                 }
             }
         }
@@ -104,17 +102,18 @@ Column {
 
     Rectangle {
         width: 700
-        height: 150
+        height: 90
         color: "#1b1e20"
         radius: 5
         border.width: 1
         border.color: "#646b75"
         Text {
             width: 600
-            height: 104
-            anchors.centerIn: parent
-            text: qsTr("<strong>No Bootloader</strong><br><br>Selecting no bootloader might result in an <strong>un-bootable system</strong>,<br>If you don't already have a bootloader that you can add this install to.")
-            font.pointSize: 10
+            height: 40
+            x: 25
+            y: 10
+            text: qsTr("<strong>No Bootloader</strong>: Not selecting a bootloader might result in an <strong>un-bootable system</strong>. Only choose this option if you already have a bootloader from another installation.")
+            font.pointSize: 12
             color: "#ffffff"
             anchors.verticalCenterOffset: 0
             anchors.horizontalCenterOffset: -20.0
@@ -122,9 +121,9 @@ Column {
         }
 
         Switch {
-            id: element3
+            id: no_bootloader_switch
             x: 500
-            y: 110
+            y: 65
             width: 187
             height: 14
             text: qsTr("No bootloader")
@@ -136,23 +135,23 @@ Column {
                 implicitWidth: 40
                 implicitHeight: 14
                 radius: 10
-                color: element3.checked ? "#3498db" : "#B9B9B9"
-                border.color: element3.checked ? "#3498db" : "#cccccc"
+                color: no_bootloader_switch.checked ? "#ff8585" : "#B9B9B9"
+                border.color: no_bootloader_switch.checked ? "#ff8585" : "#cccccc"
 
                 Rectangle {
-                    x: element3.checked ? parent.width - width : 0
+                    x: no_bootloader_switch.checked ? parent.width - width : 0
                     y: (parent.height - height) / 2
                     width: 20
                     height: 20
                     radius: 10
-                    color: element3.down ? "#cccccc" : "#ffffff"
-                    border.color: element3.checked ? (element3.down ? "#3498db" : "#3498db") : "#999999"
+                    color: no_bootloader_switch.down ? "#cccccc" : "#ffffff"
+                    border.color: no_bootloader_switch.checked ? (no_bootloader_switch.down ? "#ff8585" : "#ff8585") : "#999999"
                 }
             }
 
             onCheckedChanged: {
                 if (! checked) {
-                    print("no btl not checked")
+                    print("no bootloader not checked")
                 } else {
                     print("no bootloader")
                     config.packageChoice = "none"
