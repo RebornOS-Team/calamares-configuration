@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## Calamares Configuration `v0.1.43`
+## Calamares Configuration `v0.1.44`
 
 ### For Users
 - Add bootloader choice screen and support for systemd-boot, and refind.
