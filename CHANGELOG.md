@@ -1,9 +1,10 @@
 # CHANGELOG
 
-## Calamares Configuration `v0.1.40`
+## Calamares Configuration `v0.1.41`
 
 ### For Users
 - Add bootloader choice screen and support for systemd-boot, and refind.
+  - Fix refind not recognizing other kernels on Arch 
 - Do not install os-prober if grub is not selected.
 - Move fstab generation to later during the installation process to prevent issues with encrypted volumes.
 
