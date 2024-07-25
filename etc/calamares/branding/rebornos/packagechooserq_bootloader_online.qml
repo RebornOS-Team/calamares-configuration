@@ -25,7 +25,7 @@ Item {
 
         Loader {
             anchors.centerIn: parent
-            source: Global.value("firmwareType") === "efi" ? "UEFI.qml" : "BIOS.qml"
+            source: Global.value("firmwareType") === "efi" ? "UEFI_online.qml" : "BIOS.qml"
         }
     }
 
