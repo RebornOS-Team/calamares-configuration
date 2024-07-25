@@ -1,6 +1,13 @@
 # CHANGELOG
 
-## Calamares Configuration `v0.1.44`
+## Calamares Configuration `v0.1.45`
+
+### For Users
+- Switch to `lightdm` for *LXQt* installations.
+
+### For Developers
+
+## Calamares Configuration `v0.1.43`
 
 ### For Users
 - Add bootloader choice screen and support for systemd-boot, and refind.
