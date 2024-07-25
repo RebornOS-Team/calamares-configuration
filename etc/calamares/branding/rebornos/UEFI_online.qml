@@ -112,7 +112,7 @@ Column {
             height: 40
             x: 25
             y: 10
-            text: qsTr("<strong>Systemd-Boot</strong>: an easy-to-configure UEFI bootloader. It provides a text menu to select the boot entry and an editor for the kernel commandline.")
+            text: qsTr("<strong>systemd-boot</strong>: an easy-to-configure UEFI bootloader. It provides a text menu to select the boot entry and an editor for the kernel commandline.")
             font.pointSize: 12
             color: "#ffffff"
             anchors.verticalCenterOffset: 0
@@ -126,7 +126,7 @@ Column {
             y: 65
             width: 187
             height: 14
-            text: qsTr("Systemd-Boot")
+            text: qsTr("systemd-boot")
             checked: false
             hoverEnabled: true
             ButtonGroup.group: switchGroup
@@ -172,7 +172,7 @@ Column {
             height: 40
             x: 25
             y: 10
-            text: qsTr("<strong>Refind</strong>: a UEFI bootloader designed to be platform-neutral and to simplify booting multiple operating systems.")
+            text: qsTr("<strong>rEFInd</strong>: a UEFI bootloader designed to be platform-neutral and to simplify booting multiple operating systems.")
             font.pointSize: 12
             color: "#ffffff"
             anchors.verticalCenterOffset: 0
@@ -186,7 +186,7 @@ Column {
             y: 65
             width: 187
             height: 14
-            text: qsTr("Refind")
+            text: qsTr("rEFInd")
             checked: false
             hoverEnabled: true
             ButtonGroup.group: switchGroup
