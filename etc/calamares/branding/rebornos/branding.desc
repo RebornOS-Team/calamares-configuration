@@ -21,10 +21,10 @@ navigation: qml
 strings:
     productName:         "${NAME}"
     shortProductName:    RebornOS
-    version:             2024.07.25
-    shortVersion:        24.07.25
-    versionedName:       RebornOS 2024.07.25
-    shortVersionedName:  RebornOS 24.07.25
+    version:             2024.07.27
+    shortVersion:        24.07.27
+    versionedName:       RebornOS 2024.07.27
+    shortVersionedName:  RebornOS 24.07.27
     bootloaderEntryName: RebornOS
     productUrl:          https://www.rebornos.org/
     supportUrl:          https://rebornos.discourse.group/
