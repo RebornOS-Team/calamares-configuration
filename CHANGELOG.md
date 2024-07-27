@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## Calamares Configuration `v0.1.46`
+
+### For Users
+- Update `mkinitcpio.conf`.
+
+### For Developers
+
 ## Calamares Configuration `v0.1.45`
 
 ### For Users
