@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## Calamares Configuration `v0.1.48`
+
+### For Users
+- Removed `knotes` and `mp3splt-gtk` as they are no longer in the Arch repos.
+
+### For Developers
+
 ## Calamares Configuration `v0.1.47`
 
 ### For Users

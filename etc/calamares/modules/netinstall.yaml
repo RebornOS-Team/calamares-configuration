@@ -1746,8 +1746,6 @@
           description: Sound editor for KDE
         # - name: mhwaveedit
         #   description: (AUR) Graphical program for editing, playing and recording sound files
-        - name: mp3splt-gtk
-          description: Split mp3, ogg vorbis and native FLAC files selecting a begin and an end time position, without decoding
         # - name: ocenaudio-bin
         #   description: (AUR) Proprietary cross-platform, easy to use, fast and functional audio editor
         - name: playitslowly
