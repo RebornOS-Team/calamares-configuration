@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## Calamares Configuration `v0.1.49`
+
+### For Users
+- Removed `manaplus` as it is no longer in the Arch repos.
+
+### For Developers
+
 ## Calamares Configuration `v0.1.48`
 
 ### For Users

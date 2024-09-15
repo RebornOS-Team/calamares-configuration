@@ -1380,11 +1380,6 @@
                   description: Help the user to learn alphabet in a new language and then to learn to read simple syllables
                 - name: minuet
                   description: Software for music education
-            - name: MMO
-              noncheckable: true
-              packages:
-                - name: manaplus
-                  description: Serious effort to create an innovative free and open source MMORPG
             - name: Platformer
               noncheckable: true
               packages:
