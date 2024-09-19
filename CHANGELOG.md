@@ -1,10 +1,13 @@
 # CHANGELOG
 
-## Calamares Configuration `v0.1.49`
+## Calamares Configuration `v0.1.50`
 
 ### For Users
 - Removed `manaplus` as it is no longer in the Arch repos.
-
+- Rename `paru-bin` to `paru`.
+- Add `betterbird`
+- Reorganize LibreOffice and add German translations.
+  
 ### For Developers
 
 ## Calamares Configuration `v0.1.48`

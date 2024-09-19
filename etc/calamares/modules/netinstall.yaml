@@ -1029,7 +1029,7 @@
       packages:
         - name: yay
           description: Commandline AUR helper
-        - name: paru-bin
+        - name: paru
           description: Commandline AUR helper
         # - name: aurora-git
         #   description: (AUR) A minimal AUR helper
@@ -1528,11 +1528,31 @@
       description: Full-featured suites for word processing, spreadsheets, presentations, and drawing
       noncheckable: true
       expanded: false
+      subgroups: 
+        - name: LibreOffice
+          description: "Free power-packed Open Source personal productivity suite"
+          noncheckable: true
+          expanded: true
+          subgroups: 
+            - name: LibreOffice Fresh
+              description: "(feature branch for new updates) Free power-packed Open Source personal productivity suite"
+              noncheckable: true
+              expanded: true
+              packages:
+                - name: libreoffice-fresh
+                  description: "(feature branch for new updates) Free power-packed Open Source personal productivity suite"
+                - name: libreoffice-fresh-de
+                  description: German language pack for LibreOffice Fresh
+            - name: LibreOffice Still
+              description: "(maintenance branch for stability) Free power-packed Open Source personal productivity suite"
+              noncheckable: true
+              expanded: true
+              packages:
+                - name: libreoffice-still
+                  description: "(maintenance branch for stability) Free power-packed Open Source personal productivity suite"
+                - name: libreoffice-still-de
+                  description: German language pack for LibreOffice Still
       packages:
-        - name: libreoffice-fresh
-          description: (feature branch for new updates) Free power-packed Open Source personal productivity suite
-        - name: libreoffice-still
-          description: (maintenance branch for stability) Free power-packed Open Source personal productivity suite
         - name: calligra
           description: Actively developed fork of KOffice, the KDE office suite
         # - name: openoffice-bin
@@ -1560,6 +1580,10 @@
           description: Simple and light email client for GNOME
         - name: claws-mail
           description: Lightweight GTK-based email client and news reader
+        - name: betterbird-bin
+          description: "EN-US // Betterbird is a fine-tuned version of Mozilla Thunderbird, Thunderbird on steroids, if you will."
+        - name: betterbird-de-bin
+          description: "EN-US // Betterbird is a fine-tuned version of Mozilla Thunderbird, Thunderbird on steroids, if you will."
     - name: Document Viewers
       description: PDF, PS and DjVu viewing
       noncheckable: true
