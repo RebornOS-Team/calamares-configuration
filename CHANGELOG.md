@@ -1,8 +1,9 @@
 # CHANGELOG
 
-## Calamares Configuration `v0.1.50`
+## Calamares Configuration `v0.1.51`
 
 ### For Users
+- Add Gnome's renamed local searching tool (from `tracker3-miners` to `localsearch`).
 - Removed `manaplus` as it is no longer in the Arch repos.
 - Rename `paru-bin` to `paru`.
 - Add `betterbird`
