@@ -4,7 +4,6 @@ display_managers:
     test_packages: sddm
     test_unit: sddm
     default_priority:
-      - regolith
       - trinity
       - lxqt
       - lxde
@@ -23,7 +22,6 @@ display_managers:
     test_packages: gdm
     test_unit: gdm
     default_priority:
-      - regolith
       - trinity
       - lxqt
       - lxde
@@ -42,7 +40,6 @@ display_managers:
     test_packages: lightdm
     test_unit: lightdm
     default_priority:
-      - regolith
       - trinity
       - lxqt
       - lxde
@@ -131,12 +128,6 @@ desktops:
     test_packages: tde-tdebase
     session: trinity
     xsession: trinity
-    login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
-    wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
-  - id: regolith
-    test_packages: regolith-i3
-    session: regolith
-    xsession: regolith
     login_wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
     wallpaper: /usr/share/backgrounds/pexels-dương-nhân-2232979.jpg
   - id: openbox
