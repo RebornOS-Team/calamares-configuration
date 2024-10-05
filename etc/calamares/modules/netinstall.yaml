@@ -1055,18 +1055,6 @@
               description: Virtualbox host kernel modules for other kernels (Install kernel headers too)
             - name: virtualbox-guest-iso
               description: Install guest additions onto systems other than Arch Linux
-        - name: VMWare
-          packages:
-            - name: vmware-workstation
-              description: VMWare
-            - name: fuse2
-              description: Library that makes it possible to implement a filesystem in a userspace program.
-            - name: gtkmm
-              description: GUI for VMWare
-            - linux-headers
-            - ncurses
-            - libcanberra
-            - pcsclite
         - name: QEMU
           packages:
             - name: qemu-full
@@ -1114,8 +1102,6 @@
           description: Simple VNC Client on Gtk-VNC. Run with gvncviewer
         - name: virt-viewer
           description: Simple remote display client. Supports SPICE and VNC
-        - name: anydesk-bin
-          description: Proprietary remote desktop software
         - name: freerdp
           description: FreeRDP X11 client. Run with xfreerdp
     - name: Security
@@ -1165,8 +1151,6 @@
           description: Extensible browser from Mozilla based on Gecko with fast rendering
         - name: chromium
           description: The open source project behind Google Chrome developed by Google
-        - name: google-chrome
-          description: "Proprietary web browser developed by Google"
         - name: vivaldi
           description: An advanced proprietary browser made with the power user in mind
         # - name: brave-bin
@@ -1561,10 +1545,6 @@
           description: (AUR) Microsoft Office-compatible proprietary office suite with a word processor, spreadsheet, and presentation graphics software
         - name: onlyoffice-bin
           description: (AUR) Office suite that combines text, spreadsheet and presentation editors
-        - name: wps-office
-          description: (AUR) Proprietary office productivity suite, previously known as Kingsoft Office
-        - name: yozo-office
-          description: (AUR) Proprietary office suite, compatible with MS Office
     - name: Email Clients
       noncheckable: true
       packages:
@@ -1920,8 +1900,6 @@
       packages:
         - name: git
           description: The fast distributed version control system
-        - name: gitkraken
-          description: The intuitive, fast, and beautiful cross-platform Git client
         - name: git-lfs
           description: Git extension for versioning large files
         - name: smartgit
