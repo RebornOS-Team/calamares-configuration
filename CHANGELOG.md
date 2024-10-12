@@ -1,19 +1,30 @@
 # CHANGELOG
 
+## Calamares Configuration `v0.1.52`
+
+### For Users
+
+- Regolith is removed since it is no longer in development.
+- Removed the packages from the package selection which are no longer built on the build server.
+
+### For Developers
+
 ## Calamares Configuration `v0.1.51`
 
 ### For Users
+
 - Add Gnome's renamed local searching tool (from `tracker3-miners` to `localsearch`).
 - Removed `manaplus` as it is no longer in the Arch repos.
 - Rename `paru-bin` to `paru`.
 - Add `betterbird`
 - Reorganize LibreOffice and add German translations.
-  
+
 ### For Developers
 
 ## Calamares Configuration `v0.1.48`
 
 ### For Users
+
 - Removed `knotes` and `mp3splt-gtk` as they are no longer in the Arch repos.
 
 ### For Developers
@@ -21,6 +32,7 @@
 ## Calamares Configuration `v0.1.47`
 
 ### For Users
+
 - Update `mkinitcpio.conf`.
 
 ### For Developers
@@ -28,35 +40,40 @@
 ## Calamares Configuration `v0.1.45`
 
 ### For Users
-- Switch to `lightdm` for *LXQt* installations.
+
+- Switch to `lightdm` for _LXQt_ installations.
 
 ### For Developers
 
 ## Calamares Configuration `v0.1.43`
 
 ### For Users
+
 - Add bootloader choice screen and support for systemd-boot, and refind.
-  - Fix refind not recognizing other kernels on Arch 
+  - Fix refind not recognizing other kernels on Arch
 - Do not install os-prober if grub is not selected.
 - Move fstab generation to later during the installation process to prevent issues with encrypted volumes.
 
 ### For Developers
+
 - Set up launching the debug window by clicking on the RebornOS logo.
 - Update initcpiocfg.conf in response to schema change.
 
 ## Calamares Configuration `v0.1.39`
 
 ### For Users
+
 - Remove `exfat-utils`
-- Remove `pyside2`, `pyside2-tools`, `libcroco`, and `dbus-python`. 
+- Remove `pyside2`, `pyside2-tools`, `libcroco`, and `dbus-python`.
 
 ### For Developers
 
 ## Calamares Configuration `v0.1.38`
 
 ### For Users
+
 - Move to Qt6 with fixes for text color, window size, and UI configuration.
-- Remove `liri-text` and `liri-terminal` as they are no longer in official Arch Linux repositories. 
+- Remove `liri-text` and `liri-terminal` as they are no longer in official Arch Linux repositories.
 - Restore `discover` in KDE Plasma until a replacement is configured.
 - Remove `midori` from the package list because it is no longer in the repositories.
 - Add back essential KDE applications to the curated KDE Plasma package list.
@@ -66,10 +83,11 @@
 ## Calamares Configuration `v0.1.34`
 
 ### For Users
+
 - Include `plasma5-integration` for better Qt5 theme support
 - Update KDE packages in light of Arch Linux changes due to Plasma 6 release
 
-### For Developers 
+### For Developers
 
 ## Calamares Configuration `v0.1.31`
 
@@ -98,7 +116,6 @@
 
 - Replace `gnome-terminal` with `mate-terminal` for Cinnamon.
 - Include and enable `touchegg` on Cinnamon for touchscreen support.
-
 
 ### For Developers
 
@@ -161,20 +178,20 @@
 - The installer sidebar is moved to the bottom, in a horizontal layout.
 - Installer slide background colours, installer text colors, and installer image colors all modified to suit the dark mode.
 - Installer slides remade to fit the new aspect ratio.
-- Better audio support with a more inclusive set of audio packages added around *pipewire*.
+- Better audio support with a more inclusive set of audio packages added around _pipewire_.
 - Performance fix for Budgie by using `xdg-desktop-portal-gtk` instead of `xdg-desktop-portal-gnome`.
 - Budgie isntallation is fixed by removing `mutter43` from the Budgie package list.
 - The Grub theme is updated (thanks @SoulHarsh007).
 - The installer screenshot resolution is fixed for the Trinity desktop (thanks @SoulHarsh007).
 - Installations with swap and encryption fixed by adding `mkinitcpio-openswap`.
 - Cutefish is removed since it is no longer in development.
-  
+
 ### For Developers
 
 - The number of installation retries is reduced to two (from five earlier).
 - Removed or replaced partial upgrades.
 - Renamed the RebornOS GitHub organization from `RebornOS-Developers` to `RebornOS-Team`.
-- Updated `.gitignore` to ignore *Visual Studio Code* files.
+- Updated `.gitignore` to ignore _Visual Studio Code_ files.
 - Removed self conflicts in the `PKGBUILD`s.
 - The `README.md` documentation is updated.
 
@@ -184,15 +201,15 @@
 
 - Fix encrypted installation with swap by adding the `mkinitcpio-openswap` package which supplies the `openswap` mkinitcpio hook.
 - Fix Budgie installation by replacing `xdg-desktop-portal-gnome` with `xdg-desktop-portal-gtk`.
-- Remove the *Cutefish* desktop environment.
-- Replace `ttf-nerd-fonts-symbols-2048-em` with `ttf-nerd-fonts-symbols` for the *Sway* Window Manager (thanks @CookieSource).
-- Replace `obkey` with `lxhotkey-gtk3` for the *Openbox* Window Manager (thanks @CookieSource).
+- Remove the _Cutefish_ desktop environment.
+- Replace `ttf-nerd-fonts-symbols-2048-em` with `ttf-nerd-fonts-symbols` for the _Sway_ Window Manager (thanks @CookieSource).
+- Replace `obkey` with `lxhotkey-gtk3` for the _Openbox_ Window Manager (thanks @CookieSource).
 - Rename Budgie's `mutter` to `mutter43` (thanks @CookieSource).
 - Rename `deepin-wayland` to `deepin-wayland-protocols` (thanks @CookieSource).
 - Remove `nvidia-340xx-dkms`, `fdisk`, `exfat-utils`, `reiserfsprogs`, and `reiser4progs` (thanks @SoulHarsh007).
-- Replace `xfce4-screenshooter` with `gnome-screenshot` on the *Cinnamon* desktop environment (thanks @CookieSource).
+- Replace `xfce4-screenshooter` with `gnome-screenshot` on the _Cinnamon_ desktop environment (thanks @CookieSource).
 - Fix system user accounts being displayed at Trinity login screen (thanks @Rippanda12).
-- Add the *Sway* Window Manager.
+- Add the _Sway_ Window Manager.
 - Add `pavucontrol` to Xfce (thanks @CookieSource).
 - Add `nano` and `micro` under Console packages (thanks @cake03).
 
@@ -206,49 +223,47 @@
 
 - `electron` `12`-`15` removed and electron 17-20 are available
 
-- *Budgie* theming fixed based on suggestions from Budgie devs (thanks *finnsster* for the communication)
+- _Budgie_ theming fixed based on suggestions from Budgie devs (thanks _finnsster_ for the communication)
 
-- *Openbox* theming fixed
+- _Openbox_ theming fixed
 
-- *Trinity Desktop Environment (TDE)* installation fixed by using TDE's official repos and using a new custom module - `pre_install` (thanks *Panda*)
+- _Trinity Desktop Environment (TDE)_ installation fixed by using TDE's official repos and using a new custom module - `pre_install` (thanks _Panda_)
 
-- *LXDE* now uses `leafpad` instead of `geany`
+- _LXDE_ now uses `leafpad` instead of `geany`
 
-- *Openbox* now uses geany instead of mousepad
+- _Openbox_ now uses geany instead of mousepad
 
 - `gnome-todo` is replaced by `endeavour`
 
 - `vino` is replaced by `gnome-remote-desktop`
 
-- The exhaustive *Gnome* group is now marked as *non-critical*. Renamed or missing packages here will not fail the installation.
+- The exhaustive _Gnome_ group is now marked as _non-critical_. Renamed or missing packages here will not fail the installation.
 
 - `gvfs` and related backends installed in the default minimal base so that file managers can see all USB devices and remote devices.
 
-- *Bluetooth* set up by default in the default minimal base.
+- _Bluetooth_ set up by default in the default minimal base.
 
-- A *firewall* (`gufw`) is set up by default in the default minimal base.
+- A _firewall_ (`gufw`) is set up by default in the default minimal base.
 
 - `nvidia-utils` added among options for Nvidia GPU drivers
 
 - KDE Plasma installation now includes `plasma-wayland-session`
-  
-- *Xfce* includes `engrampa` for archive management
-  
-- *MATE* includes `mate-hud` for quick navigation
+- _Xfce_ includes `engrampa` for archive management
+- _MATE_ includes `mate-hud` for quick navigation
 
 - Fonts included by default to avoid missing characters
 
-- *Cinnamon* includes `mintlocale` and `cinnamon-translations` for localization
+- _Cinnamon_ includes `mintlocale` and `cinnamon-translations` for localization
 
-- `flatseal` added for permission management under the *Flatpak* category
+- `flatseal` added for permission management under the _Flatpak_ category
 
-- `appimagelauncher` added under the *Appimages* category to simplify handling of appimages
+- `appimagelauncher` added under the _Appimages_ category to simplify handling of appimages
 
 - LTE Kernel support for offline installations too
 
 - Discord added as an option in the advanced page
 
-- *Cinnamon* will use `gnome-terminal` instead of `mate-terminal`
+- _Cinnamon_ will use `gnome-terminal` instead of `mate-terminal`
 
 - `electron18` removed
 
@@ -268,6 +283,6 @@
 
 - Revamped and simplified build scripts for three packaging modes - `local`, `git`, and `stable`
 
-- Updated *PKGBUILD*s to prevent the annoying replacement offers for the installer packages during system updates. 
+- Updated *PKGBUILD*s to prevent the annoying replacement offers for the installer packages during system updates.
 
 - Xfce configuration for offline installations through pre-install file copies and shellprocess commands
