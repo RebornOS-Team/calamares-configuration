@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## Calamares Configuration `v0.1.53`
+
+### For Users
+
+- Update Deepin packages based on recent changes
+  - Remove `deepin-launchpad` and `deepin-session`
+  - Add `deepin-qt6integration`, `deepin-qt6platform-plugins`, and `deepin-screensaver`
+
+### For Developers
+
 ## Calamares Configuration `v0.1.52`
 
 ### For Users
