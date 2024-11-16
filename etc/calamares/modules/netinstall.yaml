@@ -563,14 +563,6 @@
               description: AMD's standalone Vulkan driver
             - name: lib32-amdvlk
               description: AMD's standalone Vulkan driver with 32bit support
-            - name: libva-mesa-driver
-              description: Accelerated video decoding for VA-API
-            - name: lib32-libva-mesa-driver
-              description: Accelerated video decoding for VA-API with 32-bit support
-            - name: mesa-vdpau
-              description: Accelerated video decoding for VDPAU
-            - name: lib32-mesa-vdpau
-              description: Accelerated video decoding for VDPAU with 32-bit support
             - name: xf86-video-ati
               description: DDX driver for 2D acceleration in Xorg
     - name: Audio

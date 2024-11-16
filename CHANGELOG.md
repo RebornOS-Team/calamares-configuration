@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## Calamares Configuration `v0.1.54`
+
+### For Users
+- Removed `libva-mesa-driver`, `lib32-libva-mesa-driver`, `mesa-vdpau`, and `lib32-mesa-vdpau`
+ as they are merged with `mesa` and `lib32-mesa` in the Arch repos.
+
+### For Developers
+
 ## Calamares Configuration `v0.1.53`
 
 ### For Users
@@ -16,8 +24,6 @@
 
 - Regolith is removed since it is no longer in development.
 - Removed the packages from the package selection which are no longer built on the build server.
-
-### For Developers
 
 ## Calamares Configuration `v0.1.51`
 
