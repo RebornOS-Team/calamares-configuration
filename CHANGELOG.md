@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## Calamares Configuration `v0.1.55`
+
+### For Users
+- Remove `deepin-dock`, and `deepin-network-utils` as they are no longer present in the Arch repos.
+
+### For Developers
+
 ## Calamares Configuration `v0.1.54`
 
 ### For Users
