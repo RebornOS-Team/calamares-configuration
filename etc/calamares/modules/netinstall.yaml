@@ -1359,8 +1359,6 @@
             - name: Platformer
               noncheckable: true
               packages:
-                - name: frogatto
-                  description: Platformer with adventure elements
                 - name: kgoldrunner
                   description: A platform game with the goal of collecting gold
                 - name: supertux
