@@ -1,5 +1,15 @@
 # CHANGELOG
 
+
+## Calamares Configuration `v0.1.56`
+
+### For Users
+- The installer is more robust against breakage due to package changes in certain desktops
+- Addressed package changes due to changes in the Arch repositories
+
+### For Developers
+- Some desktops now use package groups and meta packages wherever possible, making maintenance easier
+
 ## Calamares Configuration `v0.1.55`
 
 ### For Users
