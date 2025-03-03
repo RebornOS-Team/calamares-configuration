@@ -26,7 +26,7 @@ jobs:
           sudo -u rebornos sh -c "packaging/build_package.sh git --noconfirm"
       - name: ⬆ Upload Package Artifact
         id: upload_package_step
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with: 
           name: Unstable Package
           path: packaging/${{ github.event.repository.name }}-git/${{ github.event.repository.name }}*.pkg.tar.*
