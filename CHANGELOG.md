@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## Calamares Configuration `v0.1.57`
+
+### For Users
+- Addressed package changes due to changes in the Arch repositories
+
+### For Developers
+
 
 ## Calamares Configuration `v0.1.56`
 

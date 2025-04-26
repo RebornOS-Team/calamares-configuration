@@ -1615,12 +1615,8 @@
       packages:
         - name: gnumeric
           description: Spreadsheet program for the GNOME desktop
-        - name: sc
-          description: Curses-based lightweight spreadsheet
         # - name: pyspread
         #   description: (AUR) A non-traditional spreadsheet application that is based on and written in the programming language Python
-        # - name: sc-im
-        #   description: (AUR) Spreadsheet program based on sc
     # ------------------------
     - name: Desktop Publishing
       description:
@@ -1654,8 +1650,6 @@
               description: Free graphics editor similar to MS Paint
             - name: mypaint
               description: Free software graphics application for digital painters
-            - name: pinta
-              description: Drawing and editing program modeled after Paint.NET
         - name: Raster Graphics
           description: Edit images made of pixels. For Adobe-Photoshop-like uses
           noncheckable: true
