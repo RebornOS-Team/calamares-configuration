@@ -285,8 +285,6 @@
                   description: Suite of open source virtualization utilities and drivers
                 - name: gtkmm3
                   description: C++ bindings for GTK+ 3
-                # - name: xf86-video-vmware
-                #   description: X.org vmware video driver
                 - name: xf86-input-vmmouse
                   description: X.org VMWare Mouse input driver
                 - name: mesa
@@ -768,8 +766,6 @@
               description: Suite of open source virtualization utilities and drivers
             - name: gtkmm3
               description: C++ bindings for GTK+ 3
-            - name: xf86-video-vmware
-              description: X.org vmware video driver
             - name: xf86-input-vmmouse
               description: X.org VMWare Mouse input driver
             - name: mesa
