@@ -965,8 +965,6 @@
       description: Terminal Emulator Frontends
       noncheckable: true
       packages:
-        - name: tilix
-          description: Tiling terminal emulator for GNOME
         - name: gnome-terminal
           description: A terminal emulator included in the GNOME desktop with support for Unicode
         - name: konsole
