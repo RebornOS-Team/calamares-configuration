@@ -1,11 +1,13 @@
 # CHANGELOG
 
-## Calamares Configuration `v0.1.59`
+## Calamares Configuration `v0.1.61`
 
 ### For Users
+- Fixed network issues in online installation
 - Addressed package changes due to changes in the Arch repositories
 
 ### For Developers
+- Documented that `networkcfg` deletes `resolv.conf`, and that any package installations have to be done before the module runs
 
 ## Calamares Configuration `v0.1.57`
 
