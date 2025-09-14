@@ -103,7 +103,7 @@
       packages:
         - name: inxi
           description: A script to get system information
-        - name: gnu-netcat
+        - name: openbsd-netcat
           description: Network piping application. Does not support IPv6 (Required for termbin)
         - name: network-manager-applet
           description: Applet for managing network connections
@@ -797,7 +797,7 @@
   packages:
     - name: inxi
       description: A script to get system information
-    - name: gnu-netcat
+    - name: openbsd-netcat
       description: Network piping application. Does not support IPv6 (Required for termbin)
     - name: network-manager-applet
       description: Applet for managing network connections
@@ -917,8 +917,6 @@
               description: Simple, Multi-platform text editor
             - name: deepin-editor
               description: Simple text editor for Deepin desktop
-            - name: notepadqq
-              description: Qt-based, Notepad++-like text editor with support for syntax highlighting for more than 100 languages
             - name: featherpad
               description: Lightweight Qt plain text editor featuring a native dark theme, support for tabs, printing and syntax highlighting
             - name: gobby

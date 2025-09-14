@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## Calamares Configuration `v0.1.62`
+
+### For Users
+- Addressed package changes due to changes in the Arch repositories: `gnu-netcat` was replaced with `openbsd-netcat`, and `notepadqq` was removed.
+
+### For Developers
+
 ## Calamares Configuration `v0.1.61`
 
 ### For Users
