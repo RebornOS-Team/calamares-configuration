@@ -15,5 +15,5 @@
 
 - [ ] Commit and push all changes through git, for example `git commit -m "Some message" && git push`
 
-- [ ] Create and push a tag, for example `git tag -s -a v0.1.62 -m "This is version 0.1.62" && git push origin v0.1.62`
-- [ ] If there was a mistake and if you want to yank the release, run something like `git tag -d v0.1.62 && git push --delete origin v0.1.62`. Then the errors can be fixed and the previous step can be repeated to create a new tag.
+- [ ] Create and push a tag, for example `git tag -s -a v0.1.63 -m "This is version 0.1.63" && git push origin v0.1.63`
+- [ ] If there was a mistake and if you want to yank the release, run something like `git tag -d v0.1.63 && git push --delete origin v0.1.63`. Then the errors can be fixed and the previous step can be repeated to create a new tag.

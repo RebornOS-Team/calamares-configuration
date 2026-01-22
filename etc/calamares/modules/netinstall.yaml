@@ -485,11 +485,11 @@
               description: NVIDIA drivers utilities
             - name: lib32-nvidia-utils
               description: "NVIDIA drivers utilities (32-bit)"
-            - name: nvidia
+            - name: nvidia-open
               description: For Maxwell (NV110/GMXXX) series and newer with linux kernel
-            - name: nvidia-lts
+            - name: nvidia-open-lts
               description: For Maxwell (NV110/GMXXX) series and newer with linux-lts kernel
-            - name: nvidia-dkms
+            - name: nvidia-open-dkms
               description: For Maxwell (NV110/GMXXX) series and newer with a custom kernel
             # - name: nvidia-beta
             #   description: (AUR) Newer drivers
@@ -557,10 +557,10 @@
               description: Radeon's Vulkan mesa driver
             - name: lib32-vulkan-radeon
               description: Radeon's Vulkan mesa driver with 32-bit support
-            - name: amdvlk
-              description: AMD's standalone Vulkan driver
-            - name: lib32-amdvlk
-              description: AMD's standalone Vulkan driver with 32bit support
+            # - name: amdvlk # Now in the AUR
+            #   description: AMD's standalone Vulkan driver
+            # - name: lib32-amdvlk # Now in the AUR
+            #   description: AMD's standalone Vulkan driver with 32bit support
             - name: xf86-video-ati
               description: DDX driver for 2D acceleration in Xorg
     - name: Audio
@@ -921,8 +921,8 @@
               description: Lightweight Qt plain text editor featuring a native dark theme, support for tabs, printing and syntax highlighting
             - name: gobby
               description: Collaborative editor supporting multiple documents in one session and a multi-user chat
-            - name: leafpad
-              description: Notepad clone for GTK that emphasizes simplicity
+            # - name: leafpad # Now in the AUR
+            #   description: Notepad clone for GTK that emphasizes simplicity
             - name: l3afpad
               description: Simple text editor forked from Leafpad, supports GTK 3
             - name: emacs
@@ -1076,8 +1076,8 @@
           description: Remote desktop client written in GTK. Supports RDP, VNC, NX, XDMCP and SSH
         - name: tigervnc
           description: VNC viewer for X
-        - name: vinagre
-          description: Remote desktop viewer for GNOME. Supports RDP, VNC, SPICE and SSH. Part of gnome-extra
+        # - name: vinagre # Now in the AUR
+        #   description: Remote desktop viewer for GNOME. Supports RDP, VNC, SPICE and SSH. Part of gnome-extra
         - name: gnome-connections
           description: Remote desktop client for GNOME. Supports RDP and VNC
         - name: krdc
@@ -1334,8 +1334,6 @@
                   description: Pronunciation trainer that helps improving and perfecting a learner's pronunciation skills for a foreign language
                 - name: blinken
                   description: Sequence-remembering game for training memory
-                - name: gcompris-qt
-                  description: Educational software suite comprising of numerous activities for children aged 2 to 10
                 - name: kanagram
                   description: Letter order game
                 - name: kbruch
@@ -1363,8 +1361,8 @@
           description: Clients for Internet Relay Chat (IRC)
           noncheckable: true
           packages:
-            - name: hexchat
-              description: Easy to use GTK IRC client based on XChat
+            # - name: hexchat # Now in the AUR
+            #   description: Easy to use GTK IRC client based on XChat
             - name: polari
               description: Simple IRC client by the GNOME project
             - name: quassel-monolithic
@@ -1384,8 +1382,8 @@
             - name: fractal
               description: Matrix client for GNOME written in Rust
       packages:
-        - name: pidgin
-          description: Multi-protocol instant messaging client
+        # - name: pidgin # Now in the AUR
+        #   description: Multi-protocol instant messaging client
         - name: telegram-desktop
           description: Official Telegram Desktop client
         - name: discord
@@ -1659,8 +1657,8 @@
     - name: Webcam
       noncheckable: true
       packages:
-        - name: cheese
-          description: Take photos and videos with your webcam, with fun graphical effects
+        # - name: cheese
+        #   description: Take photos and videos with your webcam, with fun graphical effects
         - name: kamoso
           description: Webcam recorder from the KDE community
         - name: pantheon-camera
@@ -1700,8 +1698,8 @@
           description: Non-linear video editor designed for basic to semi-professional work
         - name: flowblade
           description: Multitrack non-linear video editor
-        - name: openshot
-          description: Non-linear video editor based on MLT framework
+        # - name: openshot # Now in the AUR
+        #   description: Non-linear video editor based on MLT framework
         - name: pitivi
           description: Free video editor with a beautiful and intuitive user interface, a clean codebase and a fantastic community
         - name: avidemux-qt
