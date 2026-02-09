@@ -1780,8 +1780,6 @@
           description: Vi Improved, a highly configurable, improved version of the vi text editor
         - name: emacs
           description: The extensible, customizable, self-documenting real-time display editor
-        - name: vi
-          description: The original ex/vi text editor
     - name: Scripting and Programming Languages
       noncheckable: true
       subgroups:
