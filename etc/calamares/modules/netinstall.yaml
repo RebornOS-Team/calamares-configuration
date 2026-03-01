@@ -1704,8 +1704,8 @@
           description: Free video editor with a beautiful and intuitive user interface, a clean codebase and a fantastic community
         - name: avidemux-qt
           description: Free video editor designed for simple cutting, filtering and encoding tasks
-        - name: vidcutter
-          description: Fast lossless media cutter + joiner with frame-accurate SmartCut technology
+        # - name: vidcutter
+        #   description: Fast lossless media cutter + joiner with frame-accurate SmartCut technology
     - name: Audio Recording and Editing
       noncheckable: true
       packages:

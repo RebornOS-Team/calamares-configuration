@@ -1,5 +1,23 @@
 ---
 display_managers:
+  - id: plasmalogin
+    test_packages: plasma-login-manager
+    test_unit: plasmalogin
+    default_priority:
+      - trinity
+      - lxqt
+      - lxde
+      - i3
+      - openbox
+      - mate
+      - xfce
+      - cutefish
+      - ukui
+      - deepin
+      - budgie
+      - cinnamon
+      - plasma
+      - gnome
   - id: sddm
     test_packages: sddm
     test_unit: sddm
