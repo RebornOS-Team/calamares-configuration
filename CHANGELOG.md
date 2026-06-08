@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## Calamares Configuration `v0.1.66`
+
+### For Users
+- Implement package changes due to changes in the Arch repositories.
+- Make some packages optional
+
+### For Developers
+
+
 ## Calamares Configuration `v0.1.65`
 
 ### For Users

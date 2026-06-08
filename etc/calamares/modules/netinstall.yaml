@@ -949,8 +949,6 @@
           description: Very fast and lightweight file manager which can also optionally manage the desktop icons and background
         - name: pcmanfm-qt
           description: Qt port of PCManFM file manager
-        - name: peony
-          description: File manager for the UKUI desktop
         - name: pantheon-files
           description: File browser designed for elementary OS
         - name: deepin-file-manager
@@ -999,8 +997,6 @@
           description: Rather than thinking of files and services as raw streams of text, Nu looks at each input as something with structure
         - name: dash
           description: A fast POSIX-compliant shell that aims to be as small as possible
-        - name: oil
-          description: Bash-compatible UNIX command-line shell
         - name: xonsh
           description: Python-powered shell with additional shell primitives that you are used to from Bash and IPython
         - name: elvish
@@ -1477,8 +1473,6 @@
           description: Open-source and cross-platform document viewer developed by KDE
         - name: foliate
           description: Simple and modern GTK eBook reader. Supports EPUB, Mobipocket, Kindle, FictionBook, and Comicbook formats
-        - name: coolreader
-          description: E-book viewer with many supported formats such as EPUB (non-DRM), FictionBook, TXT, RTF, HTML, CHM and TCR
         - name: bookworm
           description: Simple, focused e-book reader for Elementary OS with EPUB, PDF, Mobipocket and Comicbook support
         - name: sigil
